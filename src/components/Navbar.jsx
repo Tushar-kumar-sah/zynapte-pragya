@@ -22,6 +22,18 @@ export default function Navbar() {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  // Prevent background scroll when mobile drawer is open
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   return (
     <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
@@ -85,6 +97,15 @@ export default function Navbar() {
           </div>
         </nav>
       </div>
+
+      {/* Mobile Backdrop Overlay */}
+      {mobileMenuOpen && (
+        <div 
+          className="mobile-nav-backdrop" 
+          onClick={() => setMobileMenuOpen(false)} 
+          aria-hidden="true" 
+        />
+      )}
 
       {/* Mobile Navigation Drawer */}
       <div className={`mobile-nav-drawer ${mobileMenuOpen ? 'open' : ''}`} aria-hidden={!mobileMenuOpen}>

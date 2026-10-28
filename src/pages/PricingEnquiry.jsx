@@ -71,10 +71,6 @@ export default function PricingEnquiry() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Transparent Institutional Licensing &bull; Zero Hidden Costs</span>
-            </div>
             <div className="eyebrow"><span className="eyebrow-dot" />PLANS &amp; PROPOSALS</div>
             <h1 className="page-hero-title">Tailored Specifically to Your School's Student Count.</h1>
             <p className="page-hero-desc">
@@ -93,7 +89,7 @@ export default function PricingEnquiry() {
             <p>Every tier includes complete data ownership and encrypted nightly backups.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', alignItems: 'stretch', marginBottom: '50px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '24px', alignItems: 'stretch', marginBottom: '50px' }}>
             {tiers.map((tier, idx) => (
               <div 
                 key={idx} 

@@ -28,10 +28,6 @@ export default function WestBengalSchools() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Tailored for West Bengal Educational Institutions</span>
-            </div>
             <div className="eyebrow"><span className="eyebrow-dot" />REGIONAL CATALOGUE SUPPORT</div>
             <h1 className="page-hero-title">School ERP Built Around West Bengal School Workflows.</h1>
             <p className="page-hero-desc">
@@ -54,7 +50,7 @@ export default function WestBengalSchools() {
             <p>Ready to deploy for Madhyamik, Higher Secondary, and CBSE/ICSE institutions.</p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '20px', marginBottom: '40px' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '20px', marginBottom: '40px' }}>
             {boardPills.map((b, i) => (
               <div key={i} style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-lg)', padding: '24px 20px', display: 'flex', flexDirection: 'column' }}>
                 <span className={`badge ${b.color}`} style={{ alignSelf: 'flex-start', marginBottom: '12px' }}>{b.name}</span>

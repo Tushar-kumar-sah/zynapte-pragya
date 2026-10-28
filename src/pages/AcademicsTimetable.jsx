@@ -21,10 +21,6 @@ export default function AcademicsTimetable() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Conflict-Aware Scheduling &bull; WBBSE &amp; CBSE Catalogues</span>
-            </div>
             <div className="eyebrow"><span className="eyebrow-dot" />ACADEMIC OPERATIONS &amp; TIMETABLES</div>
             <h1 className="page-hero-title">Organise the Academic Year Without Double-Booking.</h1>
             <p className="page-hero-desc">
@@ -48,7 +44,7 @@ export default function AcademicsTimetable() {
           </div>
 
           <div style={{ maxWidth: '840px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
-            <div style={{ background: 'var(--color-ink)', color: '#FFFFFF', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ background: 'var(--color-ink)', color: '#FFFFFF', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
               <div>
                 <strong>Class IX - Section A • Weekly Master Routine</strong>
                 <div style={{ fontSize: '0.75rem', opacity: 0.8 }}>Academic Year 2026-27 • Room 204</div>
@@ -58,8 +54,8 @@ export default function AcademicsTimetable() {
               </span>
             </div>
 
-            <div style={{ overflowX: 'auto', padding: '16px' }}>
-              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.8125rem' }}>
+            <div style={{ overflowX: 'auto', padding: '16px', WebkitOverflowScrolling: 'touch' }}>
+              <table style={{ width: '100%', minWidth: '580px', borderCollapse: 'collapse', fontSize: '0.8125rem' }}>
                 <thead>
                   <tr style={{ background: 'var(--color-slate-50)', textAlign: 'left', borderBottom: '1px solid var(--color-slate-200)' }}>
                     <th style={{ padding: '8px' }}>Day</th>

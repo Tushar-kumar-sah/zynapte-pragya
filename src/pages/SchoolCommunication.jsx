@@ -21,10 +21,6 @@ export default function SchoolCommunication() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>School-Governed Messaging &bull; Official Digital Circulars</span>
-            </div>
             <div className="eyebrow"><span className="eyebrow-dot" />COMMUNICATION &amp; NOTICES</div>
             <h1 className="page-hero-title">Keep School Communication Clear, Timely and Controlled.</h1>
             <p className="page-hero-desc">

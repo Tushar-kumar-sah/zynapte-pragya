@@ -21,10 +21,6 @@ export default function StaffPayrollManagement() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Automated Gross-to-Net Payroll &bull; Bank Transfer Export</span>
-            </div>
             <div className="eyebrow"><span className="eyebrow-dot" />STAFF HR &amp; PAYROLL ENGINE</div>
             <h1 className="page-hero-title">Make Staff Administration as Organised as Your Academics.</h1>
             <p className="page-hero-desc">
@@ -47,13 +43,13 @@ export default function StaffPayrollManagement() {
             <p>Generated in 1 click and delivered securely to employee mobile apps and emails.</p>
           </div>
 
-          <div style={{ maxWidth: '680px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-xl)', padding: '28px', boxShadow: 'var(--shadow-md)', fontFamily: 'monospace' }}>
+          <div className="responsive-card-paddings" style={{ maxWidth: '680px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-xl)', padding: '28px', boxShadow: 'var(--shadow-md)', fontFamily: 'monospace' }}>
             <div style={{ textAlign: 'center', borderBottom: '1px solid var(--color-slate-300)', paddingBottom: '14px', marginBottom: '14px' }}>
               <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-ink)' }}>PRAGYA HERITAGE HIGH SCHOOL</div>
               <div style={{ fontSize: '0.75rem', color: 'var(--color-slate-500)' }}>MONTHLY SALARY SLIP • FOR THE MONTH OF OCTOBER 2026</div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 20px', fontSize: '0.8125rem', marginBottom: '16px', background: 'var(--color-soft-canvas)', padding: '12px', borderRadius: 'var(--radius-md)' }}>
+            <div className="responsive-2col-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 20px', fontSize: '0.8125rem', marginBottom: '16px', background: 'var(--color-soft-canvas)', padding: '12px', borderRadius: 'var(--radius-md)' }}>
               <div><strong>Employee:</strong> Prof. Sourav Mukherjee</div>
               <div><strong>Employee ID:</strong> EMP-T-104</div>
               <div><strong>Designation:</strong> Senior Maths Teacher</div>
@@ -62,7 +58,7 @@ export default function StaffPayrollManagement() {
               <div><strong>Days Worked:</strong> 26 / 26 Days</div>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', fontSize: '0.8125rem', marginBottom: '16px' }}>
+            <div className="responsive-2col-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', fontSize: '0.8125rem', marginBottom: '16px' }}>
               {/* Earnings */}
               <div style={{ border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '12px' }}>
                 <strong style={{ display: 'block', borderBottom: '1px solid var(--color-slate-200)', paddingBottom: '6px', marginBottom: '8px', color: 'var(--color-success)' }}>
@@ -110,7 +106,7 @@ export default function StaffPayrollManagement() {
               </div>
             </div>
 
-            <div style={{ background: 'var(--color-ink)', color: '#FFFFFF', padding: '12px 16px', borderRadius: 'var(--radius-md)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div className="responsive-flex-stack" style={{ background: 'var(--color-ink)', color: '#FFFFFF', padding: '12px 16px', borderRadius: 'var(--radius-md)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
               <div>
                 <div style={{ fontSize: '0.75rem', opacity: 0.8 }}>NET SALARY TRANSFERRED (INR)</div>
                 <strong style={{ fontSize: '1.25rem', color: '#6EE7B7' }}>₹40,200.00</strong>

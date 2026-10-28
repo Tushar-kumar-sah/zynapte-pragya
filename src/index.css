@@ -97,20 +97,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: clamp(2.25rem, 5vw, 3.4rem);
+  font-size: clamp(1.85rem, 5vw, 3.4rem);
   font-weight: 900;
   letter-spacing: -0.025em;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 h2 {
-  font-size: clamp(1.75rem, 3.5vw, 2.4rem);
+  font-size: clamp(1.45rem, 3.5vw, 2.4rem);
   font-weight: 900;
   letter-spacing: -0.02em;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 h3 {
-  font-size: 1.35rem;
+  font-size: clamp(1.15rem, 2.5vw, 1.35rem);
   font-weight: 700;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 p {
@@ -135,10 +141,24 @@ a:hover {
   padding-right: 24px;
 }
 
+@media (max-width: 576px) {
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
 .section {
   padding-top: 72px;
   padding-bottom: 72px;
   position: relative;
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
 }
 
 .section--soft {
@@ -492,11 +512,22 @@ a:hover {
     height: calc(100vh - 76px);
     background-color: var(--color-canvas);
     padding: 24px;
+    padding-bottom: 96px;
     transform: translateX(100%);
     transition: transform var(--transition-normal);
     z-index: 99;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     border-top: 1px solid var(--color-slate-200);
+  }
+
+  .mobile-nav-backdrop {
+    position: fixed;
+    inset: 0;
+    top: 76px;
+    background: rgba(15, 23, 42, 0.45);
+    backdrop-filter: blur(2px);
+    z-index: 98;
   }
 
   .mobile-nav-drawer.open {
@@ -558,6 +589,18 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
+}
+
+@media (max-width: 480px) {
+  .page-hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .page-hero-ctas .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 /* ==========================================================================
@@ -628,6 +671,18 @@ a:hover {
   align-items: center;
   gap: 16px;
   margin-bottom: 32px;
+}
+
+@media (max-width: 480px) {
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
 }
 
 .hero-trust-signals {
@@ -807,6 +862,8 @@ a:hover {
   border: 1px solid var(--color-slate-200);
   border-radius: var(--radius-md);
   padding: 16px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .apaar-panel-header {
@@ -816,6 +873,8 @@ a:hover {
   margin-bottom: 12px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--color-slate-100);
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .apaar-panel-title {
@@ -829,6 +888,7 @@ a:hover {
 
 .mockup-table {
   width: 100%;
+  min-width: 460px;
   border-collapse: collapse;
   font-size: 0.775rem;
 }
@@ -1093,6 +1153,30 @@ a:hover {
   margin-bottom: 20px;
 }
 
+@media (max-width: 640px) {
+  .apaar-interactive-box {
+    padding: 16px;
+  }
+  .table-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .table-filters {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .table-filter-select,
+  .table-search-input {
+    width: 100%;
+  }
+  .table-toolbar .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
 .table-filters {
   display: flex;
   flex-wrap: wrap;
@@ -1122,10 +1206,13 @@ a:hover {
 
 .table-responsive-wrapper {
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
 }
 
 .interactive-data-table {
   width: 100%;
+  min-width: 640px;
   border-collapse: collapse;
   text-align: left;
   font-size: 0.875rem;
@@ -1335,6 +1422,27 @@ a:hover {
   gap: 10px;
   justify-content: center;
   margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  .role-switcher-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    padding-left: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .role-switcher-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .role-tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 0.8125rem;
+  }
 }
 
 .role-tab-btn {
@@ -1958,19 +2066,7 @@ dialog.custom-dialog::backdrop {
 
 /* 1. HERO SOCIAL PROOF & LIVE BADGES */
 .hero-live-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(20, 94, 255, 0.08);
-  border: 1px solid rgba(20, 94, 255, 0.2);
-  color: var(--color-blue);
-  font-size: 0.8125rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
-  margin-bottom: 16px;
+  display: none !important;
 }
 
 .hero-live-dot {
@@ -2167,6 +2263,27 @@ dialog.custom-dialog::backdrop {
   gap: 10px;
   justify-content: center;
   margin-bottom: 40px;
+}
+
+@media (max-width: 640px) {
+  .module-filter-bar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    padding-left: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .module-filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .module-filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 7px 14px;
+    font-size: 0.8125rem;
+  }
 }
 
 .module-filter-btn {
@@ -2656,7 +2773,8 @@ dialog.custom-dialog::backdrop {
 }
 
 .simulated-idcard {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   background: #FFFFFF;
   border: 1px solid var(--color-slate-300);
   border-radius: 12px;
@@ -2812,6 +2930,32 @@ dialog.custom-dialog::backdrop {
   border-radius: 0 0 var(--radius-xl) var(--radius-xl);
 }
 
+@media (max-width: 640px) {
+  .modal-backdrop {
+    padding: 10px;
+  }
+  .modal-header {
+    padding: 14px 16px;
+  }
+  .modal-body {
+    padding: 14px 16px;
+  }
+  .modal-footer {
+    padding: 12px 16px;
+    flex-direction: column;
+  }
+  .modal-footer .btn {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .modal-preview-screen {
+    padding: 12px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 /* 5. MOBILE APPS SHOWCASE ("EVERYTHING AT YOUR FINGERTIPS") */
 .mobile-apps-section {
   background: linear-gradient(180deg, var(--color-soft-canvas) 0%, #FFFFFF 100%);
@@ -2826,6 +2970,27 @@ dialog.custom-dialog::backdrop {
   gap: 12px;
   margin-bottom: 48px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .mobile-app-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 8px;
+    padding-left: 4px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .mobile-app-tabs::-webkit-scrollbar {
+    display: none;
+  }
+  .mobile-tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 8px 16px;
+    font-size: 0.8125rem;
+  }
 }
 
 .mobile-tab-btn {
@@ -2883,7 +3048,8 @@ dialog.custom-dialog::backdrop {
 }
 
 .smartphone-body {
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   height: 640px;
   background: #1E293B;
   border-radius: 44px;
@@ -2892,6 +3058,14 @@ dialog.custom-dialog::backdrop {
     0 25px 60px -15px rgba(23, 37, 82, 0.4),
     0 0 0 1px rgba(255, 255, 255, 0.1) inset;
   position: relative;
+}
+
+@media (max-width: 480px) {
+  .smartphone-body {
+    max-height: 75vh;
+    border-radius: 36px;
+    padding: 8px;
+  }
 }
 
 .smartphone-bezel {
@@ -3428,7 +3602,7 @@ dialog.custom-dialog::backdrop {
   right: -20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .hero-floating-badge {
     display: none;
   }
@@ -3712,4 +3886,75 @@ dialog.custom-dialog::backdrop {
 
 .animate-progress-fill {
   animation: progress-fill 1.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ==========================================================================
+   GLOBAL RESPONSIVE UTILITIES & TOUCH POLISH
+   ========================================================================== */
+.responsive-table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  max-width: 100%;
+  margin-bottom: 16px;
+}
+
+.responsive-table-scroll table {
+  min-width: 520px;
+}
+
+@media (max-width: 768px) {
+  .responsive-card-paddings {
+    padding: 18px 16px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .responsive-2col-grid {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  .responsive-3col-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px !important;
+  }
+  .responsive-4col-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+  .responsive-flex-stack {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+  .responsive-flex-stack > * {
+    width: 100%;
+  }
+  .responsive-btn-full {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-4col-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .brand-wordmark {
+    font-size: 1.25rem !important;
+  }
+  .brand-tagline-small {
+    font-size: 0.6875rem !important;
+  }
+}
+
+/* Touch Device Target Sizing */
+@media (pointer: coarse) {
+  .btn,
+  .module-filter-btn,
+  .role-tab-btn,
+  .mobile-tab-btn,
+  .hamburger-btn {
+    min-height: 42px;
+  }
 }

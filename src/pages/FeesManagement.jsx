@@ -21,10 +21,6 @@ export default function FeesManagement() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Counter POS &bull; Instant 3-Sec Receipts &bull; Sibling Waivers</span>
-            </div>
             <div className="eyebrow"><span className="eyebrow-dot" />FEE &amp; REVENUE ENGINE</div>
             <h1 className="page-hero-title">School Fee Management That Keeps Every Rupee Accounted.</h1>
             <p className="page-hero-desc">
@@ -47,7 +43,7 @@ export default function FeesManagement() {
             <p>Thermal roll slips or standard A4 duplicates issued directly at the counter.</p>
           </div>
 
-          <div style={{ maxWidth: '640px', margin: '0 auto', background: '#FFFFFF', border: '1px dashed var(--color-slate-300)', borderRadius: 'var(--radius-lg)', padding: '28px', boxShadow: 'var(--shadow-md)', fontFamily: 'monospace' }}>
+          <div className="responsive-card-paddings" style={{ maxWidth: '640px', margin: '0 auto', background: '#FFFFFF', border: '1px dashed var(--color-slate-300)', borderRadius: 'var(--radius-lg)', padding: '28px', boxShadow: 'var(--shadow-md)', fontFamily: 'monospace' }}>
             <div style={{ textAlign: 'center', marginBottom: '16px' }}>
               <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-ink)' }}>PRAGYA MEMORIAL ACADEMY</div>
               <div style={{ fontSize: '0.75rem', color: 'var(--color-slate-500)' }}>AFFILIATED TO WBBSE / CBSE • SCHOOL CODE: WB-9402</div>
@@ -56,7 +52,7 @@ export default function FeesManagement() {
               </span>
             </div>
             <div style={{ borderBottom: '1px dashed var(--color-slate-300)', margin: '14px 0' }} />
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 16px', fontSize: '0.8125rem', marginBottom: '16px' }}>
+            <div className="responsive-2col-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 16px', fontSize: '0.8125rem', marginBottom: '16px' }}>
               <div><strong>Receipt No:</strong> REC-2026-0842</div>
               <div><strong>Date &amp; Time:</strong> 28 Oct 2026, 11:42 AM</div>
               <div><strong>Student:</strong> Ananya Das (Roll 14)</div>
@@ -64,39 +60,41 @@ export default function FeesManagement() {
               <div><strong>Payment Mode:</strong> Counter Cash / POS</div>
               <div><strong>Cashier ID:</strong> CASH-03 (Front Desk)</div>
             </div>
-            <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.8125rem', marginBottom: '16px' }}>
-              <thead>
-                <tr style={{ borderBottom: '1px solid var(--color-slate-300)', textAlign: 'left' }}>
-                  <th style={{ padding: '6px 0' }}>Fee Head</th>
-                  <th style={{ padding: '6px 0' }}>Period</th>
-                  <th style={{ padding: '6px 0', textAlign: 'right' }}>Amount (INR)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr style={{ borderBottom: '1px dashed var(--color-slate-200)' }}>
-                  <td style={{ padding: '6px 0' }}>Tuition &amp; Smart Class</td>
-                  <td style={{ padding: '6px 0' }}>Q3 (Oct-Dec)</td>
-                  <td style={{ padding: '6px 0', textAlign: 'right' }}>₹4,500.00</td>
-                </tr>
-                <tr style={{ borderBottom: '1px dashed var(--color-slate-200)' }}>
-                  <td style={{ padding: '6px 0' }}>Science &amp; Lab Maintenance</td>
-                  <td style={{ padding: '6px 0' }}>Annual 2026</td>
-                  <td style={{ padding: '6px 0', textAlign: 'right' }}>₹1,200.00</td>
-                </tr>
-                <tr style={{ borderBottom: '1px dashed var(--color-slate-200)' }}>
-                  <td style={{ padding: '6px 0' }}>Sibling Concession (Younger Child)</td>
-                  <td style={{ padding: '6px 0' }}>Rule: Sibling 10%</td>
-                  <td style={{ padding: '6px 0', textAlign: 'right', color: 'var(--color-success)' }}>-₹450.00</td>
-                </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <td colSpan="2" style={{ paddingTop: '10px' }}><strong>Net Amount Collected</strong></td>
-                  <td style={{ paddingTop: '10px', textAlign: 'right', fontSize: '1.1rem', fontWeight: 800, color: 'var(--color-ink)' }}>₹5,250.00</td>
-                </tr>
-              </tfoot>
-            </table>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.75rem', color: 'var(--color-slate-500)', borderTop: '1px solid var(--color-slate-200)', paddingTop: '10px' }}>
+            <div className="responsive-table-scroll">
+              <table style={{ width: '100%', minWidth: '420px', borderCollapse: 'collapse', fontSize: '0.8125rem', marginBottom: '16px' }}>
+                <thead>
+                  <tr style={{ borderBottom: '1px solid var(--color-slate-300)', textAlign: 'left' }}>
+                    <th style={{ padding: '6px 0' }}>Fee Head</th>
+                    <th style={{ padding: '6px 0' }}>Period</th>
+                    <th style={{ padding: '6px 0', textAlign: 'right' }}>Amount (INR)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr style={{ borderBottom: '1px dashed var(--color-slate-200)' }}>
+                    <td style={{ padding: '6px 0' }}>Tuition &amp; Smart Class</td>
+                    <td style={{ padding: '6px 0' }}>Q3 (Oct-Dec)</td>
+                    <td style={{ padding: '6px 0', textAlign: 'right' }}>₹4,500.00</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px dashed var(--color-slate-200)' }}>
+                    <td style={{ padding: '6px 0' }}>Science &amp; Lab Maintenance</td>
+                    <td style={{ padding: '6px 0' }}>Annual 2026</td>
+                    <td style={{ padding: '6px 0', textAlign: 'right' }}>₹1,200.00</td>
+                  </tr>
+                  <tr style={{ borderBottom: '1px dashed var(--color-slate-200)' }}>
+                    <td style={{ padding: '6px 0' }}>Sibling Concession (Younger Child)</td>
+                    <td style={{ padding: '6px 0' }}>Rule: Sibling 10%</td>
+                    <td style={{ padding: '6px 0', textAlign: 'right', color: 'var(--color-success)' }}>-₹450.00</td>
+                  </tr>
+                </tbody>
+                <tfoot>
+                  <tr>
+                    <td colSpan="2" style={{ paddingTop: '10px' }}><strong>Net Amount Collected</strong></td>
+                    <td style={{ paddingTop: '10px', textAlign: 'right', fontSize: '1.1rem', fontWeight: 800, color: 'var(--color-ink)' }}>₹5,250.00</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+            <div className="responsive-flex-stack" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.75rem', color: 'var(--color-slate-500)', borderTop: '1px solid var(--color-slate-200)', paddingTop: '10px', flexWrap: 'wrap', gap: '8px' }}>
               <span>Words: Five Thousand Two Hundred Fifty Only</span>
               <span style={{ color: 'var(--color-success)', fontWeight: 700, border: '1px solid var(--color-success)', padding: '2px 8px', borderRadius: '4px' }}>
                 PAID &bull; Pragya Ledger Logged

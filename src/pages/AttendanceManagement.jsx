@@ -35,10 +35,6 @@ export default function AttendanceManagement() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>1-Tap Roll Call &bull; 40-Second Class Register &bull; Mobile Ready</span>
-            </div>
             <div className="eyebrow"><span className="eyebrow-dot" />DAILY ATTENDANCE &amp; LEAVE</div>
             <h1 className="page-hero-title">Attendance That’s Faster to Mark and Impossible to Lose.</h1>
             <p className="page-hero-desc">
@@ -62,7 +58,7 @@ export default function AttendanceManagement() {
           </div>
 
           <div style={{ maxWidth: '680px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
-            <div style={{ background: 'var(--color-ink)', color: '#FFFFFF', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ background: 'var(--color-ink)', color: '#FFFFFF', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
               <div>
                 <strong>Class IX, Section A • Morning Roll Call</strong>
                 <div style={{ fontSize: '0.75rem', opacity: 0.8 }}>Class Teacher: Sourav Mukherjee • 28 Oct 2026</div>
@@ -74,7 +70,7 @@ export default function AttendanceManagement() {
 
             <div style={{ padding: '16px 20px' }}>
               {demoRoll.map((student, idx) => (
-                <div key={student.roll} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: idx < demoRoll.length - 1 ? '1px solid var(--color-slate-100)' : 'none' }}>
+                <div key={student.roll} className="rollcall-student-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: idx < demoRoll.length - 1 ? '1px solid var(--color-slate-100)' : 'none', flexWrap: 'wrap', gap: '10px' }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                     <span style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'var(--color-slate-100)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.8125rem' }}>
                       {student.roll}
@@ -82,7 +78,7 @@ export default function AttendanceManagement() {
                     <strong style={{ fontSize: '0.9375rem', color: 'var(--color-ink)' }}>{student.name}</strong>
                   </div>
 
-                  <div style={{ display: 'flex', gap: '6px' }}>
+                  <div className="rollcall-buttons" style={{ display: 'flex', gap: '6px' }}>
                     <button 
                       onClick={() => toggleStatus(idx, 'P')}
                       style={{ 

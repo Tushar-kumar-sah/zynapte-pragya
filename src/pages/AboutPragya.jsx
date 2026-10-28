@@ -23,10 +23,6 @@ export default function AboutPragya() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Empowering Schools &bull; Enriching Futures</span>
-            </div>
             <div className="eyebrow">
               <span className="eyebrow-dot" />
               OUR MISSION &amp; PHILOSOPHY

@@ -28,10 +28,6 @@ export default function AdmissionManagement() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Visual Kanban Pipeline &bull; Paperless Student Onboarding</span>
-            </div>
             <div className="eyebrow"><span className="eyebrow-dot" />ADMISSIONS CRM &amp; INTAKE</div>
             <h1 className="page-hero-title">From First Enquiry to Enrolled Student in Minutes.</h1>
             <p className="page-hero-desc">

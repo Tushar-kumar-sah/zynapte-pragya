@@ -50,10 +50,6 @@ export default function AllFeatures() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Full Functional Suite • 16 Integrated Modules</span>
-            </div>
             <div className="eyebrow">
               <span className="eyebrow-dot" />
               PRAGYA ERP ARCHITECTURE

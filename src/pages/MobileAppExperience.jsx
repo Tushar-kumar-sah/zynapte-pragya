@@ -53,10 +53,6 @@ export default function MobileAppExperience() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Native iOS &amp; Android Apps Available</span>
-            </div>
             <div className="eyebrow"><span className="eyebrow-dot" />SCHOOL ERP MOBILE APPS</div>
             <h1 className="page-hero-title">Your School Workflows, Wherever the Day Takes You.</h1>
             <p className="page-hero-desc">

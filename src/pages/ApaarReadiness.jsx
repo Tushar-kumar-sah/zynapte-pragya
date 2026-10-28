@@ -39,10 +39,6 @@ export default function ApaarReadiness() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Flagship Readiness Engine • Zero Format Rejections</span>
-            </div>
             <div className="eyebrow">
               <span className="eyebrow-dot" />
               APAAR READINESS SOFTWARE FOR SCHOOLS

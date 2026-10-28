@@ -21,10 +21,6 @@ export default function StudentManagement() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Unified 12-Year Student Dossier &bull; ID Card Generator</span>
-            </div>
             <div className="eyebrow"><span className="eyebrow-dot" />STUDENT REGISTRY &amp; PROFILES</div>
             <h1 className="page-hero-title">Every Student Record, Organised for the Whole School Journey.</h1>
             <p className="page-hero-desc">

@@ -55,10 +55,6 @@ export default function MultiBranchManagement() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="hero-live-pill" style={{ margin: '0 auto 16px' }}>
-              <span className="hero-live-dot" />
-              <span>Multi-Campus Master Control &bull; Segregated Ledgers</span>
-            </div>
             <div className="eyebrow"><span className="eyebrow-dot" />GROUP &amp; CHAIN SCHOOL ERP</div>
             <h1 className="page-hero-title">More Than One Campus. One Connected Organization.</h1>
             <p className="page-hero-desc">
@@ -113,7 +109,7 @@ export default function MultiBranchManagement() {
             </div>
 
             <div style={{ padding: '24px' }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
+              <div className="responsive-flex-stack" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '10px' }}>
                 <div>
                   <h3 style={{ fontSize: '1.25rem', color: 'var(--color-ink)', marginBottom: '4px' }}>{branch.name}</h3>
                   <span style={{ fontSize: '0.8125rem', color: 'var(--color-slate-500)' }}>Branch Code: {branch.code} &bull; Academic Year: 2026-27</span>
@@ -121,7 +117,7 @@ export default function MultiBranchManagement() {
                 <span className="badge badge--cyan">Active Campus View</span>
               </div>
 
-              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '14px', marginBottom: '20px' }}>
+              <div className="responsive-4col-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '14px', marginBottom: '20px' }}>
                 <div style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '12px' }}>
                   <div style={{ fontSize: '0.6875rem', color: 'var(--color-slate-500)', fontWeight: 600 }}>ENROLLED STUDENTS</div>
                   <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-ink)' }}>{branch.students}</div>
@@ -140,7 +136,7 @@ export default function MultiBranchManagement() {
                 </div>
               </div>
 
-              <div style={{ background: '#FAF5FF', border: '1px solid rgba(116, 45, 218, 0.2)', borderRadius: 'var(--radius-md)', padding: '12px 16px', fontSize: '0.8125rem', color: 'var(--color-violet)', display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+              <div className="responsive-flex-stack" style={{ background: '#FAF5FF', border: '1px solid rgba(116, 45, 218, 0.2)', borderRadius: 'var(--radius-md)', padding: '12px 16px', fontSize: '0.8125rem', color: 'var(--color-violet)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: '8px' }}>
                 <span>🔒 Campus access strictly locked to {branch.name} staff credentials.</span>
                 <strong>Isolated DB Partition ✓</strong>
               </div>
