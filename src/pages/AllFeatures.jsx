@@ -87,38 +87,42 @@ export default function AllFeatures() {
           </div>
 
           <div style={{ maxWidth: '960px', margin: '0 auto', background: '#FFFFFF', borderRadius: 'var(--radius-xl)', border: '1px solid var(--color-slate-200)', overflow: 'hidden', boxShadow: 'var(--shadow-sm)' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: 'var(--color-ink)', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '0.875rem' }}>
-              <div>Core Operation</div>
-              <div style={{ color: '#FCA5A5' }}>Traditional Manual Methods</div>
-              <div style={{ color: '#6EE7B7' }}>Pragya School ERP</div>
-            </div>
+            <div style={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch' }}>
+              <div style={{ minWidth: '680px' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1.4fr 1.4fr', background: 'var(--color-ink)', color: '#FFFFFF', padding: '16px 24px', fontWeight: 700, fontSize: '0.875rem' }}>
+                  <div>Core Operation</div>
+                  <div style={{ color: '#FCA5A5' }}>Traditional Manual Methods</div>
+                  <div style={{ color: '#6EE7B7' }}>Pragya School ERP</div>
+                </div>
 
-            {comparisonItems.map((c, i) => (
-              <div 
-                key={i} 
-                style={{ 
-                  display: 'grid', 
-                  gridTemplateColumns: '1.2fr 1.4fr 1.4fr', 
-                  padding: '16px 24px', 
-                  borderBottom: i < comparisonItems.length - 1 ? '1px solid var(--color-slate-100)' : 'none',
-                  background: i % 2 === 0 ? '#FFFFFF' : 'var(--color-soft-canvas)',
-                  alignItems: 'center',
-                  fontSize: '0.875rem'
-                }}
-              >
-                <div style={{ fontWeight: 700, color: 'var(--color-ink)' }}>
-                  {c.feature}
-                </div>
-                <div style={{ color: 'var(--color-slate-600)', paddingRight: '12px' }}>
-                  <span style={{ color: 'var(--color-danger)', marginRight: '6px' }}>✕</span>
-                  {c.manual}
-                </div>
-                <div style={{ color: 'var(--color-ink)', fontWeight: 600 }}>
-                  <span style={{ color: 'var(--color-success)', marginRight: '6px' }}>✓</span>
-                  {c.pragya}
-                </div>
+                {comparisonItems.map((c, i) => (
+                  <div 
+                    key={i} 
+                    style={{ 
+                      display: 'grid', 
+                      gridTemplateColumns: '1.2fr 1.4fr 1.4fr', 
+                      padding: '16px 24px', 
+                      borderBottom: i < comparisonItems.length - 1 ? '1px solid var(--color-slate-100)' : 'none',
+                      background: i % 2 === 0 ? '#FFFFFF' : 'var(--color-soft-canvas)',
+                      alignItems: 'center',
+                      fontSize: '0.875rem'
+                    }}
+                  >
+                    <div style={{ fontWeight: 700, color: 'var(--color-ink)' }}>
+                      {c.feature}
+                    </div>
+                    <div style={{ color: 'var(--color-slate-600)', paddingRight: '12px' }}>
+                      <span style={{ color: 'var(--color-danger)', marginRight: '6px' }}>✕</span>
+                      {c.manual}
+                    </div>
+                    <div style={{ color: 'var(--color-ink)', fontWeight: 600 }}>
+                      <span style={{ color: 'var(--color-success)', marginRight: '6px' }}>✓</span>
+                      {c.pragya}
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>

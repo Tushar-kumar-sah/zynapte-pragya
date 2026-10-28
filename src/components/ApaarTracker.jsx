@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Download, Search, CheckCircle2, AlertTriangle, ShieldCheck, X } from 'lucide-react';
 import { studentRecords } from '../data/studentRecords';
 import AccuracyNotice from './AccuracyNotice';
@@ -8,6 +8,22 @@ export default function ApaarTracker({ showJourney = true }) {
   const [selectedClass, setSelectedClass] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [isCsvModalOpen, setIsCsvModalOpen] = useState(false);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setIsCsvModalOpen(false);
+    };
+    if (isCsvModalOpen) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isCsvModalOpen]);
 
   // Filter students based on status, class, and search query
   const filteredStudents = studentRecords.filter(student => {
@@ -311,8 +327,16 @@ PRG-2026-022,2024881211,Priyanka Bose,2011-12-11,Female,VIII,A,Sumit Bose,Verifi
 
       {/* CSV Preview Modal */}
       {isCsvModalOpen && (
-        <div className="custom-dialog" style={{ display: 'block', position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, zIndex: 1000, background: 'rgba(15, 23, 42, 0.6)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-          <div className="dialog-inner" style={{ background: '#FFFFFF', borderRadius: 'var(--radius-xl)', maxWidth: '680px', width: '90%', padding: '30px' }}>
+        <div 
+          className="custom-dialog-backdrop" 
+          onClick={() => setIsCsvModalOpen(false)}
+          style={{ position: 'fixed', inset: 0, zIndex: 1000, background: 'rgba(15, 23, 42, 0.65)', backdropFilter: 'blur(4px)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '16px' }}
+        >
+          <div 
+            className="dialog-inner" 
+            onClick={e => e.stopPropagation()}
+            style={{ background: '#FFFFFF', borderRadius: 'var(--radius-xl)', maxWidth: '680px', width: '100%', maxHeight: '90vh', overflowY: 'auto', padding: '28px', boxShadow: '0 25px 60px rgba(0, 0, 0, 0.3)' }}
+          >
             <div className="dialog-header">
               <h3 style={{ fontSize: '1.25rem' }}>Sample APAAR School Export Sheet</h3>
               <button
@@ -335,7 +359,7 @@ PRG-2026-004,2024881099,Rohan Sen,2009-11-22,Male,X,B,Bikram Sen,Verified,Ready
 PRG-2026-012,2024881144,Debabrata Das,2007-02-19,Male,XII,Science,Pradip Das,Verified,Ready`}
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px' }}>
+            <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px', flexWrap: 'wrap' }}>
               <button className="btn btn--secondary" onClick={() => setIsCsvModalOpen(false)}>
                 Close
               </button>

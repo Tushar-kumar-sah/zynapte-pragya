@@ -68,6 +68,9 @@ html {
   scroll-behavior: smooth;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 body {
@@ -75,12 +78,17 @@ body {
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 #root {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 :focus-visible {
@@ -508,17 +516,21 @@ a:hover {
     position: fixed;
     top: 76px;
     left: 0;
+    right: 0;
     width: 100%;
+    max-width: 100vw;
     height: calc(100vh - 76px);
     background-color: var(--color-canvas);
     padding: 24px;
     padding-bottom: 96px;
     transform: translateX(100%);
-    transition: transform var(--transition-normal);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.3s;
     z-index: 99;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
     border-top: 1px solid var(--color-slate-200);
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .mobile-nav-backdrop {
@@ -532,6 +544,8 @@ a:hover {
 
   .mobile-nav-drawer.open {
     transform: translateX(0);
+    visibility: visible;
+    pointer-events: auto;
   }
 
   .mobile-nav-list {
@@ -1675,7 +1689,13 @@ a:hover {
 
 @media (max-width: 600px) {
   .demo-form {
-    padding: 24px;
+    padding: 24px 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .demo-form {
+    padding: 20px 12px;
   }
 }
 
@@ -1891,6 +1911,17 @@ a:hover {
 .faq-item[open] .faq-content {
   border-top-color: var(--color-slate-100);
   padding-top: 14px;
+}
+
+@media (max-width: 600px) {
+  .faq-summary {
+    padding: 16px 18px;
+    font-size: 0.9375rem;
+  }
+  .faq-content {
+    padding: 0 18px 16px 18px;
+    font-size: 0.875rem;
+  }
 }
 
 /* ==========================================================================
@@ -3719,27 +3750,14 @@ dialog.custom-dialog::backdrop {
   animation: gradient-text-shift 6s linear infinite;
 }
 
-/* 6. SCROLL-DRIVEN ENTRANCE ANIMATIONS */
-.reveal-on-scroll,
+/* 6. CONTENT VISIBILITY & SMOOTH ENTRANCE */
 .feature-card,
 .iconic-card,
 .stat-box-card,
 .workflow-step-card,
 .section-header {
-  opacity: 0;
-  transform: translateY(22px);
-  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.reveal-on-scroll.is-visible,
-.feature-card.is-visible,
-.iconic-card.is-visible,
-.stat-box-card.is-visible,
-.workflow-step-card.is-visible,
-.section-header.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 /* 7. CARD HOVER MICRO-ANIMATIONS */

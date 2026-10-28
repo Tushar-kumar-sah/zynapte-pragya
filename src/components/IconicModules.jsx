@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Users, Calendar, CheckCircle2, CreditCard, Bell, Smartphone, 
   ShieldCheck, School, Bus, BookOpen, FileSpreadsheet, KeyRound, 
@@ -332,6 +332,22 @@ export const modulesData = [
 export default function IconicModules() {
   const [filter, setFilter] = useState('all');
   const [activeModal, setActiveModal] = useState(null);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setActiveModal(null);
+    };
+    if (activeModal) {
+      document.body.style.overflow = 'hidden';
+      window.addEventListener('keydown', handleKeyDown);
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [activeModal]);
 
   const filteredModules = filter === 'all' 
     ? modulesData 
