@@ -164,10 +164,6 @@ export default function MultiBranchManagement() {
               </div>
               <h3>1-Click Executive Switcher</h3>
               <p>Move between branches and academic sessions with zero logout friction, tracking performance indicators across campuses.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--blue">Session Switch</span>
-                <span className="badge badge--blue">Group KPI</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -176,10 +172,6 @@ export default function MultiBranchManagement() {
               </div>
               <h3>Branch Role Isolation</h3>
               <p>Branch teachers and accountants only see students enrolled in their campus, preventing accidental cross-branch data access.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--violet">Data Sovereignty</span>
-                <span className="badge badge--violet">Role Protection</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -188,10 +180,6 @@ export default function MultiBranchManagement() {
               </div>
               <h3>Independent Campus Fee Ledgers</h3>
               <p>Each branch maintains independent bank accounts and receipt books while group management sees consolidated collections.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--green">Separate Ledgers</span>
-                <span className="badge badge--green">Consolidated Reports</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -200,10 +188,6 @@ export default function MultiBranchManagement() {
               </div>
               <h3>Inter-Branch Student Transfer</h3>
               <p>Transfer students seamlessly between sister branches, preserving historical marks, attendance records, and PEN numbers.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--cyan">Transfer Workflow</span>
-                <span className="badge badge--cyan">History Preserved</span>
-              </div>
             </div>
           </div>
         </div>
@@ -213,7 +197,6 @@ export default function MultiBranchManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>Multi-Branch Management FAQs</h2>
           </div>
           <FaqAccordion items={faqs} />

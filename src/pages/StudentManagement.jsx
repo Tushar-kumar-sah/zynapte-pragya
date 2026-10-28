@@ -92,10 +92,6 @@ export default function StudentManagement() {
               </div>
               <h3>Permanent Digital Dossier</h3>
               <p>Store birth certificates, Aadhaar numbers, caste certificates, previous school transfer certificates (TC), and guardian records in 1 encrypted place.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--blue">Cloud Dossier</span>
-                <span className="badge badge--blue">Photo Upload</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -104,10 +100,6 @@ export default function StudentManagement() {
               </div>
               <h3>Assisted Excel / CSV Importer</h3>
               <p>Migrate thousands of legacy students in minutes. Pragya's guided column mapper verifies phone numbers, date formats, and duplicates before import.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--green">Error Highlighting</span>
-                <span className="badge badge--green">1-Click Commit</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -116,10 +108,6 @@ export default function StudentManagement() {
               </div>
               <h3>Bulk ID Card &amp; Certificate Studio</h3>
               <p>Generate Bonafide certificates, character certificates, transfer certificates, and barcoded photo ID cards in 1 click.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--violet">TC Generator</span>
-                <span className="badge badge--violet">Bonafide Print</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -128,10 +116,6 @@ export default function StudentManagement() {
               </div>
               <h3>APAAR &amp; UDISE+ Linked</h3>
               <p>Check parental consent flags, PEN numbers, and Aadhaar name matches directly from each student's personal view.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--cyan">Consent Tag</span>
-                <span className="badge badge--cyan">PEN Link</span>
-              </div>
             </div>
           </div>
         </div>
@@ -141,7 +125,6 @@ export default function StudentManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>Student Record Management FAQs</h2>
           </div>
           <FaqAccordion items={faqs} />

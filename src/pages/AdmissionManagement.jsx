@@ -93,10 +93,6 @@ export default function AdmissionManagement() {
               </div>
               <h3>Central Enquiry Pipeline</h3>
               <p>Log walk-in parents, phone enquiries, and referral applications. Set automatic follow-up reminders for front-desk counselors.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--blue">Kanban Desk</span>
-                <span className="badge badge--blue">Follow-up Alerts</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -105,10 +101,6 @@ export default function AdmissionManagement() {
               </div>
               <h3>Document Verification Vault</h3>
               <p>Capture birth certificates, immunization logs, previous school marksheets, and guardian photo identification directly on the form.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--violet">Direct Upload</span>
-                <span className="badge badge--violet">Verification Stamps</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -117,10 +109,6 @@ export default function AdmissionManagement() {
               </div>
               <h3>1-Click Student Enrollment</h3>
               <p>Accepted applicants automatically convert into active student records, assigning class sections, rolls, and initial admission fee ledgers.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--green">Zero Re-Entry</span>
-                <span className="badge badge--green">Fee Auto-Assign</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -129,10 +117,6 @@ export default function AdmissionManagement() {
               </div>
               <h3>Bulk Spreadsheet Migration</h3>
               <p>Migrate thousands of legacy admission records from Excel. Column validation flags missing guardian contacts and invalid dates.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--cyan">Excel Mapper</span>
-                <span className="badge badge--cyan">Duplicate Check</span>
-              </div>
             </div>
           </div>
         </div>
@@ -142,7 +126,6 @@ export default function AdmissionManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>Admission Management FAQs</h2>
           </div>
           <FaqAccordion items={faqs} />

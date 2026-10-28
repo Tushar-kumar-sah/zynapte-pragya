@@ -430,18 +430,6 @@ export default function IconicModules() {
                 >
                   {item.icon}
                 </div>
-                <span 
-                  className="iconic-tag"
-                  style={{
-                    backgroundColor: item.tagBg,
-                    color: item.color,
-                    borderColor: item.borderColor,
-                    borderWidth: '1px',
-                    borderStyle: 'solid'
-                  }}
-                >
-                  {item.tag}
-                </span>
               </div>
 
               <h3 className="iconic-card-title">{item.title}</h3>

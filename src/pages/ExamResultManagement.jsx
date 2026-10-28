@@ -200,7 +200,6 @@ export default function ExamResultManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>Examinations &amp; Results FAQs</h2>
           </div>
           <FaqAccordion items={faqs} />

@@ -90,10 +90,6 @@ export default function MobileAppExperience() {
                 </div>
                 <h3>{q.title}</h3>
                 <p>{q.desc}</p>
-                <div className="feature-card-tags">
-                  <span className="badge badge--slate">Mobile Optimized</span>
-                  <span className="badge badge--green">Instant Sync</span>
-                </div>
               </div>
             ))}
           </div>
@@ -118,7 +114,6 @@ export default function MobileAppExperience() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>Mobile App Questions, Answered</h2>
           </div>
           <FaqAccordion items={faqs} />

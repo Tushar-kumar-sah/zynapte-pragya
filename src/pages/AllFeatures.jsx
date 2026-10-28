@@ -148,11 +148,6 @@ export default function AllFeatures() {
               </div>
               <h3>Admissions &amp; Student Registry</h3>
               <p>Kanban enquiry pipeline, assisted spreadsheet bulk imports, student identity card batch generation, and permanent digital records.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--blue">Kanban Desk</span>
-                <span className="badge badge--blue">Excel Import</span>
-                <span className="badge badge--blue">ID Designer</span>
-              </div>
               <Link to="/student-management" className="feature-card-link">
                 <span>Explore Student Guide</span>
                 <ArrowRight size={16} />
@@ -165,11 +160,6 @@ export default function AllFeatures() {
               </div>
               <h3>Academics &amp; Clash-Free Timetables</h3>
               <p>Configure classes, sections, required and optional subjects. Detect scheduling clashes automatically across rooms and staff.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--violet">Timetable AI</span>
-                <span className="badge badge--violet">WBBSE Catalogues</span>
-                <span className="badge badge--violet">Room Allocator</span>
-              </div>
               <Link to="/academics-timetable" className="feature-card-link">
                 <span>Explore Academics Guide</span>
                 <ArrowRight size={16} />
@@ -182,11 +172,6 @@ export default function AllFeatures() {
               </div>
               <h3>Daily Attendance &amp; Leave Ledger</h3>
               <p>Mobile 1-tap roll call, biometric integration, staff casual/medical leave tracking, and instant parent absence notifications.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--cyan">40s Roll Call</span>
-                <span className="badge badge--cyan">Staff Punch</span>
-                <span className="badge badge--cyan">Leave Requests</span>
-              </div>
               <Link to="/attendance-management" className="feature-card-link">
                 <span>Explore Attendance Guide</span>
                 <ArrowRight size={16} />
@@ -199,11 +184,6 @@ export default function AllFeatures() {
               </div>
               <h3>Fee POS, Receipts &amp; Payroll</h3>
               <p>Cash, UPI &amp; cheque collection with instant printable receipts, sibling fee rules, staff gross-to-net payroll, and bank payout files.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--green">Counter Receipts</span>
-                <span className="badge badge--green">Sibling Waivers</span>
-                <span className="badge badge--green">Staff Payslips</span>
-              </div>
               <Link to="/fees-management" className="feature-card-link">
                 <span>Explore Fees Guide</span>
                 <ArrowRight size={16} />
@@ -216,11 +196,6 @@ export default function AllFeatures() {
               </div>
               <h3>Examinations &amp; Report Cards</h3>
               <p>Summative &amp; Formative marks entry with subject-teacher locks, board-standard grade calculations, and bulk PDF report cards.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--magenta">WBBSE / WBCHSE</span>
-                <span className="badge badge--magenta">CBSE Grades</span>
-                <span className="badge badge--magenta">Moderation Lock</span>
-              </div>
               <Link to="/exam-result-management" className="feature-card-link">
                 <span>Explore Exam Guide</span>
                 <ArrowRight size={16} />
@@ -233,11 +208,6 @@ export default function AllFeatures() {
               </div>
               <h3>Multi-Branch &amp; Campus Switcher</h3>
               <p>Manage multiple campuses or sister schools with one executive login, keeping finance and student records strictly partitioned.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--slate">Multi-Branch</span>
-                <span className="badge badge--slate">Unified Search</span>
-                <span className="badge badge--slate">Isolated DB</span>
-              </div>
               <Link to="/multi-branch-management" className="feature-card-link">
                 <span>Explore Multi-Branch</span>
                 <ArrowRight size={16} />

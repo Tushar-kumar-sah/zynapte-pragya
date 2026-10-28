@@ -27,15 +27,9 @@ export default function Home() {
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content">
-              {/* Live Glowing Pill */}
-              <div className="hero-live-pill">
-                <span className="hero-live-dot" />
-                <span>All-in-One School ERP Software</span>
-              </div>
-
               <div className="eyebrow">
                 <span className="eyebrow-dot" />
-                PRAGYA SCHOOL ERP
+                PRAGYA SCHOOL OPERATING SYSTEM
               </div>
 
               <h1 className="hero-title">
@@ -374,10 +368,6 @@ export default function Home() {
       <section className="section section--soft" id="faqs">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              FREQUENTLY ASKED QUESTIONS
-            </div>
             <h2>Your Pragya Questions, Answered.</h2>
             <p>
               Straightforward answers about how Pragya works, what is currently supported and which capabilities are on the product roadmap.

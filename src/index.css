@@ -168,26 +168,47 @@ a:hover {
   color: var(--color-slate-600);
 }
 
-/* Badges & Eyebrows */
+/* Sleek, Creative Modern Eyebrow / Kicker (No Clunky Tag / Pill Bubble) */
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-size: 0.8125rem;
-  font-weight: 700;
+  font-weight: 750;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-blue);
-  background: rgba(20, 94, 255, 0.08);
-  padding: 6px 14px;
-  border-radius: var(--radius-full);
+  letter-spacing: 0.12em;
+  background: linear-gradient(135deg, #145EFF 0%, #00CDE5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-color: transparent !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin-bottom: 12px;
 }
 
 .eyebrow-dot {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background: var(--color-cyan);
+  background: #00CDE5;
+  box-shadow: 0 0 10px rgba(0, 205, 229, 0.85);
+  flex-shrink: 0;
+  display: inline-block;
+  animation: pulse-glow 2.5s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 8px rgba(0, 205, 229, 0.6);
+  }
+  50% {
+    transform: scale(1.25);
+    box-shadow: 0 0 14px rgba(0, 205, 229, 0.95);
+  }
 }
 
 .badge {
@@ -1279,10 +1300,7 @@ a:hover {
 }
 
 .feature-card-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
+  display: none !important;
 }
 
 .feature-card-tag {
@@ -2034,23 +2052,23 @@ dialog.custom-dialog::backdrop {
 }
 
 .stats-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 0.75rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-blue);
-  background: rgba(20, 94, 255, 0.08);
-  padding: 4px 12px;
-  border-radius: var(--radius-full);
-  margin-bottom: 8px;
+  display: none !important;
 }
 
 .stats-section-title {
-  font-size: 1.85rem;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--color-ink);
+  letter-spacing: -0.02em;
+}
+
+.stats-section-subtitle {
+  font-size: 1.0625rem;
+  color: var(--color-slate-600);
+  margin-top: 8px;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .stats-grid {

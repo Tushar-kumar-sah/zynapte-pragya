@@ -81,10 +81,6 @@ export default function WestBengalSchools() {
               </div>
               <h3>WBBSE Subject Catalogues</h3>
               <p>Pre-configured First Language (Bengali/English), Second Language, Mathematics, Physical Science, Life Science, History, and Geography with Summative weights.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--blue">Madhyamik Standard</span>
-                <span className="badge badge--blue">Summative I, II, III</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -93,10 +89,6 @@ export default function WestBengalSchools() {
               </div>
               <h3>WBCHSE HS Stream Electives</h3>
               <p>Configure Science (Phys, Chem, Bio/Comp), Commerce (Accts, BST, Econ), and Humanities stream electives and compulsory languages seamlessly.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--violet">Stream Electives</span>
-                <span className="badge badge--violet">Practical 30/70</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -105,10 +97,6 @@ export default function WestBengalSchools() {
               </div>
               <h3>APAAR Readiness &amp; PEN Validation</h3>
               <p>Identify missing parental consent and PEN records before preparing government submission sheets, avoiding portal rejection.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--cyan">Consent Logging</span>
-                <span className="badge badge--cyan">Clean CSV Export</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -117,10 +105,6 @@ export default function WestBengalSchools() {
               </div>
               <h3>INR Fee Counter Receipts</h3>
               <p>Collect fees at the school counter with instant thermal or A4 printed receipts, sibling concessions, and real-time cash drawer tallying.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--green">3-Sec Receipts</span>
-                <span className="badge badge--green">Sibling Waivers</span>
-              </div>
             </div>
           </div>
         </div>
@@ -130,7 +114,6 @@ export default function WestBengalSchools() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>West Bengal Schools FAQs</h2>
           </div>
           <FaqAccordion items={faqs} />

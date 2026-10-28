@@ -122,10 +122,6 @@ export default function AcademicsTimetable() {
               </div>
               <h3>Automated Clash Detector</h3>
               <p>Prevents scheduling overlapping classes for teachers or double-booking laboratories, computer rooms, and playgrounds.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--blue">Room Allocation</span>
-                <span className="badge badge--blue">Teacher Load Equalizer</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -134,10 +130,6 @@ export default function AcademicsTimetable() {
               </div>
               <h3>WBBSE / WBCHSE Catalogues</h3>
               <p>Pre-configured subject catalogues for West Bengal Madhyamik &amp; Higher Secondary courses, including language combinations and stream electives.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--violet">Bengali / English Medium</span>
-                <span className="badge badge--violet">Stream Electives</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -146,10 +138,6 @@ export default function AcademicsTimetable() {
               </div>
               <h3>Substitute Teacher Suggester</h3>
               <p>When a teacher takes leave, Pragya instantly scans the daily schedule and recommends free subject teachers to cover classes.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--green">1-Tap Reassignment</span>
-                <span className="badge badge--green">Staff Notification</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -158,10 +146,6 @@ export default function AcademicsTimetable() {
               </div>
               <h3>Syllabus &amp; Assignment Tracker</h3>
               <p>Teachers log completed curriculum milestones and distribute digital homework worksheets with deadlines to student mobile apps.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--cyan">Milestone Tracking</span>
-                <span className="badge badge--cyan">Homework Diary</span>
-              </div>
             </div>
           </div>
         </div>
@@ -171,7 +155,6 @@ export default function AcademicsTimetable() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>Academics &amp; Timetable FAQs</h2>
           </div>
           <FaqAccordion items={faqs} />

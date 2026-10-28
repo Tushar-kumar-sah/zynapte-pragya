@@ -138,10 +138,6 @@ export default function StaffPayrollManagement() {
               </div>
               <h3>Faculty &amp; Staff Dossiers</h3>
               <p>Store educational credentials, B.Ed certifications, teacher service books, appointment letters, and emergency contacts in 1 place.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--blue">Service Books</span>
-                <span className="badge badge--blue">Qualifications</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -150,10 +146,6 @@ export default function StaffPayrollManagement() {
               </div>
               <h3>Leave Ledgers &amp; Approvals</h3>
               <p>Teachers request casual or medical leaves on their smartphone app. Principals approve leaves with 1 tap, auto-updating pay registers.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--violet">Mobile Approval</span>
-                <span className="badge badge--violet">Auto-Deductions</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -162,10 +154,6 @@ export default function StaffPayrollManagement() {
               </div>
               <h3>1-Click Monthly Payroll Engine</h3>
               <p>Process 100+ teacher salaries in seconds. Handles basic pay, allowances, EPF, professional tax, and generates batch bank payout files.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--green">Bank Transfer File</span>
-                <span className="badge badge--green">EPF Calculation</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -174,10 +162,6 @@ export default function StaffPayrollManagement() {
               </div>
               <h3>Confidential Payslip Vault</h3>
               <p>Teachers access past payslips and Form 16 summaries from their personal mobile portal without visiting administrative offices.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--cyan">PDF Slips</span>
-                <span className="badge badge--cyan">Form 16 Summary</span>
-              </div>
             </div>
           </div>
         </div>
@@ -187,7 +171,6 @@ export default function StaffPayrollManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>Staff Administration &amp; Payroll FAQs</h2>
           </div>
           <FaqAccordion items={faqs} />

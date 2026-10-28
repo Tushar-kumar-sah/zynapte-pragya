@@ -78,7 +78,6 @@ export default function ContactBookDemo() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>Frequently Asked Questions on Booking a Demo</h2>
           </div>
           <FaqAccordion items={contactFaqs} />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { School, CheckCircle2, TrendingUp, Clock, ShieldCheck, Award } from 'lucide-react';
+import { School, CheckCircle2, TrendingUp, Clock, ShieldCheck } from 'lucide-react';
 
 function AnimatedCounter({ endValue, duration = 1600, suffix = '', prefix = '', decimals = 0 }) {
   const [count, setCount] = useState(0);
@@ -118,11 +118,8 @@ export default function StatsBanner() {
     <section className="stats-banner-section reveal-on-scroll" aria-label="Key Performance Statistics">
       <div className="container">
         <div className="stats-header-micro">
-          <div className="stats-badge animate-pulse-badge">
-            <Award size={14} />
-            <span>PROVEN BY THE NUMBERS • BUILT FOR INDIAN SCHOOL OPERATIONS</span>
-          </div>
           <h2 className="stats-section-title">Measurable Impact from Day One</h2>
+          <p className="stats-section-subtitle">Real operational results and hours saved across Indian school administrations</p>
         </div>
 
         <div className="stats-grid">

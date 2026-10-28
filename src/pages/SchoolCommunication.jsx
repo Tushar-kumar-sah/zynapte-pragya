@@ -96,10 +96,6 @@ export default function SchoolCommunication() {
               </div>
               <h3>Targeted Circular Ribbon</h3>
               <p>Publish announcements to specific sections, classes, or entire campuses with read confirmation tracking.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--magenta">Target Groups</span>
-                <span className="badge badge--magenta">PDF Attachments</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -108,10 +104,6 @@ export default function SchoolCommunication() {
               </div>
               <h3>Governed In-App Chat</h3>
               <p>Facilitates purposeful communication without giving out personal phone numbers, restricted strictly to working hours.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--blue">Boundary Controls</span>
-                <span className="badge badge--blue">Zero Phone Sharing</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -120,10 +112,6 @@ export default function SchoolCommunication() {
               </div>
               <h3>Institutional Email Server</h3>
               <p>Connects directly to your school's private SMTP server, sending official fee receipts and admissions confirmations.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--violet">School Domain</span>
-                <span className="badge badge--violet">Encrypted Relay</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -132,10 +120,6 @@ export default function SchoolCommunication() {
               </div>
               <h3>Daily Homework Diary</h3>
               <p>Teachers post subject-wise homework worksheets and test reminders directly to student and parent mobile apps.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--cyan">Worksheet Upload</span>
-                <span className="badge badge--cyan">Due Date Reminders</span>
-              </div>
             </div>
           </div>
 
@@ -158,7 +142,6 @@ export default function SchoolCommunication() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>School Communication FAQs</h2>
           </div>
           <FaqAccordion items={faqs} />

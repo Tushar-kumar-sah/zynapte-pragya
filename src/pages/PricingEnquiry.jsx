@@ -157,7 +157,6 @@ export default function PricingEnquiry() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>Pricing &amp; Proposal FAQs</h2>
           </div>
           <FaqAccordion items={pricingFaqs} />

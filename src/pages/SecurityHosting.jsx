@@ -133,10 +133,6 @@ export default function SecurityHosting() {
               </div>
               <h3>Role-Based Permission Boundaries</h3>
               <p>Teachers access only their assigned classes; students access only their personal dossiers; accountants operate fee desks without academic edit rights.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--blue">8 Isolated Roles</span>
-                <span className="badge badge--blue">Zero Privilege Bleed</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -145,10 +141,6 @@ export default function SecurityHosting() {
               </div>
               <h3>Passkeys, 2FA &amp; Session Guard</h3>
               <p>FIDO2 biometric passkeys, authenticator app (TOTP) verification, brute-force rate limiters, and auto session logout safeguard sensitive administrative accounts.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--violet">WebAuthn Passkeys</span>
-                <span className="badge badge--violet">Rate Limiting</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -157,10 +149,6 @@ export default function SecurityHosting() {
               </div>
               <h3>Encrypted Nightly Backups</h3>
               <p>Automated database snapshots are encrypted and can be restored quickly in the event of hardware failures, ensuring operational continuity.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--cyan">Nightly Snaps</span>
-                <span className="badge badge--cyan">Disaster Recovery</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -169,10 +157,6 @@ export default function SecurityHosting() {
               </div>
               <h3>School-Controlled Hosting</h3>
               <p>Deploy on your institution’s own on-premise server or dedicated cloud instance, retaining 100% legal ownership and sovereignty over your data.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--green">Self-Hosted</span>
-                <span className="badge badge--green">Data Sovereignty</span>
-              </div>
             </div>
           </div>
 
@@ -186,10 +170,6 @@ export default function SecurityHosting() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              FAQS
-            </div>
             <h2>Security &amp; Deployment FAQs</h2>
           </div>
           <FaqAccordion items={securityFaqs} />

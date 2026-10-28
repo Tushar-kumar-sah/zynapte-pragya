@@ -40,7 +40,6 @@ export default function FrequentlyAskedQuestions() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="eyebrow"><span className="eyebrow-dot" />SCHOOL ERP SOFTWARE FAQS</div>
             <h1 className="page-hero-title">Your Pragya Questions, Answered.</h1>
             <p className="page-hero-desc">
               Choosing school management software is an important decision. Here are straightforward answers about how Pragya works, what is currently supported and which capabilities are still planned.

@@ -121,10 +121,6 @@ export default function FeesManagement() {
               </div>
               <h3>Fast 3-Second Counter Receipting</h3>
               <p>Type student roll number, select quarter or custom installment, receive payment, and print formatted receipt instantly.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--green">Thermal Roll</span>
-                <span className="badge badge--green">A4 Duplicate</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -133,10 +129,6 @@ export default function FeesManagement() {
               </div>
               <h3>Sibling &amp; Scholarship Waivers</h3>
               <p>Auto-apply sibling percentage waivers across enrolled brothers and sisters without manual ledger adjustments.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--blue">Sibling Linking</span>
-                <span className="badge badge--blue">Staff Ward Rule</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -145,10 +137,6 @@ export default function FeesManagement() {
               </div>
               <h3>Automated Dues &amp; Reminder Registers</h3>
               <p>Generate class-wise defaulter lists with overdue days, penalty calculations, and parent notification ribbons.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--violet">Dues Ledger</span>
-                <span className="badge badge--violet">Penalties</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -157,10 +145,6 @@ export default function FeesManagement() {
               </div>
               <h3>School Expense &amp; Petty Cash</h3>
               <p>Record laboratory supplies, building repairs, generator diesel, and vendor invoices balanced against daily counter intake.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--orange">Petty Cash</span>
-                <span className="badge badge--orange">Vendor Bills</span>
-              </div>
             </div>
           </div>
 
@@ -183,7 +167,6 @@ export default function FeesManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>School Fee Accounting Questions</h2>
           </div>
           <FaqAccordion items={faqs} />

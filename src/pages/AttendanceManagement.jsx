@@ -143,10 +143,6 @@ export default function AttendanceManagement() {
               </div>
               <h3>1-Tap Roll Call (40 Seconds)</h3>
               <p>Defaults the entire class to "All Present". The class teacher merely taps the 2 or 3 absentees and submits in seconds.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--cyan">Default Present</span>
-                <span className="badge badge--cyan">Zero Delay</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -155,10 +151,6 @@ export default function AttendanceManagement() {
               </div>
               <h3>Native Mobile Apps (iOS &amp; Android)</h3>
               <p>Teachers take attendance directly on their mobile phones in the assembly ground, laboratory, or classroom.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--blue">iOS App</span>
-                <span className="badge badge--blue">Android App</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -167,10 +159,6 @@ export default function AttendanceManagement() {
               </div>
               <h3>Staff Attendance &amp; Leave Ledger</h3>
               <p>Teachers apply for Casual Leave (CL) or Medical Leave (ML). Administrators approve leaves with instant payroll adjustment.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--violet">CL &amp; ML Ledger</span>
-                <span className="badge badge--violet">Payroll Sync</span>
-              </div>
             </div>
 
             <div className="feature-card">
@@ -179,10 +167,6 @@ export default function AttendanceManagement() {
               </div>
               <h3>UDISE+ Annual Attendance %</h3>
               <p>Automatically calculates mandated academic attendance percentage per child to ensure examination eligibility compliance.</p>
-              <div className="feature-card-tags">
-                <span className="badge badge--green">UDISE+ Reports</span>
-                <span className="badge badge--green">75% Threshold Alert</span>
-              </div>
             </div>
           </div>
         </div>
@@ -192,7 +176,6 @@ export default function AttendanceManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FAQS</div>
             <h2>Attendance System FAQs</h2>
           </div>
           <FaqAccordion items={faqs} />
