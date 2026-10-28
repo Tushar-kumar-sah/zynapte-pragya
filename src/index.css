@@ -2152,8 +2152,8 @@ dialog.custom-dialog::backdrop {
 }
 
 .module-filter-btn {
-  background: var(--color-slate-50);
-  border: 1px solid var(--color-slate-200);
+  background: #FFFFFF;
+  border: 1.5px solid var(--color-slate-200);
   color: var(--color-slate-700);
   font-size: 0.875rem;
   font-weight: 600;
@@ -2161,19 +2161,21 @@ dialog.custom-dialog::backdrop {
   border-radius: var(--radius-full);
   cursor: pointer;
   transition: all var(--transition-fast);
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.04);
 }
 
 .module-filter-btn:hover {
-  background: var(--color-slate-100);
-  color: var(--color-ink);
-  border-color: var(--color-slate-300);
+  background: rgba(20, 94, 255, 0.06);
+  color: var(--color-blue);
+  border-color: rgba(20, 94, 255, 0.4);
+  transform: translateY(-1px);
 }
 
 .module-filter-btn.active {
-  background: var(--color-ink);
+  background: linear-gradient(135deg, #145EFF 0%, #00CDE5 100%);
   color: #FFFFFF;
-  border-color: var(--color-ink);
-  box-shadow: var(--shadow-sm);
+  border-color: transparent;
+  box-shadow: 0 6px 18px -3px rgba(20, 94, 255, 0.4);
 }
 
 .iconic-grid {
@@ -2201,22 +2203,36 @@ dialog.custom-dialog::backdrop {
 }
 
 .iconic-card {
-  background: #FFFFFF;
-  border: 1px solid var(--color-slate-200);
-  border-radius: var(--radius-lg);
-  padding: 22px 20px;
+  border-radius: var(--radius-xl);
+  padding: 24px 20px 20px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
   position: relative;
   text-align: left;
+  overflow: hidden;
+}
+
+.iconic-top-accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  opacity: 0.9;
+  transition: height 0.25s ease, opacity 0.25s ease;
 }
 
 .iconic-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--color-blue);
-  box-shadow: 0 16px 32px -8px rgba(20, 94, 255, 0.12);
+  transform: translateY(-8px) scale(1.018);
+  border-color: var(--hover-border, var(--color-blue)) !important;
+  box-shadow: 0 22px 40px -10px var(--hover-shadow, rgba(20, 94, 255, 0.35)) !important;
+}
+
+.iconic-card:hover .iconic-top-accent {
+  height: 6px;
+  opacity: 1;
 }
 
 .iconic-card-top {
@@ -2227,29 +2243,30 @@ dialog.custom-dialog::backdrop {
 }
 
 .iconic-icon-box {
-  width: 48px;
-  height: 48px;
-  border-radius: 12px;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .iconic-card:hover .iconic-icon-box {
-  transform: scale(1.1);
+  transform: scale(1.15) rotate(4deg);
 }
 
 .iconic-tag {
   font-size: 0.6875rem;
   font-weight: 700;
-  padding: 3px 8px;
+  padding: 4px 10px;
   border-radius: var(--radius-full);
+  letter-spacing: 0.02em;
 }
 
 .iconic-card-title {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 800;
   color: var(--color-ink);
   margin-bottom: 6px;
   line-height: 1.35;
@@ -2258,7 +2275,7 @@ dialog.custom-dialog::backdrop {
 .iconic-card-desc {
   font-size: 0.8125rem;
   color: var(--color-slate-600);
-  line-height: 1.5;
+  line-height: 1.55;
   margin-bottom: 16px;
   flex-grow: 1;
 }
@@ -2274,28 +2291,31 @@ dialog.custom-dialog::backdrop {
 .iconic-preview-prompt {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--color-blue);
+  gap: 6px;
+  font-size: 0.78125rem;
+  font-weight: 700;
+  transition: gap 0.2s ease;
+}
+
+.iconic-card:hover .iconic-preview-prompt {
+  gap: 8px;
 }
 
 .iconic-arrow-btn {
-  width: 24px;
-  height: 24px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background: var(--color-slate-100);
-  color: var(--color-slate-600);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
 }
 
 .iconic-card:hover .iconic-arrow-btn {
-  background: var(--color-blue);
-  color: #FFFFFF;
-  transform: translateX(3px);
+  background: var(--hover-gradient, var(--color-blue)) !important;
+  color: #FFFFFF !important;
+  transform: translateX(4px) scale(1.1);
+  box-shadow: 0 4px 12px -2px var(--hover-shadow, rgba(20, 94, 255, 0.4));
 }
 
 .iconic-bottom-banner {

@@ -7,8 +7,11 @@ export default function VisualWorkflow() {
     {
       num: "01",
       icon: <FileInput size={24} />,
-      color: "var(--color-blue)",
-      bg: "rgba(20, 94, 255, 0.08)",
+      color: "#145EFF",
+      gradient: "linear-gradient(135deg, #145EFF 0%, #3B82F6 100%)",
+      cardBg: "linear-gradient(150deg, #FFFFFF 20%, #EFF6FF 100%)",
+      borderColor: "rgba(20, 94, 255, 0.28)",
+      shadowColor: "rgba(20, 94, 255, 0.2)",
       title: "Parent Consent Logging",
       desc: "Record written or physical consent status per child directly into the school register.",
       badge: "Form Validation"
@@ -16,8 +19,11 @@ export default function VisualWorkflow() {
     {
       num: "02",
       icon: <SearchCheck size={24} />,
-      color: "var(--color-violet)",
-      bg: "rgba(116, 45, 218, 0.08)",
+      color: "#742DDA",
+      gradient: "linear-gradient(135deg, #742DDA 0%, #9333EA 100%)",
+      cardBg: "linear-gradient(150deg, #FFFFFF 20%, #F5F3FF 100%)",
+      borderColor: "rgba(116, 45, 218, 0.28)",
+      shadowColor: "rgba(116, 45, 218, 0.2)",
       title: "Name & DOB Pre-Check",
       desc: "Spot spelling variations between Aadhaar documentation and school admission records.",
       badge: "Discrepancy Flags"
@@ -25,8 +31,11 @@ export default function VisualWorkflow() {
     {
       num: "03",
       icon: <CheckCircle2 size={24} />,
-      color: "var(--color-cyan)",
-      bg: "rgba(0, 205, 229, 0.12)",
+      color: "#0891B2",
+      gradient: "linear-gradient(135deg, #00CDE5 0%, #0891B2 100%)",
+      cardBg: "linear-gradient(150deg, #FFFFFF 20%, #ECFEFF 100%)",
+      borderColor: "rgba(0, 205, 229, 0.32)",
+      shadowColor: "rgba(0, 205, 229, 0.2)",
       title: "UDISE+ & PEN Match",
       desc: "Link Permanent Education Numbers and detect unassigned or duplicate records early.",
       badge: "Format Assurance"
@@ -34,8 +43,11 @@ export default function VisualWorkflow() {
     {
       num: "04",
       icon: <DownloadCloud size={24} />,
-      color: "var(--color-success)",
-      bg: "rgba(5, 150, 105, 0.08)",
+      color: "#059669",
+      gradient: "linear-gradient(135deg, #059669 0%, #10B981 100%)",
+      cardBg: "linear-gradient(150deg, #FFFFFF 20%, #ECFDF5 100%)",
+      borderColor: "rgba(5, 150, 105, 0.28)",
+      shadowColor: "rgba(5, 150, 105, 0.2)",
       title: "Export Ready Data Sheet",
       desc: "Download verified, clean CSV/Excel formatted exactly for the government portal.",
       badge: "Portal-Ready"
@@ -58,18 +70,45 @@ export default function VisualWorkflow() {
 
         <div className="workflow-steps-grid">
           {steps.map((st, i) => (
-            <div key={i} className="workflow-step-card">
+            <div 
+              key={i} 
+              className="workflow-step-card"
+              style={{
+                background: st.cardBg,
+                border: `1.5px solid ${st.borderColor}`,
+                boxShadow: `0 6px 18px -4px ${st.shadowColor}`
+              }}
+            >
+              <div className="iconic-top-accent" style={{ background: st.gradient }} />
               <div className="workflow-step-top">
-                <span className="workflow-num">{st.num}</span>
-                <span className="workflow-badge">{st.badge}</span>
+                <span className="workflow-num" style={{ color: st.color, background: `${st.color}15` }}>{st.num}</span>
+                <span 
+                  className="workflow-badge"
+                  style={{
+                    backgroundColor: `${st.color}12`,
+                    color: st.color,
+                    borderColor: `${st.color}35`,
+                    borderWidth: '1px',
+                    borderStyle: 'solid'
+                  }}
+                >
+                  {st.badge}
+                </span>
               </div>
-              <div className="workflow-icon-box" style={{ color: st.color, backgroundColor: st.bg }}>
+              <div 
+                className="workflow-icon-box" 
+                style={{ 
+                  background: st.gradient,
+                  color: '#FFFFFF',
+                  boxShadow: `0 6px 16px -2px ${st.color}50`
+                }}
+              >
                 {st.icon}
               </div>
               <h3 className="workflow-step-title">{st.title}</h3>
               <p className="workflow-step-desc">{st.desc}</p>
               {i < steps.length - 1 && (
-                <div className="workflow-connector-arrow" aria-hidden="true">
+                <div className="workflow-connector-arrow" aria-hidden="true" style={{ color: st.color }}>
                   <ArrowRight size={18} />
                 </div>
               )}

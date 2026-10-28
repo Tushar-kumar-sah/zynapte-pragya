@@ -13,6 +13,11 @@ export const modulesData = [
     category: 'compliance',
     icon: <CheckCircle2 size={26} />,
     color: '#145EFF',
+    gradient: 'linear-gradient(135deg, #145EFF 0%, #3B82F6 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #EFF6FF 100%)',
+    borderColor: 'rgba(20, 94, 255, 0.28)',
+    shadowColor: 'rgba(20, 94, 255, 0.22)',
+    tagBg: 'rgba(20, 94, 255, 0.12)',
     bg: 'rgba(20, 94, 255, 0.08)',
     tag: 'Flagship Differentiator',
     tagColor: 'badge--blue',
@@ -28,6 +33,11 @@ export const modulesData = [
     category: 'finance',
     icon: <CreditCard size={26} />,
     color: '#059669',
+    gradient: 'linear-gradient(135deg, #059669 0%, #10B981 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #ECFDF5 100%)',
+    borderColor: 'rgba(5, 150, 105, 0.28)',
+    shadowColor: 'rgba(5, 150, 105, 0.22)',
+    tagBg: 'rgba(5, 150, 105, 0.12)',
     bg: 'rgba(5, 150, 105, 0.08)',
     tag: 'Instant 3-Sec Receipts',
     tagColor: 'badge--green',
@@ -43,6 +53,11 @@ export const modulesData = [
     category: 'students',
     icon: <Users size={26} />,
     color: '#742DDA',
+    gradient: 'linear-gradient(135deg, #742DDA 0%, #9333EA 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #F5F3FF 100%)',
+    borderColor: 'rgba(116, 45, 218, 0.28)',
+    shadowColor: 'rgba(116, 45, 218, 0.22)',
+    tagBg: 'rgba(116, 45, 218, 0.12)',
     bg: 'rgba(116, 45, 218, 0.08)',
     tag: 'Paperless Intake',
     tagColor: 'badge--violet',
@@ -58,6 +73,11 @@ export const modulesData = [
     category: 'academics',
     icon: <Calendar size={26} />,
     color: '#0284C7',
+    gradient: 'linear-gradient(135deg, #0284C7 0%, #38BDF8 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #F0F9FF 100%)',
+    borderColor: 'rgba(2, 132, 199, 0.28)',
+    shadowColor: 'rgba(2, 132, 199, 0.22)',
+    tagBg: 'rgba(2, 132, 199, 0.12)',
     bg: 'rgba(2, 132, 199, 0.08)',
     tag: 'Zero Double-Booking',
     tagColor: 'badge--blue',
@@ -72,7 +92,12 @@ export const modulesData = [
     title: 'Daily Attendance & Leave Ledger',
     category: 'academics',
     icon: <UserCheck size={26} />,
-    color: '#00CDE5',
+    color: '#0D9488',
+    gradient: 'linear-gradient(135deg, #0D9488 0%, #14B8A6 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #F0FDFA 100%)',
+    borderColor: 'rgba(13, 148, 136, 0.28)',
+    shadowColor: 'rgba(13, 148, 136, 0.22)',
+    tagBg: 'rgba(13, 148, 136, 0.12)',
     bg: 'rgba(0, 205, 229, 0.1)',
     tag: '1-Tap Roll Call',
     tagColor: 'badge--cyan',
@@ -88,6 +113,11 @@ export const modulesData = [
     category: 'academics',
     icon: <Award size={26} />,
     color: '#EC32CC',
+    gradient: 'linear-gradient(135deg, #D926B5 0%, #F43F5E 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #FDF2F8 100%)',
+    borderColor: 'rgba(236, 50, 204, 0.28)',
+    shadowColor: 'rgba(236, 50, 204, 0.22)',
+    tagBg: 'rgba(236, 50, 204, 0.12)',
     bg: 'rgba(236, 50, 204, 0.08)',
     tag: 'Board Standard Grades',
     tagColor: 'badge--magenta',
@@ -102,7 +132,12 @@ export const modulesData = [
     title: 'Mobile Apps (iOS & Android)',
     category: 'communication',
     icon: <Smartphone size={26} />,
-    color: '#145EFF',
+    color: '#4F46E5',
+    gradient: 'linear-gradient(135deg, #4338CA 0%, #6366F1 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #EEF2FF 100%)',
+    borderColor: 'rgba(79, 70, 229, 0.28)',
+    shadowColor: 'rgba(79, 70, 229, 0.22)',
+    tagBg: 'rgba(79, 70, 229, 0.12)',
     bg: 'rgba(20, 94, 255, 0.08)',
     tag: 'Dedicated Portals',
     tagColor: 'badge--blue',
@@ -117,7 +152,12 @@ export const modulesData = [
     title: 'Student & Staff ID Card Studio',
     category: 'students',
     icon: <Printer size={26} />,
-    color: '#84CC16',
+    color: '#65A30D',
+    gradient: 'linear-gradient(135deg, #4D7C0F 0%, #84CC16 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #F7FEE7 100%)',
+    borderColor: 'rgba(101, 163, 13, 0.28)',
+    shadowColor: 'rgba(101, 163, 13, 0.22)',
+    tagBg: 'rgba(101, 163, 13, 0.12)',
     bg: 'rgba(132, 204, 22, 0.1)',
     tag: 'Batch Printing',
     tagColor: 'badge--green',
@@ -133,6 +173,11 @@ export const modulesData = [
     category: 'finance',
     icon: <FileSpreadsheet size={26} />,
     color: '#D97706',
+    gradient: 'linear-gradient(135deg, #D97706 0%, #F59E0B 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #FFFBEB 100%)',
+    borderColor: 'rgba(217, 119, 6, 0.28)',
+    shadowColor: 'rgba(217, 119, 6, 0.22)',
+    tagBg: 'rgba(217, 119, 6, 0.12)',
     bg: 'rgba(217, 119, 6, 0.08)',
     tag: 'Bank Transfer Export',
     tagColor: 'badge--orange',
@@ -147,7 +192,12 @@ export const modulesData = [
     title: 'Multi-Branch Master Switcher',
     category: 'administration',
     icon: <School size={26} />,
-    color: '#172552',
+    color: '#1E40AF',
+    gradient: 'linear-gradient(135deg, #172554 0%, #1E40AF 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #F1F5F9 100%)',
+    borderColor: 'rgba(30, 64, 175, 0.28)',
+    shadowColor: 'rgba(30, 64, 175, 0.22)',
+    tagBg: 'rgba(30, 64, 175, 0.12)',
     bg: 'rgba(23, 37, 82, 0.08)',
     tag: 'Group Level Control',
     tagColor: 'badge--slate',
@@ -162,7 +212,12 @@ export const modulesData = [
     title: 'Transport Routes & Bus Fleet',
     category: 'administration',
     icon: <Bus size={26} />,
-    color: '#0284C7',
+    color: '#0891B2',
+    gradient: 'linear-gradient(135deg, #0891B2 0%, #06B6D4 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #ECFEFF 100%)',
+    borderColor: 'rgba(8, 145, 178, 0.28)',
+    shadowColor: 'rgba(8, 145, 178, 0.22)',
+    tagBg: 'rgba(8, 145, 178, 0.12)',
     bg: 'rgba(2, 132, 199, 0.08)',
     tag: 'Stop-Wise Fare',
     tagColor: 'badge--blue',
@@ -178,6 +233,11 @@ export const modulesData = [
     category: 'administration',
     icon: <KeyRound size={26} />,
     color: '#DC2626',
+    gradient: 'linear-gradient(135deg, #DC2626 0%, #F87171 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #FEF2F2 100%)',
+    borderColor: 'rgba(220, 38, 38, 0.28)',
+    shadowColor: 'rgba(220, 38, 38, 0.22)',
+    tagBg: 'rgba(220, 38, 38, 0.12)',
     bg: 'rgba(220, 38, 38, 0.08)',
     tag: 'Campus Perimeter',
     tagColor: 'badge--red',
@@ -192,7 +252,12 @@ export const modulesData = [
     title: 'Digital Notice Ribbon & Diary',
     category: 'communication',
     icon: <Bell size={26} />,
-    color: '#EC32CC',
+    color: '#E11D48',
+    gradient: 'linear-gradient(135deg, #E11D48 0%, #FB7185 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #FFF1F2 100%)',
+    borderColor: 'rgba(225, 29, 72, 0.28)',
+    shadowColor: 'rgba(225, 29, 72, 0.22)',
+    tagBg: 'rgba(225, 29, 72, 0.12)',
     bg: 'rgba(236, 50, 204, 0.08)',
     tag: 'School-Governed',
     tagColor: 'badge--magenta',
@@ -207,7 +272,12 @@ export const modulesData = [
     title: 'Library Barcode & Book Catalog',
     category: 'academics',
     icon: <BookOpen size={26} />,
-    color: '#742DDA',
+    color: '#8B5CF6',
+    gradient: 'linear-gradient(135deg, #7C3AED 0%, #A78BFA 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #FAF5FF 100%)',
+    borderColor: 'rgba(139, 92, 246, 0.28)',
+    shadowColor: 'rgba(139, 92, 246, 0.22)',
+    tagBg: 'rgba(139, 92, 246, 0.12)',
     bg: 'rgba(116, 45, 218, 0.08)',
     tag: 'Barcode Ready',
     tagColor: 'badge--violet',
@@ -222,7 +292,12 @@ export const modulesData = [
     title: 'Role-Based Audit & Access Shield',
     category: 'administration',
     icon: <ShieldCheck size={26} />,
-    color: '#059669',
+    color: '#15803D',
+    gradient: 'linear-gradient(135deg, #15803D 0%, #34D399 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #F0FDF4 100%)',
+    borderColor: 'rgba(21, 128, 61, 0.28)',
+    shadowColor: 'rgba(21, 128, 61, 0.22)',
+    tagBg: 'rgba(21, 128, 61, 0.12)',
     bg: 'rgba(5, 150, 105, 0.08)',
     tag: 'Zero Data Leaks',
     tagColor: 'badge--green',
@@ -237,7 +312,12 @@ export const modulesData = [
     title: 'Petty Cash & Expense Vouchers',
     category: 'finance',
     icon: <FileText size={26} />,
-    color: '#D97706',
+    color: '#EA580C',
+    gradient: 'linear-gradient(135deg, #EA580C 0%, #FB923C 100%)',
+    cardBg: 'linear-gradient(150deg, #FFFFFF 20%, #FFF7ED 100%)',
+    borderColor: 'rgba(234, 88, 12, 0.28)',
+    shadowColor: 'rgba(234, 88, 12, 0.22)',
+    tagBg: 'rgba(234, 88, 12, 0.12)',
     bg: 'rgba(217, 119, 6, 0.08)',
     tag: 'Accountant Approved',
     tagColor: 'badge--orange',
@@ -324,19 +404,42 @@ export default function IconicModules() {
             <div 
               key={item.id} 
               className="iconic-card group"
+              style={{
+                background: item.cardBg,
+                borderColor: item.borderColor,
+                boxShadow: `0 6px 18px -4px ${item.shadowColor}`,
+                '--hover-border': item.color,
+                '--hover-shadow': item.shadowColor,
+                '--hover-gradient': item.gradient
+              }}
               onClick={() => setActiveModal(item)}
               role="button"
               tabIndex={0}
               onKeyDown={(e) => { if (e.key === 'Enter') setActiveModal(item); }}
             >
+              <div className="iconic-top-accent" style={{ background: item.gradient }} />
+
               <div className="iconic-card-top">
                 <div 
                   className="iconic-icon-box"
-                  style={{ color: item.color, backgroundColor: item.bg }}
+                  style={{ 
+                    background: item.gradient, 
+                    color: '#FFFFFF',
+                    boxShadow: `0 8px 18px -4px ${item.color}55`
+                  }}
                 >
                   {item.icon}
                 </div>
-                <span className={`iconic-tag ${item.tagColor}`}>
+                <span 
+                  className="iconic-tag"
+                  style={{
+                    backgroundColor: item.tagBg,
+                    color: item.color,
+                    borderColor: item.borderColor,
+                    borderWidth: '1px',
+                    borderStyle: 'solid'
+                  }}
+                >
                   {item.tag}
                 </span>
               </div>
@@ -344,12 +447,19 @@ export default function IconicModules() {
               <h3 className="iconic-card-title">{item.title}</h3>
               <p className="iconic-card-desc">{item.summary}</p>
 
-              <div className="iconic-card-footer">
-                <span className="iconic-preview-prompt">
-                  <Eye size={14} />
+              <div className="iconic-card-footer" style={{ borderTopColor: item.borderColor }}>
+                <span className="iconic-preview-prompt" style={{ color: item.color }}>
+                  <Eye size={14} color={item.color} />
                   <span>Click to Preview</span>
                 </span>
-                <span className="iconic-arrow-btn" aria-hidden="true">
+                <span 
+                  className="iconic-arrow-btn" 
+                  aria-hidden="true"
+                  style={{ 
+                    background: `${item.color}15`,
+                    color: item.color
+                  }}
+                >
                   <ArrowRight size={14} />
                 </span>
               </div>

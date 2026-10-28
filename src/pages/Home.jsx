@@ -237,23 +237,57 @@ export default function Home() {
           </div>
 
           <div className="security-grid">
-            <div className="security-card">
-              <div className="security-card-icon" style={{ background: 'rgba(20, 94, 255, 0.08)', color: 'var(--color-blue)' }}>
+            <div 
+              className="security-card"
+              style={{
+                background: 'linear-gradient(150deg, #FFFFFF 20%, #EFF6FF 100%)',
+                border: '1.5px solid rgba(20, 94, 255, 0.28)',
+                boxShadow: '0 6px 18px -4px rgba(20, 94, 255, 0.2)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+            >
+              <div className="iconic-top-accent" style={{ background: 'linear-gradient(135deg, #145EFF, #3B82F6)' }} />
+              <div 
+                className="security-card-icon" 
+                style={{ 
+                  background: 'linear-gradient(135deg, #145EFF, #3B82F6)', 
+                  color: '#FFFFFF',
+                  boxShadow: '0 6px 16px -2px rgba(20, 94, 255, 0.45)' 
+                }}
+              >
                 <Lock size={26} />
               </div>
-              <h3>Permission Boundaries</h3>
+              <h3 style={{ color: '#145EFF' }}>Permission Boundaries</h3>
               <p>Teachers access assigned subjects and classes; students see personal records; campus databases remain isolated.</p>
               <div className="security-chips" style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '12px' }}>
-                <span className="badge badge--slate">8 Distinct Roles</span>
-                <span className="badge badge--slate">Zero Cross-Branch Leaks</span>
+                <span className="badge badge--blue">8 Distinct Roles</span>
+                <span className="badge badge--blue">Zero Cross-Branch Leaks</span>
               </div>
             </div>
 
-            <div className="security-card">
-              <div className="security-card-icon" style={{ background: 'rgba(5, 150, 105, 0.08)', color: 'var(--color-success)' }}>
+            <div 
+              className="security-card"
+              style={{
+                background: 'linear-gradient(150deg, #FFFFFF 20%, #ECFDF5 100%)',
+                border: '1.5px solid rgba(5, 150, 105, 0.28)',
+                boxShadow: '0 6px 18px -4px rgba(5, 150, 105, 0.2)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+            >
+              <div className="iconic-top-accent" style={{ background: 'linear-gradient(135deg, #059669, #10B981)' }} />
+              <div 
+                className="security-card-icon" 
+                style={{ 
+                  background: 'linear-gradient(135deg, #059669, #10B981)', 
+                  color: '#FFFFFF',
+                  boxShadow: '0 6px 16px -2px rgba(5, 150, 105, 0.45)' 
+                }}
+              >
                 <Key size={26} />
               </div>
-              <h3>Secure Sign-In &amp; 2FA</h3>
+              <h3 style={{ color: '#059669' }}>Secure Sign-In &amp; 2FA</h3>
               <p>Passkeys, authenticator apps, backup codes, session timeouts, and brute-force lockouts protect accounts.</p>
               <div className="security-chips" style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '12px' }}>
                 <span className="badge badge--green">Passkey Support</span>
@@ -261,11 +295,28 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="security-card">
-              <div className="security-card-icon" style={{ background: 'rgba(116, 45, 218, 0.08)', color: 'var(--color-violet)' }}>
+            <div 
+              className="security-card"
+              style={{
+                background: 'linear-gradient(150deg, #FFFFFF 20%, #F5F3FF 100%)',
+                border: '1.5px solid rgba(116, 45, 218, 0.28)',
+                boxShadow: '0 6px 18px -4px rgba(116, 45, 218, 0.2)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+            >
+              <div className="iconic-top-accent" style={{ background: 'linear-gradient(135deg, #742DDA, #9333EA)' }} />
+              <div 
+                className="security-card-icon" 
+                style={{ 
+                  background: 'linear-gradient(135deg, #742DDA, #9333EA)', 
+                  color: '#FFFFFF',
+                  boxShadow: '0 6px 16px -2px rgba(116, 45, 218, 0.45)' 
+                }}
+              >
                 <RefreshCw size={26} />
               </div>
-              <h3>Encrypted Nightly Backups</h3>
+              <h3 style={{ color: '#742DDA' }}>Encrypted Nightly Backups</h3>
               <p>Sensitive fields are encrypted, every change is audited, and nightly encrypted snapshots can be restored on demand.</p>
               <div className="security-chips" style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '12px' }}>
                 <span className="badge badge--violet">Encrypted Restores</span>
@@ -273,11 +324,28 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="security-card">
-              <div className="security-card-icon" style={{ background: 'rgba(0, 205, 229, 0.12)', color: '#028394' }}>
+            <div 
+              className="security-card"
+              style={{
+                background: 'linear-gradient(150deg, #FFFFFF 20%, #ECFEFF 100%)',
+                border: '1.5px solid rgba(0, 205, 229, 0.32)',
+                boxShadow: '0 6px 18px -4px rgba(0, 205, 229, 0.2)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+            >
+              <div className="iconic-top-accent" style={{ background: 'linear-gradient(135deg, #00CDE5, #0891B2)' }} />
+              <div 
+                className="security-card-icon" 
+                style={{ 
+                  background: 'linear-gradient(135deg, #00CDE5, #0891B2)', 
+                  color: '#FFFFFF',
+                  boxShadow: '0 6px 16px -2px rgba(0, 205, 229, 0.45)' 
+                }}
+              >
                 <Database size={26} />
               </div>
-              <h3>School-Controlled Server</h3>
+              <h3 style={{ color: '#0891B2' }}>School-Controlled Server</h3>
               <p>Pragya deploys on your school-controlled infrastructure or dedicated cloud, keeping your student data 100% sovereign.</p>
               <div className="security-chips" style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '12px' }}>
                 <span className="badge badge--cyan">On-Premise / Private Cloud</span>

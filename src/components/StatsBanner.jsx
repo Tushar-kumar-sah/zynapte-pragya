@@ -57,47 +57,59 @@ function AnimatedCounter({ endValue, duration = 1600, suffix = '', prefix = '', 
 export default function StatsBanner() {
   const stats = [
     {
-      icon: <School size={28} className="stat-icon" />,
+      icon: <School size={26} className="stat-icon" />,
       target: 1250,
       suffix: "+",
       decimals: 0,
       label: "Schools & Campuses",
       sublabel: "Active across India",
-      color: "var(--color-blue)",
-      bg: "rgba(20, 94, 255, 0.08)",
+      color: "#145EFF",
+      gradient: "linear-gradient(135deg, #145EFF 0%, #3B82F6 100%)",
+      cardBg: "linear-gradient(150deg, #FFFFFF 20%, #EFF6FF 100%)",
+      borderColor: "rgba(20, 94, 255, 0.28)",
+      shadowColor: "rgba(20, 94, 255, 0.2)",
       metric: "+24% YoY Growth"
     },
     {
-      icon: <CheckCircle2 size={28} className="stat-icon" />,
+      icon: <CheckCircle2 size={26} className="stat-icon" />,
       target: 100,
       suffix: "%",
       decimals: 0,
       label: "APAAR & UDISE+ Standard",
       sublabel: "Pre-validation before upload",
-      color: "var(--color-cyan)",
-      bg: "rgba(0, 205, 229, 0.1)",
+      color: "#0891B2",
+      gradient: "linear-gradient(135deg, #00CDE5 0%, #0891B2 100%)",
+      cardBg: "linear-gradient(150deg, #FFFFFF 20%, #ECFEFF 100%)",
+      borderColor: "rgba(0, 205, 229, 0.32)",
+      shadowColor: "rgba(0, 205, 229, 0.2)",
       metric: "Zero Format Rejections"
     },
     {
-      icon: <Clock size={28} className="stat-icon" />,
+      icon: <Clock size={26} className="stat-icon" />,
       target: 85,
       suffix: "%",
       decimals: 0,
       label: "Faster Fee Queues",
       sublabel: "Counter POS & 3-second receipts",
-      color: "var(--color-success)",
-      bg: "rgba(5, 150, 105, 0.08)",
+      color: "#059669",
+      gradient: "linear-gradient(135deg, #059669 0%, #10B981 100%)",
+      cardBg: "linear-gradient(150deg, #FFFFFF 20%, #ECFDF5 100%)",
+      borderColor: "rgba(5, 150, 105, 0.28)",
+      shadowColor: "rgba(5, 150, 105, 0.2)",
       metric: "Save 12 hrs/week"
     },
     {
-      icon: <ShieldCheck size={28} className="stat-icon" />,
+      icon: <ShieldCheck size={26} className="stat-icon" />,
       target: 99.9,
       suffix: "%",
       decimals: 1,
       label: "Uptime & Data Sovereignty",
       sublabel: "School-controlled server hosting",
-      color: "var(--color-violet)",
-      bg: "rgba(116, 45, 218, 0.08)",
+      color: "#742DDA",
+      gradient: "linear-gradient(135deg, #742DDA 0%, #9333EA 100%)",
+      cardBg: "linear-gradient(150deg, #FFFFFF 20%, #F5F3FF 100%)",
+      borderColor: "rgba(116, 45, 218, 0.28)",
+      shadowColor: "rgba(116, 45, 218, 0.2)",
       metric: "Nightly Encrypted Backups"
     }
   ];
@@ -115,12 +127,37 @@ export default function StatsBanner() {
 
         <div className="stats-grid">
           {stats.map((s, idx) => (
-            <div key={idx} className="stat-box-card group-hover-lift">
+            <div 
+              key={idx} 
+              className="stat-box-card group-hover-lift"
+              style={{
+                background: s.cardBg,
+                border: `1.5px solid ${s.borderColor}`,
+                boxShadow: `0 6px 18px -4px ${s.shadowColor}`
+              }}
+            >
+              <div className="iconic-top-accent" style={{ background: s.gradient }} />
               <div className="stat-box-top">
-                <div className="stat-icon-wrapper" style={{ color: s.color, backgroundColor: s.bg }}>
+                <div 
+                  className="stat-icon-wrapper" 
+                  style={{ 
+                    background: s.gradient,
+                    color: '#FFFFFF',
+                    boxShadow: `0 6px 16px -2px ${s.color}50`
+                  }}
+                >
                   {s.icon}
                 </div>
-                <span className="stat-metric-pill" style={{ color: s.color }}>
+                <span 
+                  className="stat-metric-pill" 
+                  style={{ 
+                    color: s.color, 
+                    backgroundColor: `${s.color}14`,
+                    borderColor: `${s.color}35`,
+                    borderWidth: '1px',
+                    borderStyle: 'solid'
+                  }}
+                >
                   <TrendingUp size={12} />
                   {s.metric}
                 </span>

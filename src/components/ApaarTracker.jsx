@@ -87,61 +87,85 @@ PRG-2026-022,2024881211,Priyanka Bose,2011-12-11,Female,VIII,A,Sumit Bose,Verifi
       <div className="apaar-status-grid" role="tablist" aria-label="APAAR Status Filters">
         <div
           className={`apaar-status-card apaar-status-card--ready ${activeStatus === 'ready' ? 'active' : ''}`}
+          style={{
+            background: 'linear-gradient(150deg, #FFFFFF 20%, #ECFDF5 100%)',
+            border: '1.5px solid rgba(5, 150, 105, 0.32)',
+            borderTop: '5px solid #059669',
+            boxShadow: '0 6px 18px -4px rgba(5, 150, 105, 0.2)'
+          }}
           onClick={() => setActiveStatus(activeStatus === 'ready' ? 'all' : 'ready')}
           role="tab"
           aria-selected={activeStatus === 'ready'}
           tabIndex={0}
         >
           <div className="apaar-status-header">
-            <span className="apaar-status-title">Ready to Submit</span>
-            <span className="badge badge--cyan">Ready</span>
+            <span className="apaar-status-title" style={{ color: '#059669' }}>Ready to Submit</span>
+            <span className="badge badge--green">Ready</span>
           </div>
-          <div className="apaar-status-count">428</div>
+          <div className="apaar-status-count" style={{ color: '#059669' }}>428</div>
           <div className="apaar-status-desc">Locally recorded details meet Pragya’s readiness checks. Click to filter.</div>
         </div>
 
         <div
           className={`apaar-status-card apaar-status-card--attention ${activeStatus === 'attention' ? 'active' : ''}`}
+          style={{
+            background: 'linear-gradient(150deg, #FFFFFF 20%, #FFFBEB 100%)',
+            border: '1.5px solid rgba(217, 119, 6, 0.32)',
+            borderTop: '5px solid #D97706',
+            boxShadow: '0 6px 18px -4px rgba(217, 119, 6, 0.2)'
+          }}
           onClick={() => setActiveStatus(activeStatus === 'attention' ? 'all' : 'attention')}
           role="tab"
           aria-selected={activeStatus === 'attention'}
           tabIndex={0}
         >
           <div className="apaar-status-header">
-            <span className="apaar-status-title">Needs Attention</span>
-            <span className="badge badge--warning">Follow Up</span>
+            <span className="apaar-status-title" style={{ color: '#D97706' }}>Needs Attention</span>
+            <span className="badge badge--orange">Follow Up</span>
           </div>
-          <div className="apaar-status-count">34</div>
+          <div className="apaar-status-count" style={{ color: '#D97706' }}>34</div>
           <div className="apaar-status-desc">Students with missing consent, missing PEN, or demographic mismatch alerts.</div>
         </div>
 
         <div
           className={`apaar-status-card apaar-status-card--submitted ${activeStatus === 'submitted' ? 'active' : ''}`}
+          style={{
+            background: 'linear-gradient(150deg, #FFFFFF 20%, #EFF6FF 100%)',
+            border: '1.5px solid rgba(20, 94, 255, 0.32)',
+            borderTop: '5px solid #145EFF',
+            boxShadow: '0 6px 18px -4px rgba(20, 94, 255, 0.2)'
+          }}
           onClick={() => setActiveStatus(activeStatus === 'submitted' ? 'all' : 'submitted')}
           role="tab"
           aria-selected={activeStatus === 'submitted'}
           tabIndex={0}
         >
           <div className="apaar-status-header">
-            <span className="apaar-status-title">Submitted</span>
+            <span className="apaar-status-title" style={{ color: '#145EFF' }}>Submitted</span>
             <span className="badge badge--blue">In Progress</span>
           </div>
-          <div className="apaar-status-count">512</div>
+          <div className="apaar-status-count" style={{ color: '#145EFF' }}>512</div>
           <div className="apaar-status-desc">Marked as submitted after the school completes external government processing.</div>
         </div>
 
         <div
           className={`apaar-status-card apaar-status-card--generated ${activeStatus === 'generated' ? 'active' : ''}`}
+          style={{
+            background: 'linear-gradient(150deg, #FFFFFF 20%, #F5F3FF 100%)',
+            border: '1.5px solid rgba(116, 45, 218, 0.32)',
+            borderTop: '5px solid #742DDA',
+            boxShadow: '0 6px 18px -4px rgba(116, 45, 218, 0.2)'
+          }}
           onClick={() => setActiveStatus(activeStatus === 'generated' ? 'all' : 'generated')}
           role="tab"
           aria-selected={activeStatus === 'generated'}
           tabIndex={0}
         >
           <div className="apaar-status-header">
-            <span className="apaar-status-title">APAAR Generated</span>
+            <span className="apaar-status-title" style={{ color: '#742DDA' }}>APAAR Generated</span>
             <span className="badge badge--violet">Completed</span>
           </div>
-          <div className="apaar-status-count">274</div>
+          <div className="apaar-status-count" style={{ color: '#742DDA' }}>274</div>
           <div className="apaar-status-desc">Students whose confirmed 12-digit IDs have been received and logged.</div>
         </div>
       </div>
