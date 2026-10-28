@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <linearGradient id="pragyaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00CDE5" />
+      <stop offset="35%" stop-color="#145EFF" />
+      <stop offset="70%" stop-color="#742DDA" />
+      <stop offset="100%" stop-color="#EC32CC" />
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#pragyaGrad)" />
+  <!-- White stylized P mark representing scholar and educational growth -->
+  <g stroke="#FFFFFF" stroke-width="32" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <!-- Outer cap and loop of the P -->
+    <path d="M 230 140 L 310 160 C 345 170 365 205 350 240 C 335 270 300 285 260 270 C 235 260 215 250 190 240 L 175 220 C 160 200 170 170 195 155 Z" />
+    <!-- Student head dot inside -->
+    <circle cx="295" cy="220" r="16" fill="#FFFFFF" stroke="none" />
+    <!-- P Stem curving downwards -->
+    <path d="M 220 250 L 220 350 C 220 375 235 390 250 390 C 265 390 280 375 280 350 L 280 275" />
+  </g>
+</svg>
