@@ -1,72 +1,111 @@
 import React, { useState } from 'react';
-import { Lock, FileText, CheckCircle2, AlertCircle } from 'lucide-react';
+import { 
+  Lock, FileText, CheckCircle2, CreditCard, Users, UserCheck, 
+  ShieldCheck, Sparkles, ChevronDown, Eye, Printer, 
+  Clock, Check, AlertTriangle
+} from 'lucide-react';
 
 export default function ErpMockup({ onOpenCsvPreview }) {
   const [activeTab, setActiveTab] = useState('apaar');
 
   return (
     <div className="erp-mockup-wrapper animate-float-slow">
+      {/* Ambient Multi-Color Brand Glow */}
       <div className="erp-mockup-glow" aria-hidden="true" />
       
-      {/* Floating Dynamic Badges */}
-      <div className="hero-floating-badge badge-float-top-left animate-float-reverse" aria-hidden="true">
-        <span className="badge-pulse-indicator" />
-        <div className="badge-text-block">
-          <small>GOV STANDARDS</small>
-          <strong>100% APAAR Format Ready</strong>
+      {/* Snug Top Floating Badge */}
+      <div className="hero-floating-badge badge-float-top-right animate-float-reverse" aria-hidden="true">
+        <div className="badge-icon-pill badge-icon-pill--gov">
+          <ShieldCheck size={14} />
         </div>
+        <div className="badge-text-block">
+          <small>UDISE+ &amp; DIGILOCKER</small>
+          <strong>100% APAAR Format</strong>
+        </div>
+        <span className="badge-live-pulse" />
       </div>
 
-      <div className="hero-floating-badge badge-float-bottom-right animate-float-slow" aria-hidden="true">
-        <span className="badge-icon-pill">₹</span>
+      {/* Snug Bottom Floating Badge */}
+      <div className="hero-floating-badge badge-float-bottom-left animate-float-slow" aria-hidden="true">
+        <div className="badge-icon-pill badge-icon-pill--counter">
+          <Sparkles size={14} />
+        </div>
         <div className="badge-text-block">
           <small>TODAY'S COUNTER</small>
-          <strong style={{ color: 'var(--color-success)' }}>₹1,84,500 Receipts Logged</strong>
+          <strong className="text-emerald">₹1,84,500 Receipts</strong>
         </div>
       </div>
 
+      {/* Main Sleek SaaS Window Frame */}
       <div className="erp-mockup">
-        {/* Window Bar */}
+        {/* Browser Top Window Bar */}
         <div className="mockup-window-bar">
           <div className="mockup-dots">
-            <div className="mockup-dot" />
-            <div className="mockup-dot" />
-            <div className="mockup-dot" />
+            <div className="mockup-dot mockup-dot--red" />
+            <div className="mockup-dot mockup-dot--yellow" />
+            <div className="mockup-dot mockup-dot--green" />
           </div>
+
           <div className="mockup-address-pill">
-            <Lock size={12} />
-            <span>pragyaschoolerp.in/admin/dashboard</span>
+            <Lock size={11} className="mockup-lock-icon" />
+            <span className="mockup-url">pragyaschoolerp.in/admin</span>
+            <span className="mockup-live-indicator">
+              <span className="mockup-live-dot" /> LIVE
+            </span>
           </div>
-          <div className="mockup-branch-badge">Main Campus • 2026-27</div>
+
+          <div className="mockup-branch-badge">
+            <span>Main Campus • 2026-27</span>
+            <ChevronDown size={11} />
+          </div>
         </div>
 
-        {/* Inner Dashboard View */}
+        {/* Inner ERP Dashboard Canvas */}
         <div className="mockup-inner">
-          {/* Quick Metrics */}
+          {/* Compact Metric Ribbon (Inline 4 Chips) */}
           <div className="mockup-stat-row">
-            <div className="mockup-stat-card">
-              <div className="label">Total Students</div>
-              <div className="value">1,248</div>
-              <div className="note">Active records</div>
+            <div className="mockup-stat-chip mockup-stat-chip--blue">
+              <span className="chip-icon chip-icon--blue">
+                <Users size={12} />
+              </span>
+              <div className="chip-data">
+                <strong>1,248</strong>
+                <span>Students</span>
+              </div>
             </div>
-            <div className="mockup-stat-card">
-              <div className="label">Attendance</div>
-              <div className="value">96.4%</div>
-              <div className="note">Today's roll</div>
+
+            <div className="mockup-stat-chip mockup-stat-chip--green">
+              <span className="chip-icon chip-icon--green">
+                <UserCheck size={12} />
+              </span>
+              <div className="chip-data">
+                <strong>96.4%</strong>
+                <span>Present</span>
+              </div>
             </div>
-            <div className="mockup-stat-card">
-              <div className="label">Counter Fees</div>
-              <div className="value">₹1,84,500</div>
-              <div className="note">Receipts issued</div>
+
+            <div className="mockup-stat-chip mockup-stat-chip--orange">
+              <span className="chip-icon chip-icon--orange">
+                <CreditCard size={12} />
+              </span>
+              <div className="chip-data">
+                <strong>₹1.84L</strong>
+                <span>Counter</span>
+              </div>
             </div>
-            <div className="mockup-stat-card">
-              <div className="label">APAAR Consent</div>
-              <div className="value">91.2%</div>
-              <div className="note">Forms logged</div>
+
+            <div className="mockup-stat-chip mockup-stat-chip--violet">
+              <span className="chip-icon chip-icon--violet">
+                <CheckCircle2 size={12} />
+              </span>
+              <div className="chip-data">
+                <strong>91.2%</strong>
+                <span>APAAR</span>
+              </div>
             </div>
           </div>
 
-          {/* Interactive Switcher inside Mockup */}
+          {/* Segmented Controller Tabs */}
           <div className="mockup-tabs" role="tablist">
             <button
               className={`mockup-tab-btn ${activeTab === 'apaar' ? 'active' : ''}`}
@@ -74,7 +113,9 @@ export default function ErpMockup({ onOpenCsvPreview }) {
               role="tab"
               aria-selected={activeTab === 'apaar'}
             >
-              APAAR Statuses
+              <FileText size={13} />
+              <span>APAAR Status</span>
+              <span className="mockup-tab-badge mockup-tab-badge--violet">41/45 Ready</span>
             </button>
             <button
               className={`mockup-tab-btn ${activeTab === 'fees' ? 'active' : ''}`}
@@ -82,7 +123,9 @@ export default function ErpMockup({ onOpenCsvPreview }) {
               role="tab"
               aria-selected={activeTab === 'fees'}
             >
-              Counter Collection
+              <CreditCard size={13} />
+              <span>Counter POS</span>
+              <span className="mockup-tab-badge mockup-tab-badge--orange">₹1.84L</span>
             </button>
             <button
               className={`mockup-tab-btn ${activeTab === 'attendance' ? 'active' : ''}`}
@@ -90,183 +133,327 @@ export default function ErpMockup({ onOpenCsvPreview }) {
               role="tab"
               aria-selected={activeTab === 'attendance'}
             >
-              Daily Attendance
+              <UserCheck size={13} />
+              <span>Roll Call</span>
+              <span className="mockup-tab-badge mockup-tab-badge--green">96.4%</span>
             </button>
           </div>
 
-          {/* Active View Panel */}
+          {/* Active Interactive Views */}
           <div className="mockup-apaar-panel">
+            {/* VIEW 1: APAAR READINESS CONSOLE */}
             {activeTab === 'apaar' && (
               <>
                 <div className="apaar-panel-header">
                   <div className="apaar-panel-title">
-                    <FileText size={16} color="var(--color-blue)" />
-                    <span>Class IX-A • APAAR Readiness Check</span>
+                    <div className="apaar-title-icon-box">
+                      <FileText size={14} />
+                    </div>
+                    <div>
+                      <strong>Class IX-A • APAAR Readiness Console</strong>
+                      <span className="apaar-title-sub">Pre-submission discrepancy &amp; consent auditor</span>
+                    </div>
                   </div>
-                  <span className="badge badge--cyan">Local Checks Active</span>
+                  <div className="apaar-header-actions">
+                    <span className="badge badge--green">
+                      <Check size={11} /> 41 Ready
+                    </span>
+                  </div>
                 </div>
 
-                <table className="mockup-table">
-                  <thead>
-                    <tr>
-                      <th>Student</th>
-                      <th>PEN</th>
-                      <th>Guardian Consent</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Ananya Roy</strong> (Roll 01)</td>
-                      <td>2024881023</td>
-                      <td><span style={{ color: 'var(--color-success)' }}>✓ Verified &amp; Signed</span></td>
-                      <td><span className="status-tag status-tag--generated">APAAR Generated</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Rohan Sen</strong> (Roll 04)</td>
-                      <td>2024881099</td>
-                      <td><span style={{ color: 'var(--color-success)' }}>✓ Form Attached</span></td>
-                      <td><span className="status-tag status-tag--ready">Ready to Submit</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Ishita Mukherjee</strong> (Roll 07)</td>
-                      <td><span style={{ color: 'var(--color-warning)' }}>Pending</span></td>
-                      <td><span style={{ color: 'var(--color-danger)' }}>✗ Missing Form</span></td>
-                      <td><span className="status-tag status-tag--attention">Needs Attention</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Debabrata Das</strong> (Roll 12)</td>
-                      <td>2024881144</td>
-                      <td><span style={{ color: 'var(--color-success)' }}>✓ Verified</span></td>
-                      <td><span className="status-tag status-tag--submitted">Submitted</span></td>
-                    </tr>
-                  </tbody>
-                </table>
+                {/* Micro Progress Bar */}
+                <div className="mockup-progress-banner">
+                  <div className="mockup-progress-meta">
+                    <span>Class Readiness Progress</span>
+                    <strong>41 of 45 Students Validated (91.1%)</strong>
+                  </div>
+                  <div className="mockup-progress-track">
+                    <div className="mockup-progress-fill" style={{ width: '91.1%' }} />
+                  </div>
+                </div>
+
+                {/* Table View (3 Concise Rows) */}
+                <div className="mockup-table-container">
+                  <table className="mockup-table">
+                    <thead>
+                      <tr>
+                        <th>Student &amp; Roll</th>
+                        <th>PEN Number</th>
+                        <th>Guardian Consent</th>
+                        <th>Status</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div className="mockup-student-cell">
+                            <span className="mockup-avatar mockup-avatar--violet">AR</span>
+                            <div>
+                              <strong>Ananya Roy</strong>
+                              <small>Roll 01 • Sec A</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td><code className="pen-code">2024881023</code></td>
+                        <td>
+                          <span className="status-pill status-pill--success">
+                            ✓ Verified &amp; Signed
+                          </span>
+                        </td>
+                        <td>
+                          <span className="status-tag status-tag--generated">
+                            <Sparkles size={10} /> APAAR Ready
+                          </span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div className="mockup-student-cell">
+                            <span className="mockup-avatar mockup-avatar--blue">RS</span>
+                            <div>
+                              <strong>Rohan Sen</strong>
+                              <small>Roll 04 • Sec A</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td><code className="pen-code">2024881099</code></td>
+                        <td>
+                          <span className="status-pill status-pill--success">
+                            ✓ Form Attached
+                          </span>
+                        </td>
+                        <td>
+                          <span className="status-tag status-tag--ready">
+                            <Check size={10} /> Ready
+                          </span>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div className="mockup-student-cell">
+                            <span className="mockup-avatar mockup-avatar--orange">IM</span>
+                            <div>
+                              <strong>Ishita Mukherjee</strong>
+                              <small>Roll 07 • Sec A</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <span className="status-pill status-pill--warning">
+                            Pending
+                          </span>
+                        </td>
+                        <td>
+                          <span className="status-pill status-pill--danger">
+                            <AlertTriangle size={10} /> Missing Form
+                          </span>
+                        </td>
+                        <td>
+                          <span className="status-tag status-tag--attention">
+                            Attention
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
                 <div className="mockup-footer-note">
-                  <span>Export format: CSV for school submission</span>
-                  {onOpenCsvPreview && (
+                  <div className="mockup-footer-info">
+                    <span className="mockup-footer-dot" />
+                    <span>Formatted to official UDISE+ &amp; DigiLocker CSV</span>
+                  </div>
+                  {onOpenCsvPreview ? (
                     <button
-                      className="btn btn--sm btn--secondary"
+                      className="mockup-action-btn"
                       onClick={onOpenCsvPreview}
-                      style={{ fontSize: '0.72rem', padding: '4px 8px' }}
                     >
-                      Preview CSV Sheet
+                      <Eye size={11} /> Preview CSV
                     </button>
+                  ) : (
+                    <span className="badge badge--orange">CSV Formatter Ready</span>
                   )}
                 </div>
               </>
             )}
 
+            {/* VIEW 2: COUNTER FEE COLLECTION */}
             {activeTab === 'fees' && (
               <>
                 <div className="apaar-panel-header">
                   <div className="apaar-panel-title">
-                    <FileText size={16} color="var(--color-blue)" />
-                    <span>Counter Collection &amp; Receipts • Today</span>
+                    <div className="apaar-title-icon-box apaar-title-icon-box--orange">
+                      <CreditCard size={14} />
+                    </div>
+                    <div>
+                      <strong>Counter Collection &amp; Receipts • Live Desk</strong>
+                      <span className="apaar-title-sub">Instant 3-sec printed receipts with dual ledger</span>
+                    </div>
                   </div>
-                  <span className="badge badge--blue">Receipts Logged</span>
+                  <div className="apaar-header-actions">
+                    <span className="badge badge--orange">
+                      <Printer size={11} /> POS Active
+                    </span>
+                  </div>
                 </div>
 
-                <table className="mockup-table">
-                  <thead>
-                    <tr>
-                      <th>Student &amp; Roll</th>
-                      <th>Receipt #</th>
-                      <th>Amount Paid</th>
-                      <th>Mode</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Pritam Paul</strong> (X-B, Roll 03)</td>
-                      <td><code>REC-2026-0891</code></td>
-                      <td><strong>₹14,500</strong></td>
-                      <td><span className="badge" style={{ background: '#ECFDF5', color: '#059669' }}>Cash Counter</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Sneha Karmakar</strong> (IX-A, Roll 15)</td>
-                      <td><code>REC-2026-0892</code></td>
-                      <td><strong>₹9,200</strong></td>
-                      <td><span className="badge" style={{ background: '#F0F9FF', color: '#0284C7' }}>Cheque Cleared</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Arjun Sengupta</strong> (XII-Sci, Roll 02)</td>
-                      <td><code>REC-2026-0893</code></td>
-                      <td><strong>₹18,000</strong></td>
-                      <td><span className="badge" style={{ background: '#ECFDF5', color: '#059669' }}>Counter POS Card</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Riya Bhattacharya</strong> (VIII-B, Roll 11)</td>
-                      <td><code>REC-2026-0894</code></td>
-                      <td><strong>₹11,000</strong></td>
-                      <td><span className="badge" style={{ background: '#ECFDF5', color: '#059669' }}>Cash Counter</span></td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="mockup-table-container">
+                  <table className="mockup-table">
+                    <thead>
+                      <tr>
+                        <th>Student &amp; Class</th>
+                        <th>Receipt No</th>
+                        <th>Amount</th>
+                        <th>Mode</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div className="mockup-student-cell">
+                            <span className="mockup-avatar mockup-avatar--blue">PP</span>
+                            <div>
+                              <strong>Pritam Paul</strong>
+                              <small>Class X-B • Roll 03</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td><code className="pen-code">REC-0891</code></td>
+                        <td><strong className="text-emerald">₹14,500</strong></td>
+                        <td><span className="status-pill status-pill--success">Cash Desk</span></td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div className="mockup-student-cell">
+                            <span className="mockup-avatar mockup-avatar--teal">SK</span>
+                            <div>
+                              <strong>Sneha Karmakar</strong>
+                              <small>Class IX-A • Roll 15</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td><code className="pen-code">REC-0892</code></td>
+                        <td><strong className="text-emerald">₹9,200</strong></td>
+                        <td><span className="status-pill status-pill--blue">UPI QR</span></td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div className="mockup-student-cell">
+                            <span className="mockup-avatar mockup-avatar--violet">AS</span>
+                            <div>
+                              <strong>Arjun Sengupta</strong>
+                              <small>Class XII-Sci • Roll 02</small>
+                            </div>
+                          </div>
+                        </td>
+                        <td><code className="pen-code">REC-0893</code></td>
+                        <td><strong className="text-emerald">₹18,000</strong></td>
+                        <td><span className="status-pill status-pill--success">Card POS</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
                 <div className="mockup-footer-note">
-                  <span>INR cash drawer &amp; receipts printed at office</span>
-                  <span className="badge badge--roadmap">Parent Online Checkout: Roadmap</span>
+                  <div className="mockup-footer-info">
+                    <span className="mockup-footer-dot" />
+                    <span>Cash: <strong>₹1.12L</strong> &nbsp;|&nbsp; Digital: <strong>₹72.5K</strong></span>
+                  </div>
+                  <span className="badge badge--green">Thermal Slip Ready</span>
                 </div>
               </>
             )}
 
+            {/* VIEW 3: DAILY ATTENDANCE */}
             {activeTab === 'attendance' && (
               <>
                 <div className="apaar-panel-header">
                   <div className="apaar-panel-title">
-                    <FileText size={16} color="var(--color-blue)" />
-                    <span>Daily Attendance • Morning Roll Call</span>
+                    <div className="apaar-title-icon-box apaar-title-icon-box--green">
+                      <UserCheck size={14} />
+                    </div>
+                    <div>
+                      <strong>Daily Attendance • Morning Register</strong>
+                      <span className="apaar-title-sub">Teacher mobile submission with absent SMS trigger</span>
+                    </div>
                   </div>
-                  <span className="badge badge--cyan">Real-time Count</span>
+                  <div className="apaar-header-actions">
+                    <span className="badge badge--green">
+                      <Clock size={11} /> 100% In
+                    </span>
+                  </div>
                 </div>
 
-                <table className="mockup-table">
-                  <thead>
-                    <tr>
-                      <th>Class &amp; Section</th>
-                      <th>Total Enrolled</th>
-                      <th>Present</th>
-                      <th>Attendance %</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Class VIII-A</strong></td>
-                      <td>44 Students</td>
-                      <td>43 Present</td>
-                      <td><span className="badge" style={{ background: '#ECFDF5', color: '#059669' }}>97.7%</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Class IX-A</strong></td>
-                      <td>45 Students</td>
-                      <td>43 Present</td>
-                      <td><span className="badge" style={{ background: '#ECFDF5', color: '#059669' }}>95.5%</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Class X-B</strong></td>
-                      <td>42 Students</td>
-                      <td>41 Present</td>
-                      <td><span className="badge" style={{ background: '#ECFDF5', color: '#059669' }}>97.6%</span></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Class XII-Science</strong></td>
-                      <td>38 Students</td>
-                      <td>36 Present</td>
-                      <td><span className="badge" style={{ background: '#ECFDF5', color: '#059669' }}>94.7%</span></td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="mockup-table-container">
+                  <table className="mockup-table">
+                    <thead>
+                      <tr>
+                        <th>Class &amp; Section</th>
+                        <th>Enrolled</th>
+                        <th>Present Today</th>
+                        <th>Rate</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><strong>Class VIII-A</strong></td>
+                        <td>44 Students</td>
+                        <td><strong>43 Present</strong></td>
+                        <td>
+                          <div className="attendance-rate-cell">
+                            <div className="attendance-mini-track">
+                              <div className="attendance-mini-fill" style={{ width: '97.7%' }} />
+                            </div>
+                            <span className="badge badge--green">97.7%</span>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td><strong>Class IX-A</strong></td>
+                        <td>45 Students</td>
+                        <td><strong>43 Present</strong></td>
+                        <td>
+                          <div className="attendance-rate-cell">
+                            <div className="attendance-mini-track">
+                              <div className="attendance-mini-fill" style={{ width: '95.5%' }} />
+                            </div>
+                            <span className="badge badge--green">95.5%</span>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td><strong>Class X-B</strong></td>
+                        <td>42 Students</td>
+                        <td><strong>41 Present</strong></td>
+                        <td>
+                          <div className="attendance-rate-cell">
+                            <div className="attendance-mini-track">
+                              <div className="attendance-mini-fill" style={{ width: '97.6%' }} />
+                            </div>
+                            <span className="badge badge--green">97.6%</span>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
 
                 <div className="mockup-footer-note">
-                  <span>Marked via class teacher portal &amp; mobile app</span>
-                  <span style={{ color: 'var(--color-slate-500)' }}>1,203 Total Present</span>
+                  <div className="mockup-footer-info">
+                    <span className="mockup-footer-dot" />
+                    <span>Teacher mobile sync completed at 08:45 AM</span>
+                  </div>
+                  <span className="badge badge--blue">1,203 / 1,248 Present</span>
                 </div>
               </>
             )}
           </div>
-
         </div>
       </div>
     </div>
