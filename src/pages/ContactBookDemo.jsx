@@ -1,5 +1,5 @@
 import React from 'react';
-import { Clock, ShieldCheck, Video, CheckCircle2 } from 'lucide-react';
+import { Clock, ShieldCheck, Video, CheckCircle2, Phone, MessageSquare, Award, Building2 } from 'lucide-react';
 import DemoForm from '../components/DemoForm';
 import FaqAccordion from '../components/FaqAccordion';
 
@@ -22,7 +22,7 @@ export default function ContactBookDemo() {
     },
     {
       question: 'Can we discuss on-premise server deployment and data migration?',
-      answer: 'Yes. Mention your hosting preference (school-managed dedicated server or cloud) and legacy data migration needs.'
+      answer: 'Yes. Mention your hosting preference (school-managed dedicated server or AWS cloud) and legacy data migration needs.'
     }
   ];
 
@@ -43,8 +43,44 @@ export default function ContactBookDemo() {
         </div>
       </section>
 
+      {/* Authorized Reseller Contact Card (From Brochure Page 4) */}
+      <section className="section" style={{ padding: '24px 0' }}>
+        <div className="container">
+          <div className="authorized-partner-banner-contact">
+            <div className="ap-badge-tag">EXCLUSIVE AUTHORIZED RESELLER</div>
+            <div className="ap-header-row">
+              <div>
+                <h2>Authorized Partner: Code Kumite</h2>
+                <p>Official sales, institutional implementation, and teacher onboarding partner for Pragya School ERP.</p>
+              </div>
+              <div className="ap-contact-actions">
+                <a href="tel:974855549" className="btn btn--primary btn--lg">
+                  <Phone size={18} /> Call: 974855549
+                </a>
+                <a 
+                  href="https://wa.me/919748555490?text=Hello%20Code%20Kumite,%20we%20want%20to%20schedule%20a%20Pragya%20School%20ERP%20demonstration." 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="btn btn--secondary btn--lg btn-wa"
+                >
+                  <MessageSquare size={18} color="#25D366" />
+                  <span>WhatsApp: 974855549</span>
+                </a>
+              </div>
+            </div>
+
+            <div className="ap-meta-pills">
+              <span><strong>Engineering:</strong> Developed by Zynapte Technologies Pvt. Ltd., India 🇮🇳</span>
+              <span><strong>DPIIT:</strong> DIPP187962</span>
+              <span><strong>MSME:</strong> UDYAM-WB-10-0144056</span>
+              <span><strong>DUNS:</strong> 766391467</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Trust Signal Cards */}
-      <section className="section section--soft" style={{ padding: '40px 0' }}>
+      <section className="section section--soft" style={{ padding: '36px 0' }}>
         <div className="container">
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
             {trustSignals.map((t, idx) => (

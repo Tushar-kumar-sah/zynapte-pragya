@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import { 
   ArrowRight, CheckCircle2, Shield, Users, Layers, Calendar, 
   CreditCard, Bell, Smartphone, School, Award, Sparkles, Star, 
-  Check, Lock, ShieldCheck, Database, RefreshCw, Key
+  Check, Lock, ShieldCheck, Database, RefreshCw, Key, Cloud, 
+  MessageSquare, UserPlus, BookOpen, FileText, Library, Send, 
+  Building2, Sun, Moon, Laptop, Eye, Printer, Phone, ChevronRight
 } from 'lucide-react';
 import ErpMockup from '../components/ErpMockup';
 import ApaarTracker from '../components/ApaarTracker';
@@ -18,25 +20,107 @@ import { rolesData } from '../data/rolesData';
 
 export default function Home() {
   const [selectedRole, setSelectedRole] = useState('principal');
-  const role = rolesData[selectedRole];
+  const role = rolesData[selectedRole] || rolesData['principal'];
+
+  // 9 Core Modules from Brochure Page 2
+  const coreNineModules = [
+    {
+      id: 'admissions',
+      title: 'Admissions',
+      subtitle: 'Enquiry to enrolment',
+      icon: <UserPlus size={24} />,
+      colorClass: 'module-accent--blue',
+      path: '/student-management'
+    },
+    {
+      id: 'attendance',
+      title: 'Attendance',
+      subtitle: 'Students and staff',
+      icon: <Calendar size={24} />,
+      colorClass: 'module-accent--purple',
+      path: '/attendance-management'
+    },
+    {
+      id: 'academics',
+      title: 'Academics',
+      subtitle: 'Classes and timetables',
+      icon: <BookOpen size={24} />,
+      colorClass: 'module-accent--orange',
+      path: '/academics-timetable'
+    },
+    {
+      id: 'exams',
+      title: 'Exams',
+      subtitle: 'Marks to report cards',
+      icon: <Award size={24} />,
+      colorClass: 'module-accent--green',
+      path: '/exam-result-management'
+    },
+    {
+      id: 'fees',
+      title: 'Fees',
+      subtitle: 'Receipts and dues',
+      icon: <CreditCard size={24} />,
+      colorClass: 'module-accent--coral',
+      path: '/fees-management'
+    },
+    {
+      id: 'payroll',
+      title: 'Payroll',
+      subtitle: 'Payslips for every role',
+      icon: <FileText size={24} />,
+      colorClass: 'module-accent--emerald',
+      path: '/staff-payroll-management'
+    },
+    {
+      id: 'library',
+      title: 'Library',
+      subtitle: 'Catalogue and issues',
+      icon: <Library size={24} />,
+      colorClass: 'module-accent--cyan',
+      path: '/features'
+    },
+    {
+      id: 'communication',
+      title: 'Communication',
+      subtitle: 'Notices and circulars',
+      icon: <Send size={24} />,
+      colorClass: 'module-accent--violet',
+      path: '/school-communication'
+    },
+    {
+      id: 'multi-branch',
+      title: 'Multi-Branch',
+      subtitle: 'Many campuses, one view',
+      icon: <Building2 size={24} />,
+      colorClass: 'module-accent--gold',
+      path: '/multi-branch-management'
+    }
+  ];
+
+  // Active Payslip Structure from Page 4
+  const [activePayslipTab, setActivePayslipTab] = useState('teaching');
 
   return (
     <>
-      {/* 01 / HERO SECTION WITH SOCIAL PROOF & LIVE STATUS */}
+      {/* ==========================================================================
+          01 / HERO SECTION WITH SOCIAL PROOF, LIVE STATUS & BROCHURE HIGHLIGHTS
+          ========================================================================== */}
       <section className="section hero">
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content">
               <div className="eyebrow">
                 <span className="eyebrow-dot" />
-                PRAGYA SCHOOL OPERATING SYSTEM
+                NEXT-GEN INDIAN SCHOOL &amp; COLLEGE ERP
               </div>
 
               <h1 className="hero-title">
-                One Platform for <span className="hero-title-highlight">Every School Day.</span>
+                One Platform. <span className="hero-title-highlight">Every School Day.</span>
               </h1>
 
               <p className="hero-subtitle">
+                <strong>Empowering Schools &amp; Colleges. Enriching Futures.</strong><br />
                 Bring admissions, academics, attendance, fees, results and staff management together—and see which students are ready for APAAR submission.
               </p>
 
@@ -49,23 +133,50 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* High Density Trust Signals */}
-              <div className="hero-trust-signals">
-                <div className="hero-trust-item">
-                  <CheckCircle2 size={18} color="var(--color-blue)" />
-                  <span>APAAR &amp; UDISE+ Format</span>
+              {/* Page 1: 3 Highlight Value Cards (Meta Tech, AWS, Secure by Design) */}
+              <div className="hero-value-pillars-grid">
+                <div className="value-pillar-card value-pillar-card--blue">
+                  <div className="value-pillar-icon">
+                    <MessageSquare size={18} />
+                  </div>
+                  <div className="value-pillar-text">
+                    <strong>Meta Tech Provider</strong>
+                    <small>WhatsApp-ready communication</small>
+                  </div>
                 </div>
-                <div className="hero-trust-item">
-                  <CheckCircle2 size={18} color="var(--color-blue)" />
-                  <span>WBBSE &amp; WBCHSE Catalogues</span>
+
+                <div className="value-pillar-card value-pillar-card--teal">
+                  <div className="value-pillar-icon">
+                    <Cloud size={18} />
+                  </div>
+                  <div className="value-pillar-text">
+                    <strong>Deployed on AWS</strong>
+                    <small>Reliable cloud hosting (99.9%)</small>
+                  </div>
                 </div>
-                <div className="hero-trust-item">
-                  <CheckCircle2 size={18} color="var(--color-blue)" />
-                  <span>INR Counter POS Receipts</span>
+
+                <div className="value-pillar-card value-pillar-card--violet">
+                  <div className="value-pillar-icon">
+                    <ShieldCheck size={18} />
+                  </div>
+                  <div className="value-pillar-text">
+                    <strong>Secure by Design</strong>
+                    <small>Role-based access &amp; audit</small>
+                  </div>
                 </div>
               </div>
 
-              {/* Social Proof Avatar Pile */}
+              {/* Page 1 & 3: Board & Regulatory Alignment Ribbon (7 Chips) */}
+              <div className="hero-regulatory-strip">
+                <span className="board-pill board-pill--orange">APAAR READY</span>
+                <span className="board-pill board-pill--green">UDISE+ READY</span>
+                <span className="board-pill board-pill--coral">KHELO INDIA READY</span>
+                <span className="board-pill board-pill--blue">CBSE · ICSE</span>
+                <span className="board-pill board-pill--teal">WEST BENGAL BOARD</span>
+                <span className="board-pill board-pill--purple">COLLEGES READY</span>
+              </div>
+
+              {/* Social Proof Avatar Pile & Device Scope */}
               <div className="hero-social-proof">
                 <div className="avatar-stack">
                   <span className="avatar-stack-item">👨‍🏫</span>
@@ -80,6 +191,10 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              <div className="hero-platforms-bar">
+                <small>Schools &amp; Colleges &nbsp;|&nbsp; Android · iPhone · Web &nbsp;|&nbsp; Light &amp; Dark mode</small>
+              </div>
             </div>
 
             <ErpMockup />
@@ -87,16 +202,480 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 02 / STATS COUNTER BANNER */}
+      {/* ==========================================================================
+          02 / STATS COUNTER BANNER
+          ========================================================================== */}
       <StatsBanner />
 
-      {/* 03 / ICONIC MODULES & UTILITIES GRID (16 MODULES WITH CLICK-TO-PREVIEW) */}
+      {/* ==========================================================================
+          03 / BROCHURE PAGE 2 SECTION: "EVERYTHING YOUR SCHOOL NEEDS. NOTHING IT DOESN'T."
+          ========================================================================== */}
+      <section className="section section--white" id="everything-school-needs">
+        <div className="container">
+          <div className="section-header">
+            <div className="eyebrow">
+              <span className="eyebrow-dot" />
+              ONE CONNECTED PLATFORM
+            </div>
+            <h2>Everything your school needs. Nothing it doesn't.</h2>
+            <p>
+              Unified administrative clarity across classrooms, finance, academics and governance—without bloat, clutter or steep learning curves.
+            </p>
+          </div>
+
+          {/* Split High-Impact Visual Cards (Smart Classrooms & Executive Analytics) */}
+          <div className="brochure-split-visuals-grid">
+            <div className="visual-hero-card visual-hero-card--classroom">
+              <div className="visual-hero-badge">
+                <Sparkles size={14} />
+                <span>SMART CLASSROOMS</span>
+              </div>
+              <div className="visual-hero-content">
+                <h3>Digital Teaching &amp; Student Collaboration</h3>
+                <p>Tablet-ready attendance roll calls, interactive homework assignments, doubt-clearing and real-time parent notifications.</p>
+                <div className="visual-chips-list">
+                  <span>✓ 30-sec Morning Roll Call</span>
+                  <span>✓ Syllabus Progress Tracker</span>
+                  <span>✓ Instant Absent Parent SMS</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="visual-hero-card visual-hero-card--analytics">
+              <div className="visual-hero-badge visual-hero-badge--analytics">
+                <Laptop size={14} />
+                <span>EXECUTIVE ANALYTICS</span>
+              </div>
+              <div className="visual-hero-content">
+                <h3>Leadership KPI &amp; Governance Cockpit</h3>
+                <p>Principal and Director dashboards displaying today's counter receipts, fee dues recovery, board syllabus pacing and APAAR progress.</p>
+                <div className="visual-chips-list">
+                  <span>✓ Real-time Cash POS Drawer</span>
+                  <span>✓ Class-wise Defaulter Aging</span>
+                  <span>✓ Pre-submission APAAR Audit</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 9 Core ERP Modules Grid from Brochure Page 2 */}
+          <div className="core-nine-modules-grid">
+            {coreNineModules.map((mod) => (
+              <Link to={mod.path} key={mod.id} className={`core-module-card ${mod.colorClass}`}>
+                <div className="core-module-icon-wrap">
+                  {mod.icon}
+                </div>
+                <div className="core-module-text">
+                  <h4>{mod.title}</h4>
+                  <p>{mod.subtitle}</p>
+                </div>
+                <div className="core-module-arrow">
+                  <ChevronRight size={16} />
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          {/* 5 Roles Strip from Brochure Page 2: "One system. Every role." */}
+          <div className="roles-strip-container">
+            <div className="roles-strip-header">
+              <span className="roles-strip-tagline">One system. Every role.</span>
+            </div>
+            <div className="roles-strip-pills" role="tablist">
+              <button 
+                className={`role-strip-btn role-strip-btn--principals ${selectedRole === 'principal' ? 'active' : ''}`}
+                onClick={() => setSelectedRole('principal')}
+              >
+                PRINCIPALS
+              </button>
+              <button 
+                className={`role-strip-btn role-strip-btn--admins ${selectedRole === 'administrator' ? 'active' : ''}`}
+                onClick={() => setSelectedRole('administrator')}
+              >
+                ADMINISTRATORS
+              </button>
+              <button 
+                className={`role-strip-btn role-strip-btn--teachers ${selectedRole === 'teacher' ? 'active' : ''}`}
+                onClick={() => setSelectedRole('teacher')}
+              >
+                TEACHERS
+              </button>
+              <button 
+                className={`role-strip-btn role-strip-btn--accounts ${selectedRole === 'accountant' ? 'active' : ''}`}
+                onClick={() => setSelectedRole('accountant')}
+              >
+                ACCOUNTS
+              </button>
+              <button 
+                className={`role-strip-btn role-strip-btn--hr ${selectedRole === 'hr' ? 'active' : ''}`}
+                onClick={() => setSelectedRole('hr')}
+              >
+                HR
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================================================
+          04 / BROCHURE PAGE 3 SECTION: "READY FOR THE WAY INDIAN SCHOOLS WORK."
+          ========================================================================== */}
+      <section className="section section--soft" id="indian-schools-work">
+        <div className="container">
+          <div className="section-header">
+            <div className="eyebrow">
+              <span className="eyebrow-dot" />
+              THOUGHTFULLY DESIGNED FOR INDIAN SCHOOLS • BUILT FOR INDIA
+            </div>
+            <h2>Ready for the way Indian schools work.</h2>
+            <p>
+              Designed ground-up around cash/UPI counter collections, thermal POS slips, UDISE+ compliance, Bengali/English medium catalogues, and Khelo India athletic registrations.
+            </p>
+          </div>
+
+          {/* 7 Alignment Ribbon Chips */}
+          <div className="indian-boards-ribbon">
+            <div className="ribbon-chip ribbon-chip--violet"><strong>APAAR</strong> READY</div>
+            <div className="ribbon-chip ribbon-chip--blue"><strong>UDISE+</strong> READY</div>
+            <div className="ribbon-chip ribbon-chip--orange"><strong>Khelo India</strong> READY</div>
+            <div className="ribbon-chip ribbon-chip--green"><strong>CBSE</strong> ALIGNED</div>
+            <div className="ribbon-chip ribbon-chip--red"><strong>ICSE</strong> ALIGNED</div>
+            <div className="ribbon-chip ribbon-chip--teal"><strong>WB Board</strong> ALIGNED</div>
+            <div className="ribbon-chip ribbon-chip--purple"><strong>Colleges</strong> READY</div>
+          </div>
+
+          {/* Showcases from Page 3: Fees Module (Receipt) & Library Module */}
+          <div className="brochure-page3-showcase-grid">
+            {/* Fees Showcase with Real Receipt */}
+            <div className="page3-card page3-card--fees">
+              <div className="page3-card-header">
+                <div className="page3-icon-badge page3-icon-badge--fees">
+                  <CreditCard size={20} />
+                </div>
+                <div>
+                  <h3>Fees Module</h3>
+                  <small>Class-wise fee structures, receipts &amp; collections, dues and payment history</small>
+                </div>
+              </div>
+
+              {/* Interactive Exact Fee Receipt from Page 3 of Brochure */}
+              <div className="brochure-receipt-box">
+                <div className="receipt-box-top">
+                  <div>
+                    <strong>Fee Receipt</strong>
+                    <span className="receipt-reg-no">PRG-REC-2026-1044</span>
+                  </div>
+                  <span className="receipt-status-badge">RECEIPT ISSUED</span>
+                </div>
+
+                <div className="receipt-line-items">
+                  <div className="receipt-row">
+                    <span>Tuition – Term 2</span>
+                    <strong>₹ 12,500</strong>
+                  </div>
+                  <div className="receipt-row">
+                    <span>Transport</span>
+                    <strong>₹ 3,000</strong>
+                  </div>
+                  <div className="receipt-row">
+                    <span>Library</span>
+                    <strong>₹ 500</strong>
+                  </div>
+                  <div className="receipt-row">
+                    <span>Exam fee</span>
+                    <strong>₹ 1,200</strong>
+                  </div>
+                </div>
+
+                <div className="receipt-total-row">
+                  <span>Paid (Cash / UPI Counter POS)</span>
+                  <strong className="text-emerald">₹ 17,200</strong>
+                </div>
+
+                <div className="receipt-footer-action">
+                  <small>Instant 3-sec Thermal Slip &amp; SMS Receipt</small>
+                  <Link to="/fees-management" className="btn btn--secondary btn--sm">
+                    Explore Fees POS
+                  </Link>
+                </div>
+              </div>
+
+              <ul className="page3-checklist">
+                <li><Check size={16} className="text-green" /> <span>Class-wise fee structures</span></li>
+                <li><Check size={16} className="text-green" /> <span>Receipts &amp; collections</span></li>
+                <li><Check size={16} className="text-green" /> <span>Dues and payment history</span></li>
+              </ul>
+            </div>
+
+            {/* Library Showcase from Page 3 */}
+            <div className="page3-card page3-card--library">
+              <div className="page3-card-header">
+                <div className="page3-icon-badge page3-icon-badge--library">
+                  <Library size={20} />
+                </div>
+                <div>
+                  <h3>Library</h3>
+                  <small>Digital catalogue &amp; search, issue &amp; return records, part of the same workspace</small>
+                </div>
+              </div>
+
+              {/* Digital Catalogue Mockup */}
+              <div className="brochure-library-box">
+                <div className="library-box-header">
+                  <div className="library-tag">DIGITAL CATALOGUE</div>
+                  <small>Barcoded &amp; Accession Number Ready</small>
+                </div>
+
+                <div className="library-search-preview">
+                  <span className="library-search-icon">🔍</span>
+                  <span className="library-search-placeholder">NCERT Class IX Mathematics &amp; Science...</span>
+                </div>
+
+                <div className="library-sample-records">
+                  <div className="lib-book-item">
+                    <div>
+                      <strong>Higher Algebra &amp; Trigonometry</strong>
+                      <small>S.L. Loney • Shelf B-04 • Acc #4120</small>
+                    </div>
+                    <span className="badge badge--green">Available (4)</span>
+                  </div>
+                  <div className="lib-book-item">
+                    <div>
+                      <strong>Sahitya Sanchayan (Class X)</strong>
+                      <small>WBBSE • Shelf A-02 • Acc #2811</small>
+                    </div>
+                    <span className="badge badge--orange">Issued (Roll 14)</span>
+                  </div>
+                </div>
+
+                <div className="receipt-footer-action">
+                  <small>Integrated with student ID cards</small>
+                  <Link to="/features" className="btn btn--secondary btn--sm">
+                    View Catalogue
+                  </Link>
+                </div>
+              </div>
+
+              <ul className="page3-checklist">
+                <li><Check size={16} className="text-green" /> <span>Digital catalogue &amp; search</span></li>
+                <li><Check size={16} className="text-green" /> <span>Issue &amp; return records</span></li>
+                <li><Check size={16} className="text-green" /> <span>Part of the same workspace</span></li>
+              </ul>
+            </div>
+          </div>
+
+          {/* 3 Government Pillar Cards at bottom of Page 3 */}
+          <div className="page3-bottom-pillars-grid">
+            <div className="pillar-bottom-card pillar-bottom-card--violet">
+              <div className="pillar-bottom-icon">
+                <CheckCircle2 size={24} />
+              </div>
+              <div className="pillar-bottom-text">
+                <h4>APAAR Ready</h4>
+                <p>Consent, PEN &amp; readiness tracking</p>
+              </div>
+            </div>
+
+            <div className="pillar-bottom-card pillar-bottom-card--blue">
+              <div className="pillar-bottom-icon">
+                <Database size={24} />
+              </div>
+              <div className="pillar-bottom-text">
+                <h4>UDISE+</h4>
+                <p>Structured data preparation</p>
+              </div>
+            </div>
+
+            <div className="pillar-bottom-card pillar-bottom-card--orange">
+              <div className="pillar-bottom-icon">
+                <Award size={24} />
+              </div>
+              <div className="pillar-bottom-text">
+                <h4>Khelo India</h4>
+                <p>Sports records, ready</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================================================
+          05 / BROCHURE PAGE 4 SECTION: "PAYROLL THAT FITS EVERY EMPLOYEE." & ADVANTAGE
+          ========================================================================== */}
+      <section className="section section--white" id="payroll-advantage">
+        <div className="container">
+          <div className="section-header">
+            <div className="eyebrow">
+              <span className="eyebrow-dot" />
+              BUILT FOR THE SCHOOLS OF TOMORROW • THE PRAGYA ADVANTAGE
+            </div>
+            <h2>Payroll that fits every employee.</h2>
+            <p>
+              A separate salary structure for each staff category. Automated earnings, deductions, bank NEFT files and confidential employee payslip vault.
+            </p>
+          </div>
+
+          {/* Multiple Payslip Structures Showcase (from Page 4) */}
+          <div className="payroll-showcase-container">
+            <div className="payslip-category-bar">
+              <div className="payslip-category-title">
+                <strong>Multiple payslip structures:</strong>
+              </div>
+              <div className="payslip-category-pills">
+                <button 
+                  className={`payslip-pill-btn payslip-pill-btn--teaching ${activePayslipTab === 'teaching' ? 'active' : ''}`}
+                  onClick={() => setActivePayslipTab('teaching')}
+                >
+                  TEACHING
+                </button>
+                <button 
+                  className={`payslip-pill-btn payslip-pill-btn--nonteaching ${activePayslipTab === 'nonteaching' ? 'active' : ''}`}
+                  onClick={() => setActivePayslipTab('nonteaching')}
+                >
+                  NON-TEACHING
+                </button>
+                <button 
+                  className={`payslip-pill-btn payslip-pill-btn--admin ${activePayslipTab === 'admin' ? 'active' : ''}`}
+                  onClick={() => setActivePayslipTab('admin')}
+                >
+                  ADMINISTRATIVE
+                </button>
+                <button 
+                  className={`payslip-pill-btn payslip-pill-btn--support ${activePayslipTab === 'support' ? 'active' : ''}`}
+                  onClick={() => setActivePayslipTab('support')}
+                >
+                  SUPPORT STAFF
+                </button>
+              </div>
+            </div>
+
+            <div className="payroll-split-grid">
+              {/* Left: Faculty & Staff Context */}
+              <div className="payroll-faculty-info">
+                <div className="faculty-badge">
+                  <Users size={16} />
+                  <span>FACULTY &amp; STAFF</span>
+                </div>
+                <h3>Tailored Compensation &amp; Allowances for Each Tier</h3>
+                <p>
+                  Teaching faculty structures handle DA, HRA, special allowances, and provident fund deductions. Support staff structures automatically factor in daily attendance, overtime shifts, and advance adjustments.
+                </p>
+                <div className="faculty-highlights">
+                  <div className="fac-item">
+                    <strong>1-Click Salary Calculation</strong>
+                    <small>Syncs directly with teacher mobile attendance</small>
+                  </div>
+                  <div className="fac-item">
+                    <strong>Bank NEFT/RTGS Batch Payout</strong>
+                    <small>Standard Excel file for SBI, HDFC, PNB upload</small>
+                  </div>
+                </div>
+                <div style={{ marginTop: '20px' }}>
+                  <Link to="/staff-payroll-management" className="btn btn--primary btn--sm">
+                    Explore Staff &amp; Payroll Module
+                  </Link>
+                </div>
+              </div>
+
+              {/* Right: Exact Payslip Mockup from Page 4 of Brochure */}
+              <div className="brochure-payslip-card">
+                <div className="payslip-card-top">
+                  <div>
+                    <strong>Payslip</strong>
+                    <small>Dr. Ananya Mukherjee • Senior Faculty (Math)</small>
+                  </div>
+                  <span className="badge badge--green">OCT 2026 SALARY</span>
+                </div>
+
+                <div className="payslip-line-items">
+                  <div className="payslip-row">
+                    <span>Basic</span>
+                    <strong>₹ 38,000</strong>
+                  </div>
+                  <div className="payslip-row">
+                    <span>Allowances (DA, HRA, Medical)</span>
+                    <strong className="text-emerald">₹ 9,500</strong>
+                  </div>
+                  <div className="payslip-row">
+                    <span>Deductions (EPF, Professional Tax)</span>
+                    <strong className="text-coral">– ₹ 4,200</strong>
+                  </div>
+                </div>
+
+                <div className="payslip-net-row">
+                  <span>Net pay (Bank Transfer Direct)</span>
+                  <strong className="text-blue">₹ 43,300</strong>
+                </div>
+
+                <div className="payslip-card-foot">
+                  <small>Generated securely to teacher's personal mobile app</small>
+                  <span className="badge badge--blue">NEFT Ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* 3 Pragya Advantage Cards from Brochure Page 4 */}
+          <div className="the-pragya-advantage-grid">
+            {/* Card 1: Light & Dark */}
+            <div className="advantage-feature-card advantage-feature-card--theme">
+              <div className="adv-icon-row">
+                <div className="adv-icon-circle"><Sun size={18} /></div>
+                <div className="adv-icon-circle"><Moon size={18} /></div>
+              </div>
+              <h4>Light &amp; Dark</h4>
+              <p>Comfortable in any light. High contrast readability for principals reviewing reports late in the evening or staff in daytime bright counters.</p>
+              <div className="adv-preview-theme">
+                <div className="theme-half theme-half--light">Daylight POS</div>
+                <div className="theme-half theme-half--dark">Night Review</div>
+              </div>
+            </div>
+
+            {/* Card 2: Mobile & Web */}
+            <div className="advantage-feature-card advantage-feature-card--mobile">
+              <div className="adv-icon-row">
+                <div className="adv-icon-circle"><Smartphone size={18} /></div>
+                <div className="adv-icon-circle"><Laptop size={18} /></div>
+              </div>
+              <h4>Mobile &amp; Web</h4>
+              <p>One school, every device. Native experiences for Android, iPhone, tablet and desktop browsers with offline sync support.</p>
+              <div className="adv-badge-chip">
+                <span>IOS &amp; ANDROID APP</span>
+              </div>
+            </div>
+
+            {/* Card 3: Secure on AWS */}
+            <div className="advantage-feature-card advantage-feature-card--aws">
+              <div className="adv-icon-row">
+                <div className="adv-icon-circle"><Cloud size={18} /></div>
+                <div className="adv-icon-circle"><ShieldCheck size={18} /></div>
+              </div>
+              <h4>Secure on AWS</h4>
+              <p>Protected records, reliable cloud hosting with 99.9% uptime, nightly encrypted snapshots, and strict role-based access control.</p>
+              <div className="adv-aws-badges">
+                <span className="badge badge--green">AWS HOSTED</span>
+                <span className="badge badge--violet">SECURE RBAC</span>
+                <span className="badge badge--blue">META PROVIDER</span>
+                <span className="badge badge--orange">99.9% UPTIME</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ==========================================================================
+          06 / 16 ICONIC MODULES & UTILITIES GRID (WITH CLICK-TO-PREVIEW)
+          ========================================================================== */}
       <IconicModules />
 
-      {/* 04 / 4-STEP VISUAL APAAR READINESS WORKFLOW */}
+      {/* ==========================================================================
+          07 / 4-STEP VISUAL APAAR READINESS WORKFLOW
+          ========================================================================== */}
       <VisualWorkflow />
 
-      {/* 05 / LIVE INTERACTIVE APAAR TRACKER CONSOLE */}
+      {/* ==========================================================================
+          08 / LIVE INTERACTIVE APAAR TRACKER CONSOLE
+          ========================================================================== */}
       <section className="section section--soft" id="apaar-readiness">
         <div className="container">
           <div className="section-header">
@@ -120,10 +699,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 06 / EVERYTHING AT YOUR FINGERTIPS (MOBILE APPS SHOWCASE) */}
+      {/* ==========================================================================
+          09 / EVERYTHING AT YOUR FINGERTIPS (MOBILE APPS SHOWCASE)
+          ========================================================================== */}
       <MobileAppsShowcase />
 
-      {/* 07 / SOLUTIONS BY ROLE (INTERACTIVE VIEW) */}
+      {/* ==========================================================================
+          10 / SOLUTIONS BY ROLE (DETAILED INTERACTIVE VIEW)
+          ========================================================================== */}
       <section className="section section--white" id="solutions">
         <div className="container">
           <div className="section-header">
@@ -216,7 +799,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 08 / SECURITY & HOSTING VISUAL CARDS */}
+      {/* ==========================================================================
+          11 / SECURITY & HOSTING VISUAL CARDS
+          ========================================================================== */}
       <section className="section section--soft" id="security">
         <div className="container">
           <div className="section-header">
@@ -339,22 +924,20 @@ export default function Home() {
               >
                 <Database size={26} />
               </div>
-              <h3 style={{ color: '#0891B2' }}>School-Controlled Server</h3>
-              <p>Pragya deploys on your school-controlled infrastructure or dedicated cloud, keeping your student data 100% sovereign.</p>
+              <h3 style={{ color: '#0891B2' }}>School-Controlled Server &amp; AWS</h3>
+              <p>Pragya deploys on high-availability AWS or dedicated school infrastructure, keeping institutional records sovereign.</p>
               <div className="security-chips" style={{ display: 'flex', gap: '6px', flexWrap: 'wrap', marginTop: '12px' }}>
-                <span className="badge badge--cyan">On-Premise / Private Cloud</span>
+                <span className="badge badge--cyan">AWS 99.9% Cloud</span>
                 <span className="badge badge--cyan">Isolated DB</span>
               </div>
             </div>
           </div>
-
-          <div className="security-disclaimer" style={{ marginTop: '30px' }}>
-            <strong>Responsible Security Practice:</strong> Pragya implements role boundaries, passkeys, encryption, and nightly backups rather than making unverified claims.
-          </div>
         </div>
       </section>
 
-      {/* 09 / DEMO LEAD CAPTURE FORM */}
+      {/* ==========================================================================
+          12 / DEMO LEAD CAPTURE FORM
+          ========================================================================== */}
       <section className="section section--white" id="contact">
         <div className="container">
           <DemoForm
@@ -364,7 +947,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 10 / FAQ ACCORDION */}
+      {/* ==========================================================================
+          13 / FAQ ACCORDION
+          ========================================================================== */}
       <section className="section section--soft" id="faqs">
         <div className="container">
           <div className="section-header">
@@ -384,6 +969,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ==========================================================================
+          14 / OFFICIAL BOTTOM CTA BANNER WITH AUTHORIZED PARTNER BOX
+          ========================================================================== */}
       <BottomCta />
     </>
   );
