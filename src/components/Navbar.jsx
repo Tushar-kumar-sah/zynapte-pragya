@@ -38,13 +38,9 @@ export default function Navbar() {
     <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <nav className="navbar" aria-label="Main Navigation">
-          {/* Brand Logo & Wordmark */}
+          {/* Brand Logo */}
           <Link to="/" className="brand-link" aria-label="Pragya School ERP Homepage">
-            <img src="/pragya-logo.png" alt="Pragya Logo" className="brand-logo-img" width="44" height="44" />
-            <div className="brand-text-group">
-              <span className="brand-wordmark">Pragya</span>
-              <span className="brand-tagline-small">School ERP</span>
-            </div>
+            <img src="/pragya-logo.png" alt="Pragya School ERP - Empowering Schools. Enriching Futures." className="brand-logo-img" />
           </Link>
 
           {/* Desktop Navigation */}

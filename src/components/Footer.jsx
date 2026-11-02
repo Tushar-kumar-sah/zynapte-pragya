@@ -9,12 +9,12 @@ export default function Footer() {
         <div className="footer-top-grid">
           {/* Brand Column */}
           <div className="footer-brand">
-            <h3>
-              <img src="/pragya-logo.png" alt="" width="32" height="32" style={{ borderRadius: '8px' }} />
-              <span>Pragya School ERP</span>
-            </h3>
+            <Link to="/" className="footer-brand-link" aria-label="Pragya School ERP Homepage">
+              <div className="footer-logo-card">
+                <img src="/pragya-logo.png" alt="Pragya - Empowering Schools. Enriching Futures." className="footer-logo-img" />
+              </div>
+            </Link>
             <p>
-              Empowering Schools. Enriching Futures.<br />
               One connected platform for school records, academics, attendance, fees, examinations, staff management and APAAR preparation.
             </p>
             <Link to="/contact" className="btn btn--primary btn--sm">
@@ -58,7 +58,7 @@ export default function Footer() {
             <p style={{ fontSize: '0.875rem', color: 'var(--color-slate-300)', marginBottom: '16px' }}>
               <strong>Website:</strong> https://pragyaschoolerp.in
             </p>
-            <span className="badge badge--cyan">Built for Indian Schools</span>
+            <span className="badge badge--orange">Built for Indian Schools</span>
           </div>
         </div>
 
