@@ -89,7 +89,7 @@ export default function Navbar() {
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn btn--secondary btn--sm nav-wa-btn"
-              title="Chat with Authorized Partner Code Kumite on WhatsApp"
+              title="Chat with Pragya Support on WhatsApp"
             >
               <WhatsAppIcon size={18} />
               <span className="nav-btn-text">WhatsApp</span>
@@ -123,8 +123,8 @@ export default function Navbar() {
       <div className={`mobile-nav-drawer ${mobileMenuOpen ? 'open' : ''}`} aria-hidden={!mobileMenuOpen}>
         <div className="mobile-drawer-header">
           <div className="mobile-partner-badge">
-            <small>AUTHORIZED RESELLER</small>
-            <strong>Code Kumite • +91 97485 55490</strong>
+            <small>DIRECT SCHOOL DESK</small>
+            <strong>Pragya Support • +91 97485 55490</strong>
           </div>
         </div>
         <ul className="mobile-nav-list">

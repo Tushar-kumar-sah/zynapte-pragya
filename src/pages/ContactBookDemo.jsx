@@ -48,24 +48,24 @@ export default function ContactBookDemo() {
       <section className="section" style={{ padding: '24px 0' }}>
         <div className="container">
           <div className="authorized-partner-banner-contact">
-            <div className="ap-badge-tag">EXCLUSIVE AUTHORIZED RESELLER</div>
+            <div className="ap-badge-tag">DIRECT INSTITUTIONAL DESK</div>
             <div className="ap-header-row">
               <div>
-                <h2>Authorized Partner: Code Kumite</h2>
-                <p>Official sales, institutional implementation, and teacher onboarding partner for Pragya School ERP.</p>
+                <h2>Pragya Institutional Advisory &amp; Implementation Desk</h2>
+                <p>Direct institutional advisory, implementation support, and campus onboarding for Pragya School ERP.</p>
               </div>
               <div className="ap-contact-actions">
-                <a href="tel:974855549" className="btn btn--primary btn--lg">
-                  <Phone size={18} /> Call: 974855549
+                <a href="tel:9748555490" className="btn btn--primary btn--lg">
+                  <Phone size={18} /> Call: +91 97485 55490
                 </a>
                 <a 
-                  href="https://wa.me/919748555490?text=Hello%20Code%20Kumite,%20we%20want%20to%20schedule%20a%20Pragya%20School%20ERP%20demonstration." 
+                  href="https://wa.me/919748555490?text=Hello,%20we%20want%20to%20schedule%20a%20Pragya%20School%20ERP%20demonstration." 
                   target="_blank" 
                   rel="noopener noreferrer" 
                   className="btn btn--secondary btn--lg btn-wa"
                 >
                   <WhatsAppIcon size={20} />
-                  <span>WhatsApp: 974855549</span>
+                  <span>WhatsApp: +91 97485 55490</span>
                 </a>
               </div>
             </div>

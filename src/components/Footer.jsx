@@ -97,16 +97,16 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Authorized Partner Box (From Page 4) */}
+          {/* Advisory & Support Box */}
           <div className="footer-partner-card">
-            <div className="footer-col-title">Authorized Reseller</div>
+            <div className="footer-col-title">School Advisory Desk</div>
             <div className="footer-partner-badge">
-              <strong>Code Kumite</strong>
-              <small>Sold Exclusively via Authorized Partners</small>
+              <strong>Pragya Support Desk</strong>
+              <small>Dedicated Implementation &amp; Advisory</small>
             </div>
             <p style={{ fontSize: '0.8125rem', color: 'var(--color-slate-300)', marginBottom: '8px' }}>
               <strong>Phone / WhatsApp:</strong><br />
-              <a href="tel:974855549" style={{ color: '#FFFFFF', fontWeight: 700 }}>+91 97485 55490 / 974855549</a>
+              <a href="tel:9748555490" style={{ color: '#FFFFFF', fontWeight: 700 }}>+91 97485 55490</a>
             </p>
             <p style={{ fontSize: '0.8125rem', color: 'var(--color-slate-300)', marginBottom: '8px' }}>
               <strong>Engineering &amp; IP:</strong><br />
@@ -130,10 +130,10 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="footer-bottom-bar">
           <div>
-            © 2026 Pragya School ERP. Developed by <strong>Zynapte Technologies Pvt. Ltd., India 🇮🇳</strong>. Authorized Partner: <strong>Code Kumite</strong>.
+            © 2026 Pragya School ERP. Developed by <strong>Zynapte Technologies Pvt. Ltd., India 🇮🇳</strong>. All rights reserved.
           </div>
           <div className="footer-legal-links">
-            <Link to="/contact">Contact Partner</Link>
+            <Link to="/contact">Contact Support</Link>
             <Link to="/security">Data Protection &amp; AWS</Link>
             <Link to="/about">About Us</Link>
           </div>

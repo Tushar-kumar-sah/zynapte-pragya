@@ -33,7 +33,7 @@ export default function BottomCta({
                 className="btn btn--secondary btn--lg btn-wa-light"
               >
                 <WhatsAppIcon size={20} />
-                <span>Quick WhatsApp: 974855549</span>
+                <span>Quick WhatsApp: +91 97485 55490</span>
               </a>
             </div>
 
@@ -47,16 +47,16 @@ export default function BottomCta({
 
           <div className="bottom-cta-partner-box">
             <div className="partner-card-header">
-              <div className="partner-pill">EXCLUSIVE RESELLER</div>
-              <h4>Authorized Partner</h4>
-              <div className="partner-org-name">Code Kumite</div>
+              <div className="partner-pill">DIRECT SCHOOL DESK</div>
+              <h4>Implementation &amp; Support</h4>
+              <div className="partner-org-name">Pragya Advisory Desk</div>
             </div>
 
             <div className="partner-details-list">
               <div className="partner-detail-item">
                 <span className="partner-detail-label">Phone &amp; WhatsApp:</span>
-                <a href="tel:974855549" className="partner-detail-val">
-                  <Phone size={13} /> +91 97485 55490 / 974855549
+                <a href="tel:9748555490" className="partner-detail-val">
+                  <Phone size={13} /> +91 97485 55490
                 </a>
               </div>
               <div className="partner-detail-item">
@@ -71,12 +71,12 @@ export default function BottomCta({
 
             <div className="partner-card-action">
               <a 
-                href="https://wa.me/919748555490?text=Hello%20Code%20Kumite,%20we%20want%20to%20schedule%20a%20Pragya%20School%20ERP%20demonstration." 
+                href="https://wa.me/919748555490?text=Hello,%20we%20want%20to%20schedule%20a%20Pragya%20School%20ERP%20demonstration." 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="btn btn--block btn--partner-wa"
               >
-                <WhatsAppIcon size={18} /> Message Partner on WhatsApp
+                <WhatsAppIcon size={18} /> Message on WhatsApp
               </a>
             </div>
           </div>
