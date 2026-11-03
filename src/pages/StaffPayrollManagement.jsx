@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   FileSpreadsheet, UserCheck, ShieldCheck, DollarSign, 
-  Printer, ArrowRight, Check, Users, Clock, FileText 
+  Printer, ArrowRight, Check, Users, Clock, FileText,
+  CreditCard, CheckCircle2, Building2, BarChart3
 } from 'lucide-react';
 import BottomCta from '../components/BottomCta';
 import FaqAccordion from '../components/FaqAccordion';
 
 export default function StaffPayrollManagement() {
+  const [selectedCategory, setSelectedCategory] = useState('teaching');
+
   const faqs = [
     { question: 'Does Pragya support staff leave tracking & salary deductions?', answer: 'Yes, casual, medical, and earned leave balances are tracked. Unpaid absences automatically calculate daily salary deductions.' },
     { question: 'Can we generate printable payslips in PDF?', answer: 'Yes, staff can download encrypted monthly payslips with detailed allowance (DA, HRA) and deduction (EPF, PT) breakdowns.' },
@@ -15,177 +18,316 @@ export default function StaffPayrollManagement() {
     { question: 'Does it produce bank transfer payout files?', answer: 'Yes, Pragya exports standard NEFT/RTGS batch transfer Excel/CSV sheets for direct bank portal processing.' }
   ];
 
+  const payrollCards = [
+    {
+      title: 'Teaching & Non-Teaching Pay Slabs',
+      badge: 'Multi-Structure Ready',
+      image: '/real-photos/real-staff-meeting.jpg',
+      tagline: 'Distinct pay structures for senior faculty, administrative officers, lab assistants, and support staff.',
+      chips: ['DA / HRA Allowances', 'EPF & PTax Rules', 'Annual Increments']
+    },
+    {
+      title: 'Biometric Attendance & Leave Sync',
+      badge: 'Zero Manual Days Tally',
+      image: '/real-photos/real-teacher-instruct.jpg',
+      tagline: 'Connects staff biometric machines or mobile check-ins directly to the monthly salary calculation engine.',
+      chips: ['Casual & Medical Leave', 'Loss of Pay (LOP)', 'Overtime Tracking']
+    },
+    {
+      title: 'Bank NEFT Batches & PDF Payslips',
+      badge: '1-Click Disbursement',
+      image: '/real-photos/real-fee-accounting.jpg',
+      tagline: 'Export standard SBI, HDFC, and PNB batch payout files and generate encrypted digital salary slips.',
+      chips: ['Direct Bank Upload', 'Encrypted Payslip PDF', 'Tax Deduction Form 16']
+    }
+  ];
+
   return (
-    <>
-      {/* Page Hero */}
-      <section className="page-hero">
+    <div className="features-page-wrapper">
+      {/* 1. VISUAL HERO WITH REAL PHOTO & LIVE KPI COUNTER */}
+      <section className="solutions-gov-hero">
         <div className="container">
-          <div className="page-hero-content">
-            <div className="eyebrow"><span className="eyebrow-dot" />STAFF HR &amp; PAYROLL ENGINE</div>
-            <h1 className="page-hero-title">Make Staff Administration as Organised as Your Academics.</h1>
-            <p className="page-hero-desc">
-              Manage teacher profiles, biometric presence, leave ledgers, monthly salary slips, and confidential bank payouts from 1 secure console.
-            </p>
-            <div className="page-hero-ctas">
-              <Link to="/contact" className="btn btn--primary btn--lg">Book an HR &amp; Payroll Demo</Link>
-              <Link to="/features" className="btn btn--secondary btn--lg">Explore All Features</Link>
+          <div className="solutions-gov-hero-grid">
+            <div className="solutions-gov-hero-text">
+              <div className="solutions-gov-eyebrow">
+                STAFF HR &amp; PAYROLL ENGINE
+              </div>
+              <h1 className="solutions-gov-title">
+                Make Staff Administration as Organised as Your Academics.
+              </h1>
+              <p className="solutions-gov-desc">
+                Manage teacher profiles, biometric presence, leave ledgers, monthly salary slips, and confidential bank payouts from 1 secure console.
+              </p>
+
+              <div className="solutions-hero-actions">
+                <a href="#payslip-preview" className="apaar-link-arrow">
+                  <span>Inspect Payslip Structure</span>
+                  <span className="arrow-sym">⟶</span>
+                </a>
+                <Link to="/contact" className="btn btn--primary btn--sm" style={{ marginLeft: '16px' }}>
+                  Book an HR &amp; Payroll Demo
+                </Link>
+              </div>
+
+              <div className="solutions-hero-chips">
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#059669" />
+                  <span>Teaching &amp; Staff Slabs</span>
+                </span>
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#145EFF" />
+                  <span>1-Click Salary Calculation</span>
+                </span>
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#742DDA" />
+                  <span>Bank NEFT Batches</span>
+                </span>
+              </div>
+            </div>
+
+            {/* Right: Real Staff Meeting Photo with Live Payroll Status */}
+            <div className="solutions-gov-hero-visual">
+              <div style={{ background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 10px 25px -5px rgba(15,23,42,0.08)' }}>
+                <div style={{ position: 'relative', width: '100%', height: '230px', overflow: 'hidden' }}>
+                  <img 
+                    src="/real-photos/real-staff-meeting.jpg" 
+                    alt="School faculty and staff meeting around table" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                  <div style={{ position: 'absolute', top: '12px', right: '12px', background: 'rgba(15,23,42,0.85)', backdropFilter: 'blur(6px)', color: '#FFFFFF', padding: '4px 10px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 750 }}>
+                    Monthly Payroll Batch
+                  </div>
+                </div>
+
+                <div style={{ padding: '14px 18px', background: '#F8FAFC', borderTop: '1px solid var(--color-slate-200)', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px', textAlign: 'center' }}>
+                  <div>
+                    <div style={{ fontSize: '0.65rem', fontWeight: 750, color: 'var(--color-slate-400)' }}>STAFF ACTIVE</div>
+                    <div style={{ fontSize: '1.05rem', fontWeight: 850, color: '#059669' }}>68 Members</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.65rem', fontWeight: 750, color: 'var(--color-slate-400)' }}>MONTHLY BATCH</div>
+                    <div style={{ fontSize: '1.05rem', fontWeight: 850, color: 'var(--color-blue)' }}>₹14.85 Lakhs</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.65rem', fontWeight: 750, color: 'var(--color-slate-400)' }}>STATUS</div>
+                    <div style={{ fontSize: '1.05rem', fontWeight: 850, color: '#742DDA' }}>NEFT Ready</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Simulated Confidential Staff Payslip */}
-      <section className="section section--white">
+      {/* 2. CONFIDENTIAL STAFF PAYSLIP SIMULATOR */}
+      <section className="section section--white" id="payslip-preview">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />SALARY SLIP PREVIEW • BUILT FOR INDIAN SCHOOLS</div>
-            <h2>Payroll that fits every employee.</h2>
-            <p>Multiple payslip structures: A separate salary structure for each staff category with automated deductions, allowances and bank files.</p>
+            <div className="eyebrow"><span className="eyebrow-dot" />SALARY SLIP PREVIEW</div>
+            <h2>Payroll Built for Indian School Structures</h2>
+            <p>Separate salary formulas for teaching, non-teaching, and support staff with automated deductions.</p>
           </div>
 
-          {/* Multiple Payslip Structures Selector (From Brochure Page 4) */}
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '24px' }}>
-            <span style={{ background: '#6F3B9C', color: '#FFFFFF', padding: '6px 14px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 800 }}>
-              TEACHING
-            </span>
-            <span style={{ background: '#1D68D8', color: '#FFFFFF', padding: '6px 14px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 800 }}>
-              NON-TEACHING
-            </span>
-            <span style={{ background: '#2E9D60', color: '#FFFFFF', padding: '6px 14px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 800 }}>
-              ADMINISTRATIVE
-            </span>
-            <span style={{ background: '#EF424B', color: '#FFFFFF', padding: '6px 14px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 800 }}>
-              SUPPORT STAFF
-            </span>
+          <div style={{ display: 'flex', justifyContent: 'center', gap: '8px', flexWrap: 'wrap', marginBottom: '20px' }}>
+            {['teaching', 'non-teaching', 'admin', 'support'].map(cat => (
+              <button
+                key={cat}
+                type="button"
+                onClick={() => setSelectedCategory(cat)}
+                style={{
+                  padding: '5px 14px',
+                  borderRadius: '4px',
+                  border: selectedCategory === cat ? '1px solid var(--color-blue)' : '1px solid var(--color-slate-200)',
+                  background: selectedCategory === cat ? 'var(--color-blue)' : '#FFFFFF',
+                  color: selectedCategory === cat ? '#FFFFFF' : 'var(--color-slate-700)',
+                  fontWeight: 750,
+                  fontSize: '0.74rem',
+                  cursor: 'pointer'
+                }}
+              >
+                {cat.toUpperCase()}
+              </button>
+            ))}
           </div>
 
-          <div className="responsive-card-paddings" style={{ maxWidth: '680px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-xl)', padding: '28px', boxShadow: 'var(--shadow-md)', fontFamily: 'monospace' }}>
-            <div style={{ textAlign: 'center', borderBottom: '1px solid var(--color-slate-300)', paddingBottom: '14px', marginBottom: '14px' }}>
-              <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-ink)' }}>PRAGYA HERITAGE HIGH SCHOOL</div>
-              <div style={{ fontSize: '0.75rem', color: 'var(--color-slate-500)' }}>OFFICIAL STAFF PAYSLIP • FOR THE MONTH OF OCTOBER 2026</div>
+          <div style={{ maxWidth: '680px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', padding: '24px', boxShadow: 'var(--shadow-md)' }}>
+            <div style={{ textAlign: 'center', borderBottom: '2px solid var(--color-slate-800)', paddingBottom: '14px', marginBottom: '14px' }}>
+              <div style={{ fontSize: '1.15rem', fontWeight: 850, color: 'var(--color-ink)' }}>PRAGYA MODEL ACADEMY</div>
+              <div style={{ fontSize: '0.72rem', color: 'var(--color-slate-500)' }}>SALARY SLIP FOR THE MONTH OF OCTOBER 2026</div>
+              <span style={{ display: 'inline-block', background: '#ECFDF5', color: '#059669', padding: '2px 10px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 700, marginTop: '6px' }}>
+                CONFIDENTIAL • SALARY CREDITED
+              </span>
             </div>
 
-            <div className="responsive-2col-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 20px', fontSize: '0.8125rem', marginBottom: '16px', background: 'var(--color-soft-canvas)', padding: '6px', borderRadius: 'var(--radius-md)' }}>
-              <div><strong>Employee:</strong> Dr. Ananya Mukherjee</div>
-              <div><strong>Employee ID:</strong> PRG-EMP-0412</div>
-              <div><strong>Designation:</strong> Senior Faculty (Math)</div>
-              <div><strong>Structure Tier:</strong> TEACHING (Secondary)</div>
-              <div><strong>Bank A/C:</strong> ********4819 (SBI NEFT)</div>
-              <div><strong>Days Worked:</strong> 26 / 26 Days</div>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '6px 14px', fontSize: '0.78rem', marginBottom: '14px', background: '#F8FAFC', padding: '10px 14px', borderRadius: '6px' }}>
+              <div><strong>Employee:</strong> Prof. Soumya Mukherjee</div>
+              <div><strong>Employee ID:</strong> T-104</div>
+              <div><strong>Designation:</strong> Senior Mathematics Teacher</div>
+              <div><strong>Bank Account:</strong> SBI •••• 4892</div>
+              <div><strong>Working Days:</strong> 26 / 26 Days</div>
+              <div><strong>PAN:</strong> ABCDE1234F</div>
             </div>
 
-            <div className="responsive-2col-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', fontSize: '0.8125rem', marginBottom: '16px' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', marginBottom: '14px' }}>
               {/* Earnings */}
-              <div style={{ border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '6px' }}>
-                <strong style={{ display: 'block', borderBottom: '1px solid var(--color-slate-200)', paddingBottom: '6px', marginBottom: '8px', color: 'var(--color-success)' }}>
+              <div>
+                <div style={{ fontSize: '0.78rem', fontWeight: 800, color: '#059669', marginBottom: '6px', borderBottom: '1px solid #A7F3D0', paddingBottom: '4px' }}>
                   EARNINGS &amp; ALLOWANCES
-                </strong>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                  <span>Basic Pay</span>
-                  <strong>₹38,000.00</strong>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                  <span>Allowances (DA, HRA)</span>
-                  <strong>₹9,500.00</strong>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', padding: '4px 0' }}>
+                  <span>Basic Salary</span>
+                  <strong>₹32,500.00</strong>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid var(--color-slate-200)', paddingTop: '6px', marginTop: '6px' }}>
-                  <strong>Gross Earnings</strong>
-                  <strong style={{ color: 'var(--color-success)' }}>₹47,500.00</strong>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', padding: '4px 0' }}>
+                  <span>Dearness Allowance (DA)</span>
+                  <strong>₹4,875.00</strong>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', padding: '4px 0' }}>
+                  <span>House Rent (HRA)</span>
+                  <strong>₹3,250.00</strong>
                 </div>
               </div>
 
               {/* Deductions */}
-              <div style={{ border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '6px' }}>
-                <strong style={{ display: 'block', borderBottom: '1px solid var(--color-slate-200)', paddingBottom: '6px', marginBottom: '8px', color: 'var(--color-danger)' }}>
-                  DEDUCTIONS &amp; TAXES
-                </strong>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                  <span>Deductions (EPF, PT)</span>
-                  <strong>₹4,200.00</strong>
+              <div>
+                <div style={{ fontSize: '0.78rem', fontWeight: 800, color: '#DC2626', marginBottom: '6px', borderBottom: '1px solid #FECACA', paddingBottom: '4px' }}>
+                  STATUTORY DEDUCTIONS
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '4px' }}>
-                  <span>Advance Adjustment</span>
-                  <strong>₹0.00</strong>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', padding: '4px 0' }}>
+                  <span>Employee PF (EPF)</span>
+                  <strong>₹1,800.00</strong>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid var(--color-slate-200)', paddingTop: '6px', marginTop: '6px' }}>
-                  <strong>Total Deductions</strong>
-                  <strong style={{ color: 'var(--color-danger)' }}>–₹4,200.00</strong>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', padding: '4px 0' }}>
+                  <span>Professional Tax (PTax)</span>
+                  <strong>₹200.00</strong>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', padding: '4px 0' }}>
+                  <span>TDS / Income Tax</span>
+                  <strong>₹1,500.00</strong>
                 </div>
               </div>
             </div>
 
-            <div className="responsive-flex-stack" style={{ background: 'var(--color-ink)', color: '#FFFFFF', padding: '12px 16px', borderRadius: 'var(--radius-md)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+            <div style={{ background: '#F8FAFC', borderTop: '1px solid var(--color-slate-200)', padding: '10px 14px', borderRadius: '4px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <div>
-                <div style={{ fontSize: '0.75rem', opacity: 0.8 }}>NET PAY DISBURSED (INR)</div>
-                <strong style={{ fontSize: '1.35rem', color: '#6EE7B7' }}>₹43,300.00</strong>
+                <div style={{ fontSize: '0.7rem', color: '#475569' }}>NET TAKE-HOME SALARY</div>
+                <div style={{ fontSize: '1.15rem', fontWeight: 850, color: 'var(--color-blue)' }}>₹37,125.00</div>
               </div>
-              <span style={{ fontSize: '0.75rem', background: 'rgba(255,255,255,0.2)', padding: '4px 10px', borderRadius: '4px' }}>
-                ✓ Bank NEFT Transfer Ready
-              </span>
+              <button 
+                type="button" 
+                className="btn btn--primary btn--sm" 
+                style={{ padding: '4px 10px', fontSize: '0.72rem', borderRadius: '4px' }}
+                onClick={() => alert('Downloading official encrypted salary slip PDF')}
+              >
+                <Printer size={13} style={{ marginRight: '4px' }} />
+                Download Payslip PDF
+              </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Visual Feature Cards */}
+      {/* 3. VISUAL REAL PHOTO CAPABILITY CARDS */}
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />CAPABILITIES</div>
-            <h2>Modern Human Resource Management for Schools</h2>
+            <div className="eyebrow"><span className="eyebrow-dot" />PAYROLL FEATURES</div>
+            <h2>Built for Campus Administrators &amp; HR</h2>
+            <p>Maintain accurate staff records, statutory deductions, and confidential bank payouts.</p>
           </div>
 
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(20, 94, 255, 0.08)', color: 'var(--color-blue)' }}>
-                <Users size={28} />
+          <div className="role-gallery-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+            {payrollCards.map((card, i) => (
+              <div key={i} className="role-gallery-card">
+                <div className="role-gallery-img-box" style={{ height: '180px' }}>
+                  <img src={card.image} alt={card.title} className="role-gallery-img" />
+                  <div className="role-gallery-badge">
+                    <span>{card.badge}</span>
+                  </div>
+                </div>
+                <div className="role-gallery-content">
+                  <h4 style={{ fontSize: '1.05rem' }}>{card.title}</h4>
+                  <p style={{ fontSize: '0.82rem' }}>{card.tagline}</p>
+                  <div className="role-gallery-chips">
+                    {card.chips.map((c, idx) => (
+                      <span key={idx} className="gallery-chip">{c}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <h3>Faculty &amp; Staff Dossiers</h3>
-              <p>Store educational credentials, B.Ed certifications, teacher service books, appointment letters, and emergency contacts in 1 place.</p>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(116, 45, 218, 0.08)', color: 'var(--color-violet)' }}>
-                <Clock size={28} />
-              </div>
-              <h3>Leave Ledgers &amp; Approvals</h3>
-              <p>Teachers request casual or medical leaves on their smartphone app. Principals approve leaves with 1 tap, auto-updating pay registers.</p>
-            </div>
+      {/* 4. 4-STEP CONNECTED TIMELINE */}
+      <section className="apaar-how-section" id="how-it-works">
+        <div className="container">
+          <div className="apaar-how-header">
+            <h2>The Monthly <span>Staff Payroll Cycle</span></h2>
+            <p>From biometric attendance sync to bank NEFT file generation.</p>
+          </div>
 
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(5, 150, 105, 0.08)', color: 'var(--color-success)' }}>
-                <DollarSign size={28} />
-              </div>
-              <h3>1-Click Monthly Payroll Engine</h3>
-              <p>Process 100+ teacher salaries in seconds. Handles basic pay, allowances, EPF, professional tax, and generates batch bank payout files.</p>
-            </div>
+          <div className="apaar-stepper-container">
+            <div className="apaar-stepper-connector-line" aria-hidden="true" />
 
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(0, 205, 229, 0.12)', color: '#028394' }}>
-                <Printer size={28} />
+            <div className="apaar-how-steps-grid">
+              <div className="how-step-node">
+                <div className="step-circle-badge">01.</div>
+                <div className="step-icon-box">
+                  <Clock size={22} color="#145EFF" />
+                </div>
+                <h4>Attendance Tally</h4>
+                <p>Biometric punch &amp; approved casual leaves automatically synced</p>
               </div>
-              <h3>Confidential Payslip Vault</h3>
-              <p>Teachers access past payslips and Form 16 summaries from their personal mobile portal without visiting administrative offices.</p>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">02.</div>
+                <div className="step-icon-box">
+                  <DollarSign size={22} color="#059669" />
+                </div>
+                <h4>Salary Calculation</h4>
+                <p>Auto-computes gross-to-net pay with EPF, PTax, and TDS deductions</p>
+              </div>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">03.</div>
+                <div className="step-icon-box">
+                  <FileSpreadsheet size={22} color="#742DDA" />
+                </div>
+                <h4>Bank NEFT File</h4>
+                <p>Export standard bank batch file for 1-click SBI/HDFC disbursement</p>
+              </div>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">04.</div>
+                <div className="step-icon-box">
+                  <Printer size={22} color="#F59E0B" />
+                </div>
+                <h4>Digital Payslips</h4>
+                <p>Encrypted payslips delivered to teacher smartphones on pay day</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* 5. FAQ */}
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <h2>Staff Administration &amp; Payroll FAQs</h2>
+            <div className="eyebrow"><span className="eyebrow-dot" />PAYROLL FAQS</div>
+            <h2>Frequently Asked Questions About Staff &amp; Payroll</h2>
           </div>
           <FaqAccordion items={faqs} />
         </div>
       </section>
 
       <BottomCta
-        title="Connect Workforce Processes With School Operations."
-        subtitle="Manage teacher profiles, leave, presence and monthly salary slips from one unified workspace."
-        buttonText="Explore Staff &amp; Payroll"
+        title="Make Payroll Run Smoothly Every Month."
+        subtitle="Bring your school’s salary register. We’ll show you how to generate payslips and bank files in 1 click."
+        buttonText="Book an HR &amp; Payroll Demo"
       />
-    </>
+    </div>
   );
 }

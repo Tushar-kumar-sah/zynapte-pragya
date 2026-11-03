@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Users, FileSpreadsheet, Shield, Search, ArrowRight, 
-  Printer, CheckCircle2, UserCheck, Award, FileText, Check 
+  Printer, CheckCircle2, UserCheck, Award, FileText, Check,
+  QrCode, FileCheck, Layers, Sparkles
 } from 'lucide-react';
 import BottomCta from '../components/BottomCta';
 import FaqAccordion from '../components/FaqAccordion';
@@ -15,27 +16,102 @@ export default function StudentManagement() {
     { question: 'Is student data restricted by role?', answer: 'Yes, subject teachers see only academic performance; accounts see fee history; principals see comprehensive summaries.' }
   ];
 
+  const studentCards = [
+    {
+      title: 'Permanent Digital Dossier',
+      badge: '12-Year Unified Record',
+      image: '/real-photos/real-bangalore-school-coding.jpg',
+      tagline: 'Store birth certificates, Aadhaar numbers, previous school transfer certificates (TC), and guardian records in 1 encrypted place.',
+      chips: ['Aadhaar & PEN Ready', 'Document Vault', 'All-Grade History']
+    },
+    {
+      title: 'Batch-Printable PVC ID Cards',
+      badge: '1-Click Multi-Card Print',
+      image: '/real-photos/real-indian-teacher-computer.jpg',
+      tagline: 'Generate high-resolution CR80 plastic identity cards with dynamic QR codes, blood group badges, and emergency contact numbers.',
+      chips: ['CR80 Card Standard', 'QR Barcode Scanner', '8-per-A4 Sheets']
+    },
+    {
+      title: 'Assisted Excel / CSV Importer',
+      badge: 'Zero Manual Retyping',
+      image: '/real-photos/real-fee-accounting.jpg',
+      tagline: 'Migrate thousands of legacy student records in minutes. Guided column mapper verifies phone numbers, date formats, and duplicates.',
+      chips: ['Auto Column Mapping', 'Duplicate Blocker', 'Roll Auto-Numbering']
+    }
+  ];
+
   return (
-    <>
-      {/* Page Hero */}
-      <section className="page-hero">
+    <div className="features-page-wrapper">
+      {/* 1. VISUAL HERO WITH REAL PHOTO & KPI CHIPS */}
+      <section className="solutions-gov-hero">
         <div className="container">
-          <div className="page-hero-content">
-            <div className="eyebrow"><span className="eyebrow-dot" />STUDENT REGISTRY &amp; PROFILES</div>
-            <h1 className="page-hero-title">Every Student Record, Organised for the Whole School Journey.</h1>
-            <p className="page-hero-desc">
-              One connected folder across admissions, classroom attendance, term marksheets, counter fees, and APAAR validation.
-            </p>
-            <div className="page-hero-ctas">
-              <Link to="/contact" className="btn btn--primary btn--lg">Book a Student Registry Demo</Link>
-              <Link to="/admission-management" className="btn btn--secondary btn--lg">Explore Admissions CRM</Link>
+          <div className="solutions-gov-hero-grid">
+            <div className="solutions-gov-hero-text">
+              <div className="solutions-gov-eyebrow">
+                STUDENT REGISTRY &amp; PROFILES
+              </div>
+              <h1 className="solutions-gov-title">
+                Every Student Record, Organised for the Whole School Journey.
+              </h1>
+              <p className="solutions-gov-desc">
+                One connected folder across admissions, classroom attendance, term marksheets, counter fees, and APAAR validation.
+              </p>
+
+              <div className="solutions-hero-actions">
+                <a href="#smart-id-card" className="apaar-link-arrow">
+                  <span>View Smart ID Cards</span>
+                  <span className="arrow-sym">⟶</span>
+                </a>
+                <Link to="/contact" className="btn btn--primary btn--sm" style={{ marginLeft: '16px' }}>
+                  Book a Registry Demo
+                </Link>
+              </div>
+
+              <div className="solutions-hero-chips">
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#059669" />
+                  <span>1,248 Active Students</span>
+                </span>
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#145EFF" />
+                  <span>100% Digital Dossiers</span>
+                </span>
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#742DDA" />
+                  <span>Batch PVC ID Ready</span>
+                </span>
+              </div>
+            </div>
+
+            {/* Right: Real Student Photo Hero Showcase */}
+            <div className="solutions-gov-hero-visual">
+              <div style={{ background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 10px 25px -5px rgba(15,23,42,0.08)' }}>
+                <div style={{ position: 'relative', width: '100%', height: '230px', overflow: 'hidden' }}>
+                  <img 
+                    src="/real-photos/real-teacher-students-hnahthial-opt.jpg" 
+                    alt="Real Indian school students in uniform" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                  <div style={{ position: 'absolute', top: '12px', right: '12px', background: 'rgba(15,23,42,0.85)', backdropFilter: 'blur(6px)', color: '#FFFFFF', padding: '4px 10px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 750 }}>
+                    Real Indian School Cohort
+                  </div>
+                </div>
+
+                <div style={{ padding: '14px 18px', background: '#F8FAFC', borderTop: '1px solid var(--color-slate-200)', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                    <div style={{ width: '8px', height: '8px', borderRadius: '50%', background: '#059669' }} />
+                    <span style={{ fontSize: '0.8rem', fontWeight: 750, color: 'var(--color-ink)' }}>Verified Institutional Registry</span>
+                  </div>
+                  <span style={{ fontSize: '0.72rem', color: '#475569', fontWeight: 600 }}>Class I to Class XII</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Visual Simulated Student ID Card & Digital Dossier */}
-      <section className="section section--white">
+      {/* 2. REAL SMART ID CARD DEMO (WITH REAL STUDENT PHOTO) */}
+      <section className="section section--white" id="smart-id-card">
         <div className="container">
           <div className="section-header">
             <div className="eyebrow"><span className="eyebrow-dot" />SMART ID CARDS</div>
@@ -44,15 +120,20 @@ export default function StudentManagement() {
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', margin: '20px 0' }}>
-            <div className="simulated-idcard">
+            <div className="simulated-idcard" style={{ borderRadius: '8px' }}>
               <div className="idcard-top">
-                <div className="idcard-school">PRAGYA PUBLIC SCHOOL</div>
+                <div className="idcard-school">PRAGYA MODEL ACADEMY</div>
                 <div className="idcard-affil">AFFILIATED TO WBBSE / CBSE • ESTD. 1994</div>
               </div>
               <div className="idcard-body">
                 <div className="idcard-photo-box">
-                  <div className="idcard-avatar-sample">👩‍🎓</div>
-                  <span className="idcard-student-type">STUDENT</span>
+                  {/* REAL PHOTOGRAPH OF INDIAN STUDENT */}
+                  <img 
+                    src="/real-student-id-ananya.jpg" 
+                    alt="Ananya Das Student Photo" 
+                    style={{ width: '100%', height: '110px', objectFit: 'cover', borderRadius: '4px', border: '1px solid var(--color-slate-300)' }}
+                  />
+                  <span className="idcard-student-type" style={{ marginTop: '6px' }}>STUDENT</span>
                 </div>
                 <div className="idcard-details">
                   <div className="idcard-name">ANANYA DAS</div>
@@ -66,72 +147,114 @@ export default function StudentManagement() {
               </div>
               <div className="idcard-barcode-strip">
                 <div className="barcode-mock">|||||| |||| ||||| ||||||| ||||</div>
-                <span>UID: 2026-IX-14-0842</span>
+                <span>UID: 2026-IX-14-0842 • APAAR Verified</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Visual Feature Cards with Icons */}
+      {/* 3. VISUAL REAL PHOTO CAPABILITY CARDS */}
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
             <div className="eyebrow"><span className="eyebrow-dot" />STUDENT LIFECYCLE</div>
-            <h2>Complete Control from Class I to Class XII</h2>
+            <h2>Complete Control Across All 12 School Years</h2>
+            <p>Maintain accurate academic records and legal custody of student documentation.</p>
           </div>
 
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(20, 94, 255, 0.08)', color: 'var(--color-blue)' }}>
-                <Users size={28} />
+          <div className="role-gallery-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+            {studentCards.map((card, i) => (
+              <div key={i} className="role-gallery-card">
+                <div className="role-gallery-img-box" style={{ height: '180px' }}>
+                  <img src={card.image} alt={card.title} className="role-gallery-img" />
+                  <div className="role-gallery-badge">
+                    <span>{card.badge}</span>
+                  </div>
+                </div>
+                <div className="role-gallery-content">
+                  <h4 style={{ fontSize: '1.05rem' }}>{card.title}</h4>
+                  <p style={{ fontSize: '0.82rem' }}>{card.tagline}</p>
+                  <div className="role-gallery-chips">
+                    {card.chips.map((c, idx) => (
+                      <span key={idx} className="gallery-chip">{c}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <h3>Permanent Digital Dossier</h3>
-              <p>Store birth certificates, Aadhaar numbers, caste certificates, previous school transfer certificates (TC), and guardian records in 1 encrypted place.</p>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(5, 150, 105, 0.08)', color: 'var(--color-success)' }}>
-                <FileSpreadsheet size={28} />
-              </div>
-              <h3>Assisted Excel / CSV Importer</h3>
-              <p>Migrate thousands of legacy students in minutes. Pragya's guided column mapper verifies phone numbers, date formats, and duplicates before import.</p>
-            </div>
+      {/* 4. 4-STEP CONNECTED LIFECYCLE TIMELINE */}
+      <section className="apaar-how-section" id="how-it-works">
+        <div className="container">
+          <div className="apaar-how-header">
+            <h2>The Student <span>Record Lifecycle</span></h2>
+            <p>From day one of admission through graduation, student documents remain verified and accessible.</p>
+          </div>
 
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(116, 45, 218, 0.08)', color: 'var(--color-violet)' }}>
-                <Printer size={28} />
-              </div>
-              <h3>Bulk ID Card &amp; Certificate Studio</h3>
-              <p>Generate Bonafide certificates, character certificates, transfer certificates, and barcoded photo ID cards in 1 click.</p>
-            </div>
+          <div className="apaar-stepper-container">
+            <div className="apaar-stepper-connector-line" aria-hidden="true" />
 
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(0, 205, 229, 0.12)', color: '#028394' }}>
-                <UserCheck size={28} />
+            <div className="apaar-how-steps-grid">
+              <div className="how-step-node">
+                <div className="step-circle-badge">01.</div>
+                <div className="step-icon-box">
+                  <Users size={22} color="#145EFF" />
+                </div>
+                <h4>Digital Intake</h4>
+                <p>Upload birth cert, Aadhaar scan, and passport photo</p>
               </div>
-              <h3>APAAR &amp; UDISE+ Linked</h3>
-              <p>Check parental consent flags, PEN numbers, and Aadhaar name matches directly from each student's personal view.</p>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">02.</div>
+                <div className="step-icon-box">
+                  <FileCheck size={22} color="#059669" />
+                </div>
+                <h4>Auto Verification</h4>
+                <p>Spelling and PEN validation against UDISE+ database</p>
+              </div>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">03.</div>
+                <div className="step-icon-box">
+                  <Printer size={22} color="#742DDA" />
+                </div>
+                <h4>Smart ID Print</h4>
+                <p>Batch PVC card printing with encrypted QR barcode</p>
+              </div>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">04.</div>
+                <div className="step-icon-box">
+                  <Award size={22} color="#F59E0B" />
+                </div>
+                <h4>12-Year History</h4>
+                <p>Permanent marksheets, fee history, and transfer certificates</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* 5. FAQ */}
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <h2>Student Record Management FAQs</h2>
+            <div className="eyebrow"><span className="eyebrow-dot" />STUDENT FAQS</div>
+            <h2>Common Questions on Student Management</h2>
           </div>
           <FaqAccordion items={faqs} />
         </div>
       </section>
 
       <BottomCta
-        title="See Student Management in Action."
-        subtitle="Walk through how student profiles connect with attendance, exams, fees and APAAR readiness."
-        buttonText="Book a Demo"
+        title="Ready to Digitise Your Student Records?"
+        subtitle="Bring your school's Excel roster or paper registers. We'll map your classes in a live demo."
+        buttonText="Book a Student Registry Demo"
       />
-    </>
+    </div>
   );
 }

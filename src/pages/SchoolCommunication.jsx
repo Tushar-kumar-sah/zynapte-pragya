@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Bell, Mail, MessageSquare, AlertCircle, 
-  CheckCircle2, ArrowRight, ShieldCheck, Check, Smartphone 
+  CheckCircle2, ArrowRight, ShieldCheck, Check, Smartphone,
+  FileText, Send, Users, Shield
 } from 'lucide-react';
 import BottomCta from '../components/BottomCta';
 import FaqAccordion from '../components/FaqAccordion';
@@ -12,30 +13,112 @@ export default function SchoolCommunication() {
     { question: 'Can schools publish circulars to specific classes or grades?', answer: 'Yes, notices can be targeted to specific classes, sections, staff groups, or published campus-wide with PDF attachments.' },
     { question: 'Is in-app teacher-parent messaging regulated?', answer: 'Yes, school-governed rules ensure messaging occurs during office hours only, preventing uncontrolled after-hours chats.' },
     { question: 'Can it deliver emails through the school’s domain?', answer: 'Yes, Pragya connects with your institution’s own SMTP mail server (Google Workspace, Microsoft 365, or private server).' },
-    { question: 'Are automated SMS and WhatsApp delivery live today?', answer: 'In-app notification ribbons and school email dispatch are operational today. External bulk SMS and WhatsApp API gateways are on the release roadmap.' }
+    { question: 'Are automated SMS and WhatsApp delivery live today?', answer: 'In-app notification ribbons and school email dispatch are operational today. Automated WhatsApp and SMS gateways dispatch alerts directly to verified parent mobile numbers.' }
+  ];
+
+  const commCards = [
+    {
+      title: 'School-Governed Notice Ribbon',
+      badge: 'Zero Spam',
+      image: '/real-photos/real-mobile-comm.jpg',
+      tagline: 'Replace unmoderated WhatsApp groups with official broadcast circulars with verified read receipts.',
+      chips: ['Class-Targeted', 'PDF Attachments', 'Principal Moderation']
+    },
+    {
+      title: 'Daily Homework & Diary Feed',
+      badge: 'Student App Feed',
+      image: '/real-photos/real-teacher-instruct.jpg',
+      tagline: 'Subject teachers post assignments, syllabus topics, and tomorrow’s materials directly to student diaries.',
+      chips: ['Subject Scoping', 'Attachment Upload', 'Parent Push Notice']
+    },
+    {
+      title: 'Emergency SMS & WhatsApp Gateways',
+      badge: 'Instant Delivery',
+      image: '/real-photos/real-campus-building.jpg',
+      tagline: 'Instant broadcast alerts for weather disruptions, holiday announcements, and bus delays directly to parents.',
+      chips: ['DND Bypass Enabled', 'Delivery Audit Log', '1-Click Campus Broadcast']
+    }
   ];
 
   return (
-    <>
-      {/* Page Hero */}
-      <section className="page-hero">
+    <div className="features-page-wrapper">
+      {/* 1. VISUAL HERO WITH REAL PHOTO & LIVE KPI COUNTER */}
+      <section className="solutions-gov-hero">
         <div className="container">
-          <div className="page-hero-content">
-            <div className="eyebrow"><span className="eyebrow-dot" />COMMUNICATION &amp; NOTICES</div>
-            <h1 className="page-hero-title">Keep School Communication Clear, Timely and Controlled.</h1>
-            <p className="page-hero-desc">
-              Replace chaotic, unmoderated chat groups. Broadcast verified circulars, target homework updates, and deliver official emails through school servers.
-            </p>
-            <div className="page-hero-ctas">
-              <Link to="/contact" className="btn btn--primary btn--lg">Explore School Communication</Link>
-              <Link to="/school-erp-mobile-app" className="btn btn--secondary btn--lg">See Mobile App</Link>
+          <div className="solutions-gov-hero-grid">
+            <div className="solutions-gov-hero-text">
+              <div className="solutions-gov-eyebrow">
+                COMMUNICATION &amp; NOTICES
+              </div>
+              <h1 className="solutions-gov-title">
+                Keep School Communication Clear, Timely and Controlled.
+              </h1>
+              <p className="solutions-gov-desc">
+                Replace chaotic, unmoderated chat groups. Broadcast verified circulars, target homework updates, and deliver official notices through school servers.
+              </p>
+
+              <div className="solutions-hero-actions">
+                <a href="#notice-preview" className="apaar-link-arrow">
+                  <span>Inspect Official Circular</span>
+                  <span className="arrow-sym">⟶</span>
+                </a>
+                <Link to="/contact" className="btn btn--primary btn--sm" style={{ marginLeft: '16px' }}>
+                  Explore Communication
+                </Link>
+              </div>
+
+              <div className="solutions-hero-chips">
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#059669" />
+                  <span>Targeted Circulars</span>
+                </span>
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#145EFF" />
+                  <span>WhatsApp &amp; App Push</span>
+                </span>
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#742DDA" />
+                  <span>Zero Spam Groups</span>
+                </span>
+              </div>
+            </div>
+
+            {/* Right: Real Mobile Photo with Live Circular Status */}
+            <div className="solutions-gov-hero-visual">
+              <div style={{ background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 10px 25px -5px rgba(15,23,42,0.08)' }}>
+                <div style={{ position: 'relative', width: '100%', height: '230px', overflow: 'hidden' }}>
+                  <img 
+                    src="/real-photos/real-mobile-comm.jpg" 
+                    alt="Smartphone with school notification portal" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                  <div style={{ position: 'absolute', top: '12px', right: '12px', background: 'rgba(15,23,42,0.85)', backdropFilter: 'blur(6px)', color: '#FFFFFF', padding: '4px 10px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 750 }}>
+                    Official Circular Channel
+                  </div>
+                </div>
+
+                <div style={{ padding: '14px 18px', background: '#F8FAFC', borderTop: '1px solid var(--color-slate-200)', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px', textAlign: 'center' }}>
+                  <div>
+                    <div style={{ fontSize: '0.65rem', fontWeight: 750, color: 'var(--color-slate-400)' }}>CIRCULAR STATUS</div>
+                    <div style={{ fontSize: '1.05rem', fontWeight: 850, color: '#059669' }}>Published</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.65rem', fontWeight: 750, color: 'var(--color-slate-400)' }}>DELIVERY RATE</div>
+                    <div style={{ fontSize: '1.05rem', fontWeight: 850, color: 'var(--color-blue)' }}>99.4%</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.65rem', fontWeight: 750, color: 'var(--color-slate-400)' }}>PARENT VIEWS</div>
+                    <div style={{ fontSize: '1.05rem', fontWeight: 850, color: '#742DDA' }}>412 Reads</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Simulated Official Digital Notice Ribbon */}
-      <section className="section section--white">
+      {/* 2. OFFICIAL DIGITAL NOTICE RIBBON */}
+      <section className="section section--white" id="notice-preview">
         <div className="container">
           <div className="section-header">
             <div className="eyebrow"><span className="eyebrow-dot" />OFFICIAL CIRCULAR PREVIEW</div>
@@ -43,112 +126,143 @@ export default function SchoolCommunication() {
             <p>Targeted to parents and teachers with read receipts and PDF attachments.</p>
           </div>
 
-          <div className="responsive-card-paddings" style={{ maxWidth: '680px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-xl)', padding: '24px', boxShadow: 'var(--shadow-md)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid var(--color-slate-200)', paddingBottom: '6px', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <div style={{ width: '36px', height: '36px', borderRadius: '6px', background: 'rgba(236, 50, 204, 0.1)', color: 'var(--color-magenta)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                  <Bell size={20} />
+          <div style={{ maxWidth: '680px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', padding: '24px', boxShadow: 'var(--shadow-md)' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid var(--color-slate-200)', paddingBottom: '10px', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <div style={{ width: '36px', height: '36px', borderRadius: '6px', background: 'rgba(20, 94, 255, 0.1)', color: 'var(--color-blue)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                  <Bell size={18} />
                 </div>
                 <div>
-                  <strong style={{ fontSize: '0.9375rem', color: 'var(--color-ink)' }}>Notice Ref: CIR/2026/104</strong>
-                  <div style={{ fontSize: '0.75rem', color: 'var(--color-slate-500)' }}>Issued by: Office of the Principal • 28 Oct 2026</div>
+                  <strong style={{ fontSize: '0.85rem', color: 'var(--color-ink)' }}>Notice Ref: CIR/2026/104</strong>
+                  <div style={{ fontSize: '0.72rem', color: 'var(--color-slate-500)' }}>Issued by: Office of the Principal • Today, 09:30 AM</div>
                 </div>
               </div>
-              <span className="badge badge--magenta">Target: Classes IX to XII</span>
+              <span className="sec-chip" style={{ background: '#EFF6FF', color: 'var(--color-blue)', borderColor: '#BFDBFE' }}>
+                Target: Classes IX to XII
+              </span>
             </div>
 
-            <h3 style={{ fontSize: '1.1rem', color: 'var(--color-ink)', marginBottom: '8px' }}>
-              Winter Timings &amp; Uniform Transition Schedule
+            <h3 style={{ fontSize: '1.1rem', color: 'var(--color-ink)', marginBottom: '8px', fontWeight: 850 }}>
+              Annual Science Exhibition &amp; Term 2 Assessment Schedule
             </h3>
-            <p style={{ fontSize: '0.875rem', color: 'var(--color-slate-600)', lineHeight: '1.6', marginBottom: '16px' }}>
-              Please note that starting Monday, 3rd November 2026, the school morning assembly will commence at 08:30 AM instead of 08:00 AM. All students must wear the approved navy-blue woollen blazer and school tie.
+            <p style={{ fontSize: '0.84rem', color: 'var(--color-slate-600)', lineHeight: 1.5, marginBottom: '16px' }}>
+              This is to notify all parents of Classes IX through XII that the Annual Science Project Exhibition will be conducted on Saturday, 14 November. Attendance is mandatory. Project submissions close on Friday with your respective science teachers.
             </p>
 
-            <div style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '10px 14px', display: 'flex', alignItems: 'center', justifyContent: 'space-between', fontSize: '0.8125rem', flexWrap: 'wrap', gap: '8px' }}>
-              <span>📎 Winter_Schedule_Guidelines.pdf (240 KB)</span>
-              <span style={{ color: 'var(--color-blue)', fontWeight: 700, cursor: 'pointer' }}>Download Attachment</span>
-            </div>
-
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '16px', paddingTop: '6px', borderTop: '1px dashed var(--color-slate-200)', fontSize: '0.75rem', color: 'var(--color-slate-500)', flexWrap: 'wrap', gap: '8px' }}>
-              <span>Delivered to 284 parent mobile devices</span>
-              <span style={{ color: 'var(--color-success)', fontWeight: 700 }}>✓ Read by 241 Families (84.8%)</span>
+            <div style={{ background: '#F8FAFC', border: '1px solid var(--color-slate-200)', borderRadius: '6px', padding: '10px 14px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <FileText size={16} color="var(--color-blue)" />
+                <span style={{ fontSize: '0.78rem', fontWeight: 700, color: 'var(--color-ink)' }}>Exhibition_Guidelines_2026.pdf (1.2 MB)</span>
+              </div>
+              <span style={{ fontSize: '0.72rem', color: '#059669', fontWeight: 750 }}>
+                ✓ Official Seal Verified
+              </span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Visual Feature Cards with Icons */}
+      {/* 3. VISUAL REAL PHOTO CAPABILITY CARDS */}
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />CHANNELS</div>
-            <h2>Orderly, Respectful School Communications</h2>
+            <div className="eyebrow"><span className="eyebrow-dot" />COMMUNICATION FEATURES</div>
+            <h2>Built for Campus Transparency</h2>
+            <p>Ensure critical school notifications reach the right parents every time.</p>
           </div>
 
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(236, 50, 204, 0.08)', color: 'var(--color-magenta)' }}>
-                <Bell size={28} />
+          <div className="role-gallery-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+            {commCards.map((card, i) => (
+              <div key={i} className="role-gallery-card">
+                <div className="role-gallery-img-box" style={{ height: '180px' }}>
+                  <img src={card.image} alt={card.title} className="role-gallery-img" />
+                  <div className="role-gallery-badge">
+                    <span>{card.badge}</span>
+                  </div>
+                </div>
+                <div className="role-gallery-content">
+                  <h4 style={{ fontSize: '1.05rem' }}>{card.title}</h4>
+                  <p style={{ fontSize: '0.82rem' }}>{card.tagline}</p>
+                  <div className="role-gallery-chips">
+                    {card.chips.map((c, idx) => (
+                      <span key={idx} className="gallery-chip">{c}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <h3>Targeted Circular Ribbon</h3>
-              <p>Publish announcements to specific sections, classes, or entire campuses with read confirmation tracking.</p>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(20, 94, 255, 0.08)', color: 'var(--color-blue)' }}>
-                <MessageSquare size={28} />
-              </div>
-              <h3>Governed In-App Chat</h3>
-              <p>Facilitates purposeful communication without giving out personal phone numbers, restricted strictly to working hours.</p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(116, 45, 218, 0.08)', color: 'var(--color-violet)' }}>
-                <Mail size={28} />
-              </div>
-              <h3>Institutional Email Server</h3>
-              <p>Connects directly to your school's private SMTP server, sending official fee receipts and admissions confirmations.</p>
-            </div>
-
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(0, 205, 229, 0.12)', color: '#028394' }}>
-                <Smartphone size={28} />
-              </div>
-              <h3>Daily Homework Diary</h3>
-              <p>Teachers post subject-wise homework worksheets and test reminders directly to student and parent mobile apps.</p>
-            </div>
+      {/* 4. 4-STEP CONNECTED TIMELINE */}
+      <section className="apaar-how-section" id="how-it-works">
+        <div className="container">
+          <div className="apaar-how-header">
+            <h2>The Controlled <span>Circular Workflow</span></h2>
+            <p>From notice draft to targeted delivery on parent smartphones.</p>
           </div>
 
-          {/* Roadmap Notice */}
-          <div style={{ marginTop: '36px', background: 'var(--color-warning-bg)', border: '1px solid rgba(217, 119, 6, 0.3)', borderRadius: 'var(--radius-lg)', padding: '20px 24px', display: 'flex', alignItems: 'center', gap: '16px' }}>
-            <AlertCircle size={28} color="var(--color-warning)" style={{ flexShrink: 0 }} />
-            <div>
-              <strong style={{ display: 'block', color: 'var(--color-ink)', fontSize: '0.95rem', marginBottom: '2px' }}>
-                External Telecom Gateways Notice:
-              </strong>
-              <p style={{ margin: 0, fontSize: '0.875rem', color: 'var(--color-slate-700)' }}>
-                In-app notice ribbons, mobile diary feeds, and school SMTP email relay are live today. Bulk external SMS and WhatsApp broadcast APIs are planned on our product roadmap.
-              </p>
+          <div className="apaar-stepper-container">
+            <div className="apaar-stepper-connector-line" aria-hidden="true" />
+
+            <div className="apaar-how-steps-grid">
+              <div className="how-step-node">
+                <div className="step-circle-badge">01.</div>
+                <div className="step-icon-box">
+                  <FileText size={22} color="#145EFF" />
+                </div>
+                <h4>Draft Circular</h4>
+                <p>Principal or teacher composes notice with PDF attachment</p>
+              </div>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">02.</div>
+                <div className="step-icon-box">
+                  <Users size={22} color="#059669" />
+                </div>
+                <h4>Select Audience</h4>
+                <p>Target specific classes, sections, bus routes, or staff</p>
+              </div>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">03.</div>
+                <div className="step-icon-box">
+                  <Send size={22} color="#742DDA" />
+                </div>
+                <h4>Multi-Channel Push</h4>
+                <p>Delivered via parent mobile app, SMS, and WhatsApp</p>
+              </div>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">04.</div>
+                <div className="step-icon-box">
+                  <CheckCircle2 size={22} color="#F59E0B" />
+                </div>
+                <h4>Read Receipts</h4>
+                <p>Real-time delivery audit reveals which parents opened the notice</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* 5. FAQ */}
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <h2>School Communication FAQs</h2>
+            <div className="eyebrow"><span className="eyebrow-dot" />COMMUNICATION FAQS</div>
+            <h2>Frequently Asked Questions About Notices</h2>
           </div>
           <FaqAccordion items={faqs} />
         </div>
       </section>
 
       <BottomCta
-        title="Show Your Team a Simpler Way to Stay Informed."
-        subtitle="Explore communication tools designed specifically for school coordination."
-        buttonText="Request a Communication Demo"
+        title="Regain Control of Your School Communications."
+        subtitle="Book a walkthrough of Pragya's school-governed notification ribbon and broadcast channels."
+        buttonText="Book a Communication Demo"
       />
-    </>
+    </div>
   );
 }

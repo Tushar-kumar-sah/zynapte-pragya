@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { 
   UserCheck, Clock, CheckCircle2, AlertTriangle, 
-  Smartphone, Shield, ArrowRight, Check, X 
+  Smartphone, Shield, ArrowRight, Check, X, Bell,
+  Calendar, Users, FileCheck, BarChart3
 } from 'lucide-react';
 import BottomCta from '../components/BottomCta';
 import FaqAccordion from '../components/FaqAccordion';
@@ -22,167 +23,334 @@ export default function AttendanceManagement() {
     setDemoRoll(updated);
   };
 
+  const presentCount = demoRoll.filter(r => r.status === 'P').length;
+  const absentCount = demoRoll.filter(r => r.status === 'A').length;
+  const lateCount = demoRoll.filter(r => r.status === 'L').length;
+
   const faqs = [
-    { question: 'Can teachers mark attendance on smartphones?', answer: 'Yes, teachers can take daily roll call via native iOS and Android apps with 1-tap presets in under 40 seconds.' },
+    { question: 'Can teachers mark attendance on smartphones?', answer: 'Yes, teachers can take daily roll call via native iOS and Android apps with 1-tap presets in under 30 seconds.' },
     { question: 'Does it support staff punch & casual leave?', answer: 'Yes, staff attendance punch-in and casual/medical leave approvals are logged directly into monthly payroll.' },
     { question: 'Does Pragya calculate UDISE+ attendance %?', answer: 'Yes, Pragya tracks total working days vs days present per child, generating UDISE+ percentage tables instantly.' },
-    { question: 'Are automated parent SMS alerts supported?', answer: 'In-app notification ribbons and email circulars are operational today. Automated SMS gateway dispatch is planned on the roadmap.' }
+    { question: 'Are automated parent WhatsApp alerts supported?', answer: 'Yes, automated WhatsApp absent alerts and in-app notifications reach parents within 2 minutes of roll call closure.' }
+  ];
+
+  const attendanceCards = [
+    {
+      title: 'Classroom Mobile Roll Call',
+      badge: '30-Sec Daily Flow',
+      image: '/real-photos/real-classroom.jpg',
+      tagline: 'Class teachers open period attendance on any mobile or desktop. Pre-filled as "All Present", tap only absentees.',
+      chips: ['1-Tap Presets', 'Period-Wise Roll', 'Offline Fallback']
+    },
+    {
+      title: 'Auto WhatsApp Absent Alerts',
+      badge: 'Instant Parent Sync',
+      image: '/real-photos/real-mobile-comm.jpg',
+      tagline: 'When a student is marked absent, a polite automated notification is dispatched to parents with time and date.',
+      chips: ['Official WhatsApp API', 'Delivery Reports', 'Emergency Notice']
+    },
+    {
+      title: 'UDISE+ & Term Examination Eligibility',
+      badge: 'Automated Calculation',
+      image: '/real-photos/real-teacher-instruct.jpg',
+      tagline: 'Instant calculation of 75% minimum attendance thresholds for board exam admit cards, with auto-generated medical leave waivers.',
+      chips: ['75% Rule Enforcer', 'Medical Waivers', 'Monthly Register PDF']
+    }
   ];
 
   return (
-    <>
-      {/* Hero Section */}
-      <section className="page-hero">
+    <div className="features-page-wrapper">
+      {/* 1. VISUAL HERO WITH REAL PHOTO & LIVE KPI COUNTER */}
+      <section className="solutions-gov-hero">
         <div className="container">
-          <div className="page-hero-content">
-            <div className="eyebrow"><span className="eyebrow-dot" />DAILY ATTENDANCE &amp; LEAVE</div>
-            <h1 className="page-hero-title">Attendance That’s Faster to Mark and Impossible to Lose.</h1>
-            <p className="page-hero-desc">
-              Eliminate paper roll books. Class teachers record presence on mobile or desktop in seconds, with real-time alerts reaching the front office and parents.
-            </p>
-            <div className="page-hero-ctas">
-              <Link to="/contact" className="btn btn--primary btn--lg">Book an Attendance Demo</Link>
-              <Link to="/school-erp-mobile-app" className="btn btn--secondary btn--lg">See Mobile App</Link>
+          <div className="solutions-gov-hero-grid">
+            <div className="solutions-gov-hero-text">
+              <div className="solutions-gov-eyebrow">
+                DAILY ATTENDANCE &amp; LEAVE
+              </div>
+              <h1 className="solutions-gov-title">
+                Attendance That’s Faster to Mark and Impossible to Lose.
+              </h1>
+              <p className="solutions-gov-desc">
+                Eliminate paper roll registers. Class teachers record morning presence in 30 seconds, with real-time alerts reaching parents instantly.
+              </p>
+
+              <div className="solutions-hero-actions">
+                <a href="#roll-call-simulator" className="apaar-link-arrow">
+                  <span>Try Roll Call Simulator</span>
+                  <span className="arrow-sym">⟶</span>
+                </a>
+                <Link to="/contact" className="btn btn--primary btn--sm" style={{ marginLeft: '16px' }}>
+                  Book an Attendance Demo
+                </Link>
+              </div>
+
+              <div className="solutions-hero-chips">
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#059669" />
+                  <span>30-Sec Morning Roll</span>
+                </span>
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#145EFF" />
+                  <span>Instant WhatsApp Alerts</span>
+                </span>
+                <span className="hero-kpi-chip">
+                  <CheckCircle2 size={14} color="#742DDA" />
+                  <span>UDISE+ Monthly % Engine</span>
+                </span>
+              </div>
+            </div>
+
+            {/* Right: Real Classroom Photo with Live Attendance Overlay */}
+            <div className="solutions-gov-hero-visual">
+              <div style={{ background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 10px 25px -5px rgba(15,23,42,0.08)' }}>
+                <div style={{ position: 'relative', width: '100%', height: '230px', overflow: 'hidden' }}>
+                  <img 
+                    src="/real-photos/real-classroom.jpg" 
+                    alt="Indian school classroom desks and blackboard" 
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
+                  <div style={{ position: 'absolute', top: '12px', right: '12px', background: 'rgba(15,23,42,0.85)', backdropFilter: 'blur(6px)', color: '#FFFFFF', padding: '4px 10px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 750 }}>
+                    Period 1 Roll Call
+                  </div>
+                </div>
+
+                <div style={{ padding: '14px 18px', background: '#F8FAFC', borderTop: '1px solid var(--color-slate-200)', display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px', textAlign: 'center' }}>
+                  <div>
+                    <div style={{ fontSize: '0.65rem', fontWeight: 750, color: 'var(--color-slate-400)' }}>PRESENT</div>
+                    <div style={{ fontSize: '1.05rem', fontWeight: 850, color: '#059669' }}>43 Students</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.65rem', fontWeight: 750, color: 'var(--color-slate-400)' }}>ABSENT</div>
+                    <div style={{ fontSize: '1.05rem', fontWeight: 850, color: '#DC2626' }}>2 Notified</div>
+                  </div>
+                  <div>
+                    <div style={{ fontSize: '0.65rem', fontWeight: 750, color: 'var(--color-slate-400)' }}>ROLL RATE</div>
+                    <div style={{ fontSize: '1.05rem', fontWeight: 850, color: 'var(--color-blue)' }}>95.5% Today</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Interactive Morning Roll Call Simulator */}
-      <section className="section section--white">
+      {/* 2. INTERACTIVE MORNING ROLL CALL SIMULATOR */}
+      <section className="section section--white" id="roll-call-simulator">
         <div className="container">
           <div className="section-header">
             <div className="eyebrow"><span className="eyebrow-dot" />INTERACTIVE SIMULATOR</div>
             <h2>Try the Teacher Roll Call Register</h2>
-            <p>Click the Present (P), Absent (A), or Late (L) pills to experience how quickly teachers mark attendance.</p>
+            <p>Click Present (P), Absent (A), or Late (L) pills to experience how quickly teachers take attendance.</p>
           </div>
 
-          <div style={{ maxWidth: '680px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
-            <div style={{ background: 'var(--color-ink)', color: '#FFFFFF', padding: '14px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
-              <div>
-                <strong>Class IX, Section A • Morning Roll Call</strong>
-                <div style={{ fontSize: '0.75rem', opacity: 0.8 }}>Class Teacher: Sourav Mukherjee • 28 Oct 2026</div>
+          <div style={{ maxWidth: '720px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
+            <div style={{ background: '#0F172A', color: '#FFFFFF', padding: '12px 18px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                <Clock size={16} color="var(--color-blue)" />
+                <strong style={{ fontSize: '0.85rem' }}>Class IX - Sec A • Morning Attendance Register</strong>
               </div>
-              <span style={{ background: 'rgba(0, 205, 229, 0.2)', color: 'var(--color-cyan)', padding: '3px 10px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 700 }}>
+              <span style={{ background: 'rgba(16, 185, 129, 0.2)', color: '#10B981', border: '1px solid rgba(16,185,129,0.4)', padding: '2px 8px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 750 }}>
                 Period 1 Active
               </span>
             </div>
 
-            <div style={{ padding: '16px 20px' }}>
-              {demoRoll.map((student, idx) => (
-                <div key={student.roll} className="rollcall-student-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: idx < demoRoll.length - 1 ? '1px solid var(--color-slate-100)' : 'none', flexWrap: 'wrap', gap: '6px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-                    <span style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'var(--color-slate-100)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.8125rem' }}>
-                      {student.roll}
-                    </span>
-                    <strong style={{ fontSize: '0.9375rem', color: 'var(--color-ink)' }}>{student.name}</strong>
-                  </div>
-
-                  <div className="rollcall-buttons" style={{ display: 'flex', gap: '6px' }}>
-                    <button 
-                      onClick={() => toggleStatus(idx, 'P')}
-                      style={{ 
-                        padding: '4px 12px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontWeight: 700, fontSize: '0.75rem',
-                        background: student.status === 'P' ? 'var(--color-success)' : 'var(--color-slate-100)',
-                        color: student.status === 'P' ? '#FFFFFF' : 'var(--color-slate-600)'
-                      }}
-                    >
-                      P (Present)
-                    </button>
-                    <button 
-                      onClick={() => toggleStatus(idx, 'A')}
-                      style={{ 
-                        padding: '4px 12px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontWeight: 700, fontSize: '0.75rem',
-                        background: student.status === 'A' ? 'var(--color-danger)' : 'var(--color-slate-100)',
-                        color: student.status === 'A' ? '#FFFFFF' : 'var(--color-slate-600)'
-                      }}
-                    >
-                      A (Absent)
-                    </button>
-                    <button 
-                      onClick={() => toggleStatus(idx, 'L')}
-                      style={{ 
-                        padding: '4px 12px', borderRadius: '6px', border: 'none', cursor: 'pointer', fontWeight: 700, fontSize: '0.75rem',
-                        background: student.status === 'L' ? '#D97706' : 'var(--color-slate-100)',
-                        color: student.status === 'L' ? '#FFFFFF' : 'var(--color-slate-600)'
-                      }}
-                    >
-                      L (Late)
-                    </button>
-                  </div>
-                </div>
-              ))}
+            <div style={{ padding: '12px 18px', background: '#F8FAFC', borderBottom: '1px solid var(--color-slate-200)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '8px' }}>
+              <span style={{ fontSize: '0.78rem', color: '#475569' }}>
+                Quick Preset: Tap student status to update in real time
+              </span>
+              <div style={{ display: 'flex', gap: '8px', fontSize: '0.74rem', fontWeight: 700 }}>
+                <span style={{ color: '#059669' }}>P: {presentCount}</span>
+                <span style={{ color: '#DC2626' }}>A: {absentCount}</span>
+                <span style={{ color: '#D97706' }}>L: {lateCount}</span>
+              </div>
             </div>
 
-            <div style={{ background: 'var(--color-soft-canvas)', padding: '12px 20px', borderTop: '1px solid var(--color-slate-200)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.8125rem' }}>
-              <span>Present: <strong>{demoRoll.filter(s => s.status === 'P').length}</strong> &bull; Absent: <strong style={{ color: 'var(--color-danger)' }}>{demoRoll.filter(s => s.status === 'A').length}</strong></span>
-              <button className="btn btn--primary btn--sm" onClick={() => alert('Attendance register synced to office successfully!')}>
-                Save &amp; Notify Office
+            <div style={{ overflowX: 'auto', padding: '14px 18px' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.84rem' }}>
+                <thead>
+                  <tr style={{ background: '#FFFFFF', borderBottom: '1px solid var(--color-slate-200)', textAlign: 'left', color: 'var(--color-slate-400)', fontSize: '0.72rem', textTransform: 'uppercase' }}>
+                    <th style={{ padding: '8px' }}>Roll</th>
+                    <th style={{ padding: '8px' }}>Student Name</th>
+                    <th style={{ padding: '8px', textAlign: 'right' }}>Status Toggle</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {demoRoll.map((student, idx) => (
+                    <tr key={student.roll} style={{ borderBottom: '1px solid var(--color-slate-100)' }}>
+                      <td style={{ padding: '10px 8px', fontWeight: 700, color: 'var(--color-slate-400)' }}>#{student.roll}</td>
+                      <td style={{ padding: '10px 8px', fontWeight: 750, color: 'var(--color-ink)' }}>{student.name}</td>
+                      <td style={{ padding: '10px 8px', textAlign: 'right' }}>
+                        <div style={{ display: 'inline-flex', gap: '5px' }}>
+                          <button
+                            type="button"
+                            onClick={() => toggleStatus(idx, 'P')}
+                            style={{
+                              padding: '3px 10px',
+                              borderRadius: '4px',
+                              border: student.status === 'P' ? '1px solid #059669' : '1px solid var(--color-slate-200)',
+                              background: student.status === 'P' ? '#ECFDF5' : '#FFFFFF',
+                              color: student.status === 'P' ? '#059669' : 'var(--color-slate-600)',
+                              fontWeight: 800,
+                              cursor: 'pointer'
+                            }}
+                          >
+                            P
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => toggleStatus(idx, 'A')}
+                            style={{
+                              padding: '3px 10px',
+                              borderRadius: '4px',
+                              border: student.status === 'A' ? '1px solid #DC2626' : '1px solid var(--color-slate-200)',
+                              background: student.status === 'A' ? '#FEF2F2' : '#FFFFFF',
+                              color: student.status === 'A' ? '#DC2626' : 'var(--color-slate-600)',
+                              fontWeight: 800,
+                              cursor: 'pointer'
+                            }}
+                          >
+                            A
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => toggleStatus(idx, 'L')}
+                            style={{
+                              padding: '3px 10px',
+                              borderRadius: '4px',
+                              border: student.status === 'L' ? '1px solid #D97706' : '1px solid var(--color-slate-200)',
+                              background: student.status === 'L' ? '#FFFBEB' : '#FFFFFF',
+                              color: student.status === 'L' ? '#D97706' : 'var(--color-slate-600)',
+                              fontWeight: 800,
+                              cursor: 'pointer'
+                            }}
+                          >
+                            L
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div style={{ padding: '10px 18px', background: '#F8FAFC', borderTop: '1px solid var(--color-slate-200)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.74rem', color: '#475569' }}>
+              <span>Auto-triggers WhatsApp message to absent parents upon submission</span>
+              <button 
+                type="button"
+                className="btn btn--primary btn--sm" 
+                style={{ borderRadius: '4px', padding: '4px 12px', fontSize: '0.74rem' }}
+                onClick={() => alert(`Attendance locked! ${presentCount} Present, ${absentCount} Absent. WhatsApp alerts dispatched.`)}
+              >
+                Submit Morning Roll Call
               </button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Visual Feature Cards */}
+      {/* 3. VISUAL CAPABILITY CARDS */}
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />CAPABILITIES</div>
-            <h2>Full Campus Attendance Intelligence</h2>
+            <div className="eyebrow"><span className="eyebrow-dot" />ATTENDANCE FEATURES</div>
+            <h2>Built for Campus Rhythms</h2>
+            <p>Maintain precision in daily attendance, parent sync, and board exam compliance.</p>
           </div>
 
-          <div className="features-grid">
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(0, 205, 229, 0.12)', color: '#028394' }}>
-                <Clock size={28} />
+          <div className="role-gallery-grid" style={{ gridTemplateColumns: 'repeat(3, 1fr)' }}>
+            {attendanceCards.map((card, i) => (
+              <div key={i} className="role-gallery-card">
+                <div className="role-gallery-img-box" style={{ height: '180px' }}>
+                  <img src={card.image} alt={card.title} className="role-gallery-img" />
+                  <div className="role-gallery-badge">
+                    <span>{card.badge}</span>
+                  </div>
+                </div>
+                <div className="role-gallery-content">
+                  <h4 style={{ fontSize: '1.05rem' }}>{card.title}</h4>
+                  <p style={{ fontSize: '0.82rem' }}>{card.tagline}</p>
+                  <div className="role-gallery-chips">
+                    {card.chips.map((c, idx) => (
+                      <span key={idx} className="gallery-chip">{c}</span>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <h3>1-Tap Roll Call (40 Seconds)</h3>
-              <p>Defaults the entire class to "All Present". The class teacher merely taps the 2 or 3 absentees and submits in seconds.</p>
-            </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(20, 94, 255, 0.08)', color: 'var(--color-blue)' }}>
-                <Smartphone size={28} />
-              </div>
-              <h3>Native Mobile Apps (iOS &amp; Android)</h3>
-              <p>Teachers take attendance directly on their mobile phones in the assembly ground, laboratory, or classroom.</p>
-            </div>
+      {/* 4. 4-STEP CONNECTED TIMELINE */}
+      <section className="apaar-how-section" id="how-it-works">
+        <div className="container">
+          <div className="apaar-how-header">
+            <h2>The Daily <span>Attendance Workflow</span></h2>
+            <p>From the morning bell to monthly UDISE+ compliance, attendance records flow automatically.</p>
+          </div>
 
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(116, 45, 218, 0.08)', color: 'var(--color-violet)' }}>
-                <UserCheck size={28} />
-              </div>
-              <h3>Staff Attendance &amp; Leave Ledger</h3>
-              <p>Teachers apply for Casual Leave (CL) or Medical Leave (ML). Administrators approve leaves with instant payroll adjustment.</p>
-            </div>
+          <div className="apaar-stepper-container">
+            <div className="apaar-stepper-connector-line" aria-hidden="true" />
 
-            <div className="feature-card">
-              <div className="feature-card-icon" style={{ background: 'rgba(5, 150, 105, 0.08)', color: 'var(--color-success)' }}>
-                <CheckCircle2 size={28} />
+            <div className="apaar-how-steps-grid">
+              <div className="how-step-node">
+                <div className="step-circle-badge">01.</div>
+                <div className="step-icon-box">
+                  <Clock size={22} color="#145EFF" />
+                </div>
+                <h4>30-Sec Roll Call</h4>
+                <p>Teacher takes 1-tap roll call on smartphone or laptop</p>
               </div>
-              <h3>UDISE+ Annual Attendance %</h3>
-              <p>Automatically calculates mandated academic attendance percentage per child to ensure examination eligibility compliance.</p>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">02.</div>
+                <div className="step-icon-box">
+                  <Bell size={22} color="#059669" />
+                </div>
+                <h4>Instant Alert</h4>
+                <p>Polite automated WhatsApp push dispatched to absent parents</p>
+              </div>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">03.</div>
+                <div className="step-icon-box">
+                  <BarChart3 size={22} color="#742DDA" />
+                </div>
+                <h4>UDISE+ Monthly %</h4>
+                <p>Auto-tallies working days vs present days across terms</p>
+              </div>
+
+              <div className="how-step-node">
+                <div className="step-circle-badge">04.</div>
+                <div className="step-icon-box">
+                  <CheckCircle2 size={22} color="#F59E0B" />
+                </div>
+                <h4>Admit Card Rule</h4>
+                <p>Flags students below 75% attendance before final exams</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
+      {/* 5. FAQ */}
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <h2>Attendance System FAQs</h2>
+            <div className="eyebrow"><span className="eyebrow-dot" />ATTENDANCE FAQS</div>
+            <h2>Frequently Asked Questions About Attendance</h2>
           </div>
           <FaqAccordion items={faqs} />
         </div>
       </section>
 
       <BottomCta
-        title="See Attendance Management in Action."
-        subtitle="Explore rapid class roll marking on web and mobile devices."
+        title="Stop Wasting 20 Minutes Every Morning."
+        subtitle="Schedule a 10-minute demo to see how Pragya completes daily school roll call in 30 seconds."
         buttonText="Book an Attendance Demo"
       />
-    </>
+    </div>
   );
 }

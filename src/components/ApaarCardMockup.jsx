@@ -80,7 +80,7 @@ export default function ApaarCardMockup({
           <div className="apaar-student-photo-box">
             <div className="student-photo-frame">
               <img
-                src="/apaar-student-avatar.png"
+                src="/real-student-id-ananya.jpg"
                 alt={name}
                 className="student-photo-img"
                 onError={(e) => {

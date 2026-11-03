@@ -31,7 +31,7 @@ export default function SolutionsByRole() {
       key: 'principal',
       name: 'Principals & Management',
       badge: 'Executive Oversight',
-      image: '/role-principal.jpg',
+      image: '/real-photos/real-campus-building.jpg',
       tagline: 'Real-time bird\'s-eye roll call & fee collections across classes.',
       chips: ['Live School KPIs', 'APAAR Verification', 'Full Audit Log']
     },
@@ -39,7 +39,7 @@ export default function SolutionsByRole() {
       key: 'teacher',
       name: 'Teachers & Faculty',
       badge: '30-Sec Attendance',
-      image: '/role-teacher.jpg',
+      image: '/real-photos/real-teacher-instruct.jpg',
       tagline: 'Rapid daily roll call, instant grading, and syllabus tracking.',
       chips: ['Mobile Roll Call', 'WhatsApp Absent Sync', 'Timetable Sync']
     },
@@ -47,7 +47,7 @@ export default function SolutionsByRole() {
       key: 'accountant',
       name: 'Fee Counter & Accounts',
       badge: '3-Sec Thermal POS',
-      image: '/role-fee-counter.jpg',
+      image: '/real-photos/real-fee-accounting.jpg',
       tagline: 'Instant cash & UPI QR receipts with automatic head-wise ledger.',
       chips: ['Thermal Slip POS', 'Dynamic UPI QR', 'Bank NEFT Batches']
     },
@@ -55,7 +55,7 @@ export default function SolutionsByRole() {
       key: 'student',
       name: 'Parents & Students',
       badge: 'Mobile App',
-      image: '/role-parent-app.jpg',
+      image: '/real-photos/real-students-study.jpg',
       tagline: 'Daily timetables, published report cards, homework, and fee receipts.',
       chips: ['Live Attendance Feed', 'Digital Report Cards', 'Notice Circulars']
     }
@@ -168,7 +168,7 @@ export default function SolutionsByRole() {
               {/* Role Photo Card */}
               <div className="role-photo-feature-card">
                 <img 
-                  src={role.image || '/role-principal.jpg'} 
+                  src={role.image || '/real-photos/real-campus-building.jpg'} 
                   alt={role.title} 
                   className="role-feature-photo-img" 
                 />
