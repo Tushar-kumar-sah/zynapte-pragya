@@ -3,17 +3,18 @@ export const rolesData = {
     id: 'principal',
     name: 'Principals',
     title: 'Principal & Leadership Desk',
-    outcome: 'Real-time bird’s-eye oversight across institutional operations.',
+    outcome: "Real-time bird's-eye oversight across campus operations.",
     avatar: 'P',
-    userName: 'Dr. S. Mukherjee',
-    userTitle: 'Principal • Pragya School',
+    image: '/role-principal.jpg',
+    userName: 'Dr. Vikram Singh',
+    userTitle: 'Principal • Pragya Model Academy',
     badge: 'Executive View',
     features: [
-      { icon: 'BarChart3', title: 'Live Overview', desc: 'Real-time roll call, collections & dues' },
-      { icon: 'ShieldCheck', title: 'APAAR Compliance', desc: 'Class-wise consent without paper chasing' },
-      { icon: 'Lock', title: 'Role Audit Trail', desc: 'Granular permissions and activity logs' }
+      { icon: 'BarChart3', title: 'Live Bird\'s-Eye Roll', desc: 'Real-time attendance & collections' },
+      { icon: 'ShieldCheck', title: 'APAAR Compliance', desc: 'Class-wise student consent & PEN' },
+      { icon: 'Lock', title: 'Full Role Audit Trail', desc: 'Granular permissions & zero leaks' }
     ],
-    chips: ['Daily Roll: 96.4%', 'Fees: ₹1.84L Today', 'APAAR: 91.2% Ready'],
+    chips: ['Daily Roll: 96.4%', 'Fees: ₹11.84L Today', 'APAAR: 92.8% Ready'],
     points: [
       'Live daily attendance, fees, and academic roll.',
       'Institutional APAAR readiness tracking across classes.',
@@ -24,16 +25,17 @@ export const rolesData = {
   administrator: {
     id: 'administrator',
     name: 'Administrators',
-    title: 'Admin & Academic Coordinators',
-    outcome: 'Centralized school structure, batch imports, and task queue.',
+    title: 'Admin & Operations Console',
+    outcome: 'Centralized school structure, batch imports, and task queues.',
     avatar: 'A',
+    image: '/role-principal.jpg',
     userName: 'M. Chakraborty',
     userTitle: 'Head Administrator',
     badge: 'Admin Console',
     features: [
-      { icon: 'Settings', title: 'Campus Hierarchy', desc: 'Configure sessions, classes & branches' },
-      { icon: 'Layers', title: 'Pending Task Queue', desc: 'Admissions, verifications & approvals' },
-      { icon: 'BookOpen', title: 'Board Catalogues', desc: 'CBSE, ICSE & State curriculum curations' }
+      { icon: 'Settings', title: 'Campus Structure', desc: 'Configure sessions, classes & sections' },
+      { icon: 'Layers', title: 'Task Queue', desc: 'Admissions, approvals & verifications' },
+      { icon: 'BookOpen', title: 'Board Alignment', desc: 'CBSE, ICSE & State curriculum' }
     ],
     chips: ['9 Core Modules', 'Multi-Campus Sync', 'Fast CSV Import'],
     points: [
@@ -46,16 +48,17 @@ export const rolesData = {
   teacher: {
     id: 'teacher',
     name: 'Teachers',
-    title: 'Class & Subject Teachers',
-    outcome: 'Quick daily roll call, marks entry, and syllabus tracking.',
+    title: 'Teacher Desk & Mobile Roll Call',
+    outcome: 'Quick 30-second roll call, marks entry, and period schedule.',
     avatar: 'T',
+    image: '/role-teacher.jpg',
     userName: 'P. Sengupta',
-    userTitle: 'Senior Math Teacher • Class IX-A',
+    userTitle: 'Senior Faculty • Class IX-A',
     badge: 'Teacher Desk',
     features: [
-      { icon: 'UserCheck', title: '30-Sec Roll Call', desc: 'Instant mobile or web daily attendance' },
-      { icon: 'Award', title: 'Marks & Grading', desc: 'Auto calculation of CBSE/State thresholds' },
-      { icon: 'Calendar', title: 'Syllabus & Timetable', desc: 'Conflict-free schedule and period tracking' }
+      { icon: 'UserCheck', title: '30-Sec Roll Call', desc: 'Instant mobile or web attendance' },
+      { icon: 'Award', title: 'Marks & Grading', desc: 'Auto calculation of thresholds' },
+      { icon: 'Calendar', title: 'Period Timetable', desc: 'Conflict-free daily periods' }
     ],
     chips: ['30-Sec Attendance', 'Automated Grading', 'Timetable Sync'],
     points: [
@@ -68,16 +71,17 @@ export const rolesData = {
   admissions: {
     id: 'admissions',
     name: 'Admissions',
-    title: 'Admissions & Front Office',
+    title: 'Admissions & Front Office Desk',
     outcome: 'Enquiries to confirmed admissions with verified student files.',
     avatar: 'F',
+    image: '/role-fee-counter.jpg',
     userName: 'R. Goswami',
     userTitle: 'Admissions Officer',
     badge: 'Front Office',
     features: [
-      { icon: 'UserPlus', title: 'Enquiry Pipeline', desc: 'Track inquiries, visits & applications' },
-      { icon: 'FileUp', title: 'Guided CSV Import', desc: 'Bulk student records with validation' },
-      { icon: 'Search', title: 'Instant Student Dossier', desc: '1-click lookup for parent inquiries' }
+      { icon: 'UserPlus', title: 'Enquiry Board', desc: 'Track visits, forms & applications' },
+      { icon: 'FileUp', title: 'Bulk CSV Import', desc: '1-click upload with error validation' },
+      { icon: 'Search', title: 'Student Dossier', desc: 'Instant parent-call lookup' }
     ],
     chips: ['Live Enquiry Board', 'Bulk CSV Import', '1-Click Student Lookup'],
     points: [
@@ -90,16 +94,17 @@ export const rolesData = {
   accountant: {
     id: 'accountant',
     name: 'Accounts',
-    title: 'Accounts & Finance Desk',
-    outcome: 'Counter fee collection, thermal slips, and payroll payout batches.',
+    title: 'Accounts Desk & Fee Counter POS',
+    outcome: 'Counter fee collection, thermal slips, and payroll batches.',
     avatar: '₹',
+    image: '/role-fee-counter.jpg',
     userName: 'K. Nandy',
     userTitle: 'School Accountant',
     badge: 'Finance Desk',
     features: [
-      { icon: 'CreditCard', title: 'Counter POS Terminal', desc: 'Instant cash, UPI QR & cheque receipts' },
-      { icon: 'Receipt', title: 'Head-Wise Ledger', desc: 'Tuition, development, bus & lab heads' },
-      { icon: 'Building2', title: 'Bank NEFT Batch', desc: 'Standard Excel files for SBI, HDFC upload' }
+      { icon: 'CreditCard', title: '3-Sec Thermal Slip', desc: 'Instant cash, UPI QR & receipts' },
+      { icon: 'Receipt', title: 'Head-Wise Ledger', desc: 'Tuition, development, bus & lab' },
+      { icon: 'Building2', title: 'Bank NEFT Batch', desc: 'Standard Excel files for upload' }
     ],
     chips: ['3-Sec Thermal Slip', 'UPI QR Instant', 'EPF & PTax Ready'],
     points: [
@@ -112,16 +117,17 @@ export const rolesData = {
   hr: {
     id: 'hr',
     name: 'HR & Staff',
-    title: 'HR & Staff Administration',
-    outcome: 'Teacher service records, leave approvals, and shift attendance.',
+    title: 'Staff Administration & Payroll',
+    outcome: 'Faculty service records, biometric device sync, and leave.',
     avatar: 'H',
+    image: '/role-principal.jpg',
     userName: 'T. Roy',
     userTitle: 'HR Manager',
     badge: 'Staff Admin',
     features: [
-      { icon: 'Users', title: 'Faculty Dossiers', desc: 'Qualifications, service records & KYC' },
-      { icon: 'CalendarCheck', title: 'Leave & Attendance', desc: 'Approval workflows & bio device sync' },
-      { icon: 'Shield', title: 'Role Boundaries', desc: 'Controlled module permissions per staff' }
+      { icon: 'Users', title: 'Staff Dossiers', desc: 'Qualifications, service & KYC' },
+      { icon: 'CalendarCheck', title: 'Biometric Sync', desc: 'Punch device integration' },
+      { icon: 'Shield', title: 'Role Scopes', desc: 'Controlled module permissions' }
     ],
     chips: ['Digital Staff Files', 'Biometric / App Sync', 'Salary Tier Config'],
     points: [
@@ -133,17 +139,18 @@ export const rolesData = {
   },
   student: {
     id: 'student',
-    name: 'Students',
-    title: 'Student Portal & Mobile App',
+    name: 'Students & Parents',
+    title: 'Student Portal & Parent Mobile App',
     outcome: 'Personal timetables, homework, report cards, and notices.',
     avatar: 'S',
+    image: '/role-parent-app.jpg',
     userName: 'Ananya Roy',
     userTitle: 'Student • Class IX-A',
-    badge: 'Student Portal',
+    badge: 'Mobile App',
     features: [
-      { icon: 'Calendar', title: 'Class Schedule', desc: 'Daily periods & room allocations' },
-      { icon: 'Award', title: 'Report Cards', desc: 'Term results, grades & teacher remarks' },
-      { icon: 'Bell', title: 'School Notices', desc: 'Digital circulars & homework updates' }
+      { icon: 'Calendar', title: 'Class Schedule', desc: 'Daily periods & subject periods' },
+      { icon: 'Award', title: 'Report Cards', desc: 'Term results & teacher remarks' },
+      { icon: 'Bell', title: 'School Notices', desc: 'Digital circulars & homework' }
     ],
     chips: ['Mobile Timetable', 'Online Report Cards', 'Notice Feed'],
     points: [
