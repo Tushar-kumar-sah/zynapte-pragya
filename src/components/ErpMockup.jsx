@@ -1,42 +1,18 @@
 import React, { useState } from 'react';
 import { 
   Lock, FileText, CheckCircle2, CreditCard, Users, UserCheck, 
-  ShieldCheck, Sparkles, ChevronDown, Eye, Printer, 
-  Clock, Check, AlertTriangle
+  ChevronDown, Check, AlertTriangle, IndianRupee, Printer, Clock
 } from 'lucide-react';
 
 export default function ErpMockup({ onOpenCsvPreview }) {
   const [activeTab, setActiveTab] = useState('apaar');
 
   return (
-    <div className="erp-mockup-wrapper animate-float-slow">
-      {/* Ambient Multi-Color Brand Glow */}
+    <div className="erp-mockup-wrapper">
+      {/* Subtle ambient multi-color glow */}
       <div className="erp-mockup-glow" aria-hidden="true" />
-      
-      {/* Snug Top Floating Badge */}
-      <div className="hero-floating-badge badge-float-top-right animate-float-reverse" aria-hidden="true">
-        <div className="badge-icon-pill badge-icon-pill--gov">
-          <ShieldCheck size={14} />
-        </div>
-        <div className="badge-text-block">
-          <small>UDISE+ &amp; DIGILOCKER</small>
-          <strong>100% APAAR Format</strong>
-        </div>
-        <span className="badge-live-pulse" />
-      </div>
 
-      {/* Snug Bottom Floating Badge */}
-      <div className="hero-floating-badge badge-float-bottom-left animate-float-slow" aria-hidden="true">
-        <div className="badge-icon-pill badge-icon-pill--counter">
-          <Sparkles size={14} />
-        </div>
-        <div className="badge-text-block">
-          <small>TODAY'S COUNTER</small>
-          <strong className="text-emerald">₹1,84,500 Receipts</strong>
-        </div>
-      </div>
-
-      {/* Main Sleek SaaS Window Frame */}
+      {/* Main SaaS Window Frame */}
       <div className="erp-mockup">
         {/* Browser Top Window Bar */}
         <div className="mockup-window-bar">
@@ -47,138 +23,102 @@ export default function ErpMockup({ onOpenCsvPreview }) {
           </div>
 
           <div className="mockup-address-pill">
-            <Lock size={11} className="mockup-lock-icon" />
-            <span className="mockup-url">pragyaschoolerp.in/admin</span>
-            <span className="mockup-live-indicator">
-              <span className="mockup-live-dot" /> LIVE
-            </span>
+            <Lock size={10} className="mockup-lock-icon" />
+            <span className="mockup-url">pragyaschoolerp.in/admin/dashboard</span>
           </div>
 
-          <div className="mockup-branch-badge">
-            <span>Main Campus • 2026-27</span>
-            <ChevronDown size={11} />
+          <div className="mockup-header-right">
+            <span className="mockup-gov-tag">
+              <span className="mockup-live-dot" /> 100% APAAR Format Ready
+            </span>
+            <div className="mockup-branch-badge">
+              <span>Main Campus • 2026-27</span>
+              <ChevronDown size={11} />
+            </div>
           </div>
         </div>
 
         {/* Inner ERP Dashboard Canvas */}
         <div className="mockup-inner">
-          {/* Compact Metric Ribbon (Inline 4 Chips) */}
-          <div className="mockup-stat-row">
-            <div className="mockup-stat-chip mockup-stat-chip--blue">
-              <span className="chip-icon chip-icon--blue">
-                <Users size={12} />
-              </span>
-              <div className="chip-data">
-                <strong>1,248</strong>
-                <span>Students</span>
-              </div>
+          {/* 4 Clean Metric Cards (Image 3) */}
+          <div className="mockup-compact-metrics-grid">
+            <div className="compact-metric-item">
+              <span className="metric-label">Total Students</span>
+              <strong className="metric-value">1,248</strong>
+              <span className="metric-sub">Active records</span>
             </div>
 
-            <div className="mockup-stat-chip mockup-stat-chip--green">
-              <span className="chip-icon chip-icon--green">
-                <UserCheck size={12} />
-              </span>
-              <div className="chip-data">
-                <strong>96.4%</strong>
-                <span>Present</span>
-              </div>
+            <div className="compact-metric-item">
+              <span className="metric-label">Attendance</span>
+              <strong className="metric-value">96.4%</strong>
+              <span className="metric-sub">Today's roll</span>
             </div>
 
-            <div className="mockup-stat-chip mockup-stat-chip--orange">
-              <span className="chip-icon chip-icon--orange">
-                <CreditCard size={12} />
-              </span>
-              <div className="chip-data">
-                <strong>₹1.84L</strong>
-                <span>Counter</span>
-              </div>
+            <div className="compact-metric-item">
+              <span className="metric-label">Counter Fees</span>
+              <strong className="metric-value">₹1,84,500</strong>
+              <span className="metric-sub">Receipts issued</span>
             </div>
 
-            <div className="mockup-stat-chip mockup-stat-chip--violet">
-              <span className="chip-icon chip-icon--violet">
-                <CheckCircle2 size={12} />
-              </span>
-              <div className="chip-data">
-                <strong>91.2%</strong>
-                <span>APAAR</span>
-              </div>
+            <div className="compact-metric-item">
+              <span className="metric-label">APAAR Consent</span>
+              <strong className="metric-value">91.2%</strong>
+              <span className="metric-sub">Forms logged</span>
             </div>
           </div>
 
-          {/* Segmented Controller Tabs */}
-          <div className="mockup-tabs" role="tablist">
+          {/* Segmented Controller Tabs (Image 3) */}
+          <div className="mockup-segmented-tabs" role="tablist">
             <button
-              className={`mockup-tab-btn ${activeTab === 'apaar' ? 'active' : ''}`}
+              className={`segmented-tab-btn ${activeTab === 'apaar' ? 'active' : ''}`}
               onClick={() => setActiveTab('apaar')}
+              type="button"
               role="tab"
               aria-selected={activeTab === 'apaar'}
             >
-              <FileText size={13} />
-              <span>APAAR Status</span>
-              <span className="mockup-tab-badge mockup-tab-badge--violet">41/45 Ready</span>
+              APAAR Statuses
             </button>
             <button
-              className={`mockup-tab-btn ${activeTab === 'fees' ? 'active' : ''}`}
+              className={`segmented-tab-btn ${activeTab === 'fees' ? 'active' : ''}`}
               onClick={() => setActiveTab('fees')}
+              type="button"
               role="tab"
               aria-selected={activeTab === 'fees'}
             >
-              <CreditCard size={13} />
-              <span>Counter POS</span>
-              <span className="mockup-tab-badge mockup-tab-badge--orange">₹1.84L</span>
+              Counter Collection
             </button>
             <button
-              className={`mockup-tab-btn ${activeTab === 'attendance' ? 'active' : ''}`}
+              className={`segmented-tab-btn ${activeTab === 'attendance' ? 'active' : ''}`}
               onClick={() => setActiveTab('attendance')}
+              type="button"
               role="tab"
               aria-selected={activeTab === 'attendance'}
             >
-              <UserCheck size={13} />
-              <span>Roll Call</span>
-              <span className="mockup-tab-badge mockup-tab-badge--green">96.4%</span>
+              Daily Attendance
             </button>
           </div>
 
-          {/* Active Interactive Views */}
-          <div className="mockup-apaar-panel">
-            {/* VIEW 1: APAAR READINESS CONSOLE */}
+          {/* Active View Container */}
+          <div className="mockup-subcard">
+            {/* TAB 1: APAAR READINESS CHECK (Image 3) */}
             {activeTab === 'apaar' && (
               <>
-                <div className="apaar-panel-header">
-                  <div className="apaar-panel-title">
-                    <div className="apaar-title-icon-box">
-                      <FileText size={14} />
-                    </div>
-                    <div>
-                      <strong>Class IX-A • APAAR Readiness Console</strong>
-                      <span className="apaar-title-sub">Pre-submission discrepancy &amp; consent auditor</span>
-                    </div>
+                <div className="subcard-header">
+                  <div className="subcard-title-group">
+                    <FileText size={14} className="text-blue" />
+                    <strong>Class IX-A • APAAR Readiness Check</strong>
                   </div>
-                  <div className="apaar-header-actions">
-                    <span className="badge badge--green">
-                      <Check size={11} /> 41 Ready
-                    </span>
-                  </div>
+                  <span className="subcard-badge subcard-badge--blue">
+                    Local Checks Active
+                  </span>
                 </div>
 
-                {/* Micro Progress Bar */}
-                <div className="mockup-progress-banner">
-                  <div className="mockup-progress-meta">
-                    <span>Class Readiness Progress</span>
-                    <strong>41 of 45 Students Validated (91.1%)</strong>
-                  </div>
-                  <div className="mockup-progress-track">
-                    <div className="mockup-progress-fill" style={{ width: '91.1%' }} />
-                  </div>
-                </div>
-
-                {/* Table View (3 Concise Rows) */}
-                <div className="mockup-table-container">
-                  <table className="mockup-table">
+                <div className="subcard-table-wrap">
+                  <table className="subcard-table">
                     <thead>
                       <tr>
-                        <th>Student &amp; Roll</th>
-                        <th>PEN Number</th>
+                        <th>Student</th>
+                        <th>PEN</th>
                         <th>Guardian Consent</th>
                         <th>Status</th>
                       </tr>
@@ -186,270 +126,176 @@ export default function ErpMockup({ onOpenCsvPreview }) {
                     <tbody>
                       <tr>
                         <td>
-                          <div className="mockup-student-cell">
-                            <span className="mockup-avatar mockup-avatar--violet">AR</span>
-                            <div>
-                              <strong>Ananya Roy</strong>
-                              <small>Roll 01 • Sec A</small>
-                            </div>
-                          </div>
+                          <strong>Ananya Roy</strong> <span className="roll-muted">(Roll 01)</span>
                         </td>
-                        <td><code className="pen-code">2024881023</code></td>
+                        <td><code>2024881023</code></td>
                         <td>
-                          <span className="status-pill status-pill--success">
-                            ✓ Verified &amp; Signed
-                          </span>
+                          <span className="text-green-check">✓ Verified &amp; Signed</span>
                         </td>
                         <td>
-                          <span className="status-tag status-tag--generated">
-                            <Sparkles size={10} /> APAAR Ready
-                          </span>
+                          <span className="status-pill status-pill--purple">APAAR Generated</span>
                         </td>
                       </tr>
-
                       <tr>
                         <td>
-                          <div className="mockup-student-cell">
-                            <span className="mockup-avatar mockup-avatar--blue">RS</span>
-                            <div>
-                              <strong>Rohan Sen</strong>
-                              <small>Roll 04 • Sec A</small>
-                            </div>
-                          </div>
+                          <strong>Rohan Sen</strong> <span className="roll-muted">(Roll 04)</span>
                         </td>
-                        <td><code className="pen-code">2024881099</code></td>
+                        <td><code>2024881099</code></td>
                         <td>
-                          <span className="status-pill status-pill--success">
-                            ✓ Form Attached
-                          </span>
+                          <span className="text-green-check">✓ Form Attached</span>
                         </td>
                         <td>
-                          <span className="status-tag status-tag--ready">
-                            <Check size={10} /> Ready
-                          </span>
+                          <span className="status-pill status-pill--green">Ready to Submit</span>
                         </td>
                       </tr>
-
                       <tr>
                         <td>
-                          <div className="mockup-student-cell">
-                            <span className="mockup-avatar mockup-avatar--orange">IM</span>
-                            <div>
-                              <strong>Ishita Mukherjee</strong>
-                              <small>Roll 07 • Sec A</small>
-                            </div>
-                          </div>
+                          <strong>Ishita Mukherjee</strong> <span className="roll-muted">(Roll 07)</span>
                         </td>
                         <td>
-                          <span className="status-pill status-pill--warning">
-                            Pending
-                          </span>
+                          <span className="text-orange-code">Pending</span>
                         </td>
                         <td>
-                          <span className="status-pill status-pill--danger">
-                            <AlertTriangle size={10} /> Missing Form
-                          </span>
+                          <span className="text-red-alert">✕ Missing Form</span>
                         </td>
                         <td>
-                          <span className="status-tag status-tag--attention">
-                            Attention
-                          </span>
+                          <span className="status-pill status-pill--orange">Needs Attention</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <strong>Debabrata Das</strong> <span className="roll-muted">(Roll 12)</span>
+                        </td>
+                        <td><code>2024881144</code></td>
+                        <td>
+                          <span className="text-green-check">✓ Verified</span>
+                        </td>
+                        <td>
+                          <span className="status-pill status-pill--sky">Submitted</span>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
 
-                <div className="mockup-footer-note">
-                  <div className="mockup-footer-info">
-                    <span className="mockup-footer-dot" />
-                    <span>Formatted to official UDISE+ &amp; DigiLocker CSV</span>
-                  </div>
-                  {onOpenCsvPreview ? (
-                    <button
-                      className="mockup-action-btn"
-                      onClick={onOpenCsvPreview}
-                    >
-                      <Eye size={11} /> Preview CSV
-                    </button>
-                  ) : (
-                    <span className="badge badge--orange">CSV Formatter Ready</span>
-                  )}
+                <div className="subcard-footer">
+                  <span className="export-note">Export format: CSV for school submission</span>
                 </div>
               </>
             )}
 
-            {/* VIEW 2: COUNTER FEE COLLECTION */}
+            {/* TAB 2: COUNTER COLLECTION */}
             {activeTab === 'fees' && (
               <>
-                <div className="apaar-panel-header">
-                  <div className="apaar-panel-title">
-                    <div className="apaar-title-icon-box apaar-title-icon-box--orange">
-                      <CreditCard size={14} />
-                    </div>
-                    <div>
-                      <strong>Counter Collection &amp; Receipts • Live Desk</strong>
-                      <span className="apaar-title-sub">Instant 3-sec printed receipts with dual ledger</span>
-                    </div>
+                <div className="subcard-header">
+                  <div className="subcard-title-group">
+                    <CreditCard size={14} className="text-orange" />
+                    <strong>Counter Collection • Cash &amp; UPI Desk</strong>
                   </div>
-                  <div className="apaar-header-actions">
-                    <span className="badge badge--orange">
-                      <Printer size={11} /> POS Active
-                    </span>
-                  </div>
+                  <span className="subcard-badge subcard-badge--orange">
+                    3-Sec POS Active
+                  </span>
                 </div>
 
-                <div className="mockup-table-container">
-                  <table className="mockup-table">
+                <div className="subcard-table-wrap">
+                  <table className="subcard-table">
                     <thead>
                       <tr>
-                        <th>Student &amp; Class</th>
                         <th>Receipt No</th>
-                        <th>Amount</th>
+                        <th>Student</th>
                         <th>Mode</th>
+                        <th>Amount</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td>
-                          <div className="mockup-student-cell">
-                            <span className="mockup-avatar mockup-avatar--blue">PP</span>
-                            <div>
-                              <strong>Pritam Paul</strong>
-                              <small>Class X-B • Roll 03</small>
-                            </div>
-                          </div>
-                        </td>
-                        <td><code className="pen-code">REC-0891</code></td>
+                        <td><code>#REC-2026-1044</code></td>
+                        <td><strong>Priyanka Paul</strong> (X-B)</td>
+                        <td><span className="text-green-check">UPI Counter</span></td>
+                        <td><strong className="text-emerald">₹17,200</strong></td>
+                      </tr>
+                      <tr>
+                        <td><code>#REC-2026-1043</code></td>
+                        <td><strong>Arjun Banerjee</strong> (VII-A)</td>
+                        <td><span className="text-green-check">Cash Counter</span></td>
+                        <td><strong className="text-emerald">₹9,800</strong></td>
+                      </tr>
+                      <tr>
+                        <td><code>#REC-2026-1042</code></td>
+                        <td><strong>Rohan Roy</strong> (IX-A)</td>
+                        <td><span className="text-green-check">UPI Counter</span></td>
                         <td><strong className="text-emerald">₹14,500</strong></td>
-                        <td><span className="status-pill status-pill--success">Cash Desk</span></td>
                       </tr>
-
                       <tr>
-                        <td>
-                          <div className="mockup-student-cell">
-                            <span className="mockup-avatar mockup-avatar--teal">SK</span>
-                            <div>
-                              <strong>Sneha Karmakar</strong>
-                              <small>Class IX-A • Roll 15</small>
-                            </div>
-                          </div>
-                        </td>
-                        <td><code className="pen-code">REC-0892</code></td>
-                        <td><strong className="text-emerald">₹9,200</strong></td>
-                        <td><span className="status-pill status-pill--blue">UPI QR</span></td>
-                      </tr>
-
-                      <tr>
-                        <td>
-                          <div className="mockup-student-cell">
-                            <span className="mockup-avatar mockup-avatar--violet">AS</span>
-                            <div>
-                              <strong>Arjun Sengupta</strong>
-                              <small>Class XII-Sci • Roll 02</small>
-                            </div>
-                          </div>
-                        </td>
-                        <td><code className="pen-code">REC-0893</code></td>
-                        <td><strong className="text-emerald">₹18,000</strong></td>
-                        <td><span className="status-pill status-pill--success">Card POS</span></td>
+                        <td><code>#REC-2026-1041</code></td>
+                        <td><strong>Sneha Das</strong> (XI-Sc)</td>
+                        <td><span className="text-green-check">Cheque Cleared</span></td>
+                        <td><strong className="text-emerald">₹22,000</strong></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
 
-                <div className="mockup-footer-note">
-                  <div className="mockup-footer-info">
-                    <span className="mockup-footer-dot" />
-                    <span>Cash: <strong>₹1.12L</strong> &nbsp;|&nbsp; Digital: <strong>₹72.5K</strong></span>
-                  </div>
-                  <span className="badge badge--green">Thermal Slip Ready</span>
+                <div className="subcard-footer">
+                  <span className="export-note">Dual ledger synced with automated SMS receipts</span>
                 </div>
               </>
             )}
 
-            {/* VIEW 3: DAILY ATTENDANCE */}
+            {/* TAB 3: DAILY ATTENDANCE */}
             {activeTab === 'attendance' && (
               <>
-                <div className="apaar-panel-header">
-                  <div className="apaar-panel-title">
-                    <div className="apaar-title-icon-box apaar-title-icon-box--green">
-                      <UserCheck size={14} />
-                    </div>
-                    <div>
-                      <strong>Daily Attendance • Morning Register</strong>
-                      <span className="apaar-title-sub">Teacher mobile submission with absent SMS trigger</span>
-                    </div>
+                <div className="subcard-header">
+                  <div className="subcard-title-group">
+                    <UserCheck size={14} className="text-green" />
+                    <strong>Daily Attendance Roll Call</strong>
                   </div>
-                  <div className="apaar-header-actions">
-                    <span className="badge badge--green">
-                      <Clock size={11} /> 100% In
-                    </span>
-                  </div>
+                  <span className="subcard-badge subcard-badge--green">
+                    96.4% Recorded
+                  </span>
                 </div>
 
-                <div className="mockup-table-container">
-                  <table className="mockup-table">
+                <div className="subcard-table-wrap">
+                  <table className="subcard-table">
                     <thead>
                       <tr>
                         <th>Class &amp; Section</th>
-                        <th>Enrolled</th>
-                        <th>Present Today</th>
-                        <th>Rate</th>
+                        <th>Strength</th>
+                        <th>Present</th>
+                        <th>Status</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
-                        <td><strong>Class VIII-A</strong></td>
-                        <td>44 Students</td>
-                        <td><strong>43 Present</strong></td>
-                        <td>
-                          <div className="attendance-rate-cell">
-                            <div className="attendance-mini-track">
-                              <div className="attendance-mini-fill" style={{ width: '97.7%' }} />
-                            </div>
-                            <span className="badge badge--green">97.7%</span>
-                          </div>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <td><strong>Class IX-A</strong></td>
+                        <td><strong>Class X-A</strong></td>
                         <td>45 Students</td>
-                        <td><strong>43 Present</strong></td>
-                        <td>
-                          <div className="attendance-rate-cell">
-                            <div className="attendance-mini-track">
-                              <div className="attendance-mini-fill" style={{ width: '95.5%' }} />
-                            </div>
-                            <span className="badge badge--green">95.5%</span>
-                          </div>
-                        </td>
+                        <td><code>44 Present</code></td>
+                        <td><span className="status-pill status-pill--green">97.8% Complete</span></td>
                       </tr>
-
                       <tr>
-                        <td><strong>Class X-B</strong></td>
+                        <td><strong>Class IX-B</strong></td>
                         <td>42 Students</td>
-                        <td><strong>41 Present</strong></td>
-                        <td>
-                          <div className="attendance-rate-cell">
-                            <div className="attendance-mini-track">
-                              <div className="attendance-mini-fill" style={{ width: '97.6%' }} />
-                            </div>
-                            <span className="badge badge--green">97.6%</span>
-                          </div>
-                        </td>
+                        <td><code>41 Present</code></td>
+                        <td><span className="status-pill status-pill--green">97.6% Complete</span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Class VIII-A</strong></td>
+                        <td>40 Students</td>
+                        <td><code>38 Present</code></td>
+                        <td><span className="status-pill status-pill--green">95.0% Complete</span></td>
+                      </tr>
+                      <tr>
+                        <td><strong>Teaching Staff</strong></td>
+                        <td>36 Teachers</td>
+                        <td><code>35 On Duty</code></td>
+                        <td><span className="status-pill status-pill--purple">97.2% Logged</span></td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
 
-                <div className="mockup-footer-note">
-                  <div className="mockup-footer-info">
-                    <span className="mockup-footer-dot" />
-                    <span>Teacher mobile sync completed at 08:45 AM</span>
-                  </div>
-                  <span className="badge badge--blue">1,203 / 1,248 Present</span>
+                <div className="subcard-footer">
+                  <span className="export-note">Instant absent SMS triggered at 09:30 AM</span>
                 </div>
               </>
             )}

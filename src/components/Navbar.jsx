@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, CheckCircle2, MessageSquare, Phone, Sparkles } from 'lucide-react';
+import { Menu, X, ChevronDown, MessageSquare } from 'lucide-react';
 import { navLinks } from '../data/navigation';
 
 export default function Navbar() {
@@ -36,35 +36,15 @@ export default function Navbar() {
 
   return (
     <header className={`site-header ${isScrolled ? 'scrolled' : ''}`}>
-      {/* Top Credentials & Reseller Bar (Page 1 & 4 of Brochure) */}
-      <div className="top-gov-bar">
-        <div className="container top-gov-bar-inner">
-          <div className="gov-badges-group">
-            <span className="gov-badge-highlight">
-              <Sparkles size={11} className="text-orange" />
-              <span>NEXT-GEN INDIAN SCHOOL &amp; COLLEGE ERP</span>
-            </span>
-            <span className="gov-sep">•</span>
-            <span className="gov-badge-item">DPIIT <strong>#startupindia</strong> (DIPP187962)</span>
-            <span className="gov-sep">•</span>
-            <span className="gov-badge-item">Ministry of MSME (UDYAM-WB-10-0144056)</span>
-            <span className="gov-sep">•</span>
-            <span className="gov-badge-item"><strong>D-U-N-S®</strong> 766391467</span>
-          </div>
-          <div className="gov-partner-link">
-            <span>Partner: <strong>Code Kumite</strong></span>
-            <a href="https://wa.me/919748555490" target="_blank" rel="noopener noreferrer" className="gov-wa-link" title="Chat on WhatsApp with Code Kumite">
-              <MessageSquare size={12} /> WhatsApp: 974855549
-            </a>
-          </div>
-        </div>
-      </div>
-
       <div className="container">
         <nav className="navbar" aria-label="Main Navigation">
           {/* Brand Logo */}
           <Link to="/" className="brand-link" aria-label="Pragya School ERP Homepage">
-            <img src="/pragya-logo.png" alt="Pragya - Empowering Schools & Colleges. Enriching Futures." className="brand-logo-img" />
+            <img 
+              src="/pragya-logo.png" 
+              alt="Pragya - Empowering Schools & Colleges. Enriching Futures." 
+              className="brand-logo-img" 
+            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -108,13 +88,14 @@ export default function Navbar() {
               target="_blank" 
               rel="noopener noreferrer" 
               className="btn btn--secondary btn--sm nav-wa-btn"
-              title="Chat directly with Authorized Partner on WhatsApp"
+              title="Chat with Authorized Partner Code Kumite on WhatsApp"
             >
-              <MessageSquare size={14} color="#25D366" />
-              <span>WhatsApp</span>
+              <MessageSquare size={15} color="#25D366" />
+              <span className="nav-btn-text">WhatsApp</span>
             </a>
-            <Link to="/contact" className="btn btn--primary btn--sm">
-              Book a Demo
+            <Link to="/contact" className="btn btn--primary btn--sm nav-demo-btn">
+              <span className="nav-btn-text">Book a Demo</span>
+              <span className="nav-btn-text-short">Demo</span>
             </Link>
             <button
               className="hamburger-btn"
@@ -122,7 +103,7 @@ export default function Navbar() {
               aria-label="Toggle Navigation"
               aria-expanded={mobileMenuOpen}
             >
-              {mobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </nav>
@@ -165,7 +146,13 @@ export default function Navbar() {
           <li><Link to="/faqs">FAQ &amp; Knowledge Base</Link></li>
         </ul>
         <div className="mobile-nav-footer">
-          <a href="https://wa.me/919748555490" target="_blank" rel="noopener noreferrer" className="btn btn--secondary btn--block" style={{ marginBottom: '8px', color: '#166534' }}>
+          <a 
+            href="https://wa.me/919748555490" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn btn--secondary btn--block" 
+            style={{ marginBottom: '8px', color: '#166534' }}
+          >
             <MessageSquare size={16} color="#25D366" /> Chat on WhatsApp
           </a>
           <Link to="/contact" className="btn btn--primary btn--block">
