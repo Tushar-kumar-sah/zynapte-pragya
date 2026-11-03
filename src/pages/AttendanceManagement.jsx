@@ -63,15 +63,15 @@ export default function AttendanceManagement() {
                 <strong>Class IX, Section A • Morning Roll Call</strong>
                 <div style={{ fontSize: '0.75rem', opacity: 0.8 }}>Class Teacher: Sourav Mukherjee • 28 Oct 2026</div>
               </div>
-              <span style={{ background: 'rgba(0, 205, 229, 0.2)', color: 'var(--color-cyan)', padding: '3px 10px', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 700 }}>
+              <span style={{ background: 'rgba(0, 205, 229, 0.2)', color: 'var(--color-cyan)', padding: '3px 10px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 700 }}>
                 Period 1 Active
               </span>
             </div>
 
             <div style={{ padding: '16px 20px' }}>
               {demoRoll.map((student, idx) => (
-                <div key={student.roll} className="rollcall-student-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: idx < demoRoll.length - 1 ? '1px solid var(--color-slate-100)' : 'none', flexWrap: 'wrap', gap: '10px' }}>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+                <div key={student.roll} className="rollcall-student-row" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', padding: '10px 0', borderBottom: idx < demoRoll.length - 1 ? '1px solid var(--color-slate-100)' : 'none', flexWrap: 'wrap', gap: '6px' }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
                     <span style={{ width: '28px', height: '28px', borderRadius: '50%', background: 'var(--color-slate-100)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 800, fontSize: '0.8125rem' }}>
                       {student.roll}
                     </span>

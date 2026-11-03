@@ -47,12 +47,12 @@ export default function ExamResultManagement() {
             <div style={{ textAlign: 'center', borderBottom: '2px solid var(--color-slate-800)', paddingBottom: '16px', marginBottom: '16px' }}>
               <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--color-ink)' }}>VIDYASAGAR MEMORIAL HIGH SCHOOL</div>
               <div style={{ fontSize: '0.75rem', color: 'var(--color-slate-600)' }}>AFFILIATED TO WBBSE • INDEX NO: 12-409 • ESTD. 1968</div>
-              <div style={{ display: 'inline-block', background: 'var(--color-ink)', color: '#FFFFFF', fontSize: '0.75rem', fontWeight: 700, padding: '3px 14px', borderRadius: '999px', marginTop: '8px' }}>
+              <div style={{ display: 'inline-block', background: 'var(--color-ink)', color: '#FFFFFF', fontSize: '0.75rem', fontWeight: 700, padding: '3px 14px', borderRadius: '6px', marginTop: '8px' }}>
                 ANNUAL PROGRESS REPORT CARD • 2026-27
               </div>
             </div>
 
-            <div className="responsive-3col-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '10px', fontSize: '0.8125rem', marginBottom: '16px', background: 'var(--color-soft-canvas)', padding: '12px', borderRadius: 'var(--radius-md)' }}>
+            <div className="responsive-3col-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '6px', fontSize: '0.8125rem', marginBottom: '16px', background: 'var(--color-soft-canvas)', padding: '6px', borderRadius: 'var(--radius-md)' }}>
               <div><strong>Student:</strong> Ananya Das</div>
               <div><strong>Class:</strong> IX - Sec A</div>
               <div><strong>Roll No:</strong> 14</div>

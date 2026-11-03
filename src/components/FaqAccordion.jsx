@@ -8,7 +8,7 @@ export default function FaqAccordion({ items = faqsData, limit }) {
   return (
     <div className="faq-container">
       {displayItems.map((item, idx) => (
-        <details key={idx} className="faq-item" name="pragya-faq" defaultOpen={idx === 0}>
+        <details key={idx} className="faq-item" name="pragya-faq" open={idx === 0 ? true : undefined}>
           <summary className="faq-summary">
             <span>{item.question}</span>
             <div className="faq-summary-icon" aria-hidden="true">

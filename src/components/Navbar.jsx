@@ -72,10 +72,10 @@ export default function Navbar() {
                 <li key={index} className="nav-item">
                   <Link
                     to={item.path}
-                    className={`nav-link ${location.pathname === item.path ? 'active' : ''} ${item.highlight ? 'nav-link--highlight' : ''}`}
+                    className={`nav-link ${location.pathname === item.path ? 'active' : ''} `}
                   >
                     {item.label}
-                    {item.highlight && <span className="dropdown-badge">APAAR</span>}
+                    
                   </Link>
                 </li>
               );

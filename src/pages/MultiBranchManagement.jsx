@@ -78,7 +78,7 @@ export default function MultiBranchManagement() {
           </div>
 
           <div style={{ maxWidth: '780px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-xl)', overflow: 'hidden', boxShadow: 'var(--shadow-md)' }}>
-            <div style={{ background: 'var(--color-ink)', padding: '16px 20px', display: 'flex', gap: '10px', overflowX: 'auto' }}>
+            <div style={{ background: 'var(--color-ink)', padding: '16px 20px', display: 'flex', gap: '6px', overflowX: 'auto' }}>
               <button 
                 onClick={() => setActiveBranch('main')}
                 style={{ 
@@ -109,7 +109,7 @@ export default function MultiBranchManagement() {
             </div>
 
             <div style={{ padding: '24px' }}>
-              <div className="responsive-flex-stack" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '10px' }}>
+              <div className="responsive-flex-stack" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px', flexWrap: 'wrap', gap: '6px' }}>
                 <div>
                   <h3 style={{ fontSize: '1.25rem', color: 'var(--color-ink)', marginBottom: '4px' }}>{branch.name}</h3>
                   <span style={{ fontSize: '0.8125rem', color: 'var(--color-slate-500)' }}>Branch Code: {branch.code} &bull; Academic Year: 2026-27</span>
@@ -118,19 +118,19 @@ export default function MultiBranchManagement() {
               </div>
 
               <div className="responsive-4col-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '14px', marginBottom: '20px' }}>
-                <div style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '12px' }}>
+                <div style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '6px' }}>
                   <div style={{ fontSize: '0.6875rem', color: 'var(--color-slate-500)', fontWeight: 600 }}>ENROLLED STUDENTS</div>
                   <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-ink)' }}>{branch.students}</div>
                 </div>
-                <div style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '12px' }}>
+                <div style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '6px' }}>
                   <div style={{ fontSize: '0.6875rem', color: 'var(--color-slate-500)', fontWeight: 600 }}>TEACHING FACULTY</div>
                   <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-ink)' }}>{branch.staff}</div>
                 </div>
-                <div style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '12px' }}>
+                <div style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '6px' }}>
                   <div style={{ fontSize: '0.6875rem', color: 'var(--color-slate-500)', fontWeight: 600 }}>TODAY'S FEES</div>
                   <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-success)' }}>{branch.todayFees}</div>
                 </div>
-                <div style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '12px' }}>
+                <div style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '6px' }}>
                   <div style={{ fontSize: '0.6875rem', color: 'var(--color-slate-500)', fontWeight: 600 }}>APAAR READINESS</div>
                   <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-blue)' }}>{branch.apaarReady.split(' ')[0]}</div>
                 </div>

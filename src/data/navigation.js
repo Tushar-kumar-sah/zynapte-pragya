@@ -17,7 +17,7 @@ export const navLinks = [
       { label: 'Multi-Branch Management', path: '/multi-branch-management' }
     ]
   },
-  { label: 'APAAR Readiness', path: '/apaar-readiness', highlight: true },
+  { label: 'APAAR Readiness', path: '/apaar-readiness' },
   { label: 'Who It’s For', path: '/solutions' },
   { label: 'Security & Hosting', path: '/security' },
   { label: 'About', path: '/about' },

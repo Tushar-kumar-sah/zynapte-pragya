@@ -32,7 +32,7 @@ export default function BottomCta({
                 rel="noopener noreferrer" 
                 className="btn btn--secondary btn--lg btn-wa-light"
               >
-                <MessageSquare size={18} color="#25D366" />
+                <WhatsAppIcon size={20} />
                 <span>Quick WhatsApp: 974855549</span>
               </a>
             </div>

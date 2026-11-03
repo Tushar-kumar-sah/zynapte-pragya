@@ -86,7 +86,7 @@ export default function ContactBookDemo() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '16px' }}>
             {trustSignals.map((t, idx) => (
               <div key={idx} style={{ background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-lg)', padding: '18px', display: 'flex', alignItems: 'center', gap: '14px', boxShadow: 'var(--shadow-xs)' }}>
-                <div style={{ width: '42px', height: '42px', borderRadius: '10px', background: 'var(--color-slate-50)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+                <div style={{ width: '42px', height: '42px', borderRadius: '6px', background: 'var(--color-slate-50)', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                   {t.icon}
                 </div>
                 <div>

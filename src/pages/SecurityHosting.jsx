@@ -64,7 +64,7 @@ export default function SecurityHosting() {
                 <Shield size={16} color="var(--color-cyan)" />
                 <strong>System Security Audit Trail • Main Campus</strong>
               </div>
-              <span style={{ background: '#ECFDF5', color: '#059669', padding: '3px 10px', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 700 }}>
+              <span style={{ background: '#ECFDF5', color: '#059669', padding: '3px 10px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 700 }}>
                 Encrypted &bull; Read-Only Log
               </span>
             </div>

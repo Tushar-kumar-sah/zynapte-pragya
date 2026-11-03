@@ -44,9 +44,9 @@ export default function SchoolCommunication() {
           </div>
 
           <div className="responsive-card-paddings" style={{ maxWidth: '680px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-xl)', padding: '24px', boxShadow: 'var(--shadow-md)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid var(--color-slate-200)', paddingBottom: '12px', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-                <div style={{ width: '36px', height: '36px', borderRadius: '10px', background: 'rgba(236, 50, 204, 0.1)', color: 'var(--color-magenta)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', borderBottom: '1px solid var(--color-slate-200)', paddingBottom: '6px', marginBottom: '14px', flexWrap: 'wrap', gap: '8px' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <div style={{ width: '36px', height: '36px', borderRadius: '6px', background: 'rgba(236, 50, 204, 0.1)', color: 'var(--color-magenta)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                   <Bell size={20} />
                 </div>
                 <div>
@@ -69,7 +69,7 @@ export default function SchoolCommunication() {
               <span style={{ color: 'var(--color-blue)', fontWeight: 700, cursor: 'pointer' }}>Download Attachment</span>
             </div>
 
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '16px', paddingTop: '12px', borderTop: '1px dashed var(--color-slate-200)', fontSize: '0.75rem', color: 'var(--color-slate-500)', flexWrap: 'wrap', gap: '8px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '16px', paddingTop: '6px', borderTop: '1px dashed var(--color-slate-200)', fontSize: '0.75rem', color: 'var(--color-slate-500)', flexWrap: 'wrap', gap: '8px' }}>
               <span>Delivered to 284 parent mobile devices</span>
               <span style={{ color: 'var(--color-success)', fontWeight: 700 }}>✓ Read by 241 Families (84.8%)</span>
             </div>

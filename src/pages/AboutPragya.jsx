@@ -57,7 +57,7 @@ export default function AboutPragya() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))', gap: '20px' }}>
             {principles.map((p, i) => (
               <div key={i} style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-lg)', padding: '24px', display: 'flex', flexDirection: 'column' }}>
-                <div style={{ width: '48px', height: '48px', borderRadius: '12px', background: p.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', marginBottom: '16px' }}>
+                <div style={{ width: '48px', height: '48px', borderRadius: '6px', background: p.bg, display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '1.5rem', marginBottom: '16px' }}>
                   {p.icon}
                 </div>
                 <h3 style={{ fontSize: '1.15rem', color: 'var(--color-ink)', marginBottom: '8px' }}>{p.title}</h3>
@@ -84,28 +84,28 @@ export default function AboutPragya() {
 
           <div style={{ maxWidth: '840px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-xl)', padding: '32px', boxShadow: 'var(--shadow-sm)' }}>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '20px' }}>
-              <div style={{ display: 'flex', gap: '12px' }}>
+              <div style={{ display: 'flex', gap: '6px' }}>
                 <CheckCircle2 size={20} color="var(--color-success)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
                   <strong style={{ fontSize: '0.9375rem', color: 'var(--color-ink)', display: 'block' }}>APAAR Pre-Validation</strong>
                   <p style={{ fontSize: '0.8125rem', color: 'var(--color-slate-600)', margin: '4px 0 0' }}>Spot consent slips and Aadhaar spelling mismatches before preparing export sheets.</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '12px' }}>
+              <div style={{ display: 'flex', gap: '6px' }}>
                 <CheckCircle2 size={20} color="var(--color-success)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
                   <strong style={{ fontSize: '0.9375rem', color: 'var(--color-ink)', display: 'block' }}>State &amp; National Boards</strong>
                   <p style={{ fontSize: '0.8125rem', color: 'var(--color-slate-600)', margin: '4px 0 0' }}>Pre-configured WBBSE, WBCHSE, and CBSE marksheet calculations and grading rules.</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '12px' }}>
+              <div style={{ display: 'flex', gap: '6px' }}>
                 <CheckCircle2 size={20} color="var(--color-success)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
                   <strong style={{ fontSize: '0.9375rem', color: 'var(--color-ink)', display: 'block' }}>INR Counter Cash &amp; POS</strong>
                   <p style={{ fontSize: '0.8125rem', color: 'var(--color-slate-600)', margin: '4px 0 0' }}>3-Second printed receipts, sibling waivers, and real-time cash drawer tallying.</p>
                 </div>
               </div>
-              <div style={{ display: 'flex', gap: '12px' }}>
+              <div style={{ display: 'flex', gap: '6px' }}>
                 <CheckCircle2 size={20} color="var(--color-success)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
                   <strong style={{ fontSize: '0.9375rem', color: 'var(--color-ink)', display: 'block' }}>Multi-Branch Switching</strong>

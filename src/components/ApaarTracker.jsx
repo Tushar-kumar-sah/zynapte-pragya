@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Download, Search, CheckCircle2, AlertTriangle, ShieldCheck, X } from 'lucide-react';
+import { Download, Search, CheckCircle2, AlertTriangle, ShieldCheck, X, FolderCheck, FileSpreadsheet } from 'lucide-react';
 import { studentRecords } from '../data/studentRecords';
 import AccuracyNotice from './AccuracyNotice';
 
@@ -63,24 +63,59 @@ PRG-2026-022,2024881211,Priyanka Bose,2011-12-11,Female,VIII,A,Sumit Bose,Verifi
       {showJourney && (
         <div className="apaar-journey-grid">
           <div className="journey-step-card">
-            <div className="journey-step-number">1</div>
-            <h3>1 · Gather</h3>
-            <p>Keep the required student information and guardian consent details together, with the signed form attached.</p>
+            <div className="journey-card-top">
+              <div className="journey-step-number">1</div>
+              <span className="badge badge--blue">Consent &amp; PEN</span>
+            </div>
+            <div className="journey-step-body">
+              <div className="journey-icon-wrap" style={{ color: 'var(--color-blue)' }}>
+                <FolderCheck size={20} />
+              </div>
+              <h3>1 · Gather</h3>
+            </div>
+            <p>Signed consent &amp; PEN in one student record.</p>
           </div>
+
           <div className="journey-step-card">
-            <div className="journey-step-number">2</div>
-            <h3>2 · Check</h3>
-            <p>See blockers such as missing consent or required information, plus warnings for name/date mismatches and missing PEN.</p>
+            <div className="journey-card-top">
+              <div className="journey-step-number">2</div>
+              <span className="badge badge--orange">Audit Checks</span>
+            </div>
+            <div className="journey-step-body">
+              <div className="journey-icon-wrap" style={{ color: '#F97316' }}>
+                <AlertTriangle size={20} />
+              </div>
+              <h3>2 · Check</h3>
+            </div>
+            <p>Instant Aadhaar spelling &amp; DOB mismatch alerts.</p>
           </div>
+
           <div className="journey-step-card">
-            <div className="journey-step-number">3</div>
-            <h3>3 · Prepare</h3>
-            <p>Filter by class, section and status, and export a CSV data sheet for the school’s official submission process.</p>
+            <div className="journey-card-top">
+              <div className="journey-step-number">3</div>
+              <span className="badge badge--violet">Portal Sheet</span>
+            </div>
+            <div className="journey-step-body">
+              <div className="journey-icon-wrap" style={{ color: 'var(--color-violet)' }}>
+                <FileSpreadsheet size={20} />
+              </div>
+              <h3>3 · Prepare</h3>
+            </div>
+            <p>1-Click verified CSV ready for government portal.</p>
           </div>
+
           <div className="journey-step-card">
-            <div className="journey-step-number">4</div>
-            <h3>4 · Track</h3>
-            <p>Record whether an application is pending, submitted, needs correction or has received a confirmed 12-digit APAAR ID.</p>
+            <div className="journey-card-top">
+              <div className="journey-step-number">4</div>
+              <span className="badge badge--green">12-Digit ID</span>
+            </div>
+            <div className="journey-step-body">
+              <div className="journey-icon-wrap" style={{ color: 'var(--color-success)' }}>
+                <CheckCircle2 size={20} />
+              </div>
+              <h3>4 · Track</h3>
+            </div>
+            <p>Log issued DigiLocker APAAR IDs on student cards.</p>
           </div>
         </div>
       )}
@@ -119,7 +154,7 @@ PRG-2026-022,2024881211,Priyanka Bose,2011-12-11,Female,VIII,A,Sumit Bose,Verifi
             <span className="badge badge--green">Ready</span>
           </div>
           <div className="apaar-status-count" style={{ color: '#059669' }}>428</div>
-          <div className="apaar-status-desc">Locally recorded details meet Pragya’s readiness checks. Click to filter.</div>
+          <div className="apaar-status-desc">Consent verified &amp; PEN ready.</div>
         </div>
 
         <div
@@ -140,7 +175,7 @@ PRG-2026-022,2024881211,Priyanka Bose,2011-12-11,Female,VIII,A,Sumit Bose,Verifi
             <span className="badge badge--orange">Follow Up</span>
           </div>
           <div className="apaar-status-count" style={{ color: '#D97706' }}>34</div>
-          <div className="apaar-status-desc">Students with missing consent, missing PEN, or demographic mismatch alerts.</div>
+          <div className="apaar-status-desc">Missing consent or mismatch alert.</div>
         </div>
 
         <div
@@ -161,7 +196,7 @@ PRG-2026-022,2024881211,Priyanka Bose,2011-12-11,Female,VIII,A,Sumit Bose,Verifi
             <span className="badge badge--blue">In Progress</span>
           </div>
           <div className="apaar-status-count" style={{ color: '#145EFF' }}>512</div>
-          <div className="apaar-status-desc">Marked as submitted after the school completes external government processing.</div>
+          <div className="apaar-status-desc">Submitted to official portal.</div>
         </div>
 
         <div
@@ -182,7 +217,7 @@ PRG-2026-022,2024881211,Priyanka Bose,2011-12-11,Female,VIII,A,Sumit Bose,Verifi
             <span className="badge badge--violet">Completed</span>
           </div>
           <div className="apaar-status-count" style={{ color: '#742DDA' }}>274</div>
-          <div className="apaar-status-desc">Students whose confirmed 12-digit IDs have been received and logged.</div>
+          <div className="apaar-status-desc">12-digit APAAR received &amp; logged.</div>
         </div>
       </div>
 

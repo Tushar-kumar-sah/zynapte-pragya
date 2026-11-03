@@ -5,18 +5,46 @@ import {
   CreditCard, Award, Sparkles, Check, Lock, ShieldCheck, 
   Database, Cloud, MessageSquare, UserPlus, BookOpen, 
   FileText, Library, Send, Building2, Sun, Moon, Laptop, 
-  Eye, ChevronRight, Phone
+  Eye, ChevronRight, Phone, BarChart3, Settings, Layers, 
+  UserCheck, FileUp, Search, Receipt, CalendarCheck, 
+  ScanLine, Printer, FileSpreadsheet, Smartphone, Clock
 } from 'lucide-react';
 import ErpMockup from '../components/ErpMockup';
 import ApaarTracker from '../components/ApaarTracker';
 import DemoForm from '../components/DemoForm';
 import FaqAccordion from '../components/FaqAccordion';
 import BottomCta from '../components/BottomCta';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import { rolesData } from '../data/rolesData';
 
 export default function Home() {
   const [selectedRole, setSelectedRole] = useState('principal');
   const role = rolesData[selectedRole] || rolesData['principal'];
+
+  // Helper to render role capability icons
+  const renderRoleIcon = (name) => {
+    switch (name) {
+      case 'BarChart3': return <BarChart3 size={18} style={{ color: '#145EFF' }} />;
+      case 'ShieldCheck': return <ShieldCheck size={18} style={{ color: '#059669' }} />;
+      case 'Lock': return <Lock size={18} style={{ color: '#742DDA' }} />;
+      case 'Settings': return <Settings size={18} style={{ color: '#145EFF' }} />;
+      case 'Layers': return <Layers size={18} style={{ color: '#742DDA' }} />;
+      case 'BookOpen': return <BookOpen size={18} style={{ color: '#F97316' }} />;
+      case 'UserCheck': return <UserCheck size={18} style={{ color: '#059669' }} />;
+      case 'Award': return <Award size={18} style={{ color: '#F97316' }} />;
+      case 'Calendar': return <Calendar size={18} style={{ color: '#145EFF' }} />;
+      case 'UserPlus': return <UserPlus size={18} style={{ color: '#145EFF' }} />;
+      case 'FileUp': return <FileUp size={18} style={{ color: '#742DDA' }} />;
+      case 'Search': return <Search size={18} style={{ color: '#059669' }} />;
+      case 'CreditCard': return <CreditCard size={18} style={{ color: '#FF5A36' }} />;
+      case 'Receipt': return <Receipt size={18} style={{ color: '#059669' }} />;
+      case 'Building2': return <Building2 size={18} style={{ color: '#145EFF' }} />;
+      case 'Users': return <Users size={18} style={{ color: '#145EFF' }} />;
+      case 'CalendarCheck': return <CalendarCheck size={18} style={{ color: '#059669' }} />;
+      case 'Shield': return <Shield size={18} style={{ color: '#742DDA' }} />;
+      default: return <CheckCircle2 size={18} style={{ color: '#059669' }} />;
+    }
+  };
 
   // 9 Core Modules from Brochure Page 2
   const coreNineModules = [
@@ -117,7 +145,7 @@ export default function Home() {
               </h1>
 
               <p className="hero-subtitle">
-                Bring admissions, academics, attendance, fees, results and staff management together—and see which students are ready for APAAR submission.
+                Unified school management and automated APAAR readiness in one intuitive workspace.
               </p>
 
               <div className="hero-cta-group">
@@ -174,27 +202,27 @@ export default function Home() {
         <div className="container trust-strip-container">
           <div className="trust-strip-inner">
             <div className="trust-item">
-              <span className="trust-dot trust-dot--orange" />
+              <Award size={15} style={{ color: '#F97316' }} />
               <span>DPIIT <strong>#startupindia</strong> (DIPP187962)</span>
             </div>
             <div className="trust-sep">•</div>
             <div className="trust-item">
-              <span className="trust-dot trust-dot--green" />
+              <Building2 size={15} style={{ color: '#059669' }} />
               <span>Ministry of <strong>MSME</strong> (UDYAM-WB-10-0144056)</span>
             </div>
             <div className="trust-sep">•</div>
             <div className="trust-item">
-              <span className="trust-dot trust-dot--blue" />
+              <ShieldCheck size={15} style={{ color: '#2563EB' }} />
               <span><strong>D-U-N-S®</strong> 766391467</span>
             </div>
             <div className="trust-sep">•</div>
             <div className="trust-item">
-              <span className="trust-dot trust-dot--purple" />
+              <WhatsAppIcon size={15} />
               <span><strong>Meta Tech Provider</strong></span>
             </div>
             <div className="trust-sep">•</div>
             <div className="trust-item">
-              <span className="trust-dot trust-dot--teal" />
+              <Cloud size={15} style={{ color: '#0284C7' }} />
               <span><strong>AWS Cloud</strong> (99.9% Uptime)</span>
             </div>
           </div>
@@ -274,19 +302,34 @@ export default function Home() {
             </div>
 
             <div className="role-showcase-detail">
-              <div className="role-detail-text">
-                <h3>{role.title}</h3>
-                <p className="role-detail-outcome">{role.outcome}</p>
-                <ul className="role-detail-points">
-                  {role.points.map((p, idx) => (
-                    <li key={idx}>
-                      <CheckCircle2 size={16} color="var(--color-green)" />
-                      <span>{p}</span>
-                    </li>
+              <div className="role-detail-header-row">
+                <div>
+                  <h3>{role.title}</h3>
+                  <p className="role-detail-outcome">{role.outcome}</p>
+                </div>
+                <div className="role-chips-row">
+                  {role.chips?.map((chip, idx) => (
+                    <span key={idx} className="badge badge--slate">{chip}</span>
                   ))}
-                </ul>
+                </div>
               </div>
-              <div className="role-detail-action">
+
+              {/* Visual 3-Capability Grid with Icons */}
+              <div className="role-capabilities-grid">
+                {role.features?.map((feat, idx) => (
+                  <div key={idx} className="role-capability-card">
+                    <div className="role-cap-icon-box">
+                      {renderRoleIcon(feat.icon)}
+                    </div>
+                    <div className="role-cap-text">
+                      <strong>{feat.title}</strong>
+                      <small>{feat.desc}</small>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="role-detail-action" style={{ marginTop: '6px' }}>
                 <Link to="/solutions" className="btn btn--secondary btn--sm">
                   {role.cta} <ArrowRight size={14} />
                 </Link>
@@ -333,7 +376,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3>Fees Module</h3>
-                  <small>Class-wise fee structures, receipts &amp; collections, dues and payment history</small>
+                  <small>Counter POS • Class-wise Fees • Dues Tracking</small>
                 </div>
               </div>
 
@@ -379,11 +422,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <ul className="page3-checklist">
-                <li><Check size={16} className="text-green" /> <span>Class-wise fee structures</span></li>
-                <li><Check size={16} className="text-green" /> <span>Receipts &amp; collections</span></li>
-                <li><Check size={16} className="text-green" /> <span>Dues and payment history</span></li>
-              </ul>
+              {/* Visual Capability Chips (Icons replace text checklist) */}
+              <div className="page3-visual-chips">
+                <span className="visual-chip"><CreditCard size={15} style={{ color: '#FF5A36' }} /> Cash &amp; UPI QR POS</span>
+                <span className="visual-chip"><Printer size={15} style={{ color: '#145EFF' }} /> 3-Sec Thermal Slip</span>
+                <span className="visual-chip"><WhatsAppIcon size={15} /> WhatsApp Receipt</span>
+              </div>
             </div>
 
             {/* Library Showcase */}
@@ -394,7 +438,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3>Library</h3>
-                  <small>Digital catalogue &amp; search, issue &amp; return records, part of the same workspace</small>
+                  <small>Digital Catalogue • Barcode Search • Issue Records</small>
                 </div>
               </div>
 
@@ -435,11 +479,12 @@ export default function Home() {
                 </div>
               </div>
 
-              <ul className="page3-checklist">
-                <li><Check size={16} className="text-green" /> <span>Digital catalogue &amp; search</span></li>
-                <li><Check size={16} className="text-green" /> <span>Issue &amp; return records</span></li>
-                <li><Check size={16} className="text-green" /> <span>Part of the same workspace</span></li>
-              </ul>
+              {/* Visual Capability Chips (Icons replace text checklist) */}
+              <div className="page3-visual-chips">
+                <span className="visual-chip"><ScanLine size={15} style={{ color: '#00CDE5' }} /> Barcode &amp; Accession</span>
+                <span className="visual-chip"><BookOpen size={15} style={{ color: '#059669' }} /> NCERT &amp; State Syllabus</span>
+                <span className="visual-chip"><Clock size={15} style={{ color: '#742DDA' }} /> Due Date Alerts</span>
+              </div>
             </div>
           </div>
 
@@ -471,7 +516,7 @@ export default function Home() {
               </div>
               <div className="pillar-bottom-text">
                 <h4>Khelo India</h4>
-                <p>Sports records, ready</p>
+                <p>Fitness assessments &amp; report cards</p>
               </div>
             </div>
           </div>
@@ -479,9 +524,9 @@ export default function Home() {
       </section>
 
       {/* ==========================================================================
-          05 / "PAYROLL THAT FITS EVERY EMPLOYEE." & THE PRAGYA ADVANTAGE (PAGE 4)
+          05 / "PAYROLL THAT FITS EVERY EMPLOYEE." (PAGE 4)
           ========================================================================== */}
-      <section className="section section--white" id="payroll-section">
+      <section className="section section--white" id="payroll-overview">
         <div className="container">
           <div className="section-header">
             <div className="eyebrow">
@@ -494,13 +539,11 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Multiple Payslip Structures Showcase */}
           <div className="payroll-showcase-container">
+            {/* Top Category Switcher */}
             <div className="payslip-category-bar">
-              <div className="payslip-category-title">
-                <strong>Multiple payslip structures:</strong>
-              </div>
-              <div className="payslip-category-pills">
+              <span className="payslip-category-label">Multiple payslip structures:</span>
+              <div className="payslip-pills-row" role="tablist">
                 <button 
                   className={`payslip-pill-btn payslip-pill-btn--teaching ${activePayslipTab === 'teaching' ? 'active' : ''}`}
                   onClick={() => setActivePayslipTab('teaching')}
@@ -529,27 +572,58 @@ export default function Home() {
             </div>
 
             <div className="payroll-split-grid">
-              {/* Left: Faculty & Staff Context */}
+              {/* Left: Faculty & Staff Context with Visual Cards */}
               <div className="payroll-faculty-info">
                 <div className="faculty-badge">
                   <Users size={15} />
                   <span>FACULTY &amp; STAFF</span>
                 </div>
-                <h3>Tailored Compensation &amp; Allowances for Each Tier</h3>
-                <p>
-                  Teaching faculty structures handle DA, HRA, special allowances, and provident fund deductions. Support staff structures automatically factor in daily attendance, overtime shifts, and advance adjustments.
-                </p>
-                <div className="faculty-highlights">
-                  <div className="fac-item">
-                    <strong>1-Click Salary Calculation</strong>
-                    <small>Syncs with teacher mobile attendance</small>
+                <h3>Tailored Compensation &amp; Allowances</h3>
+
+                {/* 4 Visual Capability Cards (Icons replace long paragraphs) */}
+                <div className="payroll-visual-grid">
+                  <div className="payroll-feat-card">
+                    <div className="payroll-feat-icon" style={{ color: 'var(--color-emerald)' }}>
+                      <FileSpreadsheet size={18} />
+                    </div>
+                    <div>
+                      <strong>DA, HRA &amp; EPF</strong>
+                      <small>Govt compliant formulas</small>
+                    </div>
                   </div>
-                  <div className="fac-item">
-                    <strong>Bank NEFT/RTGS Batch Payout</strong>
-                    <small>Standard Excel file for SBI, HDFC upload</small>
+
+                  <div className="payroll-feat-card">
+                    <div className="payroll-feat-icon" style={{ color: 'var(--color-blue)' }}>
+                      <Building2 size={18} />
+                    </div>
+                    <div>
+                      <strong>Bank NEFT Batch</strong>
+                      <small>SBI, HDFC &amp; PNB upload</small>
+                    </div>
+                  </div>
+
+                  <div className="payroll-feat-card">
+                    <div className="payroll-feat-icon" style={{ color: 'var(--color-purple)' }}>
+                      <Clock size={18} />
+                    </div>
+                    <div>
+                      <strong>Attendance Sync</strong>
+                      <small>1-Click salary calculation</small>
+                    </div>
+                  </div>
+
+                  <div className="payroll-feat-card">
+                    <div className="payroll-feat-icon" style={{ color: 'var(--color-coral)' }}>
+                      <Smartphone size={18} />
+                    </div>
+                    <div>
+                      <strong>Mobile Payslips</strong>
+                      <small>Direct to staff mobile app</small>
+                    </div>
                   </div>
                 </div>
-                <div style={{ marginTop: '18px' }}>
+
+                <div style={{ marginTop: '14px' }}>
                   <Link to="/staff-payroll-management" className="btn btn--primary btn--sm">
                     Explore Staff &amp; Payroll Module
                   </Link>
@@ -602,7 +676,7 @@ export default function Home() {
                 <div className="adv-icon-circle"><Moon size={16} /></div>
               </div>
               <h4>Light &amp; Dark</h4>
-              <p>Comfortable in any light. High contrast readability for daytime fee counters and quiet evening administrative reviews.</p>
+              <p>Dual high-contrast themes for bright counters and evening reviews.</p>
               <div className="adv-preview-theme">
                 <div className="theme-half theme-half--light">Daylight POS</div>
                 <div className="theme-half theme-half--dark">Night Review</div>
@@ -611,12 +685,15 @@ export default function Home() {
 
             <div className="advantage-feature-card advantage-feature-card--mobile">
               <div className="adv-icon-row">
+                <div className="adv-icon-circle"><Smartphone size={16} /></div>
                 <div className="adv-icon-circle"><Laptop size={16} /></div>
               </div>
-              <h4>Mobile &amp; Web</h4>
-              <p>One school, every device. Native experiences for Android, iPhone, tablet and desktop browsers with offline sync support.</p>
-              <div className="adv-badge-chip">
-                <span>IOS &amp; ANDROID APP</span>
+              <h4>Mobile &amp; Web Cloud</h4>
+              <p>One school, every device with offline sync support.</p>
+              <div className="adv-platform-badges">
+                <span className="platform-chip"><Smartphone size={12} /> Android App</span>
+                <span className="platform-chip"><Smartphone size={12} /> iOS App</span>
+                <span className="platform-chip"><Laptop size={12} /> Desktop Web</span>
               </div>
             </div>
 
@@ -626,7 +703,7 @@ export default function Home() {
                 <div className="adv-icon-circle"><ShieldCheck size={16} /></div>
               </div>
               <h4>Secure on AWS</h4>
-              <p>Protected records, reliable cloud hosting with 99.9% uptime, nightly encrypted snapshots, and strict role-based access control.</p>
+              <p>99.9% uptime with nightly encrypted snapshots.</p>
               <div className="adv-aws-badges">
                 <span className="badge badge--green">AWS HOSTED</span>
                 <span className="badge badge--violet">SECURE RBAC</span>
@@ -650,7 +727,7 @@ export default function Home() {
             </div>
             <h2>Know Who Is Ready. Know What Is Missing.</h2>
             <p>
-              Pre-check records student-by-student before upload. Track parental consent, detect Aadhaar spelling mismatches, and avoid portal rejection.
+              Pre-check records student-by-student to detect mismatches and avoid portal rejection.
             </p>
           </div>
 
@@ -671,7 +748,7 @@ export default function Home() {
         <div className="container">
           <DemoForm
             title="See What a Better School Day Looks Like."
-            subtitle="Tell us about your school structure and the workflows you want to simplify. We’ll walk through relevant Pragya modules, answer questions and share live previews."
+            subtitle="Schedule a 20-minute tailored walkthrough of Pragya modules."
           />
         </div>
       </section>
@@ -684,7 +761,7 @@ export default function Home() {
           <div className="section-header">
             <h2>Your Pragya Questions, Answered.</h2>
             <p>
-              Straightforward answers about how Pragya works, what is currently supported and which capabilities are on the product roadmap.
+              Clear answers on features, board compliance, and deployment.
             </p>
           </div>
 

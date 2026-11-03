@@ -49,7 +49,7 @@ export default function AcademicsTimetable() {
                 <strong>Class IX - Section A • Weekly Master Routine</strong>
                 <div style={{ fontSize: '0.75rem', opacity: 0.8 }}>Academic Year 2026-27 • Room 204</div>
               </div>
-              <span style={{ background: '#ECFDF5', color: '#059669', padding: '3px 10px', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
+              <span style={{ background: '#ECFDF5', color: '#059669', padding: '3px 10px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 700, display: 'inline-flex', alignItems: 'center', gap: '4px' }}>
                 <CheckCircle2 size={14} /> Zero Clashes Detected
               </span>
             </div>

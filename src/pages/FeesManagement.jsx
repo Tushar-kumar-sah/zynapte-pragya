@@ -47,7 +47,7 @@ export default function FeesManagement() {
             <div style={{ textAlign: 'center', marginBottom: '16px' }}>
               <div style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-ink)' }}>PRAGYA MEMORIAL ACADEMY</div>
               <div style={{ fontSize: '0.75rem', color: 'var(--color-slate-500)' }}>AFFILIATED TO WBBSE / CBSE • SCHOOL CODE: WB-9402</div>
-              <span style={{ display: 'inline-block', background: 'var(--color-slate-100)', padding: '3px 12px', borderRadius: '999px', fontSize: '0.75rem', fontWeight: 700, marginTop: '6px' }}>
+              <span style={{ display: 'inline-block', background: 'var(--color-slate-100)', padding: '3px 12px', borderRadius: '6px', fontSize: '0.75rem', fontWeight: 700, marginTop: '6px' }}>
                 FEE PAYMENT RECEIPT (OFFICIAL)
               </span>
             </div>
@@ -93,13 +93,13 @@ export default function FeesManagement() {
                 </tbody>
                 <tfoot>
                   <tr>
-                    <td colSpan="2" style={{ paddingTop: '10px' }}><strong>Paid (Counter Cash / POS)</strong></td>
-                    <td style={{ paddingTop: '10px', textAlign: 'right', fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-green-dark)' }}>₹17,200.00</td>
+                    <td colSpan="2" style={{ paddingTop: '6px' }}><strong>Paid (Counter Cash / POS)</strong></td>
+                    <td style={{ paddingTop: '6px', textAlign: 'right', fontSize: '1.2rem', fontWeight: 800, color: 'var(--color-green-dark)' }}>₹17,200.00</td>
                   </tr>
                 </tfoot>
               </table>
             </div>
-            <div className="responsive-flex-stack" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.75rem', color: 'var(--color-slate-500)', borderTop: '1px solid var(--color-slate-200)', paddingTop: '10px', flexWrap: 'wrap', gap: '8px' }}>
+            <div className="responsive-flex-stack" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '0.75rem', color: 'var(--color-slate-500)', borderTop: '1px solid var(--color-slate-200)', paddingTop: '6px', flexWrap: 'wrap', gap: '8px' }}>
               <span>Words: Seventeen Thousand Two Hundred Only</span>
               <span style={{ color: '#15803D', fontWeight: 700, background: '#DCFCE7', border: '1px solid #86EFAC', padding: '2px 8px', borderRadius: '4px' }}>
                 ✓ RECEIPT ISSUED &bull; Pragya Ledger Logged

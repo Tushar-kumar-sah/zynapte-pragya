@@ -1,113 +1,155 @@
 export const rolesData = {
   principal: {
     id: 'principal',
-    name: 'Principal & School Leaders',
-    title: 'For Principals and School Leaders',
-    outcome: 'See attendance, results, fees and APAAR progress at a glance.',
+    name: 'Principals',
+    title: 'Principal & Leadership Desk',
+    outcome: 'Real-time bird’s-eye oversight across institutional operations.',
     avatar: 'P',
     userName: 'Dr. S. Mukherjee',
     userTitle: 'Principal • Pragya School',
     badge: 'Executive View',
+    features: [
+      { icon: 'BarChart3', title: 'Live Overview', desc: 'Real-time roll call, collections & dues' },
+      { icon: 'ShieldCheck', title: 'APAAR Compliance', desc: 'Class-wise consent without paper chasing' },
+      { icon: 'Lock', title: 'Role Audit Trail', desc: 'Granular permissions and activity logs' }
+    ],
+    chips: ['Daily Roll: 96.4%', 'Fees: ₹1.84L Today', 'APAAR: 91.2% Ready'],
     points: [
-      'Live consolidated visibility into daily attendance, outstanding dues, and academic performance.',
-      'Institutional APAAR readiness tracking across classes without chasing teachers for paper lists.',
-      'Faster institutional decisions with role-level auditing and fewer disconnected spreadsheets.'
+      'Live daily attendance, fees, and academic roll.',
+      'Institutional APAAR readiness tracking across classes.',
+      'Role-level audit trail with zero spreadsheet clutter.'
     ],
     cta: "See Principal's View in Action"
   },
   administrator: {
     id: 'administrator',
-    name: 'Administrator',
-    title: 'For Administrators & Academic Coordinators',
-    outcome: 'Set up classes, subjects, staff and fee structures, with clear pending-work visibility.',
+    name: 'Administrators',
+    title: 'Admin & Academic Coordinators',
+    outcome: 'Centralized school structure, batch imports, and task queue.',
     avatar: 'A',
     userName: 'M. Chakraborty',
     userTitle: 'Head Administrator',
     badge: 'Admin Console',
+    features: [
+      { icon: 'Settings', title: 'Campus Hierarchy', desc: 'Configure sessions, classes & branches' },
+      { icon: 'Layers', title: 'Pending Task Queue', desc: 'Admissions, verifications & approvals' },
+      { icon: 'BookOpen', title: 'Board Catalogues', desc: 'CBSE, ICSE & State curriculum curations' }
+    ],
+    chips: ['9 Core Modules', 'Multi-Campus Sync', 'Fast CSV Import'],
     points: [
-      'Central academic structure: configure years, branches, classes, sections, and subject teachers.',
-      'Pending task queue: instantly view pending admissions, verification requests, and fee reconciliations.',
-      'WBBSE/WBCHSE catalogue support with custom school elective groups.'
+      'Central academic structure: years, branches, classes, sections.',
+      'Actionable pending task queue for verifications.',
+      'State board & CBSE catalogue alignments.'
     ],
     cta: 'Explore Admin Configuration'
   },
   teacher: {
     id: 'teacher',
-    name: 'Teacher',
-    title: 'For Class and Subject Teachers',
-    outcome: 'Mark attendance, manage subject work, enter permitted marks and track syllabus progress.',
+    name: 'Teachers',
+    title: 'Class & Subject Teachers',
+    outcome: 'Quick daily roll call, marks entry, and syllabus tracking.',
     avatar: 'T',
     userName: 'P. Sengupta',
     userTitle: 'Senior Math Teacher • Class IX-A',
     badge: 'Teacher Desk',
+    features: [
+      { icon: 'UserCheck', title: '30-Sec Roll Call', desc: 'Instant mobile or web daily attendance' },
+      { icon: 'Award', title: 'Marks & Grading', desc: 'Auto calculation of CBSE/State thresholds' },
+      { icon: 'Calendar', title: 'Syllabus & Timetable', desc: 'Conflict-free schedule and period tracking' }
+    ],
+    chips: ['30-Sec Attendance', 'Automated Grading', 'Timetable Sync'],
     points: [
-      'Rapid daily roll call from browser or mobile app without paper registers.',
-      'Permitted marks entry: enter subject examination marks with automated grade threshold calculations.',
-      'Direct syllabus progress tracking and conflict-free timetable view.'
+      'Rapid daily roll call from phone or desktop.',
+      'Subject examination marks with auto-calculated grades.',
+      'Conflict-free timetable and syllabus progress.'
     ],
     cta: "Explore Teacher's Workflow"
   },
   admissions: {
     id: 'admissions',
-    name: 'Admissions / Front Office',
-    title: 'For Admissions & Front-Office Teams',
-    outcome: 'Move enquiries to accepted applications and answer student or guardian queries from one record.',
+    name: 'Admissions',
+    title: 'Admissions & Front Office',
+    outcome: 'Enquiries to confirmed admissions with verified student files.',
     avatar: 'F',
     userName: 'R. Goswami',
     userTitle: 'Admissions Officer',
     badge: 'Front Office',
+    features: [
+      { icon: 'UserPlus', title: 'Enquiry Pipeline', desc: 'Track inquiries, visits & applications' },
+      { icon: 'FileUp', title: 'Guided CSV Import', desc: 'Bulk student records with validation' },
+      { icon: 'Search', title: 'Instant Student Dossier', desc: '1-click lookup for parent inquiries' }
+    ],
+    chips: ['Live Enquiry Board', 'Bulk CSV Import', '1-Click Student Lookup'],
     points: [
-      'Kanban-style admissions board to manage enquiries, scheduled visits, and submitted documents.',
-      'Guided Excel/CSV data import for bulk student entries with field matching and validation.',
-      'Instant student lookup when parents call with fee, attendance, or document queries.'
+      'Kanban board for enquiries, visits, and forms.',
+      'Guided Excel/CSV data import with error checks.',
+      'Instant parent-call lookup for fees and records.'
     ],
     cta: 'See Admissions Workflow'
   },
   accountant: {
     id: 'accountant',
-    name: 'Accountant',
-    title: 'For Accounts & Finance Teams',
-    outcome: 'Collect fees, issue receipts, follow up on dues and manage monthly payroll.',
+    name: 'Accounts',
+    title: 'Accounts & Finance Desk',
+    outcome: 'Counter fee collection, thermal slips, and payroll payout batches.',
     avatar: '₹',
     userName: 'K. Nandy',
     userTitle: 'School Accountant',
     badge: 'Finance Desk',
+    features: [
+      { icon: 'CreditCard', title: 'Counter POS Terminal', desc: 'Instant cash, UPI QR & cheque receipts' },
+      { icon: 'Receipt', title: 'Head-Wise Ledger', desc: 'Tuition, development, bus & lab heads' },
+      { icon: 'Building2', title: 'Bank NEFT Batch', desc: 'Standard Excel files for SBI, HDFC upload' }
+    ],
+    chips: ['3-Sec Thermal Slip', 'UPI QR Instant', 'EPF & PTax Ready'],
     points: [
-      'Counter fee collection with instant receipt printing and clear dues balance breakdown.',
-      'INR accounting with head-wise breakdowns (Tuition, Development, Transport, Lab).',
-      'Staff monthly payroll workflow with salary slips, adjustments, and recorded history.'
+      'Counter fee POS with 3-second thermal slip printing.',
+      'Head-wise INR ledger accounting with receipt log.',
+      'Staff payroll generation with bank NEFT batch files.'
     ],
     cta: 'See Fee Collection Workflow'
   },
   hr: {
     id: 'hr',
-    name: 'HR & Staff Admin',
-    title: 'For HR & Staff Administration',
-    outcome: 'Manage profiles, leave, attendance and salary changes with a recorded history.',
+    name: 'HR & Staff',
+    title: 'HR & Staff Administration',
+    outcome: 'Teacher service records, leave approvals, and shift attendance.',
     avatar: 'H',
     userName: 'T. Roy',
     userTitle: 'HR Manager',
     badge: 'Staff Admin',
+    features: [
+      { icon: 'Users', title: 'Faculty Dossiers', desc: 'Qualifications, service records & KYC' },
+      { icon: 'CalendarCheck', title: 'Leave & Attendance', desc: 'Approval workflows & bio device sync' },
+      { icon: 'Shield', title: 'Role Boundaries', desc: 'Controlled module permissions per staff' }
+    ],
+    chips: ['Digital Staff Files', 'Biometric / App Sync', 'Salary Tier Config'],
     points: [
-      'Maintain complete teacher and support staff dossiers, service records, and qualifications.',
-      'Streamline staff leave requests, approvals, and daily presence tracking.',
-      'Keep workforce records connected to the rest of school administration.'
+      'Teacher and support staff dossiers and service records.',
+      'Streamlined staff leave approvals and daily shifts.',
+      'Connected payroll structures with attendance sync.'
     ],
     cta: 'Explore HR Workflows'
   },
   student: {
     id: 'student',
-    name: 'Student',
-    title: 'For Students',
-    outcome: 'Access personal timetable, attendance, homework, results, fees, syllabus and notices.',
+    name: 'Students',
+    title: 'Student Portal & Mobile App',
+    outcome: 'Personal timetables, homework, report cards, and notices.',
     avatar: 'S',
     userName: 'Ananya Roy',
     userTitle: 'Student • Class IX-A',
     badge: 'Student Portal',
+    features: [
+      { icon: 'Calendar', title: 'Class Schedule', desc: 'Daily periods & room allocations' },
+      { icon: 'Award', title: 'Report Cards', desc: 'Term results, grades & teacher remarks' },
+      { icon: 'Bell', title: 'School Notices', desc: 'Digital circulars & homework updates' }
+    ],
+    chips: ['Mobile Timetable', 'Online Report Cards', 'Notice Feed'],
     points: [
-      'Clear daily schedule and conflict-aware timetable available on mobile and browser.',
-      'View published report cards, term assessments, and homework assignments.',
-      'Stay updated with daily school message ribbons and official notices.'
+      'Daily schedule and timetable on mobile and browser.',
+      'Published report cards and term assessments.',
+      'School message ribbons and circulars.'
     ],
     cta: 'Explore Student Experience'
   }

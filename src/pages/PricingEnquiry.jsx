@@ -105,7 +105,7 @@ export default function PricingEnquiry() {
                 }}
               >
                 {tier.popular && (
-                  <span style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: 'var(--color-blue)', color: '#FFFFFF', fontSize: '0.6875rem', fontWeight: 800, padding: '4px 14px', borderRadius: '999px', letterSpacing: '0.05em' }}>
+                  <span style={{ position: 'absolute', top: '-12px', left: '50%', transform: 'translateX(-50%)', background: 'var(--color-blue)', color: '#FFFFFF', fontSize: '0.6875rem', fontWeight: 800, padding: '4px 14px', borderRadius: '6px', letterSpacing: '0.05em' }}>
                     RECOMMENDED FOR K-12
                   </span>
                 )}
@@ -117,12 +117,12 @@ export default function PricingEnquiry() {
                 </div>
 
                 <div style={{ borderTop: '1px solid var(--color-slate-200)', borderBottom: '1px solid var(--color-slate-200)', padding: '16px 0', margin: '16px 0' }}>
-                  <div style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--color-slate-500)', textTransform: 'uppercase', marginBottom: '12px', letterSpacing: '0.05em' }}>
+                  <div style={{ fontSize: '0.75rem', fontWeight: 800, color: 'var(--color-slate-500)', textTransform: 'uppercase', marginBottom: '6px', letterSpacing: '0.05em' }}>
                     INCLUDED CAPABILITIES
                   </div>
-                  <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                     {tier.features.map((feat, i) => (
-                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '10px', fontSize: '0.8125rem', color: 'var(--color-slate-700)' }}>
+                      <div key={i} style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '0.8125rem', color: 'var(--color-slate-700)' }}>
                         <CheckCircle2 size={16} color="var(--color-success)" style={{ flexShrink: 0 }} />
                         <span>{feat}</span>
                       </div>

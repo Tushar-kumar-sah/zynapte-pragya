@@ -74,11 +74,12 @@
   --shadow-lg: 0 10px 15px -3px rgba(23, 37, 82, 0.08), 0 4px 6px -4px rgba(23, 37, 82, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(23, 37, 82, 0.1), 0 8px 10px -6px rgba(23, 37, 82, 0.06);
 
-  --radius-sm: 6px;
-  --radius-md: 10px;
-  --radius-lg: 16px;
-  --radius-xl: 24px;
-  --radius-full: 9999px;
+  --radius-xs: 3px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 8px;
+  --radius-full: 6px;
 
   --container-max: 1200px;
   --transition-fast: 0.15s ease;
@@ -1031,7 +1032,7 @@ a:hover {
   z-index: 2;
   background: #FFFFFF;
   border: 1px solid rgba(226, 232, 240, 0.9);
-  border-radius: 18px;
+  border-radius: 8px;
   box-shadow: 0 16px 36px -10px rgba(23, 37, 82, 0.12), 0 0 0 1px rgba(23, 37, 82, 0.04);
   overflow: hidden;
   width: 100%;
@@ -1180,7 +1181,7 @@ a:hover {
 .mockup-stat-chip {
   background: #FFFFFF;
   border: 1px solid var(--color-slate-200);
-  border-radius: 9px;
+  border-radius: 5px;
   padding: 5px 8px;
   display: flex;
   align-items: center;
@@ -1246,7 +1247,7 @@ a:hover {
   display: flex;
   background: #E2E8F0;
   padding: 3px;
-  border-radius: 9px;
+  border-radius: 5px;
   margin-bottom: 9px;
   gap: 3px;
   overflow-x: auto;
@@ -1308,7 +1309,7 @@ a:hover {
 .mockup-apaar-panel {
   background: #FFFFFF;
   border: 1px solid var(--color-slate-200);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 10px 12px;
   box-shadow: 0 2px 6px -2px rgba(23, 37, 82, 0.04);
   max-width: 100%;
@@ -3098,7 +3099,7 @@ dialog.custom-dialog::backdrop {
 .iconic-icon-box {
   width: 50px;
   height: 50px;
-  border-radius: 14px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3237,7 +3238,7 @@ dialog.custom-dialog::backdrop {
 .modal-icon-badge {
   width: 44px;
   height: 44px;
-  border-radius: 12px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3495,7 +3496,7 @@ dialog.custom-dialog::backdrop {
   max-width: 320px;
   background: #FFFFFF;
   border: 1px solid var(--color-slate-300);
-  border-radius: 12px;
+  border-radius: 6px;
   box-shadow: var(--shadow-md);
   overflow: hidden;
 }
@@ -3770,7 +3771,7 @@ dialog.custom-dialog::backdrop {
   max-width: 320px;
   height: 640px;
   background: #1E293B;
-  border-radius: 44px;
+  border-radius: 16px;
   padding: 12px;
   box-shadow: 
     0 25px 60px -15px rgba(23, 37, 82, 0.4),
@@ -3781,7 +3782,7 @@ dialog.custom-dialog::backdrop {
 @media (max-width: 480px) {
   .smartphone-body {
     max-height: 75vh;
-    border-radius: 36px;
+    border-radius: 14px;
     padding: 8px;
   }
 }
@@ -3790,7 +3791,7 @@ dialog.custom-dialog::backdrop {
   width: 100%;
   height: 100%;
   background: #000000;
-  border-radius: 34px;
+  border-radius: 14px;
   overflow: hidden;
   position: relative;
 }
@@ -3825,7 +3826,7 @@ dialog.custom-dialog::backdrop {
   width: 90px;
   height: 20px;
   background: #000000;
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 .phone-signals {
@@ -3836,7 +3837,7 @@ dialog.custom-dialog::backdrop {
   background: linear-gradient(135deg, var(--color-blue), var(--color-blue-dark));
   color: #FFFFFF;
   padding: 16px;
-  border-radius: 0 0 20px 20px;
+  border-radius: 0 0 8px 8px;
   margin-bottom: 12px;
 }
 
@@ -3888,7 +3889,7 @@ dialog.custom-dialog::backdrop {
 .app-metric-card {
   background: #FFFFFF;
   border: 1px solid var(--color-slate-200);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 10px;
   display: flex;
   flex-direction: column;
@@ -3923,7 +3924,7 @@ dialog.custom-dialog::backdrop {
 .app-task-card {
   background: #FFFFFF;
   border: 1px solid var(--color-slate-200);
-  border-radius: 10px;
+  border-radius: 6px;
   margin: 0 12px 8px;
   padding: 10px 12px;
   display: flex;
@@ -3979,7 +3980,7 @@ dialog.custom-dialog::backdrop {
 .quick-btn {
   background: #FFFFFF;
   border: 1px solid var(--color-slate-200);
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 8px 4px;
   text-align: center;
   display: flex;
@@ -4078,7 +4079,7 @@ dialog.custom-dialog::backdrop {
 .store-pill {
   background: #FFFFFF;
   border: 1px solid var(--color-slate-300);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 10px 18px;
   display: flex;
   align-items: center;
@@ -4184,7 +4185,7 @@ dialog.custom-dialog::backdrop {
 .workflow-icon-box {
   width: 48px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4841,7 +4842,7 @@ dialog.custom-dialog::backdrop {
 
 .value-pillar-card {
   background: #FFFFFF;
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 8px 12px;
   display: flex;
   align-items: center;
@@ -5087,7 +5088,7 @@ dialog.custom-dialog::backdrop {
 .core-module-card {
   background: #FFFFFF;
   border: 1px solid var(--color-slate-200);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 18px;
   display: flex;
   align-items: center;
@@ -5126,7 +5127,7 @@ dialog.custom-dialog::backdrop {
 .core-module-icon-wrap {
   width: 44px;
   height: 44px;
-  border-radius: 10px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5303,7 +5304,7 @@ dialog.custom-dialog::backdrop {
 .page3-icon-badge {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -5338,7 +5339,7 @@ dialog.custom-dialog::backdrop {
 .brochure-receipt-box {
   background: #F8FAFC;
   border: 1px dashed var(--color-slate-300);
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 14px 16px;
   margin-bottom: 14px;
 }
@@ -5415,7 +5416,7 @@ dialog.custom-dialog::backdrop {
 .brochure-library-box {
   background: #F0FDFA;
   border: 1px solid rgba(13, 148, 136, 0.2);
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 14px 16px;
   margin-bottom: 14px;
 }
@@ -5512,7 +5513,7 @@ dialog.custom-dialog::backdrop {
 }
 
 .pillar-bottom-card {
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 14px 18px;
   color: #FFFFFF;
   display: flex;
@@ -5528,7 +5529,7 @@ dialog.custom-dialog::backdrop {
 .pillar-bottom-icon {
   width: 40px;
   height: 40px;
-  border-radius: 10px;
+  border-radius: 6px;
   background: rgba(255, 255, 255, 0.16);
   display: flex;
   align-items: center;
@@ -5674,7 +5675,7 @@ dialog.custom-dialog::backdrop {
 .brochure-payslip-card {
   background: #FFFFFF;
   border: 1.5px solid var(--color-slate-300);
-  border-radius: 12px;
+  border-radius: 6px;
   padding: 16px;
   box-shadow: 0 4px 14px rgba(23, 37, 82, 0.05);
 }
@@ -6337,7 +6338,7 @@ a.partner-detail-val:hover {
   position: absolute;
   background: #FFFFFF;
   padding: 8px 14px;
-  border-radius: 12px;
+  border-radius: 6px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08), 0 2px 6px rgba(0, 0, 0, 0.04);
   border: 1px solid #F1F5F9;
   display: flex;
@@ -6404,7 +6405,7 @@ a.partner-detail-val:hover {
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  border-radius: 16px;
+  border-radius: 8px;
   box-shadow: 0 20px 45px rgba(15, 23, 42, 0.08), 0 4px 12px rgba(15, 23, 42, 0.03);
   border: 1px solid #E2E8F0;
   overflow: hidden;
@@ -6438,7 +6439,7 @@ a.partner-detail-val:hover {
 .mockup-address-pill {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  border-radius: 9999px;
+  border-radius: 6px;
   padding: 3px 12px;
   display: inline-flex;
   align-items: center;
@@ -6462,7 +6463,7 @@ a.partner-detail-val:hover {
   background: #FEF3C7;
   color: #92400E;
   border: 1px solid #FDE68A;
-  border-radius: 9999px;
+  border-radius: 6px;
   padding: 3px 8px;
   font-size: 0.625rem;
   font-weight: 750;
@@ -6576,7 +6577,7 @@ a.partner-detail-val:hover {
 .mockup-subcard {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  border-radius: 10px;
+  border-radius: 6px;
   padding: 10px 12px;
 }
 
@@ -6598,7 +6599,7 @@ a.partner-detail-val:hover {
 
 .subcard-badge {
   padding: 2px 8px;
-  border-radius: 9999px;
+  border-radius: 6px;
   font-size: 0.625rem;
   font-weight: 700;
 }
@@ -6672,7 +6673,7 @@ a.partner-detail-val:hover {
 .status-pill {
   display: inline-block;
   padding: 2px 8px;
-  border-radius: 9999px;
+  border-radius: 6px;
   font-size: 0.625rem;
   font-weight: 750;
   text-align: center;
@@ -6804,7 +6805,7 @@ a.partner-detail-val:hover {
 .role-showcase-box {
   background: #FFFFFF;
   border: 1px solid #E2E8F0;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 28px;
   margin-top: 36px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
@@ -6831,7 +6832,7 @@ a.partner-detail-val:hover {
   display: inline-flex;
   background: #F1F5F9;
   padding: 4px;
-  border-radius: 9999px;
+  border-radius: 6px;
   gap: 4px;
   flex-wrap: wrap;
 }
@@ -6840,7 +6841,7 @@ a.partner-detail-val:hover {
   border: none;
   background: transparent;
   padding: 7px 16px;
-  border-radius: 9999px;
+  border-radius: 6px;
   font-size: 0.725rem;
   font-weight: 750;
   letter-spacing: 0.04em;
@@ -6941,7 +6942,7 @@ a.partner-detail-val:hover {
   background: #F8FAFC;
   border: 1px solid #E2E8F0;
   padding: 12px 18px;
-  border-radius: 12px;
+  border-radius: 6px;
 }
 
 .payslip-category-title {
@@ -6992,5 +6993,286 @@ a.partner-detail-val:hover {
   }
   .payslip-pill-btn {
     white-space: nowrap;
+  }
+}
+
+
+/* ==========================================================================
+   CLEAN & CRISP ENTERPRISE BORDER RADIUS SYSTEM
+   Ensures all cards, buttons, badges and inputs have subtle modern corners (4px - 8px)
+   and eliminates excessively rounded / pill-shaped edges.
+   ========================================================================== */
+
+/* Buttons: Crisp 6px edges */
+.btn,
+.btn--primary,
+.btn--secondary,
+.btn--accent-gradient,
+.btn--sm,
+.btn--lg,
+.btn--block,
+.nav-demo-btn,
+.nav-wa-btn,
+.role-pill-btn,
+.module-filter-btn,
+.role-tab-btn,
+.mobile-tab-btn,
+.mockup-tab-btn,
+.segmented-tab-btn,
+.hamburger-btn {
+  border-radius: 6px !important;
+}
+
+/* Cards & Mockup Containers: Clean 8px corners */
+.erp-mockup,
+.core-module-card,
+.feature-card,
+.page3-card,
+.advantage-feature-card,
+.brochure-payslip-card,
+.stat-box-card,
+.security-card,
+.journey-step-card,
+.apaar-status-card,
+.faq-item,
+.demo-card-container,
+.bottom-cta-card,
+.role-showcase-box,
+.iconic-card,
+.pricing-card,
+.pricing-tier-card,
+.benefit-icon-box,
+.indian-schools-strip,
+.multi-campus-banner,
+.simulated-idcard,
+.workflow-step-card {
+  border-radius: 8px !important;
+}
+
+/* Sub-cards, inner boxes & inputs: 6px corners */
+.mockup-subcard,
+.mockup-apaar-panel,
+.brochure-receipt,
+.brochure-library,
+.pillar-bottom-card,
+.value-pillar-card,
+.app-metric-card,
+.app-task-card,
+.form-control,
+.table-filter-select,
+.table-search-input,
+.role-pills-row,
+.payslip-category-bar {
+  border-radius: 6px !important;
+}
+
+/* Tags, Badges & Pills: Refined 4px - 6px subtle badges instead of giant pills */
+.eyebrow,
+.dropdown-badge,
+.badge,
+.strip-tag,
+.board-pill,
+.faculty-badge,
+.receipt-badge,
+.subcard-badge,
+.status-pill,
+.status-tag,
+.brand-logo-pill,
+.mockup-address-pill,
+.mockup-gov-tag,
+.mockup-branch-badge,
+.mockup-tab-badge,
+.feature-card-tag,
+.stat-metric-pill,
+.bottom-cta-badge,
+.hero-floating-badge {
+  border-radius: 5px !important;
+}
+
+
+/* ==========================================================================
+   VISUAL-FIRST COMPONENT ENHANCEMENTS (ICON & CHIP FOCUS)
+   ========================================================================== */
+.role-detail-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.role-chips-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.role-capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin: 16px 0 14px;
+}
+
+.role-capability-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  padding: 12px 14px;
+  transition: all 0.2s ease;
+}
+
+.role-capability-card:hover {
+  background: #FFFFFF;
+  border-color: #CBD5E1;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.05);
+}
+
+.role-cap-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.role-cap-text strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 750;
+  color: var(--color-ink);
+  line-height: 1.25;
+}
+
+.role-cap-text small {
+  display: block;
+  font-size: 0.75rem;
+  color: #64748B;
+  margin-top: 2px;
+  line-height: 1.35;
+}
+
+.page3-visual-chips {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.visual-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-slate-200);
+  border-radius: 6px;
+  padding: 6px 11px;
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.payroll-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 14px 0 16px;
+}
+
+.payroll-feat-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 6px;
+  padding: 10px 12px;
+}
+
+.payroll-feat-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 6px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.payroll-feat-card strong {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 750;
+  color: var(--color-ink);
+  line-height: 1.2;
+}
+
+.payroll-feat-card small {
+  display: block;
+  font-size: 0.7rem;
+  color: #64748B;
+  margin-top: 1px;
+}
+
+.adv-platform-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.platform-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  border-radius: 6px;
+  padding: 5px 9px;
+  font-size: 0.725rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.journey-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.journey-step-body {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.journey-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .role-capabilities-grid {
+    grid-template-columns: 1fr;
+  }
+  .payroll-visual-grid {
+    grid-template-columns: 1fr;
   }
 }

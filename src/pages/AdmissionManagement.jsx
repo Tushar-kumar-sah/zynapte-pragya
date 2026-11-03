@@ -53,16 +53,16 @@ export default function AdmissionManagement() {
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 240px), 1fr))', gap: '16px', maxWidth: '1080px', margin: '0 auto' }}>
             {kanbanColumns.map((col, idx) => (
               <div key={idx} style={{ background: 'var(--color-soft-canvas)', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-lg)', padding: '16px', display: 'flex', flexDirection: 'column' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '12px' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '6px' }}>
                   <strong style={{ fontSize: '0.875rem', color: 'var(--color-ink)' }}>{col.title}</strong>
-                  <span style={{ background: col.color, color: '#FFFFFF', fontSize: '0.6875rem', fontWeight: 800, padding: '2px 8px', borderRadius: '999px' }}>
+                  <span style={{ background: col.color, color: '#FFFFFF', fontSize: '0.6875rem', fontWeight: 800, padding: '2px 8px', borderRadius: '6px' }}>
                     {col.count}
                   </span>
                 </div>
 
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
                   {col.items.map((item, i) => (
-                    <div key={i} style={{ background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '12px', boxShadow: 'var(--shadow-xs)' }}>
+                    <div key={i} style={{ background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '6px', boxShadow: 'var(--shadow-xs)' }}>
                       <strong style={{ fontSize: '0.8125rem', display: 'block', color: 'var(--color-ink)' }}>{item}</strong>
                       <span style={{ fontSize: '0.6875rem', color: 'var(--color-slate-500)' }}>Applicant ID: WB-2026-{(idx + 1) * 10 + i}</span>
                     </div>

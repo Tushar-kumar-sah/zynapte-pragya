@@ -65,7 +65,7 @@ export default function StaffPayrollManagement() {
               <div style={{ fontSize: '0.75rem', color: 'var(--color-slate-500)' }}>OFFICIAL STAFF PAYSLIP • FOR THE MONTH OF OCTOBER 2026</div>
             </div>
 
-            <div className="responsive-2col-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 20px', fontSize: '0.8125rem', marginBottom: '16px', background: 'var(--color-soft-canvas)', padding: '12px', borderRadius: 'var(--radius-md)' }}>
+            <div className="responsive-2col-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 20px', fontSize: '0.8125rem', marginBottom: '16px', background: 'var(--color-soft-canvas)', padding: '6px', borderRadius: 'var(--radius-md)' }}>
               <div><strong>Employee:</strong> Dr. Ananya Mukherjee</div>
               <div><strong>Employee ID:</strong> PRG-EMP-0412</div>
               <div><strong>Designation:</strong> Senior Faculty (Math)</div>
@@ -76,7 +76,7 @@ export default function StaffPayrollManagement() {
 
             <div className="responsive-2col-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px', fontSize: '0.8125rem', marginBottom: '16px' }}>
               {/* Earnings */}
-              <div style={{ border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '12px' }}>
+              <div style={{ border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '6px' }}>
                 <strong style={{ display: 'block', borderBottom: '1px solid var(--color-slate-200)', paddingBottom: '6px', marginBottom: '8px', color: 'var(--color-success)' }}>
                   EARNINGS &amp; ALLOWANCES
                 </strong>
@@ -95,7 +95,7 @@ export default function StaffPayrollManagement() {
               </div>
 
               {/* Deductions */}
-              <div style={{ border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '12px' }}>
+              <div style={{ border: '1px solid var(--color-slate-200)', borderRadius: 'var(--radius-md)', padding: '6px' }}>
                 <strong style={{ display: 'block', borderBottom: '1px solid var(--color-slate-200)', paddingBottom: '6px', marginBottom: '8px', color: 'var(--color-danger)' }}>
                   DEDUCTIONS &amp; TAXES
                 </strong>
