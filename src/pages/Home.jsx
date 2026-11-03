@@ -303,18 +303,18 @@ export default function Home() {
 
             <div className="role-showcase-detail">
               <div className="role-detail-header-row">
-                <div>
+                <div className="role-heading-text">
                   <h3>{role.title}</h3>
                   <p className="role-detail-outcome">{role.outcome}</p>
                 </div>
-                <div className="role-chips-row">
-                  {role.chips?.map((chip, idx) => (
-                    <span key={idx} className="badge badge--slate">{chip}</span>
-                  ))}
+                <div className="role-header-action">
+                  <Link to="/solutions" className="btn btn--secondary btn--sm">
+                    {role.cta} <ArrowRight size={14} />
+                  </Link>
                 </div>
               </div>
 
-              {/* Visual 3-Capability Grid with Icons */}
+              {/* Visual 3-Capability Grid with Integrated Micro Badges */}
               <div className="role-capabilities-grid">
                 {role.features?.map((feat, idx) => (
                   <div key={idx} className="role-capability-card">
@@ -322,17 +322,16 @@ export default function Home() {
                       {renderRoleIcon(feat.icon)}
                     </div>
                     <div className="role-cap-text">
-                      <strong>{feat.title}</strong>
+                      <div className="role-cap-top-line">
+                        <strong>{feat.title}</strong>
+                        {role.chips?.[idx] && (
+                          <span className="role-micro-chip">{role.chips[idx]}</span>
+                        )}
+                      </div>
                       <small>{feat.desc}</small>
                     </div>
                   </div>
                 ))}
-              </div>
-
-              <div className="role-detail-action" style={{ marginTop: '6px' }}>
-                <Link to="/solutions" className="btn btn--secondary btn--sm">
-                  {role.cta} <ArrowRight size={14} />
-                </Link>
               </div>
             </div>
           </div>

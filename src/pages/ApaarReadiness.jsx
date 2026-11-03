@@ -2,10 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   CheckCircle2, ShieldAlert, ArrowRight, ShieldCheck, 
-  FileSpreadsheet, Users, FileCheck, AlertTriangle, DownloadCloud 
+  FileSpreadsheet, Users, FileCheck, AlertTriangle, DownloadCloud,
+  Award, Compass, GitFork, UserCheck, FileText, CreditCard, CloudLightning
 } from 'lucide-react';
+import ApaarCardMockup from '../components/ApaarCardMockup';
 import ApaarTracker from '../components/ApaarTracker';
-import VisualWorkflow from '../components/VisualWorkflow';
 import BottomCta from '../components/BottomCta';
 import FaqAccordion from '../components/FaqAccordion';
 
@@ -34,31 +35,205 @@ export default function ApaarReadiness() {
   ];
 
   return (
-    <>
-      {/* Page Hero */}
-      <section className="page-hero">
+    <div className="apaar-page-wrapper">
+      {/* 1. HERO SECTION (Matching Official Portal Layout + Pragya Light Theme) */}
+      <section className="apaar-gov-hero">
         <div className="container">
-          <div className="page-hero-content">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              APAAR READINESS SOFTWARE FOR SCHOOLS
+          <div className="apaar-gov-hero-grid">
+            {/* Left Column: Heading, Subtext, CTAs */}
+            <div className="apaar-gov-hero-text">
+              <div className="apaar-gov-eyebrow">
+                AUTOMATED PERMANENT ACADEMIC ACCOUNT REGISTRY
+              </div>
+              <h1 className="apaar-gov-title">
+                One Nation, One Student ID
+              </h1>
+              <p className="apaar-gov-desc">
+                Your gateway to a seamless, digital academic journey. APAAR ID helps in a seamless integration of skills and experience into a credit-based system.
+              </p>
+              
+              <div className="apaar-hero-actions">
+                <a href="#how-to-get" className="apaar-link-arrow">
+                  <span>Learn More</span>
+                  <span className="arrow-sym">⟶</span>
+                </a>
+                <a href="#tracker" className="btn btn--primary btn--sm" style={{ marginLeft: '16px' }}>
+                  School Readiness Console
+                </a>
+              </div>
             </div>
-            <h1 className="page-hero-title">Make APAAR Preparation Simpler, Student by Student.</h1>
-            <p className="page-hero-desc">
-              Spot missing parental consent, detect Aadhaar spelling mismatches, and verify PEN numbers before submitting records to the government portal.
-            </p>
-            <div className="page-hero-ctas">
-              <a href="#tracker" className="btn btn--primary btn--lg">Open Live Readiness Tracker</a>
-              <Link to="/contact" className="btn btn--secondary btn--lg">Book an APAAR Demo</Link>
+
+            {/* Right Column: Official Visual with Arch, Rays, Student & Floating Badges */}
+            <div className="apaar-gov-hero-visual">
+              <div className="apaar-hero-visual-frame">
+                <img
+                  src="/apaar-hero-full-student.png"
+                  alt="Aarav Sharma - Registered APAAR ID Holder"
+                  className="apaar-hero-student-img"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4-Step Visual Journey */}
-      <VisualWorkflow />
+      {/* 2. ABOUT APAAR SECTION (Matching Reference Image 2) */}
+      <section className="apaar-about-section" id="about">
+        <div className="container">
+          <div className="apaar-about-grid">
+            {/* Left: Layered Official Physical Card Mockup */}
+            <div className="apaar-about-card-col">
+              <ApaarCardMockup
+                name="Aarav Sharma"
+                dob="14 April 2014"
+                gender="Male"
+                idNumber="9154 5678 3420"
+                showStacked={true}
+              />
+            </div>
 
-      {/* Interactive Tracker Console */}
+            {/* Right: Explanatory Copy + Resources / Learn How CTAs */}
+            <div className="apaar-about-text">
+              <h2>About <span>APAAR</span></h2>
+              <p>
+                APAAR empowers students to accumulate and store their academic accomplishments, facilitating seamless transitions between institutions for the pursuit of further education. The APAAR ID simplifies the processes of credit recognition and transfer right from the school level, thereby streamlining academic progression and recognition of prior learning.
+              </p>
+              
+              <div className="apaar-about-actions">
+                <a href="#tracker" className="btn btn--primary" style={{ background: '#059669', borderColor: '#059669', borderRadius: '6px' }}>
+                  Resources
+                </a>
+                <a href="#how-to-get" className="apaar-link-arrow">
+                  <span>Learn How to</span>
+                  <span className="arrow-sym">⟶</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3. APAAR BENEFITS SECTION (Matching Reference Image 3) */}
+      <section className="apaar-benefits-section" id="benefits">
+        <div className="container">
+          <div className="apaar-benefits-header">
+            <h2>APAAR <span>Benefits</span></h2>
+          </div>
+
+          <div className="apaar-benefits-layout">
+            {/* Left: 3 Benefit Pills */}
+            <div className="apaar-benefits-left">
+              <div className="apaar-benefit-pill">
+                <div className="apaar-benefit-icon-circle apaar-benefit-icon-circle--green">
+                  <Award size={22} />
+                </div>
+                <div>
+                  <strong>Recognize learning achievements</strong>
+                </div>
+              </div>
+
+              <div className="apaar-benefit-pill">
+                <div className="apaar-benefit-icon-circle apaar-benefit-icon-circle--blue">
+                  <Compass size={22} />
+                </div>
+                <div>
+                  <strong>Allows student to choose own learning path</strong>
+                </div>
+              </div>
+
+              <div className="apaar-benefit-pill">
+                <div className="apaar-benefit-icon-circle apaar-benefit-icon-circle--purple">
+                  <GitFork size={22} />
+                </div>
+                <div>
+                  <strong>Enable student mobility and academic flexibility</strong>
+                </div>
+              </div>
+            </div>
+
+            {/* Center: Floating Single Front Physical APAAR Card */}
+            <div className="apaar-benefits-center">
+              <ApaarCardMockup
+                name="Aarav Sharma"
+                dob="14 April 2014"
+                gender="Male"
+                idNumber="9154 5678 3420"
+                showStacked={false}
+              />
+            </div>
+
+            {/* Right: Student Academic Mobility Illustration */}
+            <div className="apaar-benefits-right">
+              <div className="apaar-mobility-frame">
+                <img
+                  src="/apaar-mobility-graduate.png"
+                  alt="Student Academic Mobility and Credit Flexibility Across India"
+                  className="apaar-mobility-img"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. HOW TO GET THE APAAR SECTION (Matching Reference Image 4) */}
+      <section className="apaar-how-section" id="how-to-get">
+        <div className="container">
+          <div className="apaar-how-header">
+            <h2>How to Get The <span>APAAR</span></h2>
+            <p>Are you a student? Be a part of the APAAR by creating your Unique ID</p>
+          </div>
+
+          <div className="apaar-stepper-container">
+            {/* Dashed connector line across all 4 nodes */}
+            <div className="apaar-stepper-connector-line" aria-hidden="true" />
+
+            <div className="apaar-how-steps-grid">
+              {/* Step 01 */}
+              <div className="how-step-node">
+                <div className="step-circle-badge">01.</div>
+                <div className="step-icon-box">
+                  <Users size={22} />
+                </div>
+                <h4>Educating Parents</h4>
+                <p>Parents visit school to learn about APAAR ID</p>
+              </div>
+
+              {/* Step 02 */}
+              <div className="how-step-node">
+                <div className="step-circle-badge">02.</div>
+                <div className="step-icon-box">
+                  <FileText size={22} />
+                </div>
+                <h4>Consent Submitted</h4>
+                <p>Parents fill up consent form voluntarily for APAAR ID creation</p>
+              </div>
+
+              {/* Step 03 */}
+              <div className="how-step-node">
+                <div className="step-circle-badge">03.</div>
+                <div className="step-icon-box">
+                  <CreditCard size={22} />
+                </div>
+                <h4>APAAR ID Generated</h4>
+                <p>UDISE system generates APAAR ID against PEN ID of student</p>
+              </div>
+
+              {/* Step 04 */}
+              <div className="how-step-node">
+                <div className="step-circle-badge">04.</div>
+                <div className="step-icon-box">
+                  <CloudLightning size={22} />
+                </div>
+                <h4>Uploaded to DigiLocker</h4>
+                <p>APAAR ID is pushed into student's DigiLocker Account</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. PRAGYA LIVE READINESS CONSOLE (School Verification Tooling) */}
       <section className="section section--soft" id="tracker">
         <div className="container">
           <div className="section-header">
@@ -68,15 +243,15 @@ export default function ApaarReadiness() {
             </div>
             <h2>Live Student Readiness Verification Table</h2>
             <p>
-              Simulate how class teachers and administrative clerks audit consent, name match, and PEN numbers in real time.
+              Simulate how class teachers and administrative clerks audit consent, name match, and PEN numbers before official government portal submission.
             </p>
           </div>
 
-          <ApaarTracker showJourney={true} />
+          <ApaarTracker showJourney={false} />
         </div>
       </section>
 
-      {/* What Pragya Does vs Official System */}
+      {/* 6. WHAT PRAGYA DOES VS OFFICIAL GOVERNMENT SYSTEM */}
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
@@ -124,41 +299,7 @@ export default function ApaarReadiness() {
         </div>
       </section>
 
-      {/* Visual Role Cards */}
-      <section className="section section--soft">
-        <div className="container">
-          <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              COLLABORATIVE TEAMS
-            </div>
-            <h2>Built for School Teams, Not Just Data Entry</h2>
-          </div>
-
-          <div className="guardrails-row">
-            <div className="guardrail-card">
-              <div style={{ fontSize: '1.8rem', marginBottom: '10px' }}>🏛️</div>
-              <h4>School Administrators</h4>
-              <p>Review overall school readiness across grades, resolve format errors, and assign record corrections before export.</p>
-              <span className="badge badge--slate">Batch CSV Exporter</span>
-            </div>
-            <div className="guardrail-card">
-              <div style={{ fontSize: '1.8rem', marginBottom: '10px' }}>👩‍🏫</div>
-              <h4>Class Teachers</h4>
-              <p>Identify missing parental consent forms and verify student demographic details directly from their class register.</p>
-              <span className="badge badge--slate">Consent Tracker</span>
-            </div>
-            <div className="guardrail-card">
-              <div style={{ fontSize: '1.8rem', marginBottom: '10px' }}>👨‍💼</div>
-              <h4>Principals &amp; Leaders</h4>
-              <p>Check school-wide progress and submission status without consolidating dozens of departmental spreadsheets.</p>
-              <span className="badge badge--slate">Readiness KPI</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs */}
+      {/* 7. FREQUENTLY ASKED QUESTIONS */}
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
@@ -172,11 +313,12 @@ export default function ApaarReadiness() {
         </div>
       </section>
 
+      {/* 8. BOTTOM CTA */}
       <BottomCta
         title="Replace Follow-Up Spreadsheets with a Readiness View."
         subtitle="See the information that is complete, the records that still need correction and the students whose status must be checked externally. Book a guided demonstration of the APAAR workflow."
         buttonText="Book an APAAR Readiness Demo"
       />
-    </>
+    </div>
   );
 }
