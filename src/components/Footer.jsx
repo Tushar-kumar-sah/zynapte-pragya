@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { MessageSquare, Phone, ShieldCheck, CheckCircle2, Award, Building2 } from 'lucide-react';
+import { Phone, ShieldCheck, CheckCircle2, Award, Building2 } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { footerPlatformLinks, footerSolutionsLinks } from '../data/navigation';
 
 export default function Footer() {
@@ -34,7 +35,7 @@ export default function Footer() {
           </div>
           <div className="footer-cred-sep" />
           <div className="footer-cred-item">
-            <MessageSquare size={18} color="#25D366" />
+            <WhatsAppIcon size={18} />
             <div>
               <strong>Meta Tech Provider</strong>
               <small>WhatsApp-Ready School Broadcasts</small>
@@ -65,7 +66,7 @@ export default function Footer() {
                 className="btn btn--secondary btn--sm"
                 style={{ color: '#166534' }}
               >
-                <MessageSquare size={13} color="#25D366" /> WhatsApp
+                <WhatsAppIcon size={16} /> WhatsApp
               </a>
             </div>
           </div>

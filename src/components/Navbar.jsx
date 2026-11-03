@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ChevronDown, MessageSquare } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 import { navLinks } from '../data/navigation';
 
 export default function Navbar() {
@@ -90,7 +91,7 @@ export default function Navbar() {
               className="btn btn--secondary btn--sm nav-wa-btn"
               title="Chat with Authorized Partner Code Kumite on WhatsApp"
             >
-              <MessageSquare size={15} color="#25D366" />
+              <WhatsAppIcon size={18} />
               <span className="nav-btn-text">WhatsApp</span>
             </a>
             <Link to="/contact" className="btn btn--primary btn--sm nav-demo-btn">
@@ -153,7 +154,7 @@ export default function Navbar() {
             className="btn btn--secondary btn--block" 
             style={{ marginBottom: '8px', color: '#166534' }}
           >
-            <MessageSquare size={16} color="#25D366" /> Chat on WhatsApp
+            <WhatsAppIcon size={18} /> Chat on WhatsApp
           </a>
           <Link to="/contact" className="btn btn--primary btn--block">
             Book a Personalised Demo

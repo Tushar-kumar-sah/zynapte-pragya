@@ -1,5 +1,6 @@
 import React from 'react';
-import { Clock, ShieldCheck, Video, CheckCircle2, Phone, MessageSquare, Award, Building2 } from 'lucide-react';
+import { Clock, ShieldCheck, Video, CheckCircle2, Phone, Award, Building2 } from 'lucide-react';
+import WhatsAppIcon from '../components/WhatsAppIcon';
 import DemoForm from '../components/DemoForm';
 import FaqAccordion from '../components/FaqAccordion';
 
@@ -63,7 +64,7 @@ export default function ContactBookDemo() {
                   rel="noopener noreferrer" 
                   className="btn btn--secondary btn--lg btn-wa"
                 >
-                  <MessageSquare size={18} color="#25D366" />
+                  <WhatsAppIcon size={20} />
                   <span>WhatsApp: 974855549</span>
                 </a>
               </div>

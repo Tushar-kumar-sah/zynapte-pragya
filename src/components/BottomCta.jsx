@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, MessageSquare, Phone, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Sparkles, Phone, ShieldCheck, CheckCircle2 } from 'lucide-react';
+import WhatsAppIcon from './WhatsAppIcon';
 
 export default function BottomCta({
   title = "Your school deserves a smarter system.",
@@ -75,7 +76,7 @@ export default function BottomCta({
                 rel="noopener noreferrer" 
                 className="btn btn--block btn--partner-wa"
               >
-                <MessageSquare size={15} /> Message Partner on WhatsApp
+                <WhatsAppIcon size={18} /> Message Partner on WhatsApp
               </a>
             </div>
           </div>
