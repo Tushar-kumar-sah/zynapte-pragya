@@ -251,10 +251,6 @@ export default function MobileAppsShowcase() {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <div className="eyebrow">
-            <span className="eyebrow-dot" />
-            EVERYTHING AT YOUR FINGERTIPS
-          </div>
           <h2>Smart Mobile Apps for Every Stakeholder</h2>
           <p>
             Experience true mobility. Empower parents, teachers, and school leadership with dedicated native mobile workflows on iOS and Android.

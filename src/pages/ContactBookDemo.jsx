@@ -32,10 +32,6 @@ export default function ContactBookDemo() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              SCHEDULE A CONSULTATION
-            </div>
             <h1 className="page-hero-title">Let’s Talk About Your School Day.</h1>
             <p className="page-hero-desc">
               Tell us how you manage records today and which processes you want to simplify. We’ll show you the relevant Pragya modules and answer every practical question.

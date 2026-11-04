@@ -123,7 +123,6 @@ export default function StaffPayrollManagement() {
       <section className="section section--white" id="payslip-preview">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />SALARY SLIP PREVIEW</div>
             <h2>Payroll Built for Indian School Structures</h2>
             <p>Separate salary formulas for teaching, non-teaching, and support staff with automated deductions.</p>
           </div>
@@ -231,7 +230,6 @@ export default function StaffPayrollManagement() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />PAYROLL FEATURES</div>
             <h2>Built for Campus Administrators &amp; HR</h2>
             <p>Maintain accurate staff records, statutory deductions, and confidential bank payouts.</p>
           </div>
@@ -316,7 +314,6 @@ export default function StaffPayrollManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />PAYROLL FAQS</div>
             <h2>Frequently Asked Questions About Staff &amp; Payroll</h2>
           </div>
           <FaqAccordion items={faqs} />

@@ -358,10 +358,6 @@ export default function IconicModules() {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <div className="eyebrow">
-            <span className="eyebrow-dot" />
-            COMPREHENSIVE ERP MODULES &amp; UTILITIES
-          </div>
           <h2>Iconic Modules. Built for Everyday School Workflows.</h2>
           <p>
             No clutter, no disconnected spreadsheets. Click any module to preview its live document, receipt, or workflow in action.

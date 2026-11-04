@@ -181,10 +181,6 @@ export default function SecurityHosting() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              SOVEREIGN ARCHITECTURE
-            </div>
             <h2>Built for Institutional Privacy &amp; Control</h2>
             <p>Every layer of Pragya is architected to eliminate data leaks, shared logins, and unverified access.</p>
           </div>
@@ -232,10 +228,6 @@ export default function SecurityHosting() {
       <section className="section section--soft" id="audit-ledger">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              TAMPER-EVIDENT AUDIT TRAIL
-            </div>
             <h2>Permanent Institutional Activity Log</h2>
             <p>Every fee collection, mark entry, and permission modification is cryptographically hashed with timestamps and user IDs.</p>
           </div>
@@ -364,10 +356,6 @@ export default function SecurityHosting() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              SECURITY PILLARS
-            </div>
             <h2>Four Pillars of Pragya Data Architecture</h2>
             <p>Defense-in-depth principles implemented across every database query and user session.</p>
           </div>
@@ -480,10 +468,6 @@ export default function SecurityHosting() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              DEPLOYMENT FLEXIBILITY
-            </div>
             <h2>Choose the Hosting Model That Fits Your Trust</h2>
             <p>Whether you require managed convenience or full on-premise physical custody, Pragya supports both.</p>
           </div>
@@ -580,10 +564,6 @@ export default function SecurityHosting() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              FREQUENT QUESTIONS
-            </div>
             <h2>Security &amp; Deployment FAQs</h2>
           </div>
           <FaqAccordion items={securityFaqs} />

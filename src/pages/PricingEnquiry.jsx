@@ -71,7 +71,6 @@ export default function PricingEnquiry() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="eyebrow"><span className="eyebrow-dot" />PLANS &amp; PROPOSALS</div>
             <h1 className="page-hero-title">Tailored Specifically to Your School's Student Count.</h1>
             <p className="page-hero-desc">
               Whether you run a standalone primary academy or a network of senior secondary campuses, get a transparent written proposal tailored to your actual workflows.
@@ -84,7 +83,6 @@ export default function PricingEnquiry() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FLEXIBLE PACKAGES</div>
             <h2>Choose the Operational Scope for Your Campus</h2>
             <p>Every tier includes complete data ownership and encrypted nightly backups.</p>
           </div>

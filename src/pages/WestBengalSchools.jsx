@@ -28,7 +28,6 @@ export default function WestBengalSchools() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="eyebrow"><span className="eyebrow-dot" />REGIONAL CATALOGUE SUPPORT</div>
             <h1 className="page-hero-title">School ERP Built Around West Bengal School Workflows.</h1>
             <p className="page-hero-desc">
               Pre-loaded with WBBSE and WBCHSE subject catalogues, Summative assessment grading, INR counter receipts, and APAAR readiness tracking.
@@ -45,7 +44,6 @@ export default function WestBengalSchools() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />BOARD ALIGNMENT</div>
             <h2>Built for State &amp; National Curricula</h2>
             <p>Ready to deploy for Madhyamik, Higher Secondary, and CBSE/ICSE institutions.</p>
           </div>
@@ -66,7 +64,6 @@ export default function WestBengalSchools() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />WEST BENGAL FEATURES</div>
             <h2>Every Daily School Workflow, Simplified</h2>
           </div>
 

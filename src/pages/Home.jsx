@@ -134,10 +134,6 @@ export default function Home() {
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content">
-              <div className="eyebrow">
-                <span className="eyebrow-dot" />
-                PRAGYA SCHOOL OPERATING SYSTEM
-              </div>
 
               <h1 className="hero-title">
                 One Platform. <br />
@@ -235,10 +231,6 @@ export default function Home() {
       <section className="section section--white" id="core-modules">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              ONE CONNECTED PLATFORM
-            </div>
             <h2>Everything your school needs. Nothing it doesn't.</h2>
             <p>
               Nine core administrative modules designed specifically around the daily rhythm of Indian schools.
@@ -344,10 +336,6 @@ export default function Home() {
       <section className="section section--soft" id="indian-context">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              THOUGHTFULLY DESIGNED FOR INDIAN SCHOOLS
-            </div>
             <h2>Ready for the way Indian schools work.</h2>
             <p>
               Built for counter fee collections, cash POS receipts, library accessions, and state board workflows.
@@ -528,10 +516,6 @@ export default function Home() {
       <section className="section section--white" id="payroll-overview">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              BUILT FOR THE SCHOOLS OF TOMORROW
-            </div>
             <h2>Payroll that fits every employee.</h2>
             <p>
               A separate salary structure for each staff category with automated deductions and instant bank NEFT batch files.
@@ -720,10 +704,6 @@ export default function Home() {
       <section className="section section--soft" id="apaar-readiness">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              REGULATORY COMPLIANCE
-            </div>
             <h2>Know Who Is Ready. Know What Is Missing.</h2>
             <p>
               Pre-check records student-by-student to detect mismatches and avoid portal rejection.

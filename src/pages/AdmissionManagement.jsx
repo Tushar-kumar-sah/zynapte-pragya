@@ -128,7 +128,6 @@ export default function AdmissionManagement() {
       <section className="section section--white" id="intake-pipeline">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />VISUAL PIPELINE</div>
             <h2>Live Admission Intake Board</h2>
             <p>Track every enquiry, document verification status, and fee clearance stage in real time.</p>
           </div>
@@ -160,7 +159,6 @@ export default function AdmissionManagement() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />ADMISSIONS CAPABILITIES</div>
             <h2>Built for Front-Desk &amp; Principals</h2>
             <p>Eliminate paper registration queues and missed applicant follow-ups.</p>
           </div>
@@ -245,7 +243,6 @@ export default function AdmissionManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />ADMISSIONS FAQS</div>
             <h2>Frequently Asked Questions About Admissions</h2>
           </div>
           <FaqAccordion items={faqs} />

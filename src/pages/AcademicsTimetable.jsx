@@ -121,7 +121,6 @@ export default function AcademicsTimetable() {
       <section className="section section--white" id="routine-grid">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />SMART TIMETABLE GRID</div>
             <h2>Live Routine with Automated Conflict Protection</h2>
             <p>Guarantees zero room or teacher collisions across classes and sections.</p>
           </div>
@@ -197,7 +196,6 @@ export default function AcademicsTimetable() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />ACADEMIC CAPABILITIES</div>
             <h2>Built for Academic Directors &amp; Teachers</h2>
             <p>From subject allocations to daily substitution and syllabus velocity.</p>
           </div>
@@ -282,7 +280,6 @@ export default function AcademicsTimetable() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />ACADEMIC FAQS</div>
             <h2>Frequently Asked Questions About Academics</h2>
           </div>
           <FaqAccordion items={faqs} />

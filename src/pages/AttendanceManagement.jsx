@@ -139,7 +139,6 @@ export default function AttendanceManagement() {
       <section className="section section--white" id="roll-call-simulator">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />INTERACTIVE SIMULATOR</div>
             <h2>Try the Teacher Roll Call Register</h2>
             <p>Click Present (P), Absent (A), or Late (L) pills to experience how quickly teachers take attendance.</p>
           </div>
@@ -254,7 +253,6 @@ export default function AttendanceManagement() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />ATTENDANCE FEATURES</div>
             <h2>Built for Campus Rhythms</h2>
             <p>Maintain precision in daily attendance, parent sync, and board exam compliance.</p>
           </div>
@@ -339,7 +337,6 @@ export default function AttendanceManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />ATTENDANCE FAQS</div>
             <h2>Frequently Asked Questions About Attendance</h2>
           </div>
           <FaqAccordion items={faqs} />

@@ -127,7 +127,6 @@ export default function MobileAppExperience() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />MOBILE CAPABILITIES</div>
             <h2>Built for Teachers, Parents &amp; Leaders</h2>
             <p>Every role gets a dedicated mobile screen with zero distraction and strict privacy guardrails.</p>
           </div>
@@ -212,7 +211,6 @@ export default function MobileAppExperience() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />MOBILE FAQS</div>
             <h2>Frequently Asked Questions About Mobile Apps</h2>
           </div>
           <FaqAccordion items={faqs} />

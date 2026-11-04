@@ -182,10 +182,6 @@ export default function AllFeatures() {
       <section className="section section--white" id="flagship-modules">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              FLAGSHIP CAPABILITIES
-            </div>
             <h2>Purpose-Built for Indian School Workflows</h2>
             <p>Every module is designed around the daily rhythm of teachers, accountants, and principals.</p>
           </div>
@@ -277,10 +273,6 @@ export default function AllFeatures() {
       <section className="section section--soft" id="comparison">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              OPERATIONAL COMPARISON
-            </div>
             <h2>Why Modern Schools Switch to Pragya</h2>
             <p>See how replacing manual school bookkeeping with Pragya's visual ERP saves hundreds of staff hours every term.</p>
           </div>
@@ -327,10 +319,6 @@ export default function AllFeatures() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              COMMON QUESTIONS
-            </div>
             <h2>Frequently Asked Questions About Pragya Modules</h2>
           </div>
           <FaqAccordion limit={4} />

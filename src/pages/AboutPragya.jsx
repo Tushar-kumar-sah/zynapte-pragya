@@ -23,10 +23,6 @@ export default function AboutPragya() {
       <section className="page-hero">
         <div className="container">
           <div className="page-hero-content">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              OUR MISSION &amp; PHILOSOPHY
-            </div>
             <h1 className="page-hero-title">Less Administration. More Room for Learning.</h1>
             <p className="page-hero-desc">
               Schools run on the dedication of teachers and leaders. Pragya eliminates chaotic paper registers, providing one connected digital backbone built for Indian education.
@@ -46,10 +42,6 @@ export default function AboutPragya() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              CORE PILLARS
-            </div>
             <h2>The Principles Behind Pragya ERP</h2>
             <p>Every feature in Pragya is built around simplicity, accuracy, and absolute data privacy.</p>
           </div>
@@ -72,10 +64,6 @@ export default function AboutPragya() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              PURPOSE-BUILT FOR INDIA
-            </div>
             <h2>Why Indian Schools Choose Pragya</h2>
             <p>
               Unlike generic international school software, Pragya is grounded in the operational realities of Indian school desks.

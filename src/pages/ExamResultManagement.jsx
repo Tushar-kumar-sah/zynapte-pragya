@@ -121,7 +121,6 @@ export default function ExamResultManagement() {
       <section className="section section--white" id="report-card-preview">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />OFFICIAL MARKSHEET PREVIEW</div>
             <h2>Board-Compliant Digital &amp; Printable Report Cards</h2>
             <p>Formatted according to WBBSE Summative Assessment or CBSE Term Evaluation guidelines.</p>
           </div>
@@ -214,7 +213,6 @@ export default function ExamResultManagement() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />EXAM CAPABILITIES</div>
             <h2>Built for Examination Committees &amp; Boards</h2>
             <p>From teacher marks submission to official publication and graduation archives.</p>
           </div>
@@ -299,7 +297,6 @@ export default function ExamResultManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />EXAM FAQS</div>
             <h2>Frequently Asked Questions About Exams</h2>
           </div>
           <FaqAccordion items={faqs} />

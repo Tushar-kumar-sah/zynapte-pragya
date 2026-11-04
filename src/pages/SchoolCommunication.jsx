@@ -121,7 +121,6 @@ export default function SchoolCommunication() {
       <section className="section section--white" id="notice-preview">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />OFFICIAL CIRCULAR PREVIEW</div>
             <h2>School-Governed Notice Ribbon</h2>
             <p>Targeted to parents and teachers with read receipts and PDF attachments.</p>
           </div>
@@ -166,7 +165,6 @@ export default function SchoolCommunication() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />COMMUNICATION FEATURES</div>
             <h2>Built for Campus Transparency</h2>
             <p>Ensure critical school notifications reach the right parents every time.</p>
           </div>
@@ -251,7 +249,6 @@ export default function SchoolCommunication() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />COMMUNICATION FAQS</div>
             <h2>Frequently Asked Questions About Notices</h2>
           </div>
           <FaqAccordion items={faqs} />

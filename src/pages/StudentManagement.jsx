@@ -114,7 +114,6 @@ export default function StudentManagement() {
       <section className="section section--white" id="smart-id-card">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />SMART ID CARDS</div>
             <h2>Batch-Printable Student Identity Cards</h2>
             <p>Ready to print on CR80 PVC plastic cards or 8-per-page A4 sticker sheets.</p>
           </div>
@@ -158,7 +157,6 @@ export default function StudentManagement() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />STUDENT LIFECYCLE</div>
             <h2>Complete Control Across All 12 School Years</h2>
             <p>Maintain accurate academic records and legal custody of student documentation.</p>
           </div>
@@ -243,7 +241,6 @@ export default function StudentManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />STUDENT FAQS</div>
             <h2>Common Questions on Student Management</h2>
           </div>
           <FaqAccordion items={faqs} />

@@ -137,10 +137,6 @@ export default function SolutionsByRole() {
       <section className="section section--soft" id="role-workbench">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              INTERACTIVE ROLE CONSOLE
-            </div>
             <h2>Tailored Workspaces for Every Campus Department</h2>
             <p>Click any role below to view their dedicated workplace image, capabilities, and live screen preview.</p>
           </div>
@@ -219,10 +215,6 @@ export default function SolutionsByRole() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              VISUAL ROLE SHOWCASE
-            </div>
             <h2>Built Around Real School People</h2>
             <p>Every role gets an intuitive, distraction-free interface built for their daily rhythm.</p>
           </div>
@@ -339,10 +331,6 @@ export default function SolutionsByRole() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              COMMON QUESTIONS
-            </div>
             <h2>Frequently Asked Questions About Role Workspaces</h2>
           </div>
           <FaqAccordion items={solutionsFaqs} />

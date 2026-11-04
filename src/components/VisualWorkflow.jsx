@@ -58,10 +58,6 @@ export default function VisualWorkflow() {
     <section className="section visual-workflow-section" aria-label="4-Step APAAR Readiness Flow">
       <div className="container">
         <div className="section-header">
-          <div className="eyebrow">
-            <span className="eyebrow-dot" />
-            4-STEP VISUAL READINESS JOURNEY
-          </div>
           <h2>From Admission Form to Clean Export</h2>
           <p>
             Pragya structures the entire APAAR readiness flow so school staff never submit incomplete records or face portal rejections.

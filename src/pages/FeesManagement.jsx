@@ -121,7 +121,6 @@ export default function FeesManagement() {
       <section className="section section--white" id="pos-receipt">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />INSTANT DOCUMENTATION</div>
             <h2>Print-Ready Counter Receipts in 3 Seconds</h2>
             <p>Thermal roll slips or standard A4 duplicates issued directly at the school counter.</p>
           </div>
@@ -194,7 +193,6 @@ export default function FeesManagement() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FEE REVENUE FEATURES</div>
             <h2>Built for Financial Accuracy &amp; Audits</h2>
             <p>Every collection automatically syncs to the student dossier and institutional ledger.</p>
           </div>
@@ -279,7 +277,6 @@ export default function FeesManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />FEE FAQS</div>
             <h2>Frequently Asked Questions About Fee Management</h2>
           </div>
           <FaqAccordion items={faqs} />

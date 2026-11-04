@@ -237,10 +237,6 @@ export default function ApaarReadiness() {
       <section className="section section--soft" id="tracker">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              INTERACTIVE READINESS CONSOLE
-            </div>
             <h2>Live Student Readiness Verification Table</h2>
             <p>
               Simulate how class teachers and administrative clerks audit consent, name match, and PEN numbers before official government portal submission.
@@ -255,10 +251,6 @@ export default function ApaarReadiness() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              RESPONSIBILITY MATRIX
-            </div>
             <h2>Pragya Pre-Validation vs Official Government Systems</h2>
             <p>
               Pragya guarantees your records are accurate and complete before submission. The government portal validates Aadhaar OTP and issues the digital ID.
@@ -303,10 +295,6 @@ export default function ApaarReadiness() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow">
-              <span className="eyebrow-dot" />
-              QUESTIONS
-            </div>
             <h2>Frequently Asked Questions About APAAR</h2>
           </div>
           <FaqAccordion items={apaarFaqs} />

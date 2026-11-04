@@ -155,7 +155,6 @@ export default function MultiBranchManagement() {
       <section className="section section--white" id="branch-switcher-demo">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />INTERACTIVE SWITCHER</div>
             <h2>Live Multi-Campus Switcher Simulator</h2>
             <p>Click any campus below to simulate the executive bird's-eye view.</p>
           </div>
@@ -237,7 +236,6 @@ export default function MultiBranchManagement() {
       <section className="section section--soft">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />MULTI-BRANCH FEATURES</div>
             <h2>Built for School Groups &amp; Educational Trusts</h2>
             <p>Shared executive governance without blending daily classroom records.</p>
           </div>
@@ -322,7 +320,6 @@ export default function MultiBranchManagement() {
       <section className="section section--white">
         <div className="container">
           <div className="section-header">
-            <div className="eyebrow"><span className="eyebrow-dot" />MULTI-BRANCH FAQS</div>
             <h2>Frequently Asked Questions About Multi-Branch ERP</h2>
           </div>
           <FaqAccordion items={faqs} />
