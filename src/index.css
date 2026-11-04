@@ -229,6 +229,22 @@ a:hover {
   color: var(--color-slate-600);
 }
 
+.core-modules-header {
+  max-width: 1100px;
+}
+
+.core-modules-header h2 {
+  font-size: clamp(1.4rem, 2.75vw, 2.35rem);
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .core-modules-header h2 {
+    white-space: normal;
+    font-size: clamp(1.35rem, 5.5vw, 1.85rem);
+  }
+}
+
 /* Sleek, Creative Modern Eyebrow / Kicker (Harmonized with Logo Palette) */
 .eyebrow {
   display: inline-flex;

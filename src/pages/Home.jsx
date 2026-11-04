@@ -276,7 +276,7 @@ export default function Home() {
           ========================================================================== */}
       <section className="section section--white" id="core-modules">
         <div className="container">
-          <div className="section-header">
+          <div className="section-header core-modules-header">
             <h2>Everything your school needs. Nothing it doesn't.</h2>
             <p>
               Nine core administrative modules designed specifically around the daily rhythm of Indian schools.
