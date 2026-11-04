@@ -5645,60 +5645,55 @@ dialog.custom-dialog::backdrop {
   100% { transform: scale(0.95); opacity: 0.8; }
 }
 
-/* Exact Fee Receipt Mockup from Page 3 */
-.brochure-receipt-box {
-  background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFC 100%);
-  border: 1px solid #E2E8F0;
-  border-radius: 6px;
-  padding: 18px 20px;
-  margin-bottom: 18px;
-  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04);
+/* Visual Showcase Frame & Realistic Photography for Page 3 */
+.page3-visual-frame {
   position: relative;
+  width: 100%;
+  height: 290px;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.95);
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+  background: #0F172A;
 }
 
-.receipt-box-top {
+.page3-showcase-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.page3-card:hover .page3-showcase-img {
+  transform: scale(1.03);
+}
+
+.page3-img-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
-  border-bottom: 1px solid #E2E8F0;
-  padding-bottom: 12px;
-  margin-bottom: 12px;
-}
-
-.receipt-school-title {
-  font-size: 0.88rem;
-  font-weight: 850;
-  color: #0F172A;
-  letter-spacing: 0.02em;
-  display: block;
-}
-
-.receipt-meta-sub {
-  display: flex;
-  gap: 8px;
   align-items: center;
-  margin-top: 3px;
-  flex-wrap: wrap;
+  padding: 12px 14px;
+  pointer-events: none;
+  z-index: 2;
 }
 
-.receipt-reg-no {
-  font-size: 0.6875rem;
-  color: #64748B;
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  font-weight: 650;
+.page3-img-overlay--top {
+  top: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.72) 0%, rgba(15, 23, 42, 0) 100%);
 }
 
-.receipt-pos-counter {
-  font-size: 0.625rem;
-  font-weight: 800;
-  color: #EA580C;
-  background: rgba(249, 115, 22, 0.09);
-  padding: 1.5px 6px;
-  border-radius: 3px;
-  letter-spacing: 0.03em;
+.page3-img-overlay--bottom {
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0) 100%);
 }
 
-.receipt-status-badge {
+.page3-overlay-chip {
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -5707,137 +5702,110 @@ dialog.custom-dialog::backdrop {
   padding: 4px 10px;
   border-radius: var(--radius-full);
   letter-spacing: 0.03em;
-  white-space: nowrap;
+  backdrop-filter: blur(8px);
 }
 
-.receipt-status-badge--success {
-  background: #DCFCE7;
-  color: #15803D;
-  border: 1px solid #86EFAC;
+.page3-overlay-chip--success {
+  background: rgba(34, 197, 94, 0.92);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(34, 197, 94, 0.35);
 }
 
-.receipt-student-meta {
-  display: grid;
-  grid-template-columns: 1.2fr 1.2fr 1.6fr;
-  gap: 8px;
-  background: #F1F5F9;
+.page3-overlay-chip--teal {
+  background: rgba(13, 148, 136, 0.92);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(13, 148, 136, 0.35);
+}
+
+.page3-overlay-tag {
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.page3-overlay-tag--teal {
+  background: rgba(13, 148, 136, 0.45);
+  border-color: rgba(94, 234, 212, 0.35);
+}
+
+.page3-overlay-amount-pill {
+  display: flex;
+  flex-direction: column;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 12px;
+  border-radius: 6px;
+}
+
+.page3-overlay-amount-pill .overlay-amount-label {
+  font-size: 0.58rem;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.page3-overlay-amount-pill .overlay-amount-val {
+  font-size: 0.95rem;
+  font-weight: 900;
+  color: #34D399;
+  letter-spacing: -0.01em;
+}
+
+.page3-overlay-amount-pill--teal .overlay-amount-val {
+  color: #2DD4BF;
+}
+
+.page3-overlay-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  background: rgba(15, 23, 42, 0.78);
+  backdrop-filter: blur(8px);
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.page3-overlay-badge--orange {
+  border-left: 3px solid #EA580C;
+}
+
+.page3-overlay-badge--teal {
+  border-left: 3px solid #0D9488;
+}
+
+.page3-card-action-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #F8FAFC;
   border: 1px solid #E2E8F0;
   border-radius: 6px;
-  padding: 8px 12px;
-  margin-bottom: 12px;
-}
-
-@media (max-width: 600px) {
-  .receipt-student-meta {
-    grid-template-columns: 1fr;
-    gap: 6px;
-  }
-}
-
-.receipt-meta-cell {
-  display: flex;
-  flex-direction: column;
-}
-
-.receipt-meta-cell .meta-label {
-  font-size: 0.6rem;
-  font-weight: 800;
-  color: #64748B;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.receipt-meta-cell .meta-val {
-  font-size: 0.775rem;
-  font-weight: 750;
-  color: #0F172A;
-}
-
-.receipt-meta-cell .meta-val.text-emerald {
-  color: #059669;
-}
-
-.receipt-line-items {
-  display: flex;
-  flex-direction: column;
-  gap: 7px;
-  font-size: 0.8rem;
-  margin-bottom: 12px;
-  padding: 0 4px;
-}
-
-.receipt-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 5px;
-  border-bottom: 1px dashed #E2E8F0;
-}
-
-.receipt-item-name {
-  color: #334155;
-  font-weight: 550;
-}
-
-.receipt-item-amount {
-  color: #0F172A;
-  font-weight: 750;
-  font-variant-numeric: tabular-nums;
-}
-
-.receipt-total-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(135deg, #ECFDF5 0%, #F0FDF4 100%);
-  border: 1.5px solid #A7F3D0;
-  border-radius: 6px;
   padding: 10px 14px;
-  margin-bottom: 12px;
-}
-
-.receipt-total-label-wrap {
-  display: flex;
-  flex-direction: column;
-}
-
-.receipt-total-label {
-  font-size: 0.825rem;
-  font-weight: 800;
-  color: #065F46;
-}
-
-.receipt-reconcile-tag {
-  font-size: 0.65rem;
-  color: #047857;
-  font-weight: 650;
-}
-
-.receipt-total-val {
-  font-size: 1.25rem;
-  font-weight: 900;
-  color: #047857;
-  font-variant-numeric: tabular-nums;
-  letter-spacing: -0.02em;
-}
-
-.receipt-footer-action {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-top: 10px;
-  border-top: 1px solid #E2E8F0;
-  gap: 10px;
+  margin-bottom: 18px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
-.receipt-footer-status {
+.page3-action-note {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 7px;
   font-size: 0.725rem;
-  color: #64748B;
-  font-weight: 600;
+  color: #475569;
+  font-weight: 650;
+  flex: 1;
 }
 
 .page3-cta-btn {
@@ -5851,6 +5819,7 @@ dialog.custom-dialog::backdrop {
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .page3-cta-btn--fees {
@@ -5875,190 +5844,6 @@ dialog.custom-dialog::backdrop {
   background: linear-gradient(135deg, #059669 0%, #047857 100%) !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 18px rgba(13, 148, 136, 0.38) !important;
-}
-
-/* Digital Catalogue Mockup from Page 3 */
-.brochure-library-box {
-  background: linear-gradient(180deg, #F0FDFA 0%, #FFFFFF 100%);
-  border: 1px solid rgba(13, 148, 136, 0.25);
-  border-radius: 6px;
-  padding: 18px 20px;
-  margin-bottom: 18px;
-  box-shadow: 0 4px 14px rgba(13, 148, 136, 0.04);
-}
-
-.library-box-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.library-badge-group {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.library-tag {
-  background: #0D9488;
-  color: #FFFFFF;
-  font-size: 0.625rem;
-  font-weight: 850;
-  padding: 2.5px 7px;
-  border-radius: 4px;
-  letter-spacing: 0.04em;
-}
-
-.library-curriculum-badge {
-  background: rgba(13, 148, 136, 0.12);
-  color: #0F766E;
-  font-size: 0.625rem;
-  font-weight: 800;
-  padding: 2.5px 7px;
-  border-radius: 4px;
-  border: 1px solid rgba(13, 148, 136, 0.25);
-  letter-spacing: 0.03em;
-}
-
-.library-header-hint {
-  font-size: 0.6875rem;
-  color: #0F766E;
-  font-weight: 650;
-}
-
-.library-search-preview {
-  background: #FFFFFF;
-  border: 1.5px solid #CCFBF1;
-  border-radius: 6px;
-  padding: 7px 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.775rem;
-  color: #64748B;
-  margin-bottom: 12px;
-  box-shadow: 0 2px 6px rgba(13, 148, 136, 0.05);
-}
-
-.library-search-icon {
-  color: #0D9488;
-  flex-shrink: 0;
-}
-
-.library-search-placeholder {
-  flex: 1;
-  color: #475569;
-  font-weight: 500;
-}
-
-.library-scan-shortcut {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  background: #F1F5F9;
-  border: 1px solid #CBD5E1;
-  color: #334155;
-  font-size: 0.65rem;
-  font-weight: 750;
-  padding: 2px 7px;
-  border-radius: 4px;
-  letter-spacing: 0.02em;
-}
-
-.library-sample-records {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-.lib-book-item {
-  position: relative;
-  background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  border-radius: 6px;
-  padding: 9px 12px 9px 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
-  overflow: hidden;
-  transition: border-color 0.15s ease, box-shadow 0.15s ease;
-}
-
-.lib-book-item:hover {
-  border-color: #99F6E4;
-  box-shadow: 0 3px 8px rgba(13, 148, 136, 0.08);
-}
-
-.lib-book-spine {
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 5px;
-}
-
-.lib-book-spine--math {
-  background: linear-gradient(180deg, #3B82F6 0%, #1D4ED8 100%);
-}
-
-.lib-book-spine--lit {
-  background: linear-gradient(180deg, #F59E0B 0%, #D97706 100%);
-}
-
-.lib-book-spine--science {
-  background: linear-gradient(180deg, #10B981 0%, #059669 100%);
-}
-
-.lib-book-info {
-  flex: 1;
-}
-
-.lib-book-title-row {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin-bottom: 2px;
-  flex-wrap: wrap;
-}
-
-.lib-book-title-row strong {
-  font-size: 0.825rem;
-  font-weight: 800;
-  color: #0F172A;
-}
-
-.lib-book-tag {
-  font-size: 0.6rem;
-  font-weight: 800;
-  color: #1D68D8;
-  background: rgba(29, 104, 216, 0.08);
-  padding: 1px 5px;
-  border-radius: 3px;
-  letter-spacing: 0.03em;
-}
-
-.lib-book-info small {
-  color: #64748B;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  display: block;
-}
-
-.lib-status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.6875rem;
-  font-weight: 800;
-  padding: 4px 9px;
-  border-radius: 4px;
-  white-space: nowrap;
 }
 
 /* Visual Capability Chips */

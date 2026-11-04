@@ -518,7 +518,7 @@ export default function Home() {
 
           {/* 2 Clean Side-by-Side Showcases: Fees & Library */}
           <div className="brochure-page3-showcase-grid">
-            {/* Fees Showcase with Real Receipt */}
+            {/* Fees Showcase with Real Photo */}
             <div className="page3-card page3-card--fees">
               <div className="page3-card-header">
                 <div className="page3-icon-badge page3-icon-badge--fees">
@@ -527,82 +527,53 @@ export default function Home() {
                 <div className="page3-header-meta">
                   <span className="page3-kicker-tag text-orange">INSTANT COUNTER BILLING</span>
                   <h3>Fees &amp; Dynamic UPI Counter</h3>
-                  <small>Class-wise Fee Slabs • Automated Dues • 3-Sec Slips</small>
+                  <small>Instant INR Billing • Dynamic UPI QR • 3-Sec Thermal Slips</small>
                 </div>
                 <span className="page3-live-pill page3-live-pill--orange">
                   <span className="live-dot-pulse live-dot-pulse--orange"></span> Counter Live
                 </span>
               </div>
 
-              {/* Fee Receipt Mockup from Page 3 */}
-              <div className="brochure-receipt-box">
-                <div className="receipt-box-top">
-                  <div className="receipt-brand-meta">
-                    <strong className="receipt-school-title">PRAGYA MODEL ACADEMY</strong>
-                    <div className="receipt-meta-sub">
-                      <span className="receipt-reg-no">SLIP #PRG-2026-1044</span>
-                      <span className="receipt-pos-counter">BURSAR DESK #01</span>
-                    </div>
-                  </div>
-                  <span className="receipt-status-badge receipt-status-badge--success">
-                    <CheckCircle2 size={12} /> PAID &amp; RECONCILED
+              {/* Visual Showcase Frame with Authentic Indian School Fee Counter Photo */}
+              <div className="page3-visual-frame">
+                <img 
+                  src="/real-photos/real-indian-fees-pos.jpg" 
+                  alt="Indian school fees counter with POS thermal printer and UPI QR" 
+                  className="page3-showcase-img"
+                  loading="lazy"
+                />
+                <div className="page3-img-overlay page3-img-overlay--top">
+                  <span className="page3-overlay-chip page3-overlay-chip--success">
+                    <CheckCircle2 size={13} />
+                    <span>PAID &amp; RECONCILED</span>
+                  </span>
+                  <span className="page3-overlay-tag">
+                    BURSAR DESK #01
                   </span>
                 </div>
-
-                <div className="receipt-student-meta">
-                  <div className="receipt-meta-cell">
-                    <span className="meta-label">STUDENT</span>
-                    <strong className="meta-val">Ananya Roy</strong>
+                <div className="page3-img-overlay page3-img-overlay--bottom">
+                  <div className="page3-overlay-amount-pill">
+                    <span className="overlay-amount-label">Counter Collection</span>
+                    <strong className="overlay-amount-val">₹ 17,200</strong>
                   </div>
-                  <div className="receipt-meta-cell">
-                    <span className="meta-label">CLASS &amp; ROLL</span>
-                    <strong className="meta-val">Class IX-A • Roll 01</strong>
-                  </div>
-                  <div className="receipt-meta-cell">
-                    <span className="meta-label">SETTLEMENT</span>
-                    <strong className="meta-val text-emerald">Dynamic UPI QR / Cash</strong>
-                  </div>
-                </div>
-
-                <div className="receipt-line-items">
-                  <div className="receipt-row">
-                    <span className="receipt-item-name">Quarterly Tuition (Term II)</span>
-                    <strong className="receipt-item-amount">₹ 12,500</strong>
-                  </div>
-                  <div className="receipt-row">
-                    <span className="receipt-item-name">Composite Transport (Route #4)</span>
-                    <strong className="receipt-item-amount">₹ 3,000</strong>
-                  </div>
-                  <div className="receipt-row">
-                    <span className="receipt-item-name">Digital Library &amp; STEM Lab</span>
-                    <strong className="receipt-item-amount">₹ 500</strong>
-                  </div>
-                  <div className="receipt-row">
-                    <span className="receipt-item-name">Board Exam &amp; Verification Fee</span>
-                    <strong className="receipt-item-amount">₹ 1,200</strong>
-                  </div>
-                </div>
-
-                <div className="receipt-total-row">
-                  <div className="receipt-total-label-wrap">
-                    <span className="receipt-total-label">Total Settled at Counter</span>
-                    <span className="receipt-reconcile-tag">✓ SBI &amp; HDFC Dynamic QR Auto-Sync</span>
-                  </div>
-                  <strong className="receipt-total-val">₹ 17,200</strong>
-                </div>
-
-                <div className="receipt-footer-action">
-                  <div className="receipt-footer-status">
-                    <Printer size={14} className="text-blue" />
-                    <span>Instant 3-sec Thermal Print • Auto WhatsApp Slip</span>
-                  </div>
-                  <Link to="/fees-management" className="btn btn--primary btn--sm page3-cta-btn page3-cta-btn--fees">
-                    Explore Fees POS <ArrowRight size={14} />
-                  </Link>
+                  <span className="page3-overlay-badge page3-overlay-badge--orange">
+                    <CreditCard size={13} /> Dynamic UPI QR &amp; Cash POS
+                  </span>
                 </div>
               </div>
 
-              {/* Visual Capability Chips (Icons replace text checklist) */}
+              {/* Action Bar */}
+              <div className="page3-card-action-bar">
+                <div className="page3-action-note">
+                  <Printer size={15} className="text-orange" />
+                  <span>3-Sec Thermal Slip • WhatsApp Receipts Sent</span>
+                </div>
+                <Link to="/fees-management" className="btn btn--primary btn--sm page3-cta-btn page3-cta-btn--fees">
+                  Explore Fees POS <ArrowRight size={14} />
+                </Link>
+              </div>
+
+              {/* Visual Capability Chips */}
               <div className="page3-visual-chips">
                 <span className="visual-chip visual-chip--orange">
                   <CreditCard size={15} /> Cash &amp; Dynamic UPI QR
@@ -616,7 +587,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Library Showcase */}
+            {/* Library Showcase with Real Photo */}
             <div className="page3-card page3-card--library">
               <div className="page3-card-header">
                 <div className="page3-icon-badge page3-icon-badge--library">
@@ -625,87 +596,53 @@ export default function Home() {
                 <div className="page3-header-meta">
                   <span className="page3-kicker-tag text-teal">SMART ACCESSION SYSTEM</span>
                   <h3>Digital Library Catalogue</h3>
-                  <small>Barcode Search • Accession Tracking • Due Alerts</small>
+                  <small>14,800+ Volumes • Barcode Accession • Auto Overdue Alerts</small>
                 </div>
                 <span className="page3-live-pill page3-live-pill--teal">
                   <span className="live-dot-pulse live-dot-pulse--teal"></span> 14,820 Volumes
                 </span>
               </div>
 
-              {/* Digital Catalogue Mockup */}
-              <div className="brochure-library-box">
-                <div className="library-box-header">
-                  <div className="library-badge-group">
-                    <span className="library-tag">DIGITAL REPOSITORY</span>
-                    <span className="library-curriculum-badge">ICSE &amp; CBSE READY</span>
-                  </div>
-                  <small className="library-header-hint">Barcoded &amp; Accession Number Indexed</small>
-                </div>
-
-                <div className="library-search-preview">
-                  <Search size={15} className="library-search-icon" />
-                  <span className="library-search-placeholder">NCERT Class IX Mathematics &amp; Science...</span>
-                  <span className="library-scan-shortcut">
-                    <ScanLine size={13} /> Barcode Scan
+              {/* Visual Showcase Frame with Authentic Indian School Library Photo */}
+              <div className="page3-visual-frame">
+                <img 
+                  src="/real-photos/real-indian-library.jpg" 
+                  alt="Indian school library with student in uniform and digital catalog desk" 
+                  className="page3-showcase-img"
+                  loading="lazy"
+                />
+                <div className="page3-img-overlay page3-img-overlay--top">
+                  <span className="page3-overlay-chip page3-overlay-chip--teal">
+                    <BookOpen size={13} />
+                    <span>ICSE &amp; CBSE CATALOGUE</span>
+                  </span>
+                  <span className="page3-overlay-tag page3-overlay-tag--teal">
+                    14,820 VOLUMES
                   </span>
                 </div>
-
-                <div className="library-sample-records">
-                  <div className="lib-book-item">
-                    <div className="lib-book-spine lib-book-spine--math"></div>
-                    <div className="lib-book-info">
-                      <div className="lib-book-title-row">
-                        <strong>Higher Algebra &amp; Trigonometry</strong>
-                        <span className="lib-book-tag">CBSE &amp; ICSE</span>
-                      </div>
-                      <small>S.L. Loney • Shelf B-04 • Acc #4120 • 9th Edition</small>
-                    </div>
-                    <span className="badge badge--green lib-status-badge">
-                      <Check size={11} /> Available (4)
-                    </span>
+                <div className="page3-img-overlay page3-img-overlay--bottom">
+                  <div className="page3-overlay-amount-pill page3-overlay-amount-pill--teal">
+                    <span className="overlay-amount-label">Smart Accession</span>
+                    <strong className="overlay-amount-val">1-Tap Scan</strong>
                   </div>
-
-                  <div className="lib-book-item">
-                    <div className="lib-book-spine lib-book-spine--lit"></div>
-                    <div className="lib-book-info">
-                      <div className="lib-book-title-row">
-                        <strong>Sahitya Sanchayan (Secondary Literature)</strong>
-                        <span className="lib-book-tag">ICSE &amp; CBSE</span>
-                      </div>
-                      <small>Curriculum Text • Shelf A-02 • Acc #2811 • Class X</small>
-                    </div>
-                    <span className="badge badge--orange lib-status-badge">
-                      <Clock size={11} /> Issued (Roll 14)
-                    </span>
-                  </div>
-
-                  <div className="lib-book-item">
-                    <div className="lib-book-spine lib-book-spine--science"></div>
-                    <div className="lib-book-info">
-                      <div className="lib-book-title-row">
-                        <strong>Concepts of Physics (Vol 1 &amp; 2)</strong>
-                        <span className="lib-book-tag">CBSE &amp; ICSE</span>
-                      </div>
-                      <small>Dr. H.C. Verma • Shelf C-01 • Acc #5920 • Reference</small>
-                    </div>
-                    <span className="badge badge--green lib-status-badge">
-                      <Check size={11} /> Available (6)
-                    </span>
-                  </div>
-                </div>
-
-                <div className="receipt-footer-action">
-                  <div className="receipt-footer-status">
-                    <ScanLine size={14} className="text-teal" />
-                    <span>Student ID Barcode Linked • 1-Tap Checkout</span>
-                  </div>
-                  <Link to="/features" className="btn btn--primary btn--sm page3-cta-btn page3-cta-btn--library">
-                    View Live Catalogue <ArrowRight size={14} />
-                  </Link>
+                  <span className="page3-overlay-badge page3-overlay-badge--teal">
+                    <ScanLine size={13} /> Barcode Scanner Integrated
+                  </span>
                 </div>
               </div>
 
-              {/* Visual Capability Chips (Icons replace text checklist) */}
+              {/* Action Bar */}
+              <div className="page3-card-action-bar">
+                <div className="page3-action-note">
+                  <ScanLine size={15} className="text-teal" />
+                  <span>Student ID Barcode Linked • Overdue Reminders</span>
+                </div>
+                <Link to="/features" className="btn btn--primary btn--sm page3-cta-btn page3-cta-btn--library">
+                  View Live Catalogue <ArrowRight size={14} />
+                </Link>
+              </div>
+
+              {/* Visual Capability Chips */}
               <div className="page3-visual-chips">
                 <span className="visual-chip visual-chip--teal">
                   <ScanLine size={15} /> 1-Tap Barcode Scan
