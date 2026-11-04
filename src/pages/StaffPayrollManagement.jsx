@@ -22,21 +22,21 @@ export default function StaffPayrollManagement() {
     {
       title: 'Teaching & Non-Teaching Pay Slabs',
       badge: 'Multi-Structure Ready',
-      image: '/real-photos/real-staff-meeting.jpg',
+      image: '/real-photos/real-indian-principal-inspection.jpg',
       tagline: 'Distinct pay structures for senior faculty, administrative officers, lab assistants, and support staff.',
       chips: ['DA / HRA Allowances', 'EPF & PTax Rules', 'Annual Increments']
     },
     {
       title: 'Biometric Attendance & Leave Sync',
       badge: 'Zero Manual Days Tally',
-      image: '/real-photos/real-teacher-instruct.jpg',
+      image: '/real-photos/real-indian-teacher-students.jpg',
       tagline: 'Connects staff biometric machines or mobile check-ins directly to the monthly salary calculation engine.',
       chips: ['Casual & Medical Leave', 'Loss of Pay (LOP)', 'Overtime Tracking']
     },
     {
       title: 'Bank NEFT Batches & PDF Payslips',
       badge: '1-Click Disbursement',
-      image: '/real-photos/real-fee-accounting.jpg',
+      image: '/real-photos/real-indian-fee-counter.jpg',
       tagline: 'Export standard SBI, HDFC, and PNB batch payout files and generate encrypted digital salary slips.',
       chips: ['Direct Bank Upload', 'Encrypted Payslip PDF', 'Tax Deduction Form 16']
     }
@@ -90,7 +90,7 @@ export default function StaffPayrollManagement() {
               <div style={{ background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 10px 25px -5px rgba(15,23,42,0.08)' }}>
                 <div style={{ position: 'relative', width: '100%', height: '230px', overflow: 'hidden' }}>
                   <img 
-                    src="/real-photos/real-staff-meeting.jpg" 
+                    src="/real-photos/real-indian-principal-inspection.jpg" 
                     alt="School faculty and staff meeting around table" 
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />

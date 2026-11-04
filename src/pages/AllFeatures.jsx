@@ -65,7 +65,7 @@ export default function AllFeatures() {
     {
       title: "Fee Counter POS & Ledger",
       badge: "3-Sec Thermal POS",
-      image: "/real-photos/real-fee-accounting.jpg",
+      image: "/real-photos/real-indian-fee-counter.jpg",
       tagline: "Instant cash and UPI collection with automatic daybook and sibling rules.",
       link: "/fees-management",
       chips: ["Thermal Print Slips", "Dynamic UPI QR", "Bank NEFT Files"]
@@ -81,7 +81,7 @@ export default function AllFeatures() {
     {
       title: "Academics & Timetables",
       badge: "Clash-Free Scheduling",
-      image: "/real-photos/real-teacher-instruct.jpg",
+      image: "/real-photos/real-indian-teacher-students.jpg",
       tagline: "Automated period distribution with teacher substitution and syllabus tracking.",
       link: "/academics-timetable",
       chips: ["Clash Detection", "Substitution Board", "Syllabus Progress"]

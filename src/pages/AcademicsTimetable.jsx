@@ -20,7 +20,7 @@ export default function AcademicsTimetable() {
     {
       title: 'Automated Clash-Free Timetables',
       badge: 'Zero Double-Booking',
-      image: '/real-photos/real-teacher-instruct.jpg',
+      image: '/real-photos/real-indian-teacher-students.jpg',
       tagline: 'Multi-period routine generator ensures no two classes share the same teacher, room, or STEM lab simultaneously.',
       chips: ['Lab & Room Allocation', 'Max 6 Periods / Teacher', 'Clash Shield']
     },
@@ -88,7 +88,7 @@ export default function AcademicsTimetable() {
               <div style={{ background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 10px 25px -5px rgba(15,23,42,0.08)' }}>
                 <div style={{ position: 'relative', width: '100%', height: '230px', overflow: 'hidden' }}>
                   <img 
-                    src="/real-photos/real-teacher-instruct.jpg" 
+                    src="/real-photos/real-indian-teacher-students.jpg" 
                     alt="Indian school teacher instructing in classroom" 
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />

@@ -39,7 +39,7 @@ export default function SolutionsByRole() {
       key: 'teacher',
       name: 'Teachers & Faculty',
       badge: '30-Sec Attendance',
-      image: '/real-photos/real-teacher-instruct.jpg',
+      image: '/real-photos/real-indian-teacher-students.jpg',
       tagline: 'Rapid daily roll call, instant grading, and syllabus tracking.',
       chips: ['Mobile Roll Call', 'WhatsApp Absent Sync', 'Timetable Sync']
     },
@@ -47,7 +47,7 @@ export default function SolutionsByRole() {
       key: 'accountant',
       name: 'Fee Counter & Accounts',
       badge: '3-Sec Thermal POS',
-      image: '/real-photos/real-fee-accounting.jpg',
+      image: '/real-photos/real-indian-fee-counter.jpg',
       tagline: 'Instant cash & UPI QR receipts with automatic head-wise ledger.',
       chips: ['Thermal Slip POS', 'Dynamic UPI QR', 'Bank NEFT Batches']
     },
@@ -55,7 +55,7 @@ export default function SolutionsByRole() {
       key: 'student',
       name: 'Parents & Students',
       badge: 'Mobile App',
-      image: '/real-photos/real-students-study.jpg',
+      image: '/real-photos/real-indian-students-uniform.jpg',
       tagline: 'Daily timetables, published report cards, homework, and fee receipts.',
       chips: ['Live Attendance Feed', 'Digital Report Cards', 'Notice Circulars']
     }

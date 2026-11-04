@@ -52,7 +52,7 @@ export default function AttendanceManagement() {
     {
       title: 'UDISE+ & Term Examination Eligibility',
       badge: 'Automated Calculation',
-      image: '/real-photos/real-teacher-instruct.jpg',
+      image: '/real-photos/real-indian-teacher-students.jpg',
       tagline: 'Instant calculation of 75% minimum attendance thresholds for board exam admit cards, with auto-generated medical leave waivers.',
       chips: ['75% Rule Enforcer', 'Medical Waivers', 'Monthly Register PDF']
     }

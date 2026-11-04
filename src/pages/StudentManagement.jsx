@@ -34,7 +34,7 @@ export default function StudentManagement() {
     {
       title: 'Assisted Excel / CSV Importer',
       badge: 'Zero Manual Retyping',
-      image: '/real-photos/real-fee-accounting.jpg',
+      image: '/real-photos/real-indian-fee-counter.jpg',
       tagline: 'Migrate thousands of legacy student records in minutes. Guided column mapper verifies phone numbers, date formats, and duplicates.',
       chips: ['Auto Column Mapping', 'Duplicate Blocker', 'Roll Auto-Numbering']
     }

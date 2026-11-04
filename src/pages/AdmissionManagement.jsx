@@ -27,7 +27,7 @@ export default function AdmissionManagement() {
     {
       title: 'Visual Intake Kanban Pipeline',
       badge: 'Zero Lost Inquiries',
-      image: '/real-photos/real-students-study.jpg',
+      image: '/real-photos/real-indian-students-uniform.jpg',
       tagline: 'Track every inquiry from walk-in visit to application fee, interview scheduling, and final enrollment.',
       chips: ['Kanban Drag-and-Drop', 'Follow-Up Reminders', 'Source Analytics']
     },
@@ -41,7 +41,7 @@ export default function AdmissionManagement() {
     {
       title: 'Document Verification Vault',
       badge: 'Compliance First',
-      image: '/real-photos/real-fee-accounting.jpg',
+      image: '/real-photos/real-indian-fee-counter.jpg',
       tagline: 'Store birth certificates, Transfer Certificates (TC), medical records, and caste certificates safely in encrypted cloud storage.',
       chips: ['PDF & Image Scans', 'Missing Document Alert', 'Verification Stamp']
     }
@@ -95,7 +95,7 @@ export default function AdmissionManagement() {
               <div style={{ background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 10px 25px -5px rgba(15,23,42,0.08)' }}>
                 <div style={{ position: 'relative', width: '100%', height: '230px', overflow: 'hidden' }}>
                   <img 
-                    src="/real-photos/real-students-study.jpg" 
+                    src="/real-photos/real-indian-students-uniform.jpg" 
                     alt="Indian students studying and admission candidates" 
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />

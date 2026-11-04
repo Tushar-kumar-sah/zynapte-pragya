@@ -61,7 +61,7 @@ export default function MultiBranchManagement() {
     {
       title: 'Campus Boundary RBAC Guardrails',
       badge: 'Isolated Accounting',
-      image: '/real-photos/real-staff-meeting.jpg',
+      image: '/real-photos/real-indian-principal-inspection.jpg',
       tagline: 'Teachers, cashiers, and clerks operate strictly within their designated branch, preventing data cross-pollution.',
       chips: ['Campus Scoping', 'Separate Bank Ledgers', 'Local Fee POS']
     },

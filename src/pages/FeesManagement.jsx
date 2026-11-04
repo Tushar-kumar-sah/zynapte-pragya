@@ -20,7 +20,7 @@ export default function FeesManagement() {
     {
       title: 'Counter POS & 3-Second Receipts',
       badge: 'Rapid Collection',
-      image: '/real-photos/real-fee-accounting.jpg',
+      image: '/real-photos/real-indian-fee-counter.jpg',
       tagline: 'Cashiers process fee payments in 3 seconds with auto-selected tuition, exam, lab, and transport heads.',
       chips: ['Thermal Roll Print', 'Sequential Series', 'Duplicate Prevention']
     },
@@ -88,7 +88,7 @@ export default function FeesManagement() {
               <div style={{ background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', overflow: 'hidden', boxShadow: '0 10px 25px -5px rgba(15,23,42,0.08)' }}>
                 <div style={{ position: 'relative', width: '100%', height: '230px', overflow: 'hidden' }}>
                   <img 
-                    src="/real-photos/real-fee-accounting.jpg" 
+                    src="/real-photos/real-indian-fee-counter.jpg" 
                     alt="School fee ledger and payment accounting" 
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />

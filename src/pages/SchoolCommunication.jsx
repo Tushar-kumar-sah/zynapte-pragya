@@ -27,7 +27,7 @@ export default function SchoolCommunication() {
     {
       title: 'Daily Homework & Diary Feed',
       badge: 'Student App Feed',
-      image: '/real-photos/real-teacher-instruct.jpg',
+      image: '/real-photos/real-indian-teacher-students.jpg',
       tagline: 'Subject teachers post assignments, syllabus topics, and tomorrow’s materials directly to student diaries.',
       chips: ['Subject Scoping', 'Attachment Upload', 'Parent Push Notice']
     },
