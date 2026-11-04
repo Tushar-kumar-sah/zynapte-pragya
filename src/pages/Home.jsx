@@ -7,7 +7,8 @@ import {
   FileText, Library, Send, Building2, Sun, Moon, Laptop, 
   Eye, ChevronRight, Phone, BarChart3, Settings, Layers, 
   UserCheck, FileUp, Search, Receipt, CalendarCheck, 
-  ScanLine, Printer, FileSpreadsheet, Smartphone, Clock
+  ScanLine, Printer, FileSpreadsheet, Smartphone, Clock,
+  CalendarCheck2, BookOpenCheck, GraduationCap, WalletCards, LibraryBig, Network
 } from 'lucide-react';
 import ErpMockup from '../components/ErpMockup';
 import ApaarTracker from '../components/ApaarTracker';
@@ -50,74 +51,119 @@ export default function Home() {
   const coreNineModules = [
     {
       id: 'admissions',
-      title: 'Admissions',
-      subtitle: 'Enquiry to enrolment',
-      icon: <UserPlus size={22} />,
-      colorClass: 'module-accent--blue',
+      num: '01',
+      title: 'Admissions & CRM',
+      subtitle: 'Streamline enquiry intake, verification, fee collection, and 1-click student enrolment.',
+      icon: <UserCheck size={26} color="#FFFFFF" />,
+      accent: '#1D68D8',
+      rgb: '29, 104, 216',
+      gradient: 'linear-gradient(135deg, #1D68D8 0%, #3B82F6 100%)',
+      badge: 'ENROLMENT CRM',
+      chips: ['Lead Pipeline', 'Aadhaar Check', 'Auto Roll No'],
       path: '/student-management'
     },
     {
       id: 'attendance',
-      title: 'Attendance',
-      subtitle: 'Students and staff',
-      icon: <Calendar size={22} />,
-      colorClass: 'module-accent--purple',
+      num: '02',
+      title: 'Attendance & Leave',
+      subtitle: '1-Tap classroom roll call, biometric sync, and instant WhatsApp absence alerts to parents.',
+      icon: <CalendarCheck2 size={26} color="#FFFFFF" />,
+      accent: '#6F3B9C',
+      rgb: '111, 59, 156',
+      gradient: 'linear-gradient(135deg, #6F3B9C 0%, #8B5CF6 100%)',
+      badge: 'REAL-TIME TRACKING',
+      chips: ['1-Tap Roll Call', 'WhatsApp SMS', 'Leave Workflow'],
       path: '/attendance-management'
     },
     {
       id: 'academics',
-      title: 'Academics',
-      subtitle: 'Classes and timetables',
-      icon: <BookOpen size={22} />,
-      colorClass: 'module-accent--orange',
+      num: '03',
+      title: 'Academics & Timetables',
+      subtitle: 'Interactive clash-free timetable scheduler with 1-click substitute teacher assignments.',
+      icon: <BookOpenCheck size={26} color="#FFFFFF" />,
+      accent: '#D97706',
+      rgb: '217, 119, 6',
+      gradient: 'linear-gradient(135deg, #D97706 0%, #F59E0B 100%)',
+      badge: 'ZERO-CLASH GRID',
+      chips: ['ICSE & CBSE Ready', 'Smart Substitution', 'Room Balancer'],
       path: '/academics-timetable'
     },
     {
       id: 'exams',
-      title: 'Exams',
-      subtitle: 'Marks to report cards',
-      icon: <Award size={22} />,
-      colorClass: 'module-accent--green',
+      num: '04',
+      title: 'Exams & Report Cards',
+      subtitle: 'Co-scholastic grading, marksheet calculations, and batch printing of board-format report cards.',
+      icon: <GraduationCap size={26} color="#FFFFFF" />,
+      accent: '#059669',
+      rgb: '5, 150, 105',
+      gradient: 'linear-gradient(135deg, #059669 0%, #10B981 100%)',
+      badge: 'BOARD EVALUATION',
+      chips: ['ICSE / CBSE Scales', '1-Click Batch PDF', 'Co-Scholastic'],
       path: '/exam-result-management'
     },
     {
       id: 'fees',
-      title: 'Fees',
-      subtitle: 'Receipts and dues',
-      icon: <CreditCard size={22} />,
-      colorClass: 'module-accent--coral',
+      num: '05',
+      title: 'Counter Fees & POS',
+      subtitle: '3-Second thermal slips, customer-facing dynamic UPI QR, and automated sibling discount rules.',
+      icon: <Receipt size={26} color="#FFFFFF" />,
+      accent: '#EF424B',
+      rgb: '239, 66, 75',
+      gradient: 'linear-gradient(135deg, #EF424B 0%, #F43F5E 100%)',
+      badge: 'CASH & DYNAMIC UPI',
+      chips: ['3-Sec Slip Print', 'Dynamic UPI QR', 'Head-Wise Ledger'],
       path: '/fees-management'
     },
     {
       id: 'payroll',
-      title: 'Payroll',
-      subtitle: 'Payslips for every role',
-      icon: <FileText size={22} />,
-      colorClass: 'module-accent--emerald',
+      num: '06',
+      title: 'Staff, HR & Payroll',
+      subtitle: 'EPF, ESI & PTax statutory deductions, biometric attendance sync, and instant salary slip batches.',
+      icon: <WalletCards size={26} color="#FFFFFF" />,
+      accent: '#0D9488',
+      rgb: '13, 148, 136',
+      gradient: 'linear-gradient(135deg, #0D9488 0%, #14B8A6 100%)',
+      badge: 'STATUTORY SALARY',
+      chips: ['EPF & PTax Ready', 'Bank NEFT Batch', 'Payslip Generator'],
       path: '/staff-payroll-management'
     },
     {
       id: 'library',
-      title: 'Library',
-      subtitle: 'Catalogue and issues',
-      icon: <Library size={22} />,
-      colorClass: 'module-accent--cyan',
+      num: '07',
+      title: 'Digital Library Catalogue',
+      subtitle: 'Barcode accession cataloguing, NCERT curriculum search, and automatic overdue fine alerts.',
+      icon: <LibraryBig size={26} color="#FFFFFF" />,
+      accent: '#0284C7',
+      rgb: '2, 132, 199',
+      gradient: 'linear-gradient(135deg, #0284C7 0%, #06B6D4 100%)',
+      badge: 'ACCESSION CATALOGUE',
+      chips: ['Barcode Scanner', 'NCERT Book Index', 'Overdue Tracking'],
       path: '/features'
     },
     {
       id: 'communication',
-      title: 'Communication',
-      subtitle: 'Notices and circulars',
-      icon: <Send size={22} />,
-      colorClass: 'module-accent--violet',
+      num: '08',
+      title: 'School Communication',
+      subtitle: 'Official circulars, emergency holiday broadcasts, exam schedules, and parent announcements.',
+      icon: <Send size={26} color="#FFFFFF" />,
+      accent: '#7C3AED',
+      rgb: '124, 58, 237',
+      gradient: 'linear-gradient(135deg, #7C3AED 0%, #A855F7 100%)',
+      badge: 'PARENT BROADCAST',
+      chips: ['WhatsApp Push', 'Circular Manager', 'SMS Fallback'],
       path: '/school-communication'
     },
     {
       id: 'multi-branch',
-      title: 'Multi-Branch',
-      subtitle: 'Many campuses, one view',
-      icon: <Building2 size={22} />,
-      colorClass: 'module-accent--gold',
+      num: '09',
+      title: 'Multi-Branch Group ERP',
+      subtitle: '1-Click executive campus switcher with segregated accounting ledgers and group-wide MIS.',
+      icon: <Network size={26} color="#FFFFFF" />,
+      accent: '#EA580C',
+      rgb: '234, 88, 12',
+      gradient: 'linear-gradient(135deg, #EA580C 0%, #FB923C 100%)',
+      badge: 'INSTITUTIONAL CHAINS',
+      chips: ['1-Click Switcher', 'Separate Books', 'Unified MIS'],
       path: '/multi-branch-management'
     }
   ];
@@ -240,19 +286,70 @@ export default function Home() {
           {/* 9 Core ERP Modules in a Balanced 3x3 Grid */}
           <div className="core-nine-modules-grid">
             {coreNineModules.map((mod) => (
-              <Link to={mod.path} key={mod.id} className={`core-module-card ${mod.colorClass}`}>
-                <div className="core-module-icon-wrap">
-                  {mod.icon}
+              <Link 
+                to={mod.path} 
+                key={mod.id} 
+                className="core-module-card"
+                style={{ 
+                  '--mod-accent': mod.accent, 
+                  '--mod-rgb': mod.rgb,
+                  '--mod-gradient': mod.gradient 
+                }}
+              >
+                {/* Top Row: Vibrant Gradient Icon & Step Pill */}
+                <div className="core-module-header">
+                  <div className="core-module-icon-tile" style={{ background: mod.gradient }}>
+                    {mod.icon}
+                  </div>
+                  <div className="core-module-badge-wrap">
+                    <span className="core-module-num">{mod.num}</span>
+                    <span className="core-module-pill">{mod.badge}</span>
+                  </div>
                 </div>
-                <div className="core-module-text">
-                  <h4>{mod.title}</h4>
-                  <p>{mod.subtitle}</p>
+
+                {/* Content */}
+                <div className="core-module-content">
+                  <h3 className="core-module-title">{mod.title}</h3>
+                  <p className="core-module-desc">{mod.subtitle}</p>
                 </div>
-                <div className="core-module-arrow">
-                  <ChevronRight size={16} />
+
+                {/* Feature Micro-Chips */}
+                <div className="core-module-chips">
+                  {mod.chips.map((chip, idx) => (
+                    <span key={idx} className="core-module-chip">
+                      <span className="core-module-chip-dot" />
+                      {chip}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Interactive Bottom Action Bar with Animated Arrow */}
+                <div className="core-module-footer">
+                  <span className="core-module-cta-text">Explore Module</span>
+                  <div className="core-module-arrow-btn">
+                    <ArrowRight size={16} />
+                  </div>
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Connected OS Ribbon */}
+          <div className="core-modules-integration-ribbon">
+            <div className="integration-ribbon-item">
+              <span className="ribbon-glow-dot" style={{ background: '#1D68D8', boxShadow: '0 0 8px #1D68D8' }} />
+              <span><strong>Unified Single Ledger:</strong> Zero manual retyping across desks</span>
+            </div>
+            <div className="integration-ribbon-sep" />
+            <div className="integration-ribbon-item">
+              <span className="ribbon-glow-dot" style={{ background: '#059669', boxShadow: '0 0 8px #059669' }} />
+              <span><strong>Instant Board Exports:</strong> 100% ICSE &amp; CBSE compliant</span>
+            </div>
+            <div className="integration-ribbon-sep" />
+            <div className="integration-ribbon-item">
+              <span className="ribbon-glow-dot" style={{ background: '#EF424B', boxShadow: '0 0 8px #EF424B' }} />
+              <span><strong>Zero-Leak Privacy:</strong> Strict role-isolated data boundaries</span>
+            </div>
           </div>
 
           {/* Role Switcher: "One system. Every role." */}
