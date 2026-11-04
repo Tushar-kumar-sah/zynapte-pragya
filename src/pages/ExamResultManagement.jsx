@@ -11,7 +11,7 @@ import FaqAccordion from '../components/FaqAccordion';
 export default function ExamResultManagement() {
   const faqs = [
     { question: 'Can subject teachers enter marks independently?', answer: 'Yes, subject teachers have login access restricted strictly to their assigned classes and subjects, preventing accidental edits to other disciplines.' },
-    { question: 'Does Pragya calculate results and board grades automatically?', answer: 'Yes, automatic percentage calculations, WBBSE 7-point scale (AA, A+, A, B+, B, C, D) and CBSE 9-point grading are executed instantly.' },
+    { question: 'Does Pragya calculate results and board grades automatically?', answer: 'Yes, automatic percentage calculations, ICSE percentage/grading and CBSE 9-point scale grading are executed instantly.' },
     { question: 'Are marks published immediately to students?', answer: 'No, marks remain in Draft status until the Examination Committee and Principal officially apply the moderation lock and authorize batch publication.' },
     { question: 'Can we generate printable report cards in bulk?', answer: 'Yes, Pragya generates multi-page student report cards with school crest, grading scales, attendance percentage, and principal signature box.' }
   ];
@@ -26,10 +26,10 @@ export default function ExamResultManagement() {
     },
     {
       title: 'Board-Compliant Auto Grading',
-      badge: 'CBSE & WBBSE Schemes',
+      badge: 'ICSE & CBSE Schemes',
       image: '/real-photos/real-exam-results.jpg',
       tagline: 'Automatic calculation of term percentages, grade point averages (GPA), class rankings, and co-scholastic rubrics.',
-      chips: ['WBBSE 7-Point AA-D', 'CBSE 9-Point Scale', 'Pass / Fail Logic']
+      chips: ['ICSE Board Grading', 'CBSE 9-Point Scale', 'Pass / Fail Logic']
     },
     {
       title: '1-Click Batch PDF Report Cards',
@@ -74,7 +74,7 @@ export default function ExamResultManagement() {
                 </span>
                 <span className="hero-kpi-chip">
                   <CheckCircle2 size={14} color="#145EFF" />
-                  <span>WBBSE / CBSE Scales</span>
+                  <span>ICSE &amp; CBSE Scales</span>
                 </span>
                 <span className="hero-kpi-chip">
                   <CheckCircle2 size={14} color="#742DDA" />
@@ -122,13 +122,13 @@ export default function ExamResultManagement() {
         <div className="container">
           <div className="section-header">
             <h2>Board-Compliant Digital &amp; Printable Report Cards</h2>
-            <p>Formatted according to WBBSE Summative Assessment or CBSE Term Evaluation guidelines.</p>
+            <p>Formatted according to ICSE Board or CBSE Term Evaluation guidelines.</p>
           </div>
 
           <div style={{ maxWidth: '680px', margin: '0 auto', background: '#FFFFFF', border: '1px solid var(--color-slate-200)', borderRadius: '8px', padding: '24px', boxShadow: 'var(--shadow-md)' }}>
             <div style={{ textAlign: 'center', borderBottom: '2px solid var(--color-slate-800)', paddingBottom: '14px', marginBottom: '14px' }}>
               <div style={{ fontSize: '1.15rem', fontWeight: 850, color: 'var(--color-ink)' }}>PRAGYA MODEL ACADEMY</div>
-              <div style={{ fontSize: '0.72rem', color: 'var(--color-slate-600)' }}>AFFILIATED TO WBBSE / CBSE • ESTD. 1994</div>
+              <div style={{ fontSize: '0.72rem', color: 'var(--color-slate-600)' }}>AFFILIATED TO ICSE / CBSE • ESTD. 1994</div>
               <div style={{ display: 'inline-block', background: 'var(--color-ink)', color: '#FFFFFF', fontSize: '0.72rem', fontWeight: 700, padding: '2px 12px', borderRadius: '4px', marginTop: '6px' }}>
                 ANNUAL PROGRESS REPORT CARD • SESSION 2026-27
               </div>

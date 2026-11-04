@@ -161,7 +161,7 @@ export default function Home() {
                 </span>
                 <span className="hero-check-item">
                   <CheckCircle2 size={15} color="var(--color-blue)" />
-                  <span>WBBSE &amp; WBCHSE Catalogues</span>
+                  <span>ICSE &amp; CBSE Catalogues</span>
                 </span>
                 <span className="hero-check-item">
                   <CheckCircle2 size={15} color="var(--color-blue)" />
@@ -180,7 +180,7 @@ export default function Home() {
                 <div className="rating-block">
                   <div className="rating-stars">★★★★★</div>
                   <div className="rating-text">
-                    <strong>4.9/5 Rating</strong> from 1,200+ School Leaders &amp; Principals
+                    <strong>4.9/5 Rating</strong> from 15+ Schools &amp; Principals
                   </div>
                 </div>
               </div>

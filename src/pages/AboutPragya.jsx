@@ -12,7 +12,7 @@ export default function AboutPragya() {
     { title: "Clarity", icon: "🎯", desc: "Make the next school task obvious and eliminate paper-chasing across administrative offices.", color: "var(--color-blue)", bg: "rgba(20, 94, 255, 0.08)" },
     { title: "Continuity", icon: "🔗", desc: "Preserve student academic, medical, and fee history across all 12 years in 1 unified folder.", color: "var(--color-violet)", bg: "rgba(116, 45, 218, 0.08)" },
     { title: "Accountability", icon: "⚖️", desc: "Every mark modification, fee cancellation, and leave approval is permanently recorded in the audit ledger.", color: "var(--color-cyan)", bg: "rgba(0, 205, 229, 0.12)" },
-    { title: "Indian Context", icon: "🇮🇳", desc: "Built specifically around APAAR readiness, UDISE+ compliance, WBBSE/CBSE rules, and INR cash counters.", color: "var(--color-success)", bg: "rgba(5, 150, 105, 0.08)" },
+    { title: "Indian Context", icon: "🇮🇳", desc: "Built specifically around APAAR readiness, UDISE+ compliance, ICSE/CBSE rules, and INR cash counters.", color: "var(--color-success)", bg: "rgba(5, 150, 105, 0.08)" },
     { title: "Data Sovereignty", icon: "🛡️", desc: "Schools own 100% of their database. Deploy on private cloud or on-premise servers with encrypted backups.", color: "var(--color-warning)", bg: "rgba(217, 119, 6, 0.08)" },
     { title: "Role Isolation", icon: "👥", desc: "Protect sensitive student records with strict boundaries for teachers, accountants, and administrators.", color: "var(--color-magenta)", bg: "rgba(236, 50, 204, 0.08)" }
   ];
@@ -83,7 +83,7 @@ export default function AboutPragya() {
                 <CheckCircle2 size={20} color="var(--color-success)" style={{ flexShrink: 0, marginTop: '2px' }} />
                 <div>
                   <strong style={{ fontSize: '0.9375rem', color: 'var(--color-ink)', display: 'block' }}>State &amp; National Boards</strong>
-                  <p style={{ fontSize: '0.8125rem', color: 'var(--color-slate-600)', margin: '4px 0 0' }}>Pre-configured WBBSE, WBCHSE, and CBSE marksheet calculations and grading rules.</p>
+                  <p style={{ fontSize: '0.8125rem', color: 'var(--color-slate-600)', margin: '4px 0 0' }}>Pre-configured ICSE, CBSE, and state board marksheet calculations and grading rules.</p>
                 </div>
               </div>
               <div style={{ display: 'flex', gap: '6px' }}>

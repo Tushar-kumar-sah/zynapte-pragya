@@ -109,7 +109,7 @@ export const modulesData = [
   },
   {
     id: 'report-cards',
-    title: 'WBBSE / CBSE Exam Marksheets',
+    title: 'ICSE / CBSE Exam Marksheets',
     category: 'academics',
     icon: <Award size={26} />,
     color: '#EC32CC',
@@ -122,7 +122,7 @@ export const modulesData = [
     tag: 'Board Standard Grades',
     tagColor: 'badge--magenta',
     summary: 'Subject-teacher marks entry, automatic grade conversion, moderation lock, and bulk PDF report cards.',
-    features: ['WBBSE 1st, 2nd, 3rd Summative rules', 'CBSE Term 1 & 2 grade templates', 'Pass/Fail rule configurer', 'Principal digital signature seal'],
+    features: ['ICSE Board grading & assessment rules', 'CBSE Term 1 & 2 grade templates', 'Pass/Fail rule configurer', 'Principal digital signature seal'],
     previewTitle: 'Annual Progress & Marks Report Card',
     previewType: 'reportcard',
     link: '/exam-result-management'
@@ -512,7 +512,7 @@ export default function IconicModules() {
                   <div className="simulated-receipt">
                     <div className="receipt-header">
                       <div className="receipt-school-name">ST. XAVIER'S CONVENT SCHOOL</div>
-                      <div className="receipt-meta">AFFILIATED TO WBBSE / CBSE • SCHOOL CODE: WB-7104</div>
+                      <div className="receipt-meta">AFFILIATED TO ICSE / CBSE • SCHOOL CODE: IC-7104</div>
                       <div className="receipt-badge">FEE RECEIPT (DUPLICATE COUNTER COPY)</div>
                     </div>
                     <div className="receipt-divider" />

@@ -122,7 +122,7 @@ export default function StudentManagement() {
             <div className="simulated-idcard" style={{ borderRadius: '8px' }}>
               <div className="idcard-top">
                 <div className="idcard-school">PRAGYA MODEL ACADEMY</div>
-                <div className="idcard-affil">AFFILIATED TO WBBSE / CBSE • ESTD. 1994</div>
+                <div className="idcard-affil">AFFILIATED TO ICSE / CBSE • ESTD. 1994</div>
               </div>
               <div className="idcard-body">
                 <div className="idcard-photo-box">

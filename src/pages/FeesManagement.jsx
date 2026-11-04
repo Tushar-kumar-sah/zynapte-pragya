@@ -128,7 +128,7 @@ export default function FeesManagement() {
           <div style={{ maxWidth: '640px', margin: '0 auto', background: '#FFFFFF', border: '1px dashed var(--color-slate-300)', borderRadius: '8px', padding: '24px', boxShadow: 'var(--shadow-md)', fontFamily: 'monospace' }}>
             <div style={{ textAlign: 'center', marginBottom: '14px' }}>
               <div style={{ fontSize: '1.15rem', fontWeight: 850, color: 'var(--color-ink)' }}>PRAGYA MODEL ACADEMY</div>
-              <div style={{ fontSize: '0.72rem', color: 'var(--color-slate-500)' }}>AFFILIATED TO WBBSE / CBSE • SCHOOL CODE: WB-9402</div>
+              <div style={{ fontSize: '0.72rem', color: 'var(--color-slate-500)' }}>AFFILIATED TO ICSE / CBSE • SCHOOL CODE: IC-9402</div>
               <span style={{ display: 'inline-block', background: 'var(--color-slate-100)', padding: '2px 10px', borderRadius: '4px', fontSize: '0.72rem', fontWeight: 700, marginTop: '6px' }}>
                 FEE PAYMENT RECEIPT (OFFICIAL)
               </span>

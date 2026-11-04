@@ -31,7 +31,7 @@ export default function AllFeatures() {
     {
       feature: "Examination & Report Cards",
       manual: "Manual marks entry on paper sheets, manual formula errors in grading",
-      pragya: "Subject-teacher marks portal; 1-click WBBSE/CBSE report card batch print"
+      pragya: "Subject-teacher marks portal; 1-click ICSE / CBSE report card batch print"
     },
     {
       feature: "APAAR & UDISE+ Compliance",
@@ -72,7 +72,7 @@ export default function AllFeatures() {
     },
     {
       title: "Examinations & Marksheets",
-      badge: "WBBSE / CBSE Ready",
+      badge: "ICSE / CBSE Ready",
       image: "/real-photos/real-exam-writing.jpg",
       tagline: "Subject-teacher marks lock, automatic grade calculations, and batch report cards.",
       link: "/exam-result-management",

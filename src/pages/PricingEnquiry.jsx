@@ -17,7 +17,7 @@ export default function PricingEnquiry() {
       features: [
         "Student Digital Dossier & ID Card Studio",
         "1-Tap Class Roll Call & Mobile Attendance",
-        "WBBSE / CBSE Exam & Report Cards",
+        "ICSE / CBSE Exam & Report Cards",
         "Counter Fee POS with Thermal Receipts",
         "APAAR Parental Consent & PEN Tracking",
         "School-Controlled Server Setup"

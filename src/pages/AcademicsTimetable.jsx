@@ -12,7 +12,7 @@ export default function AcademicsTimetable() {
   const faqs = [
     { question: 'Does Pragya detect timetable conflicts automatically?', answer: 'Yes, Pragya alerts immediately if a teacher, classroom, or science laboratory is assigned to two different classes during the same period.' },
     { question: 'Can elective and optional subjects be configured?', answer: 'Yes, supports Class XI & XII stream electives (Science, Commerce, Humanities) and optional 4th subject rules.' },
-    { question: 'Are WBBSE & CBSE subject catalogues built-in?', answer: 'Yes, pre-configured subject codes and weightage for state boards and CBSE are ready out of the box.' },
+    { question: 'Are ICSE & CBSE subject catalogues built-in?', answer: 'Yes, pre-configured subject codes and weightage for ICSE and CBSE are ready out of the box.' },
     { question: 'Can substitute teachers be assigned quickly?', answer: 'Yes, when a teacher logs casual leave, Pragya suggests available free teachers with matching subject specializations in 1 tap.' }
   ];
 
@@ -78,7 +78,7 @@ export default function AcademicsTimetable() {
                 </span>
                 <span className="hero-kpi-chip">
                   <CheckCircle2 size={14} color="#742DDA" />
-                  <span>WBBSE &amp; CBSE Schemes</span>
+                  <span>ICSE &amp; CBSE Schemes</span>
                 </span>
               </div>
             </div>
